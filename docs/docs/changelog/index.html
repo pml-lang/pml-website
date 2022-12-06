@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="generator" content="PML 3.1.0 (www.pml-lang.dev)" />
+        <title>PML Changelog</title>
+        <link rel="stylesheet" href="css/pml-default.css">
+        <link rel="stylesheet" href="css/pml-print-default.css" media="print">
+
+    </head>
+    <body>
+
+        <div class="pml-doc-wrapper">
+            <header class="pml-doc-header">
+            </header>
+            <div class="pml-doc-content">
+                <aside class="pml-doc-left">
+                    <nav class="pml-toc">
+                        <h2 class="pml-toc-title">Table of Contents</h2>
+                        <div class="pml-toc-tree" id="TOCTree">
+                            <ul>
+                                <li class="pml-toc-branch-node">
+                                    <details>
+                                        <summary><a href="#v_3_1_0">Version 3.1.0 2022-10-03</a></summary>
+                                        <ul>
+                                            <li class="pml-toc-leaf-node"><a href="#v_3_1_0_new_features">New Features</a></li>
+                                            <li class="pml-toc-leaf-node"><a href="#v_3_1_0_deprecated">Deprecated Features</a></li>
+                                            <li class="pml-toc-leaf-node"><a href="#ch__4">Bug Fixes</a></li>
+                                        </ul>
+                                    </details>
+                                </li>
+                                <li class="pml-toc-branch-node">
+                                    <details>
+                                        <summary><a href="#ch__5">Version 3.0.0 2022-08-19</a></summary>
+                                        <ul>
+                                            <li class="pml-toc-leaf-node"><a href="#ch__6">Backwards-Incompatible Changes</a></li>
+                                            <li class="pml-toc-leaf-node"><a href="#ch__7">New Features</a></li>
+                                            <li class="pml-toc-leaf-node"><a href="#ch__8">Bug Fixes</a></li>
+                                        </ul>
+                                    </details>
+                                </li>
+                                <li class="pml-toc-branch-node">
+                                    <details>
+                                        <summary><a href="#ch__9">Version 2.3.0 2022-02-11</a></summary>
+                                        <ul>
+                                            <li class="pml-toc-leaf-node"><a href="#ch__10">New Features</a></li>
+                                            <li class="pml-toc-leaf-node"><a href="#v_2_3_0_deprecated">Deprecated Features</a></li>
+                                        </ul>
+                                    </details>
+                                </li>
+                                <li class="pml-toc-branch-node">
+                                    <details>
+                                        <summary><a href="#ch__12">Version 2.2.0 2021-12-14</a></summary>
+                                        <ul>
+                                            <li class="pml-toc-leaf-node"><a href="#ch__13">New Features</a></li>
+                                            <li class="pml-toc-leaf-node"><a href="#ch__14">Bug Fixes</a></li>
+                                        </ul>
+                                    </details>
+                                </li>
+                                <li class="pml-toc-branch-node">
+                                    <details>
+                                        <summary><a href="#ch__15">Version 2.1.0 2021-09-09</a></summary>
+                                        <ul>
+                                            <li class="pml-toc-leaf-node"><a href="#ch__16">Bug Fixes</a></li>
+                                            <li class="pml-toc-leaf-node"><a href="#ch__17">Improvements</a></li>
+                                        </ul>
+                                    </details>
+                                </li>
+                                <li class="pml-toc-branch-node">
+                                    <details>
+                                        <summary><a href="#ch__18">Version 2.0.0 2021-09-03</a></summary>
+                                        <ul>
+                                            <li class="pml-toc-leaf-node"><a href="#ch__19">Backwards-Incompatible Changes</a></li>
+                                            <li class="pml-toc-leaf-node"><a href="#ch__20">New Features</a></li>
+                                            <li class="pml-toc-leaf-node"><a href="#ch__21">Bug Fixes</a></li>
+                                            <li class="pml-toc-leaf-node"><a href="#ch__22">Improvements</a></li>
+                                        </ul>
+                                    </details>
+                                </li>
+                                <li class="pml-toc-branch-node">
+                                    <details>
+                                        <summary><a href="#ch__23">Version 1.5.0 2021-06-08</a></summary>
+                                        <ul>
+                                            <li class="pml-toc-leaf-node"><a href="#ch__24">New Features</a></li>
+                                        </ul>
+                                    </details>
+                                </li>
+                                <li class="pml-toc-branch-node">
+                                    <details>
+                                        <summary><a href="#ch__25">Version 1.4.0 2021-04-16</a></summary>
+                                        <ul>
+                                            <li class="pml-toc-leaf-node"><a href="#ch__26">Backwards-Incompatible Changes</a></li>
+                                            <li class="pml-toc-leaf-node"><a href="#ch__27">New Features</a></li>
+                                            <li class="pml-toc-leaf-node"><a href="#ch__28">Bug Fixes</a></li>
+                                        </ul>
+                                    </details>
+                                </li>
+                                <li class="pml-toc-branch-node">
+                                    <details>
+                                        <summary><a href="#ch__29">Version 1.3.0 2021-03-09</a></summary>
+                                        <ul>
+                                            <li class="pml-toc-leaf-node"><a href="#ch__30">Backwards-Incompatible Changes</a></li>
+                                            <li class="pml-toc-leaf-node"><a href="#ch__31">New Features</a></li>
+                                            <li class="pml-toc-leaf-node"><a href="#ch__32">Improvements</a></li>
+                                        </ul>
+                                    </details>
+                                </li>
+                                <li class="pml-toc-branch-node">
+                                    <details>
+                                        <summary><a href="#ch__33">Version 1.2.0 2021-02-10</a></summary>
+                                        <ul>
+                                            <li class="pml-toc-leaf-node"><a href="#ch__34">New Features</a></li>
+                                        </ul>
+                                    </details>
+                                </li>
+                                <li class="pml-toc-branch-node">
+                                    <details>
+                                        <summary><a href="#ch__35">Version 1.1.0 2021-01-14</a></summary>
+                                        <ul>
+                                            <li class="pml-toc-branch-node">
+                                                <details>
+                                                    <summary><a href="#ch__36">New Features</a></summary>
+                                                    <ul>
+                                                        <li class="pml-toc-leaf-node"><a href="#ch__37">New Nodes</a></li>
+                                                        <li class="pml-toc-leaf-node"><a href="#ch__38">New Attributes</a></li>
+                                                        <li class="pml-toc-leaf-node"><a href="#ch__39">New Command Line Arguments</a></li>
+                                                    </ul>
+                                                </details>
+                                            </li>
+                                        </ul>
+                                    </details>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </aside>
+                <article id="doc__" class="pml-doc-text" id="doc__">
+                    <h1 class="pml-doc-title">PML Changelog</h1>
+                    <table class="pml-table">
+                        <tr class="pml-table-body-row">
+                            <td class="pml-table-body-cell">
+                                <p class="pml-paragraph"><b class="pml-bold">Latest Update</b></p>
+
+                            </td>
+                            <td class="pml-table-body-cell">
+                                <p class="pml-paragraph">2022-10-03</p>
+
+                            </td>
+
+                        </tr>
+                        <tr class="pml-table-body-row">
+                            <td class="pml-table-body-cell">
+                                <p class="pml-paragraph"><b class="pml-bold">First Published</b></p>
+
+                            </td>
+                            <td class="pml-table-body-cell">
+                                <p class="pml-paragraph">2021-01-14</p>
+
+                            </td>
+
+                        </tr>
+                        <tr class="pml-table-body-row">
+                            <td class="pml-table-body-cell">
+                                <p class="pml-paragraph"><b class="pml-bold">License</b></p>
+
+                            </td>
+                            <td class="pml-table-body-cell">
+                                <p class="pml-paragraph"><a class="pml-link" href="https://creativecommons.org/licenses/by-nd/4.0/">CC BY-ND 4.0</a></p>
+
+                            </td>
+
+                        </tr>
+                        <tr class="pml-table-body-row">
+                            <td class="pml-table-body-cell">
+                                <p class="pml-paragraph"><b class="pml-bold">Author and Copyright</b></p>
+
+                            </td>
+                            <td class="pml-table-body-cell">
+                                <p class="pml-paragraph">Christian Neumanns</p>
+
+                            </td>
+
+                        </tr>
+                        <tr class="pml-table-body-row">
+                            <td class="pml-table-body-cell">
+                                <p class="pml-paragraph"><b class="pml-bold">Website</b></p>
+
+                            </td>
+                            <td class="pml-table-body-cell">
+                                <p class="pml-paragraph"><a class="pml-link" href="https://pml-lang.dev/">https://pml-lang.dev/</a></p>
+
+                            </td>
+
+                        </tr>
+                        <tr class="pml-table-body-row">
+                            <td class="pml-table-body-cell">
+                                <p class="pml-paragraph"><b class="pml-bold">PML Markup Code</b></p>
+
+                            </td>
+                            <td class="pml-table-body-cell">
+                                <p class="pml-paragraph"><a class="pml-link" href="https://github.com/pml-lang/changelog">Github</a></p>
+
+                            </td>
+
+                        </tr>
+
+                    </table>
+                    <p class="pml-paragraph">This document lists the changes in PML, sorted in descending order by version number and date.</p>
+                    <div class="pml-admonition">
+                        <div class="pml-admonition-label">Note</div>
+                        <div class="pml-admonition-content">
+                            <p class="pml-paragraph">PML uses <a class="pml-link" href="https://semver.org/">Semantic Versioning</a>.</p>
+                        </div>
+                    </div>
+                    <section id="v_3_1_0" class="pml-chapter">
+                        <h2 class="pml-chapter-title">Version 3.1.0 2022-10-03</h2>
+                        <section id="v_3_1_0_new_features" class="pml-chapter">
+                            <h3 class="pml-chapter-title">New Features</h3>
+                            <ul class="pml-list">
+                                <li class="pml-list-element">
+                                    <p class="pml-paragraph">Footnotes have been added, after <a class="pml-link" href="https://github.com/pml-lang/pml-companion/discussions/85">this</a> discussion.</p>
+                                    <p class="pml-paragraph">For instructions and examples, please refer to the following links in the <i class="pml-italic">PML Nodes Reference Manual</i>:</p>
+                                    <ul class="pml-list">
+                                        <li class="pml-list-element">
+                                            <p class="pml-paragraph"><a class="pml-link" href="https://www.pml-lang.dev/docs/reference_manual/#node_fnote">Inline Footnote</a></p>
+
+                                        </li>
+                                        <li class="pml-list-element">
+                                            <p class="pml-paragraph"><a class="pml-link" href="https://www.pml-lang.dev/docs/reference_manual/#node_fnotes">Footnotes Placeholder</a></p>
+
+                                        </li>
+                                        <li class="pml-list-element">
+                                            <p class="pml-paragraph"><a class="pml-link" href="https://www.pml-lang.dev/docs/reference_manual/#node_fnote_def">Footnote Definition</a></p>
+
+                                        </li>
+                                        <li class="pml-list-element">
+                                            <p class="pml-paragraph"><a class="pml-link" href="https://www.pml-lang.dev/docs/reference_manual/#node_fnote_ref">Footnote Reference</a></p>
+
+                                        </li>
+
+                                    </ul>
+                                    <div class="pml-admonition">
+                                        <div class="pml-admonition-label">Note</div>
+                                        <div class="pml-admonition-content">
+                                            <p class="pml-paragraph">Footnotes are in an incubating state. This means that the nodes and their attributes might change in future versions, based on user feedback.</p>
+                                        </div>
+                                    </div>
+
+                                </li>
+
+                            </ul>
+
+                        </section>
+                        <section id="v_3_1_0_deprecated" class="pml-chapter">
+                            <h3 class="pml-chapter-title">Deprecated Features</h3>
+                            <ul class="pml-list">
+                                <li class="pml-list-element">
+                                    <p class="pml-paragraph">The <a class="pml-link" href="https://pdml-lang.dev/docs/extensions/reference_manual/index.html#raw_text_block_syntax">Text Block Syntax</a> used to define text in raw text blocks is now deprecated and will be removed in an upcoming major version.</p>
+                                    <p class="pml-paragraph">For example, instead of writing:</p>
+                                    <pre class="pml-code"><code>[code
+    int i = 1;
+code]</code></pre>
+                                    <p class="pml-paragraph">... you need to use the <a class="pml-link" href="https://pdml-lang.dev/docs/extensions/reference_manual/index.html#raw_text_delimiter_syntax">Delimited Text Syntax</a> and write:</p>
+                                    <pre class="pml-code"><code>[code
+    ~~~
+    int i = 1;
+    ~~~
+]</code></pre>
+
+                                </li>
+
+                            </ul>
+
+                        </section>
+                        <section id="ch__4" class="pml-chapter">
+                            <h3 class="pml-chapter-title">Bug Fixes</h3>
+                            <p class="pml-paragraph">Some minor bugs have been fixed.</p>
+
+                        </section>
+
+                    </section>
+                    <section id="ch__5" class="pml-chapter">
+                        <h2 class="pml-chapter-title">Version 3.0.0 2022-08-19</h2>
+                        <p class="pml-paragraph">PMLC 3.0.0 is a major update.</p>
+                        <p class="pml-paragraph">The tool has been completely rewritten in Java (PPL is no longer used). Some features are therefore no longer available, some will be added again later.</p>
+                        <p class="pml-paragraph">However, there are only 3 minor changes related to the PML <i class="pml-italic">syntax</i>: the <code class="pml-inline-code">!</code> symbol and the <code class="pml-inline-code">caption</code> attribute are no longer supported, and the <code class="pml-inline-code">source</code> attribute name in <code class="pml-inline-code">image</code> nodes must be specified explicitly, as explained below.</p>
+                        <p class="pml-paragraph">Before deciding to upgrade to version 3.0.0, have a look at the changes described below.</p>
+                        <section id="ch__6" class="pml-chapter">
+                            <h3 class="pml-chapter-title">Backwards-Incompatible Changes</h3>
+                            <ul class="pml-list">
+                                <li class="pml-list-element">
+                                    <p class="pml-paragraph">The PMLC command line interface (CLI) has changed.</p>
+                                    <p class="pml-paragraph">Please refer to the <a class="pml-link" href="https://www.pml-lang.dev/docs/commands_manual/index.html">Commands Reference Manual</a> to see the updated list of commands and arguments.</p>
+                                    <p class="pml-paragraph">Most important breaking change:</p>
+                                    <ul class="pml-list">
+                                        <li class="pml-list-element">
+                                            <p class="pml-paragraph">The <code class="pml-inline-code">convert</code> command has been renamed to <code class="pml-inline-code">PML_to_HTML</code> (shortcut: <code class="pml-inline-code">p2h</code>) and is used as follows:</p>
+                                            <pre class="pml-input">pmlc PML_to_HTML article.pml
+or:
+pmlc p2h article.pml</pre>
+                                            <p class="pml-paragraph">The following old (no more supported) syntax:</p>
+                                            <pre class="pml-input">pmlc convert -i article.pml -o output</pre>
+                                            <p class="pml-paragraph">... has been replaced by:</p>
+                                            <pre class="pml-input">pmlc p2h article.pml -o output/article.html</pre>
+                                            <p class="pml-paragraph">Note that the old <code class="pml-inline-code">-o</code> option specified an output <i class="pml-italic">directory</i>, while the new option specifies an output <i class="pml-italic">file</i>.</p>
+
+                                        </li>
+                                        <li class="pml-list-element">
+                                            <p class="pml-paragraph">The <code class="pml-inline-code">help</code> and <code class="pml-inline-code">tag_info</code> commands haven't yet been re-implemented.</p>
+
+                                        </li>
+
+                                    </ul>
+
+                                </li>
+                                <li class="pml-list-element">
+                                    <p class="pml-paragraph">The <code class="pml-inline-code">source</code> attribute name for <code class="pml-inline-code">image</code> nodes is now required. Instead of writing:</p>
+                                    <pre class="pml-code"><code>[image flower.png]</code></pre>
+                                    <p class="pml-paragraph">... you need to write:</p>
+                                    <pre class="pml-code"><code>[image source=flower.png]</code></pre>
+
+                                </li>
+                                <li class="pml-list-element">
+                                    <p class="pml-paragraph">The <code class="pml-inline-code">!</code> node-name prefix, <a class="pml-xref" href="#v_2_3_0_deprecated">deprecated</a> in version 2.3.0, is no longer supported. For example, instead of writing <code class="pml-inline-code">[!ins-file ...]</code> you need to write <code class="pml-inline-code">[u:ins_file ...]</code>.</p>
+
+                                </li>
+                                <li class="pml-list-element">
+                                    <p class="pml-paragraph">The <code class="pml-inline-code">caption</code> <i class="pml-italic">attribute</i> for nodes <code class="pml-inline-code">image</code>, <code class="pml-inline-code">audio</code>, <code class="pml-inline-code">video</code>, <code class="pml-inline-code">youtube_video</code> and <code class="pml-inline-code">table</code> is no longer supported. Please use the new <a class="pml-link" href="https://www.pml-lang.dev/docs/reference_manual/index.html#node_caption">caption</a> <i class="pml-italic">node</i> instead.</p>
+
+                                </li>
+                                <li class="pml-list-element">
+                                    <p class="pml-paragraph">User-defined nodes have been temporarily disabled.</p>
+                                    <p class="pml-paragraph">They will be reintroduced in a future version. Their definition, however, will probably differ significantly from their first (experimental) implementation.</p>
+
+                                </li>
+                                <li class="pml-list-element">
+                                    <p class="pml-paragraph">The PMLC GUI (graphical user interface) is no longer supported. PMLC is now a command line tool only, to be used in a terminal emulator (shell or CMD). The GUI might be reintroduced again in a future version.</p>
+
+                                </li>
+                                <li class="pml-list-element">
+                                    <p class="pml-paragraph">Windows/Linux installers are no longer supported. They have been replaced by OS-specific standalone binary executables or, alternatively, a cross-platform Java <code class="pml-inline-code">jar</code> executable that can be run on Windows, Linux, and MacOS systems where the JavaRuntime Environment (JRE) has been installed. PMLC can also be build from source code (works on Windows, Linux, and MacOS).</p>
+
+                                </li>
+                                <li class="pml-list-element">
+                                    <p class="pml-paragraph">The following two fields have been removed from the <code class="pml-inline-code">pml_tags.json</code> file (created by the <code class="pml-inline-code">export_tags</code> command): <code class="pml-inline-code">default_attribute_id</code> and <code class="pml-inline-code">closing_tag</code>.</p>
+                                    <p class="pml-paragraph">The <code class="pml-inline-code">position</code> field has been added to attributes as a replacement for <code class="pml-inline-code">default_attribute_id</code>, which is more versatile for future improvements.</p>
+
+                                </li>
+
+                            </ul>
+
+                        </section>
+                        <section id="ch__7" class="pml-chapter">
+                            <h3 class="pml-chapter-title">New Features</h3>
+                            <ul class="pml-list">
+                                <li class="pml-list-element">
+                                    <p class="pml-paragraph">Besides defining options via the command line, it is now also possible to define them inside the PML document, or in a shared options file. Please read <a class="pml-link" href="https://www.pml-lang.dev/docs/user_manual/index.html#options">Options</a> for more information.</p>
+
+                                </li>
+                                <li class="pml-list-element">
+                                    <p class="pml-paragraph">The following PMLC commands have been added:</p>
+                                    <ul class="pml-list">
+                                        <li class="pml-list-element">
+                                            <p class="pml-paragraph"><code class="pml-inline-code">info</code></p>
+
+                                        </li>
+                                        <li class="pml-list-element">
+                                            <p class="pml-paragraph"><code class="pml-inline-code">PDML_to_XML</code></p>
+
+                                        </li>
+                                        <li class="pml-list-element">
+                                            <p class="pml-paragraph"><code class="pml-inline-code">PDML_to_standalone</code></p>
+
+                                        </li>
+                                        <li class="pml-list-element">
+                                            <p class="pml-paragraph"><code class="pml-inline-code">create_commands_manual</code></p>
+
+                                        </li>
+
+                                    </ul>
+                                    <p class="pml-paragraph">Please refer to the <a class="pml-link" href="https://www.pml-lang.dev/docs/commands_manual/index.html">Commands Reference Manual</a> for more information.</p>
+                                    <div class="pml-admonition">
+                                        <div class="pml-admonition-label">Note</div>
+                                        <div class="pml-admonition-content">
+                                            <p class="pml-paragraph">The <code class="pml-inline-code">PDML_to_XML</code> and <code class="pml-inline-code">PDML_to_standalone</code> commands cannot be used to convert PML documents (only PDML documents are supported). Commands <code class="pml-inline-code">PML_to_XML</code> and <code class="pml-inline-code">PML_to_standalone</code> will be added later.</p>
+                                        </div>
+                                    </div>
+
+                                </li>
+                                <li class="pml-list-element">
+                                    <p class="pml-paragraph"><a class="pml-link" href="https://www.pml-lang.dev/docs/user_manual/index.html#customized_css">Custom CSS files</a> are now supported.</p>
+
+                                </li>
+                                <li class="pml-list-element">
+                                    <p class="pml-paragraph">The location of media assets is no longer restricted to specific URLs. Any URL that is valid in the browser can now be specified.</p>
+
+                                </li>
+                                <li class="pml-list-element">
+                                    <p class="pml-paragraph">PMLC is now available as:</p>
+                                    <ul class="pml-list">
+                                        <li class="pml-list-element">
+                                            <p class="pml-paragraph">A single, standalone binary executable for Windows or Linux.</p>
+
+                                        </li>
+                                        <li class="pml-list-element">
+                                            <p class="pml-paragraph">A single <code class="pml-inline-code">zip</code> file containing Java <code class="pml-inline-code">jar</code> files and an OS script file to launch PMLC. This requires the Java runtime version 17 or later to be installed on the PC. Hence, PMLC can now be be executed on Windows, Linux, and MacOS.</p>
+
+                                        </li>
+                                        <li class="pml-list-element">
+                                            <p class="pml-paragraph">Java source code that can be compiled and build into <code class="pml-inline-code">jar</code> files that can be executed by a JVM (works on Windows, Linux, and MacOS).</p>
+
+                                        </li>
+
+                                    </ul>
+                                    <div class="pml-admonition">
+                                        <div class="pml-admonition-label">Note</div>
+                                        <div class="pml-admonition-content">
+                                            <p class="pml-paragraph">As stated already, Windows/Linux installers are no longer supported.</p>
+                                        </div>
+                                    </div>
+
+                                </li>
+                                <li class="pml-list-element">
+                                    <p class="pml-paragraph">There is now an auto-generated <a class="pml-link" href="https://www.pml-lang.dev/docs/commands_manual/index.html">Commands Reference Manual</a> describing all PMLC commands.</p>
+
+                                </li>
+                                <li class="pml-list-element">
+                                    <p class="pml-paragraph">Semantic node validation is now implemented (but not yet applied to all nodes).</p>
+                                    <p class="pml-paragraph">For example, <code class="pml-inline-code">list</code> nodes can only contain <code class="pml-inline-code">el</code> nodes, and each <code class="pml-inline-code">el</code> node must be a child of a <code class="pml-inline-code">list</code> node.</p>
+
+                                </li>
+                                <li class="pml-list-element">
+                                    <p class="pml-paragraph">The PMLC source code (a complete rewrite in Java) is now more modular, featuring many under-the-hood improvements that will be beneficial in the future. PMLC is now much more <i class="pml-italic">time and space efficient</i>, and everything has been set up to evolve as an open-source project.</p>
+
+                                </li>
+                                <li class="pml-list-element">
+                                    <p class="pml-paragraph">The meaning of the PMLC acronym has been changed from <i class="pml-italic">PML to HTML Converter</i> to <i class="pml-italic">PML Companion</i>.</p>
+
+                                </li>
+
+                            </ul>
+
+                        </section>
+                        <section id="ch__8" class="pml-chapter">
+                            <h3 class="pml-chapter-title">Bug Fixes</h3>
+                            <p class="pml-paragraph">All known bugs have been fixed.</p>
+
+                        </section>
+
+                    </section>
+                    <section id="ch__9" class="pml-chapter">
+                        <h2 class="pml-chapter-title">Version 2.3.0 2022-02-11</h2>
+                        <section id="ch__10" class="pml-chapter">
+                            <h3 class="pml-chapter-title">New Features</h3>
+                            <ul class="pml-list">
+                                <li class="pml-list-element">
+                                    <p class="pml-paragraph"><i class="pml-italic">Script Nodes</i> have been added. Script nodes enable you to embed source code in a PML document, and execute it when the document is parsed. For more information please refer to <a class="pml-link" href="https://www.pml-lang.dev/docs/advanced_features/index.html#script_nodes">Script Nodes</a>.</p>
+
+                                </li>
+                                <li class="pml-list-element">
+                                    <p class="pml-paragraph">Node <code class="pml-inline-code">table_data</code>: Besides using a comma or tab as cell separator, a vertical bar (<code class="pml-inline-code">|</code>) or a semicolon (<code class="pml-inline-code">;</code>) can now also be used.</p>
+
+                                </li>
+
+                            </ul>
+
+                        </section>
+                        <section id="v_2_3_0_deprecated" class="pml-chapter">
+                            <h3 class="pml-chapter-title">Deprecated Features</h3>
+                            <ul class="pml-list">
+                                <li class="pml-list-element">
+                                    <p class="pml-paragraph">The syntax for nodes whose name is prefixed with <code class="pml-inline-code">!</code> has changed, as shown in the following table:</p>
+                                    <table class="pml-table">
+                                        <thead class="pml-table-header">
+                                            <th class="pml-table-header-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Old Syntax</b></p>
+
+                                            </th>
+                                            <th class="pml-table-header-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">New Syntax</b></p>
+
+                                            </th>
+
+                                        </thead>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><code class="pml-inline-code">[!ins-file ...]</code></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><code class="pml-inline-code">[u:ins_file ...]</code></p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><code class="pml-inline-code">[!get ...]</code></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><code class="pml-inline-code">[u:get ...]</code></p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><code class="pml-inline-code">[!set ...]</code></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><code class="pml-inline-code">[u:set ...]</code></p>
+
+                                            </td>
+
+                                        </tr>
+
+                                    </table>
+                                    <p class="pml-paragraph">The old syntax will no more be supported in a future version.</p>
+
+                                </li>
+                                <li class="pml-list-element">
+                                    <p class="pml-paragraph">The method to define user-defined-nodes will probably change in the future, as explained <a class="pml-link" href="https://www.pml-lang.dev/docs/advanced_features/index.html#UDN_how">here</a>.</p>
+
+                                </li>
+
+                            </ul>
+
+                        </section>
+
+                    </section>
+                    <section id="ch__12" class="pml-chapter">
+                        <h2 class="pml-chapter-title">Version 2.2.0 2021-12-14</h2>
+                        <section id="ch__13" class="pml-chapter">
+                            <h3 class="pml-chapter-title">New Features</h3>
+                            <ul class="pml-list">
+                                <li class="pml-list-element">
+                                    <p class="pml-paragraph"><i class="pml-italic">User-defined nodes</i> have been added. They allow you to create your own, customized PML nodes (in addition to PML's standard nodes) and use them in your documents.</p>
+                                    <p class="pml-paragraph">For more information please refer to chapter <a class="pml-link" href="https://www.pml-lang.dev/docs/advanced_features/index.html#user_defined_nodes">User-Defined Nodes</a>.</p>
+
+                                </li>
+                                <li class="pml-list-element">
+                                    <p class="pml-paragraph">Unicode escape sequences above FFFF are now supported. This is useful to insert emoticons and some Asian characters.</p>
+                                    <p class="pml-paragraph">The existing syntax for 4 hex digits Unicode escapes is <code class="pml-inline-code">\uhhhh</code>.</p>
+                                    <p class="pml-paragraph">The new (additional) syntax for 8 hex digits Unicode escapes is <code class="pml-inline-code">\Uhhhhhhhh</code>. Note the uppercase U which is used to denote that 8 hex digits are used.</p>
+                                    <p class="pml-paragraph">Examples are shown in chapter <a class="pml-link" href="https://www.pml-lang.dev/docs/user_manual/index.html#escape_characters">Escape Characters</a> of the user manual.</p>
+
+                                </li>
+                                <li class="pml-list-element">
+                                    <p class="pml-paragraph">Field <code class="pml-inline-code">child_nodes_allowed</code> has been added in the JSON file created with command <code class="pml-inline-code">export_tags</code>.</p>
+
+                                </li>
+
+                            </ul>
+
+                        </section>
+                        <section id="ch__14" class="pml-chapter">
+                            <h3 class="pml-chapter-title">Bug Fixes</h3>
+                            <ul class="pml-list">
+                                <li class="pml-list-element">
+                                    <p class="pml-paragraph">When Unicode characters above <code class="pml-inline-code">FFFF</code> are inserted into a PML document with copy/paste, they are now correctly written into the HTML target file.</p>
+
+                                </li>
+
+                            </ul>
+
+                        </section>
+
+                    </section>
+                    <section id="ch__15" class="pml-chapter">
+                        <h2 class="pml-chapter-title">Version 2.1.0 2021-09-09</h2>
+                        <section id="ch__16" class="pml-chapter">
+                            <h3 class="pml-chapter-title">Bug Fixes</h3>
+                            <ul class="pml-list">
+                                <li class="pml-list-element">
+                                    <p class="pml-paragraph">The <code class="pml-inline-code">id</code> attribute for nodes <code class="pml-inline-code">title</code> and <code class="pml-inline-code">subtitle</code> is now correctly rendered in HTML.</p>
+
+                                </li>
+                                <li class="pml-list-element">
+                                    <p class="pml-paragraph">All errors are now displayed in OS err.</p>
+
+                                </li>
+
+                            </ul>
+
+                        </section>
+                        <section id="ch__17" class="pml-chapter">
+                            <h3 class="pml-chapter-title">Improvements</h3>
+                            <ul class="pml-list">
+                                <li class="pml-list-element">
+                                    <p class="pml-paragraph">File CHANGELOG.txt in the converter's directory has been replaced by by an <a class="pml-link" href="https://www.pml-lang.dev/docs/changelog/index.html">online document</a> written in PML. The PML source code is available in <a class="pml-link" href="https://github.com/pml-lang/changelog">Github repository</a>.</p>
+
+                                </li>
+
+                            </ul>
+
+                        </section>
+
+                    </section>
+                    <section id="ch__18" class="pml-chapter">
+                        <h2 class="pml-chapter-title">Version 2.0.0 2021-09-03</h2>
+                        <section id="ch__19" class="pml-chapter">
+                            <h3 class="pml-chapter-title">Backwards-Incompatible Changes</h3>
+                            <ul class="pml-list">
+                                <li class="pml-list-element">
+                                    <p class="pml-paragraph">The title of a chapter is now defined with a separate node following the <code class="pml-inline-code">ch</code> node. The title can no longer be defined with an attribute. Instead of writing:</p>
+                                    <pre class="pml-code"><code>[ch (title=&quot;My Title&quot;)
+    text
+]</code></pre>
+                                    <p class="pml-paragraph">... we have to write:</p>
+                                    <pre class="pml-code"><code>[ch [title My Title]
+    text
+]</code></pre>
+                                    <div class="pml-admonition">
+                                        <div class="pml-admonition-label">Note</div>
+                                        <div class="pml-admonition-content">
+                                            <p class="pml-paragraph">While the <code class="pml-inline-code">title</code> attribute was limited to plain text, any inline markup can now be used in <code class="pml-inline-code">title</code> nodes, e.g.</p>
+                                            <pre class="pml-code"><code>[title A [i nice] side effect]</code></pre>
+                                        </div>
+                                    </div>
+
+                                </li>
+                                <li class="pml-list-element">
+                                    <p class="pml-paragraph">The following attributes have been removed from the <code class="pml-inline-code">doc</code> (document) node: <code class="pml-inline-code">title</code>, <code class="pml-inline-code">authors</code>, and <code class="pml-inline-code">date</code>.</p>
+                                    <p class="pml-paragraph">Instead of a <code class="pml-inline-code">title</code> <i class="pml-italic">attribute</i>, a <code class="pml-inline-code">title</code> <i class="pml-italic">node</i> must be used (as for chapters), e.g.</p>
+                                    <pre class="pml-code"><code>[doc [title My Title]
+    text
+]</code></pre>
+                                    <p class="pml-paragraph">Instead of <code class="pml-inline-code">authors</code> and <code class="pml-inline-code">date</code> attributes, these information can simply be written as text, e.g.:</p>
+                                    <pre class="pml-code"><code>[doc [title My Title]
+    Author: your name
+
+    Published: 2021-09-03
+]</code></pre>
+                                    <p class="pml-paragraph">In a future version there will be a dedicated <code class="pml-inline-code">meta</code> node that will hold data like author, date, version, abstract, etc., as well as other, user-defined meta-data</p>
+
+                                </li>
+                                <li class="pml-list-element">
+                                    <p class="pml-paragraph">The <code class="pml-inline-code">title</code> attribute has been removed from all nodes. Please refer to the previous two items for <code class="pml-inline-code">doc</code> and <code class="pml-inline-code">ch</code> nodes. For all other nodes, the new <code class="pml-inline-code">header</code> node (see below) should be used instead of the old <code class="pml-inline-code">title</code> attribute.</p>
+                                    <p class="pml-paragraph">Example:</p>
+                                    <p class="pml-paragraph">Old code:</p>
+                                    <pre class="pml-code"><code>[el (title = &quot;List element header&quot;)
+    ...
+]</code></pre>
+                                    <p class="pml-paragraph">New code:</p>
+                                    <pre class="pml-code"><code>[el [header List element header]
+    ...
+]</code></pre>
+
+                                </li>
+                                <li class="pml-list-element">
+                                    <p class="pml-paragraph">Lenient parsing is now supported differently:</p>
+                                    <ul class="pml-list">
+                                        <li class="pml-list-element">
+                                            <p class="pml-paragraph">Attributes must be enclosed in parentheses, except for nodes that have only attributes (no child-nodes)</p>
+                                            <p class="pml-paragraph">Example: <code class="pml-inline-code">[foo (a1=v1 a2=v2) ... ]</code></p>
+
+                                        </li>
+                                        <li class="pml-list-element">
+                                            <p class="pml-paragraph">The <i class="pml-italic">attribute continuation character</i> <code class="pml-inline-code">\</code> at the end of a line is no more necessary and therefore no more supported.</p>
+
+                                        </li>
+                                        <li class="pml-list-element">
+                                            <p class="pml-paragraph">Attribute values that contain spaces must be enclosed in quotes.</p>
+                                            <p class="pml-paragraph">Example: <code class="pml-inline-code">path = &quot;name with spaces.png&quot;</code></p>
+                                            <p class="pml-paragraph">For more information please refer to the <a class="pml-link" href="https://www.pml-lang.dev/docs/user_manual/index.html#lenient_parsing">user manual</a>.</p>
+
+                                        </li>
+
+                                    </ul>
+
+                                </li>
+                                <li class="pml-list-element">
+                                    <p class="pml-paragraph">The syntax for using constants has changed</p>
+                                    <p class="pml-paragraph">The syntax for declaring a constant changed from:</p>
+                                    <pre class="pml-code"><code>[const name = value]</code></pre>
+                                    <p class="pml-paragraph">... to:</p>
+                                    <pre class="pml-code"><code>[!set name = value]</code></pre>
+                                    <p class="pml-paragraph">Using a constant changed from:</p>
+                                    <pre class="pml-code"><code>&lt;&lt;value&gt;&gt;</code></pre>
+                                    <p class="pml-paragraph">... to:</p>
+                                    <pre class="pml-code"><code>[!get name]</code></pre>
+                                    <p class="pml-paragraph">For more information please refer to the <a class="pml-link" href="https://www.pml-lang.dev/docs/user_manual/index.html#parameters">user manual</a></p>
+
+                                </li>
+                                <li class="pml-list-element">
+                                    <p class="pml-paragraph">The syntax for inserting a file has changed from:</p>
+                                    <pre class="pml-code"><code>[insert file=sub-chapter.pml]</code></pre>
+                                    <p class="pml-paragraph">... to:</p>
+                                    <pre class="pml-code"><code>[!ins-file path=sub-chapter.pml]</code></pre>
+                                    <p class="pml-paragraph">For more information please refer to the <a class="pml-link" href="https://www.pml-lang.dev/docs/user_manual/index.html#file_splitting">user manual</a></p>
+                                    <div class="pml-admonition">
+                                        <div class="pml-admonition-label">Note</div>
+                                        <div class="pml-admonition-content">
+                                            <p class="pml-paragraph"><code class="pml-inline-code">ins-url</code> and <code class="pml-inline-code">ins-env</code> (OS environment variable) will be added in a future version.</p>
+                                        </div>
+                                    </div>
+
+                                </li>
+                                <li class="pml-list-element">
+                                    <p class="pml-paragraph">Command line parameter <code class="pml-inline-code">tag_start_stop_symbols</code> has been removed. A node must start with <code class="pml-inline-code">[</code>, and end with <code class="pml-inline-code">]</code>.</p>
+
+                                </li>
+
+                            </ul>
+
+                        </section>
+                        <section id="ch__20" class="pml-chapter">
+                            <h3 class="pml-chapter-title">New Features</h3>
+                            <div class="pml-header">Better error handling</div>
+                            <ul class="pml-list">
+                                <li class="pml-list-element">
+                                    <p class="pml-paragraph">New parameter <code class="pml-inline-code">open_file_cmd</code> for command <code class="pml-inline-code">convert</code>.</p>
+                                    <p class="pml-paragraph">This argument enables you to automatically open an editor for the first file in which an error was detected.</p>
+                                    <p class="pml-paragraph">For more information, type the following command in a terminal, and look for parameter <code class="pml-inline-code">open_file_cmd</code>:</p>
+                                    <pre class="pml-input">pmlc command_info -command convert</pre>
+
+                                </li>
+                                <li class="pml-list-element">
+                                    <p class="pml-paragraph">Better format for error messages displayed in the terminal.</p>
+
+                                </li>
+                                <li class="pml-list-element">
+                                    <p class="pml-paragraph">If there are several errors, they are all displayed in the terminal (not just the first one)</p>
+
+                                </li>
+                                <li class="pml-list-element">
+                                    <p class="pml-paragraph">Distinction between canceling errors, non-canceling errors, and warnings</p>
+
+                                </li>
+                                <li class="pml-list-element">
+                                    <p class="pml-paragraph">Customizable error handler (by providing a specific Java class)</p>
+
+                                </li>
+
+                            </ul>
+                            <div class="pml-header">New block nodes</div>
+                            <ul class="pml-list">
+                                <li class="pml-list-element">
+                                    <p class="pml-paragraph"><code class="pml-inline-code">title</code>: A title for a chapter (can include markup, included in the table of contents)</p>
+                                    <p class="pml-paragraph">This node replaces the chapter's <code class="pml-inline-code">title</code> <i class="pml-italic">attribute</i>, which is no more supported.</p>
+
+                                </li>
+                                <li class="pml-list-element">
+                                    <p class="pml-paragraph"><code class="pml-inline-code">subtitle</code>: A subtitle for a chapter (can include markup, not included in the table of contents)</p>
+
+                                </li>
+                                <li class="pml-list-element">
+                                    <p class="pml-paragraph"><code class="pml-inline-code">header</code>: A header (small title) above text (can include markup, not included in the table of contents)</p>
+
+                                </li>
+
+                            </ul>
+                            <div class="pml-admonition">
+                                <div class="pml-admonition-label">Note</div>
+                                <div class="pml-admonition-content">
+                                    <p class="pml-paragraph">Inline markup can be used in <code class="pml-inline-code">title</code>, <code class="pml-inline-code">subtitle</code>, and <code class="pml-inline-code">header</code> nodes, e.g.</p>
+                                    <pre class="pml-code"><code>[title A [i nice] side effect]</code></pre>
+                                </div>
+                            </div>
+                            <p class="pml-paragraph">Please refer to the <a class="pml-link" href="https://www.pml-lang.dev/docs/reference_manual/">reference manual</a> for more information.</p>
+                            <div class="pml-header">More powerful text parameters</div>
+                            <p class="pml-paragraph">Text parameters are no more limited to text snippets. They can define markup code to be used repetitively. Example:</p>
+                            <pre class="pml-code"><code>[!set reused_image=&quot;[image source=my-image.png width=600 height=400]&quot;]
+...
+[!get reused_image]
+...
+[!get reused_image]</code></pre>
+                            <p class="pml-paragraph">For more information please refer to the <a class="pml-link" href="https://www.pml-lang.dev/docs/user_manual/index.html#parameters">user manual</a>.</p>
+
+                        </section>
+                        <section id="ch__21" class="pml-chapter">
+                            <h3 class="pml-chapter-title">Bug Fixes</h3>
+                            <p class="pml-paragraph">Some minor bugs have been fixed.</p>
+
+                        </section>
+                        <section id="ch__22" class="pml-chapter">
+                            <h3 class="pml-chapter-title">Improvements</h3>
+                            <ul class="pml-list">
+                                <li class="pml-list-element">
+                                    <div class="pml-header">Parser</div>
+                                    <p class="pml-paragraph">The previous PML parser (written in PPL) has been replaced by the pXML parser (written in Java). This important change makes PML totally compatible with pXML, and provides a powerful foundation for exciting new features in the future, such as:</p>
+                                    <ul class="pml-list">
+                                        <li class="pml-list-element">
+                                            <p class="pml-paragraph">converting PML to XML, or XML to PML/HTML</p>
+
+                                        </li>
+                                        <li class="pml-list-element">
+                                            <p class="pml-paragraph">using XML technology for PML documents (e.g. querying, modifying, transforming and validating a PML AST)</p>
+
+                                        </li>
+                                        <li class="pml-list-element">
+                                            <p class="pml-paragraph">using new, future pXML features in PML too (e.g. creating standalone documents, inserting PML snippets retrieved from a URL, etc.)</p>
+
+                                        </li>
+
+                                    </ul>
+                                    <p class="pml-paragraph">For more information on pXML please visit its <a class="pml-link" href="https://pxml-lang.github.io">website</a>.</p>
+
+                                </li>
+                                <li class="pml-list-element">
+                                    <div class="pml-header"><a class="pml-link" href="https://www.pml-lang.dev/docs/user_manual">User manual</a></div>
+                                    <ul class="pml-list">
+                                        <li class="pml-list-element">
+                                            <p class="pml-paragraph">Updated to the changes in version 2.0.0</p>
+
+                                        </li>
+                                        <li class="pml-list-element">
+                                            <p class="pml-paragraph">Chapter <i class="pml-italic">Text processing</i> has been completely rewritten, and the following chapters have been added:</p>
+                                            <ul class="pml-list">
+                                                <li class="pml-list-element">
+                                                    <p class="pml-paragraph">Lenient Parsing</p>
+
+                                                </li>
+                                                <li class="pml-list-element">
+                                                    <p class="pml-paragraph">Whitespace Handling</p>
+
+                                                </li>
+                                                <li class="pml-list-element">
+                                                    <p class="pml-paragraph">Escape Characters</p>
+
+                                                </li>
+
+                                            </ul>
+
+                                        </li>
+
+                                    </ul>
+
+                                </li>
+
+                            </ul>
+
+                        </section>
+
+                    </section>
+                    <section id="ch__23" class="pml-chapter">
+                        <h2 class="pml-chapter-title">Version 1.5.0 2021-06-08</h2>
+                        <section id="ch__24" class="pml-chapter">
+                            <h3 class="pml-chapter-title">New Features</h3>
+                            <p class="pml-paragraph">New inline nodes:</p>
+                            <ul class="pml-list">
+                                <li class="pml-list-element">
+                                    <p class="pml-paragraph"><code class="pml-inline-code">sub</code>: Subscript text</p>
+
+                                </li>
+                                <li class="pml-list-element">
+                                    <p class="pml-paragraph"><code class="pml-inline-code">sup</code>: Superscript text</p>
+
+                                </li>
+                                <li class="pml-list-element">
+                                    <p class="pml-paragraph"><code class="pml-inline-code">strike</code>: Strikethrough text</p>
+
+                                </li>
+
+                            </ul>
+
+                        </section>
+
+                    </section>
+                    <section id="ch__25" class="pml-chapter">
+                        <h2 class="pml-chapter-title">Version 1.4.0 2021-04-16</h2>
+                        <section id="ch__26" class="pml-chapter">
+                            <h3 class="pml-chapter-title">Backwards-Incompatible Changes</h3>
+                            <p class="pml-paragraph">Each tag and each attribute have one single identifier. Alternative identifiers are no more supported. This change makes PML documents look more uniform and reduces complexity for editor plugins, tools, etc. Please consult PML's reference manual if you have PML documents created with a previous version and which use identifiers that are no more valid anymore.</p>
+
+                        </section>
+                        <section id="ch__27" class="pml-chapter">
+                            <h3 class="pml-chapter-title">New Features</h3>
+                            <ul class="pml-list">
+                                <li class="pml-list-element">
+                                    <p class="pml-paragraph">Command <code class="pml-inline-code">export_tags</code> has been added.</p>
+                                    <p class="pml-paragraph">This command creates a JSON file containing structured data about PML tags and attributes. The JSON file can be used by editor plugins and tools that depend on PML tags and attributes. For more information type <code class="pml-inline-code">pmlc command_info -command export_tags</code> in a terminal.</p>
+
+                                </li>
+                                <li class="pml-list-element">
+                                    <p class="pml-paragraph">The PML user manual and reference manual are now deployed into directory <code class="pml-inline-code">docs</code> of the PML installation directory.</p>
+
+                                </li>
+
+                            </ul>
+
+                        </section>
+                        <section id="ch__28" class="pml-chapter">
+                            <h3 class="pml-chapter-title">Bug Fixes</h3>
+                            <p class="pml-paragraph">The table of contents is now displayed correctly on devices with small screens.</p>
+
+                        </section>
+
+                    </section>
+                    <section id="ch__29" class="pml-chapter">
+                        <h2 class="pml-chapter-title">Version 1.3.0 2021-03-09</h2>
+                        <section id="ch__30" class="pml-chapter">
+                            <h3 class="pml-chapter-title">Backwards-Incompatible Changes</h3>
+                            <ul class="pml-list">
+                                <li class="pml-list-element">
+                                    <p class="pml-paragraph">The tag's open/close symbols have changed from <code class="pml-inline-code">{}</code> to <code class="pml-inline-code">[]</code></p>
+                                    <p class="pml-paragraph">Example:</p>
+                                    <p class="pml-paragraph">Old version: <code class="pml-inline-code">{i great}</code></p>
+                                    <p class="pml-paragraph">New version: <code class="pml-inline-code">[i great]</code></p>
+                                    <p class="pml-paragraph">If you want to keep <code class="pml-inline-code">{}</code> you can run the converter with the parameter <code class="pml-inline-code">--tag_start_stop_symbols &quot;{}&quot;</code>.</p>
+
+                                </li>
+                                <li class="pml-list-element">
+                                    <p class="pml-paragraph">The open/close symbols for embedding variables have changed from <code class="pml-inline-code">[[]]</code> to <code class="pml-inline-code">&lt;&lt;&gt;&gt;</code></p>
+                                    <p class="pml-paragraph">Example:</p>
+                                    <p class="pml-paragraph">Old version: <code class="pml-inline-code">[[name]]</code></p>
+                                    <p class="pml-paragraph">New version: <code class="pml-inline-code">&lt;&lt;name&gt;&gt;</code></p>
+
+                                </li>
+
+                            </ul>
+
+                        </section>
+                        <section id="ch__31" class="pml-chapter">
+                            <h3 class="pml-chapter-title">New Features</h3>
+                            <ul class="pml-list">
+                                <li class="pml-list-element">
+                                    <p class="pml-paragraph">A new CSS file, named <code class="pml-inline-code">pml-print-default.css</code>, has been added.</p>
+                                    <p class="pml-paragraph">This file has specific styles defined for documents printed in a browser. These styles are also applied when a document is sent to a PDF writer, such as 'Microsoft Print to PDF' in Windows. You can use CSS's full printing support to adapt printed document to your specific needs, such as printing two columns on a page.</p>
+
+                                </li>
+                                <li class="pml-list-element">
+                                    <p class="pml-paragraph">Attribute <code class="pml-inline-code">TOC_title</code> has been added to node <code class="pml-inline-code">document</code></p>
+                                    <p class="pml-paragraph">It defines the title displayed for the table of contents.</p>
+                                    <p class="pml-paragraph">The default value is &quot;Table of Contents&quot;.</p>
+
+                                </li>
+                                <li class="pml-list-element">
+                                    <p class="pml-paragraph">Argument <code class="pml-inline-code">tag_start_stop_symbols</code> has been added.</p>
+                                    <p class="pml-paragraph">It allows you to define which symbols you want to use to start/stop tags. Currently supported values are <code class="pml-inline-code">{}</code> and <code class="pml-inline-code">[]</code></p>
+
+                                </li>
+
+                            </ul>
+
+                        </section>
+                        <section id="ch__32" class="pml-chapter">
+                            <h3 class="pml-chapter-title">Improvements</h3>
+                            <ul class="pml-list">
+                                <li class="pml-list-element">
+                                    <p class="pml-paragraph">The Javascript code for expanding/collapsing the table of contents has been removed.</p>
+                                    <p class="pml-paragraph">The HTML <code class="pml-inline-code">&lt;details&gt;</code> tag is used instead.</p>
+
+                                </li>
+                                <li class="pml-list-element">
+                                    <p class="pml-paragraph">The Javascript code for sliding the separator between the table of contents and the text has been removed.</p>
+
+                                </li>
+
+                            </ul>
+
+                        </section>
+
+                    </section>
+                    <section id="ch__33" class="pml-chapter">
+                        <h2 class="pml-chapter-title">Version 1.2.0 2021-02-10</h2>
+                        <section id="ch__34" class="pml-chapter">
+                            <h3 class="pml-chapter-title">New Features</h3>
+                            <ul class="pml-list">
+                                <li class="pml-list-element">
+                                    <p class="pml-paragraph">The <i class="pml-italic">PML to HTML Converter</i> is now open-sourced under the GPL 2.</p>
+
+                                </li>
+                                <li class="pml-list-element">
+                                    <p class="pml-paragraph">Development is supported on Linux, macOS, and Windows.</p>
+
+                                </li>
+                                <li class="pml-list-element">
+                                    <p class="pml-paragraph">Support for the Gradle build tool has been added.</p>
+
+                                </li>
+                                <li class="pml-list-element">
+                                    <p class="pml-paragraph">The <code class="pml-inline-code">prism</code> source code syntax highlighter is now supported, as an alternative to <code class="pml-inline-code">lightjs</code>. Please refer to the documentation of nodes <code class="pml-inline-code">document</code>, <code class="pml-inline-code">code</code>, and <code class="pml-inline-code">insert_code</code> for more information.</p>
+
+                                </li>
+
+                            </ul>
+
+                        </section>
+
+                    </section>
+                    <section id="ch__35" class="pml-chapter">
+                        <h2 class="pml-chapter-title">Version 1.1.0 2021-01-14</h2>
+                        <section id="ch__36" class="pml-chapter">
+                            <h3 class="pml-chapter-title">New Features</h3>
+                            <section id="ch__37" class="pml-chapter">
+                                <h4 class="pml-chapter-title">New Nodes</h4>
+                                <ul class="pml-list">
+                                    <li class="pml-list-element">
+                                        <p class="pml-paragraph"><code class="pml-inline-code">table_data</code>: Simple table data defined as plain CSV text, and rendered as a table.</p>
+
+                                    </li>
+                                    <li class="pml-list-element">
+                                        <p class="pml-paragraph"><code class="pml-inline-code">table</code>: A table layout composed of rows and columns.</p>
+                                        <p class="pml-paragraph">Besides just text, each cell in the table can have complex content, including nested tables. Conceptually similar to a HTML table.</p>
+
+                                    </li>
+                                    <li class="pml-list-element">
+                                        <p class="pml-paragraph"><code class="pml-inline-code">monospace</code>: A paragraph in which whitespace is preserved, and a monospace font is used.</p>
+
+                                    </li>
+                                    <li class="pml-list-element">
+                                        <p class="pml-paragraph"><code class="pml-inline-code">division</code>: A division or section in the document. Similar to a <code class="pml-inline-code">div</code> tag in HTML.</p>
+
+                                    </li>
+                                    <li class="pml-list-element">
+                                        <p class="pml-paragraph"><code class="pml-inline-code">span</code>: An inline node typically used to render a HTML <code class="pml-inline-code">&lt;span&gt;...&lt;/span&gt;</code> inline element with a specific set of HTML attributes.</p>
+
+                                    </li>
+
+                                </ul>
+
+                            </section>
+                            <section id="ch__38" class="pml-chapter">
+                                <h4 class="pml-chapter-title">New Attributes</h4>
+                                <ul class="pml-list">
+                                    <li class="pml-list-element">
+                                        <p class="pml-paragraph"><code class="pml-inline-code">caption</code>: A small text displayed below the node. Available for the following tags: <code class="pml-inline-code">image, audio, video, youtube_video, and table</code></p>
+
+                                    </li>
+
+                                </ul>
+
+                            </section>
+                            <section id="ch__39" class="pml-chapter">
+                                <h4 class="pml-chapter-title">New Command Line Arguments</h4>
+                                <p class="pml-paragraph">Added command line arguments <code class="pml-inline-code">HTML_header</code> and <code class="pml-inline-code">HTML_footer</code> to the <i class="pml-italic">PML to HTML Converter</i>. Allows you to:</p>
+                                <ul class="pml-list">
+                                    <li class="pml-list-element">
+                                        <p class="pml-paragraph">Provide a custom HTML header/footer for each document, or generate only the HTML body code (no header/footer).</p>
+
+                                    </li>
+                                    <li class="pml-list-element">
+                                        <p class="pml-paragraph">Customize the style of the resulting HTML by providing your specific CSS file(s), in addition to PML's default CSS file, or as a replacement.</p>
+
+                                    </li>
+
+                                </ul>
+
+                            </section>
+
+                        </section>
+
+                    </section>
+                </article>
+                <aside class="pml-doc-right">
+                </aside>
+            </div>
+            <footer class="pml-doc-footer">
+            </footer>
+        </div>
+
+    </body>
+</html>

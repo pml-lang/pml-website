@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>PML Documentation</title> 
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="content-language" content="en-us">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Practical Markup Language (PML): lightweight and powerful markup language to write beautiful web articles and books.">
+		<meta name="keywords" content="practical markup language, PML, write article book">
+
+		<link rel="stylesheet" href="../css/pml.css">
+		<link rel="icon" href="../favicon.ico" type="image/x-icon" />
+
+
+
+	</head>
+
+	<body>
+		<script>
+			window.onload = function() {
+				const path = window.location.pathname;
+				// console.log ( path );
+				var tab_name = "none";
+				if ( path.includes ( "/about" ) ) {
+					tab_name = "about";
+				} else if ( path.includes ( "/docs" ) ) {
+					tab_name = "docs";
+				} else if ( path.includes ( "/downloads" ) ) {
+					tab_name = "downloads";
+				} else if ( path.includes ( "/help" ) ) {
+					tab_name = "help";
+				}
+				if ( tab_name !== "none" ) {
+					document.getElementById(tab_name).style.background = "lightgrey";
+				}
+			};
+		</script>
+
+		<div id="left_margin"></div>
+		
+		<div id="page">
+		
+			<a href="../index.html" class="no_link_decoration">
+			<div id="header">
+				<div id="header_name">Practical Markup Language (PML)</div>
+				<div id="header_slogan">markup on steroids</div>
+			</div>
+			</a>
+
+			<div id="menu">
+				<div class="menu-item" id="about">
+					<a href="../about/faq.html" class="menu-link">About</a>
+				</div>
+				<div class="menu-item" id="docs">
+					<a href="../docs/index.html" class="menu-link">Docs</a>
+				</div>
+				<div class="menu-item" id="downloads">
+					<a href="../downloads/index.html" class="menu-link">Downloads</a>
+				</div>
+				<div class="menu-item" id="help">
+					<a href="../help/index.html" class="menu-link">Help</a>
+				</div>
+			</div>
+
+			<div id="menu_content_separator"></div>
+
+			<div id="content">
+
+				<h2>Documentation</h2>
+
+				<h3>Manuals:</h3>
+
+				<p>
+				    <a href="user_manual/index.html" target="_blank" class="sub_menu_link_button">User Manual</a>
+                </p>
+
+				<p>
+				    <a href="advanced_features/index.html" target="_blank" class="sub_menu_link_button">Advanced Features</a>
+                </p>
+
+				<p>
+				    <a href="reference_manual/index.html" target="_blank" class="sub_menu_link_button">Nodes Reference Manual</a>
+                </p>
+
+				<p>
+				    <a href="commands_manual/index.html" target="_blank" class="sub_menu_link_button">Commands Reference Manual</a>
+                </p>
+
+				<p>
+				    <a href="changelog/index.html" target="_blank" class="sub_menu_link_button">List of Changes</a>
+                </p>
+
+<!--
+                <p>
+                    <a href="syntax/ebnf.html" target="_blank" class="sub_menu_link_button">EBNF</a>
+                </p>
+-->
+
+                <h3>Articles:</h3>
+
+				<p>
+				    <a href="articles/practical-document-markup-language/index.html" target="_blank" class="sub_menu_link_button">We Need a New Document Markup Language - Here is Why</a>
+                </p>
+
+				<p>
+				    <a href="articles/advantages-markup-language-vs-word-processor/index.html" target="_blank" class="sub_menu_link_button">Advantages of Document Markup Languages vs WYSIWYG Editors</a>
+                </p>
+
+				<br />
+
+
+<!--				
+				<p>
+					Do you want to be informed about new features and releases?<br />
+					Then please subscribe to the mailing list:
+				</p>
+
+Begin Mailchimp Signup Form; see also Mailchimp code in head
+
+	<div id="mc_embed_signup">
+	<form action="https://practical-programming.us20.list-manage.com/subscribe/post?u=33d7900d7cbcaf70d610370b0&amp;id=cf579e014e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+		<div id="mc_embed_signup_scroll">
+		
+		<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+real people should not fill this in and expect good things - do not remove this or risk form bot signups
+		<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_33d7900d7cbcaf70d610370b0_cf579e014e" tabindex="-1" value=""></div>
+		<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+		</div>
+	</form>
+	</div>
+
+End mc_embed_signup
+
+-->
+
+			</div>
+
+			<div id="footer"></div>
+		
+		</div>
+		
+		<div id="right_margin"></div>
+	</body>
+</html>
+

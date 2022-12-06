@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="generator" content="PML 3.1.0 (www.pml-lang.dev)" />
+        <title>Advanced PML Features</title>
+        <link rel="stylesheet" href="css/pml-default.css">
+        <link rel="stylesheet" href="css/pml-print-default.css" media="print">
+
+    </head>
+    <body>
+
+        <div class="pml-doc-wrapper">
+            <header class="pml-doc-header">
+            </header>
+            <div class="pml-doc-content">
+                <aside class="pml-doc-left">
+                    <nav class="pml-toc">
+                        <h2 class="pml-toc-title">Table of Contents</h2>
+                        <div class="pml-toc-tree" id="TOCTree">
+                            <ul>
+                                <li class="pml-toc-leaf-node"><a href="#introduction">Introduction</a></li>
+                                <li class="pml-toc-leaf-node"><a href="#warnings">Warnings</a></li>
+                                <li class="pml-toc-leaf-node"><a href="#script_nodes">Script Nodes (Experimental)</a></li>
+                                <li class="pml-toc-leaf-node"><a href="#user_defined_nodes">User-Defined Nodes (Experimental)</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </aside>
+                <article id="doc__" class="pml-doc-text" id="doc__">
+                    <h1 class="pml-doc-title">Advanced PML Features</h1>
+                    <table class="pml-table">
+                        <tr class="pml-table-body-row">
+                            <td class="pml-table-body-cell">
+                                <p class="pml-paragraph"><b class="pml-bold">PML Version</b></p>
+
+                            </td>
+                            <td class="pml-table-body-cell">
+                                <p class="pml-paragraph">3.1.0 2022-10-03</p>
+
+                            </td>
+
+                        </tr>
+                        <tr class="pml-table-body-row">
+                            <td class="pml-table-body-cell">
+                                <p class="pml-paragraph"><b class="pml-bold">First Published</b></p>
+
+                            </td>
+                            <td class="pml-table-body-cell">
+                                <p class="pml-paragraph">2021-12-14</p>
+
+                            </td>
+
+                        </tr>
+                        <tr class="pml-table-body-row">
+                            <td class="pml-table-body-cell">
+                                <p class="pml-paragraph"><b class="pml-bold">License</b></p>
+
+                            </td>
+                            <td class="pml-table-body-cell">
+                                <p class="pml-paragraph"><a class="pml-link" href="https://creativecommons.org/licenses/by-nd/4.0//">CC BY-ND 4.0</a></p>
+
+                            </td>
+
+                        </tr>
+                        <tr class="pml-table-body-row">
+                            <td class="pml-table-body-cell">
+                                <p class="pml-paragraph"><b class="pml-bold">Author and Copyright</b></p>
+
+                            </td>
+                            <td class="pml-table-body-cell">
+                                <p class="pml-paragraph">Christian Neumanns</p>
+
+                            </td>
+
+                        </tr>
+                        <tr class="pml-table-body-row">
+                            <td class="pml-table-body-cell">
+                                <p class="pml-paragraph"><b class="pml-bold">Website</b></p>
+
+                            </td>
+                            <td class="pml-table-body-cell">
+                                <p class="pml-paragraph"><a class="pml-link" href="https://pml-lang.dev/">https://pml-lang.dev/</a></p>
+
+                            </td>
+
+                        </tr>
+                        <tr class="pml-table-body-row">
+                            <td class="pml-table-body-cell">
+                                <p class="pml-paragraph"><b class="pml-bold">PML Markup Code</b></p>
+
+                            </td>
+                            <td class="pml-table-body-cell">
+                                <p class="pml-paragraph"><a class="pml-link" href="https://github.com/pml-lang/advanced-features-manual">Github</a></p>
+
+                            </td>
+
+                        </tr>
+
+                    </table>
+                    <section id="introduction" class="pml-chapter">
+                        <h2 class="pml-chapter-title">Introduction</h2>
+                        <p class="pml-paragraph">This document describes advanced PML features.</p>
+                        <p class="pml-paragraph">Advanced features aim to simplify and automate the writing/publishing process as far as possible. As a result they can significantly increase productivity, reliability, and maintainability, especially in professional environments where documents change often, content depends on external resources, or parts of the document must be created and updated automatically.</p>
+                        <p class="pml-paragraph">For example, advanced features enable you to:</p>
+                        <ul class="pml-list">
+                            <li class="pml-list-element">
+                                <p class="pml-paragraph">embed Javascript source code in PML documents, to dynamically generate PML code and resources (e.g. graphical components like diagrams) at build-time, and to execute external OS commands and scripts that can create content or do anything else related to the PML document</p>
+
+                            </li>
+                            <li class="pml-list-element">
+                                <p class="pml-paragraph">create <i class="pml-italic">user-defined nodes</i> which you can then use in all your PML documents, in addition to the standard nodes provided by PML</p>
+
+                            </li>
+                            <li class="pml-list-element">
+                                <p class="pml-paragraph">convert a PML document to an XML document (or vice versa) and apply XML technologies to PML documents (e.g. validate, query, modify, or transform documents)</p>
+
+                            </li>
+                            <li class="pml-list-element">
+                                <p class="pml-paragraph">use a Java API to configure and execute PML commands programmatically</p>
+
+                            </li>
+
+                        </ul>
+                        <p class="pml-paragraph">The setup/configuration of advanced features requires some technical knowledge. However, once configured by skilled people, these features are often easy to use by non-tech-savvy document creators. This potentially eliminates the need for complex tool chains that must be installed, configured, and maintained. </p>
+
+                    </section>
+                    <section id="warnings" class="pml-chapter">
+                        <h2 class="pml-chapter-title">Warnings</h2>
+                        <p class="pml-paragraph">This document is a work in progress.</p>
+                        <p class="pml-paragraph">Advanced features are first published as an <i class="pml-italic">experimental</i> feature. This means that you can try out the feature, but you need to be aware that:</p>
+                        <ul class="pml-list">
+                            <li class="pml-list-element">
+                                <p class="pml-paragraph">The feature is not fully developed yet, and may contain bugs. You might encounter limitations and malfunctions.</p>
+
+                            </li>
+                            <li class="pml-list-element">
+                                <p class="pml-paragraph">The feature is not guaranteed to be backwards-compatible. Anything can change in future versions, although this is avoided as far as possible.</p>
+
+                            </li>
+                            <li class="pml-list-element">
+                                <p class="pml-paragraph">The documentation might be incomplete and change in future releases.</p>
+
+                            </li>
+
+                        </ul>
+                        <p class="pml-paragraph">Experimental features are tagged by the suffix <code class="pml-inline-code">(Experimental)</code> in their title.</p>
+                        <p class="pml-paragraph">If you encounter a bug or miss an important functionality, then please submit an <a class="pml-link" href="https://github.com/pml-lang/advanced-features-manual/issues">issue</a>.</p>
+                        <p class="pml-paragraph">If you have a question or want to discuss anything (e.g. an idea or enhancement), then please create a <a class="pml-link" href="https://github.com/pml-lang/advanced-features-manual/discussions">discussion</a>. </p>
+
+                    </section>
+                    <section id="script_nodes" class="pml-chapter">
+                        <h2 class="pml-chapter-title">Script Nodes (Experimental)</h2>
+                        <p class="pml-paragraph"><i class="pml-italic">'Script Nodes'</i> is arguably the most powerful PML feature. They allow you to embed Javascript source code in a PML document. The code is executed when the PML document is parsed.</p>
+                        <p class="pml-paragraph"><i class="pml-italic">Script Nodes</i> can help to considerably simplify and automate the writing process, especially in case of big, complex, or frequently changing documents.</p>
+                        <p class="pml-paragraph">Here are just a few examples of what you can do:</p>
+                        <ul class="pml-list">
+                            <li class="pml-list-element">
+                                <p class="pml-paragraph">Automatically update text or data snippets in a document.</p>
+                                <p class="pml-paragraph">Example: Update the <i class="pml-italic">last updated</i> date field each time a document is re-generated.</p>
+
+                            </li>
+                            <li class="pml-list-element">
+                                <p class="pml-paragraph">Retrieve text and data from external resources like files, URLs, databases, etc.</p>
+                                <p class="pml-paragraph">Example: Retrieve a version number stored in a JSON file, and insert it in the document.</p>
+
+                            </li>
+                            <li class="pml-list-element">
+                                <p class="pml-paragraph">Generate text and data programmatically.</p>
+                                <p class="pml-paragraph">Example: Insert compound interest tables that are generated by an embedded Javascript function.</p>
+
+                            </li>
+                            <li class="pml-list-element">
+                                <p class="pml-paragraph">Use a calculator to compute values to be inserted in the document.</p>
+                                <p class="pml-paragraph">Example: Calculate, round, and format product prices to be inserted in the document, using an arithmetic expression.</p>
+
+                            </li>
+                            <li class="pml-list-element">
+                                <p class="pml-paragraph">Conditionally include/exclude parts of the document, depending on the target audience.</p>
+                                <p class="pml-paragraph">Example: An exam paper printed for students contains only questions, while the teachers' edition also contains the answers.</p>
+
+                            </li>
+                            <li class="pml-list-element">
+                                <p class="pml-paragraph">Dynamically generate and insert graphical components like diagrams into a PML document.</p>
+                                <p class="pml-paragraph">Example: Insert <a class="pml-link" href="https://plantuml.com/">PlantUML</a> source code into a document, and render it as a MindMap diagram in the target document.</p>
+
+                            </li>
+                            <li class="pml-list-element">
+                                <p class="pml-paragraph">Ask the user for input on the console or in a GUI dialog.</p>
+                                <p class="pml-paragraph">Example: Ask the user if all graphic files should be re-generated.</p>
+
+                            </li>
+                            <li class="pml-list-element">
+                                <p class="pml-paragraph">Execute external programs and OS scripts to generate PML code on-the-fly, or to do whatever else can be done on the machine.</p>
+                                <p class="pml-paragraph">Example: Execute an external program (written in <i class="pml-italic">any</i> programming language) to retrieve some real-time data from an Excel sheet, a database, or from the cloud, and then generate the PML markup code for some tables to be inserted in the PML document. Moreover, send an email to inform managers about the update. And add an entry in a log file located on the company's headquarter server.</p>
+
+                            </li>
+
+                        </ul>
+                        <p class="pml-paragraph"><i class="pml-italic">Script Nodes</i> is a feature of the <a class="pml-link" href="https://pdml-lang.dev/">Practical Data and Markup Language (PDML)</a>. But since PML uses PDML under the hood, <i class="pml-italic">Script Nodes</i>, as well as all other PDML features, are supported in PML too. All documentation related to <i class="pml-italic">Script Nodes</i> is available on PDML's website. Please refer to the following links for more information:</p>
+                        <ul class="pml-list">
+                            <li class="pml-list-element">
+                                <p class="pml-paragraph">Chapter <a class="pml-link" href="https://pdml-lang.dev/docs/extensions/user_manual/index.html#script_nodes">Script Nodes</a> in the <a class="pml-link" href="https://pdml-lang.dev/docs/extensions/user_manual/index.html">PDML Extensions User Manual</a></p>
+
+                            </li>
+                            <li class="pml-list-element">
+                                <p class="pml-paragraph">Chapter <a class="pml-link" href="https://pdml-lang.dev/docs/extensions/reference_manual/index.html#scripting_api">Scripting API</a> in the <a class="pml-link" href="https://pdml-lang.dev/docs/extensions/reference_manual/index.html">PDML Extensions Reference Manual</a></p>
+
+                            </li>
+                            <li class="pml-list-element">
+                                <p class="pml-paragraph"><a class="pml-link" href="https://pdml-lang.dev/docs/extensions/scripting_examples/index.html">PDML Scripting Examples</a></p>
+
+                            </li>
+
+                        </ul>
+
+                    </section>
+                    <section id="user_defined_nodes" class="pml-chapter">
+                        <h2 class="pml-chapter-title">User-Defined Nodes (Experimental)</h2>
+                        <div class="pml-admonition">
+                            <div class="pml-admonition-label">Note</div>
+                            <div class="pml-admonition-content">
+                                <p class="pml-paragraph">User-defined nodes have been temporarily disabled in PMLC version 3.0.0.</p>
+                                <p class="pml-paragraph">They will be activated again in a future version. However, the definition of user-defined nodes will probably be significantly different from the first (experimental) implementation.</p>
+                            </div>
+                        </div>
+
+                    </section>
+                </article>
+                <aside class="pml-doc-right">
+                </aside>
+            </div>
+            <footer class="pml-doc-footer">
+            </footer>
+        </div>
+
+    </body>
+</html>

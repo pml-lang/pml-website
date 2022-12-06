@@ -1,0 +1,224 @@
+---
+[title PML Syntax EBNF]
+[template HTML_page]
+---
+			<div id="content">
+
+				<h2>PML Syntax EBNF</h2>
+
+                <p>The following table specifies PML's syntax, expressed in <a href="https://en.wikipedia.org/wiki/Extended_Backus%E2%80%93Naur_form">Extended Backus–Naur form (EBNF)</a>.</p>
+
+                <!--
+                <p>The syntax is also specified as <a href="railroad-diagrams.html">Railroad Diagrams</a>.</p>
+                -->
+                
+				<h3>Nodes</h3>
+
+                <table class="ebnf-table">
+                    <thead>
+                        <tr><th>Name</th><th></th><th>Rule</th><th>Examples</th></tr>
+                    </thead>
+                    <tbody>
+
+                        <tr>
+                            <td>node</td>
+                            <td>=</td>
+                            <td>&nbsp;&nbsp;empty_node<br />| non_empty_node</td>
+                            <td></td>
+                        </tr>
+                        
+                        <tr>
+                            <td>empty_node</td>
+                            <td>=</td>
+                            <td>"[" name "]"</td>
+                            <td>[nl]</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>non_empty_node</td>
+                            <td>=</td>
+                            <td>"[" name separator attributes ? child_node * "]"<br /><br />Note: The separator is optional if the name is immediately followed by [ or (.</td>
+                            <td>[i huge]<br />[image(source=strawberries.jpg)]<br />[image (<br />&nbsp;&nbsp;&nbsp;&nbsp;source = strawberries.jpg<br />) ]<br />[div A [i[b nice]] dog]</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>separator</td>
+                            <td>=</td>
+                            <td>whitespace_char</td>
+                            <td></td>
+                        </tr>
+                        
+                        <tr>
+                            <td>child_node</td>
+                            <td>=</td>
+                            <td>&nbsp;&nbsp;node<br />| node_text<br />| comment</td>
+                            <td>[i huge]<br />All is well!<br />[- comment -]</td>
+                        </tr>
+
+                        <tr>
+                            <td>node_text</td>
+                            <td>=</td>
+                            <td>node_text_char +</td>
+                            <td>Bob<br />3.14<br />We want simplicity.<br />root\\config\["port"\]</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>node_text_char</td>
+                            <td>=</td>
+                            <td>&nbsp;&nbsp;any Unicode character,<br />&nbsp;&nbsp;except "[", "]", and "\"<br />| escaped_char<br />| "\("</td>
+                            <td>a<br />é<br />\[<br />\(</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+
+
+				<h3>Attributes</h3>
+
+                <table class="ebnf-table">
+                    <thead>
+                        <tr><th>Name</th><th></th><th>Rule</th><th>Examples</th></tr>
+                    </thead>
+                    <tbody>
+
+                        <tr>
+                            <td>attributes</td>
+                            <td>=</td>
+                            <td>"(" commented_attribute * ")"</td>
+                            <td>(height=200)<br />(<br />&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;"A&nbsp;planet"<br />&nbsp;&nbsp;&nbsp;&nbsp;[- size in mm -]<br />&nbsp;&nbsp;&nbsp;&nbsp;width = 400<br />&nbsp;&nbsp;&nbsp;&nbsp;height = 248<br />)<br />()</td>
+                        </tr>
+
+                        <tr>
+                            <td>commented_attribute</td>
+                            <td>=</td>
+                            <td>( whitespace | comment ) * attribute ( whitespace | comment ) *</td>
+                            <td>[- degrees celsius -]<br />temperature = 30</td>
+                        </tr>
+
+                        <tr>
+                            <td>attribute</td>
+                            <td>=</td>
+                            <td>name whitespace ? "=" whitespace ? attribute_value</td>
+                            <td>color=orange<br />title = "More&nbsp;Benefits"<br /></td>
+                        </tr>
+
+                        <tr>
+                            <td>attribute_value</td>
+                            <td>=</td>
+                            <td>&nbsp;&nbsp;quoted_value<br />| unquoted_value</td>
+                            <td>"yes"<br />yes</td>
+                        </tr>
+
+                        <tr>
+                            <td>quoted_value</td>
+                            <td>=</td>
+                            <td>'"' quoted_value_char * '"'</td>
+                            <td>"yellow"<br />"light yellow"<br />"/root/foo/bar"<br />"C:\\config.txt"<br />"list[3]"<br />"list\[3\]"<br />"He said\n\"That's ok\""<br />"Tim<br />Tom<br />Tam"<br />""</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>quoted_value_char</td>
+                            <td>=</td>
+                            <td>&nbsp;&nbsp;any Unicode character,<br />&nbsp;&nbsp;except "<br />| '\"'<br />| escaped_char</td>
+                            <td>a<br />é<br />\"<br />\n</td>
+                        </tr>
+
+                        <tr>
+                            <td>unquoted_value</td>
+                            <td>=</td>
+                            <td>unquoted_value_char +</td>
+                            <td>yellow<br />/root/foo/bar<br />C:\config.txt</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>unquoted_value_char</td>
+                            <td>=</td>
+                            <td>Any Unicode character,<br />except whitespace_char, [, ], (, ), ", '<br /><small>Remak: Escape characters are not allowed.</small></td>
+                            <td>a<br />/<br />\</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+
+
+				<h3>Common Elements</h3>
+
+                <table class="ebnf-table">
+                    <thead>
+                        <tr><th>Name</th><th></th><th>Rule</th><th>Examples</th></tr>
+                    </thead>
+                    <tbody>
+
+                        <tr>
+                            <td>name</td>
+                            <td>=</td>
+                            <td>name_start_char name_char *<br /><br /><small>Regex: [a-zA-Z_][a-zA-Z0-9_\.-]*</small></td>
+                            <td>height<br />border-color<br />_default</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>name_start_char</td>
+                            <td>=</td>
+                            <td>&nbsp;&nbsp;"a" .. "z"<br />| "A" .. "Z"<br />| "_"</td>
+                            <td>a<br />Z<br />_</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>name_char</td>
+                            <td>=</td>
+                            <td>&nbsp;&nbsp;"a" .. "z"<br />| "A" .. "Z"<br />| "0" .. "9"<br />| "_"<br />| "-"<br />| "."</td>
+                            <td>a<br />Z<br />9<br />_<br />-<br />.</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>comment</td>
+                            <td>=</td>
+                            <td>"[-" ( node_text | comment ) * "-]"</td>
+                            <td>[- TODO: improve text -]<br />[- comment [- nested comment -] -]</td>
+                        </tr>
+
+                        <tr>
+                            <td>whitespace</td>
+                            <td>=</td>
+                            <td>whitespace_char +</td>
+                            <td></td>
+                        </tr>
+ 
+                        <tr>
+                            <td>whitespace_char</td>
+                            <td>=</td>
+                            <td>&nbsp;&nbsp;" "<br />| \t<br />| \n<br />| \r\n</td>
+                            <td></td>
+                        </tr>
+
+                        <tr>
+                            <td>escaped_char</td>
+                            <td>=</td>
+                            <td>&nbsp;&nbsp;"\\"<br />| "\["<br />| "\]"<br />| "\t"<br />| "\r"<br />| "\n"<br />| Unicode_escape_sequence</td>
+                            <td>\\&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(\)<br />\[&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;([)<br />\]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(])<br />\t&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(tab)<br />\r&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(carriage return)<br />\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(line feed)<br />\u002A&nbsp;&nbsp;&nbsp;&nbsp;(*)</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>Unicode_escape_sequence</td>
+                            <td>=</td>
+                            <td>"\u" hex_char hex_char hex_char hex_char</td>
+                            <td>\u002A&nbsp;&nbsp;&nbsp;&nbsp;(*)</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>hex_char</td>
+                            <td>=</td>
+                            <td>&nbsp;&nbsp;"0" .. "9"<br />| "a" .. "f"<br />| "A" .. "F"</td>
+                            <td>1<br />a<br />F</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+<!--
+                <blockquote>
+                    <p>Note:</p>
+                    <p>A pXML <code>name</code> must follow the same rules as an XML name. The above regex (<code>[a-zA-Z][a-zA-Z0-9-_.]*</code>) is a simplified version of the <a href="https://www.w3.org/TR/REC-xml/#NT-NameStartChar">authoritative rules for XML names</a>. A simple description of the rules can be found in chapter "XML Naming Rules" of <a href="https://www.w3schools.com/xml/xml_nodes.asp">XML nodes</a>.</p>
+                </blockquote>
+-->
+			</div>

@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Advantages of Document Markup Languages vs WYSIWYG Editors</title>
+        <link rel="stylesheet" href="pml-default.css">
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.6/build/styles/default.min.css">
+    </head>
+    <body>
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.6/build/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+        <div class="pml-hsplit-panel">
+            <div class="pml-hsplit-left-panel" id="PMLHsplitLeftPanel">
+                <nav class="pml-toc">
+                    <h2 class="pml-toc-title"></h2>
+                    <div class="pml-toc-content">
+                        <ul class="pml-toc-tree">
+                            <li>
+                                <div class="pml-toc-leaf-node">
+                                    <div class="pml-toc-leaf-prefix"></div>
+                                    <a class="pml-toc-leaf-link" href="#ch__1">Introduction</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="pml-toc-leaf-node">
+                                    <div class="pml-toc-leaf-prefix"></div>
+                                    <a class="pml-toc-leaf-link" href="#ch__2">WYSIWYG Editors</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="pml-toc-branch-node">
+                                    <div class="pml-toc-branch-prefix pml-toc-branch-hidden"></div>
+                                    <a class="pml-toc-branch-link" href="#ch__3">Document Markup Languages</a>
+                                </div>
+                                <ul class="pml-toc-sub-chapters pml-hidden">
+                                    <li>
+                                        <div class="pml-toc-leaf-node">
+                                            <div class="pml-toc-leaf-prefix"></div>
+                                            <a class="pml-toc-leaf-link" href="#ch__4">Basic Concept</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="pml-toc-leaf-node">
+                                            <div class="pml-toc-leaf-prefix"></div>
+                                            <a class="pml-toc-leaf-link" href="#ch__5">Simple Example</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="pml-toc-branch-node">
+                                            <div class="pml-toc-branch-prefix pml-toc-branch-hidden"></div>
+                                            <a class="pml-toc-branch-link" href="#advantages">Advantages</a>
+                                        </div>
+                                        <ul class="pml-toc-sub-chapters pml-hidden">
+                                            <li>
+                                                <div class="pml-toc-branch-node">
+                                                    <div class="pml-toc-branch-prefix pml-toc-branch-hidden"></div>
+                                                    <a class="pml-toc-branch-link" href="#ch__6">Ubiquitous Advantages</a>
+                                                </div>
+                                                <ul class="pml-toc-sub-chapters pml-hidden">
+                                                    <li>
+                                                        <div class="pml-toc-leaf-node">
+                                                            <div class="pml-toc-leaf-prefix"></div>
+                                                            <a class="pml-toc-leaf-link" href="#ch__7">Distraction-Free Writing</a>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="pml-toc-leaf-node">
+                                                            <div class="pml-toc-leaf-prefix"></div>
+                                                            <a class="pml-toc-leaf-link" href="#ch__8">Choice of Editor</a>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="pml-toc-leaf-node">
+                                                            <div class="pml-toc-leaf-prefix"></div>
+                                                            <a class="pml-toc-leaf-link" href="#ch__9">Choice of Presentation</a>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="pml-toc-leaf-node">
+                                                            <div class="pml-toc-leaf-prefix"></div>
+                                                            <a class="pml-toc-leaf-link" href="#ch__10">Choice of Transformation</a>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="pml-toc-leaf-node">
+                                                            <div class="pml-toc-leaf-prefix"></div>
+                                                            <a class="pml-toc-leaf-link" href="#ch__11">Choice of Text Tools</a>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="pml-toc-leaf-node">
+                                                            <div class="pml-toc-leaf-prefix"></div>
+                                                            <a class="pml-toc-leaf-link" href="#ch__12">Customized Tools</a>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="pml-toc-leaf-node">
+                                                            <div class="pml-toc-leaf-prefix"></div>
+                                                            <a class="pml-toc-leaf-link" href="#ch__13">Portability</a>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <div class="pml-toc-branch-node">
+                                                    <div class="pml-toc-branch-prefix pml-toc-branch-hidden"></div>
+                                                    <a class="pml-toc-branch-link" href="#ch__14">Language-Dependent Advantages</a>
+                                                </div>
+                                                <ul class="pml-toc-sub-chapters pml-hidden">
+                                                    <li>
+                                                        <div class="pml-toc-leaf-node">
+                                                            <div class="pml-toc-leaf-prefix"></div>
+                                                            <a class="pml-toc-leaf-link" href="#ch__15">File Splitting</a>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="pml-toc-leaf-node">
+                                                            <div class="pml-toc-leaf-prefix"></div>
+                                                            <a class="pml-toc-leaf-link" href="#ch__16">Semantic Markup</a>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="pml-toc-leaf-node">
+                                                            <div class="pml-toc-leaf-prefix"></div>
+                                                            <a class="pml-toc-leaf-link" href="#ch__17">Parameters</a>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="pml-toc-leaf-node">
+                                                            <div class="pml-toc-leaf-prefix"></div>
+                                                            <a class="pml-toc-leaf-link" href="#ch__18">Advanced Features</a>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <div class="pml-toc-leaf-node">
+                                    <div class="pml-toc-leaf-prefix"></div>
+                                    <a class="pml-toc-leaf-link" href="#ch__19">Further readings</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="pml-toc-leaf-node">
+                                    <div class="pml-toc-leaf-prefix"></div>
+                                    <a class="pml-toc-leaf-link" href="#ch__20">Conclusion</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="pml-hsplit-panel-separator" id="PMLHsplitPanelSeparator" draggable="true" ondragstart="PMLHsplitPanelSeparatorDragStart(event)" ondrag="PMLHsplitPanelSeparatorDragging(event)" ondragend="PMLHsplitPanelSeparatorDragEnd(event)"></div>
+            <div class="pml-hsplit-right-panel" id="PMLHsplitRightPanel">
+                <div class="pml-hsplit-right-panel-content" id="PMLHsplitRightPanelContent">
+                    <article class="pml-document">
+                        <div class="pml-document-header">
+                            <h1 class="pml-document-title">Advantages of Document Markup Languages vs WYSIWYG Editors</h1>
+                            <div class="pml-document-authors">Christian Neumanns</div>
+                            <time class="pml-document-date-time" datetime="2019-03-07">2019-03-07</time>
+                        </div>
+                        <p class="pml-paragraph"><br /></p>
+                        <figure style="text-align: center">
+                            <img class="pml-image" src="images/scribbling-152216_1280.png" width="600">
+                        </figure>
+                        <section id="ch__1" class="pml-chapter">
+                            <h2 class="pml-chapter-title">Introduction</h2>
+                            <p class="pml-paragraph">Did you ever wonder what's the best tool to write an article, user manual, book, or any other kind of text document?</p>
+                            <p class="pml-paragraph">There are many options to choose from. Most people use a <i class="pml-italic">What-You-See-Is-What-You-Get (WYSIWYG)</i> editor (also called a <i class="pml-italic">text processor</i>), such as Google Docs, LibreOffice or Word. However, more and more people are writing their documents using another, less known option: a <i class="pml-italic">document markup language</i>.</p>
+                            <p class="pml-paragraph">Why?</p>
+                            <p class="pml-paragraph">Should you, too, use a document markup language instead of a WYSIWYG editor? Let's see.</p>
+                            <div class="pml-admonition">
+                                <div class="pml-admonition-label">Note</div>
+                                <div class="pml-admonition-content">
+                                    <p class="pml-paragraph">This article does not compare or evaluate different writing solutions/products. It will not tell you why product X is better than product Y. The purpose of this article is to point out <i class="pml-italic">general</i> advantages of document markup languages.</p>
+                                </div>
+                            </div>
+                        </section>
+                        <section id="ch__2" class="pml-chapter">
+                            <h2 class="pml-chapter-title">WYSIWYG Editors</h2>
+                            <p class="pml-paragraph">Offline or online WYSIWYG editors are often the best solution for non-technical people who occasionally write short or medium-size documents. Some websites have their own WYSIWYG editor integrated in the website, which makes it very easy to write formatted text. WYSIWYG software is also the right choice for design-intensive publications where you want to have total control of the position, size, font, and other visual properties of the document's elements, and you want to immediately see and trim the end result while working on the document. Examples of such documents are flyers, advertisements, party invitations, posters, etc.</p>
+                            <p class="pml-paragraph">There are <a href="https://en.wikipedia.org/wiki/List_of_word_processors" class="pml-link">many</a> word processors to choose from.</p>
+                            <p class="pml-paragraph">Some word processors offer advanced features for particular tasks, such as writing a novel.</p>
+                            <p class="pml-paragraph">However, as said already, this article focuses on markup languages, so let's move on and see why many people prefer them over WYSIWYG editors.</p>
+                        </section>
+                        <section id="ch__3" class="pml-chapter">
+                            <h2 class="pml-chapter-title">Document Markup Languages</h2>
+                            <div class="pml-admonition">
+                                <div class="pml-admonition-label">Note</div>
+                                <div class="pml-admonition-content">
+                                    <p class="pml-paragraph">Readers familiar with markup languages can <a href="#advantages" class="pml-xref">skip</a> the following two chapters.</p>
+                                </div>
+                            </div>
+                            <section id="ch__4" class="pml-chapter">
+                                <h3 class="pml-chapter-title">Basic Concept</h3>
+                                <p class="pml-paragraph">A <i class="pml-italic">document markup language</i> consists of a set of rules and symbols (special characters) used to annotate plain text. The annotated text can then be read by a <i class="pml-italic">markup processor</i> to generate styled documents (e.g. HTML, PDF, ePub, etc.) or any other kind of data.</p>
+                                <p class="pml-paragraph">For example, in some markup languages an underline (<code class="pml-inline-code">_</code>) is used to emphasize text and render it in italics. Writing:</p>
+                                <pre class="pml-code"><code class="nohighlight">A _good_ girl.</code></pre>
+                                <p class="pml-paragraph">... results in:<br /> A <i class="pml-italic">good</i> girl.</p>
+                                <p class="pml-paragraph">Hence, <i class="pml-italic">markup code</i> is just plain text intermixed with markup instructions.</p>
+                                <p class="pml-paragraph">A <i class="pml-italic">markup document</i> consists of one or more text files that contain markup code.</p>
+                                <p class="pml-paragraph">There are <a href="https://en.wikipedia.org/wiki/List_of_document_markup_languages" class="pml-link">many</a> document markup languages to choose from.</p>
+                            </section>
+                            <section id="ch__5" class="pml-chapter">
+                                <h3 class="pml-chapter-title">Simple Example</h3>
+                                <p class="pml-paragraph">Suppose you create a text file with the following content (written in Markdown syntax):</p>
+                                <pre class="pml-code"><code class="nohighlight"># Simple Markup Example
+
+This is just a _simple_ example.
+
+Here is a list:
+
+- orange
+- banana
+- apple</code></pre>
+                                <p class="pml-paragraph">After the above text has been converted to HTML (by the markup processor), the result in the browser looks like this:</p>
+                                <figure style="text-align: center">
+                                    <img class="pml-image" src="images/simple_example.png">
+                                </figure>
+                                <p class="pml-paragraph">The style of the final document can be customized. This is often done by modifying a separate CSS files.</p>
+                            </section>
+                            <section id="advantages" class="pml-chapter">
+                                <h3 class="pml-chapter-title">Advantages</h3>
+                                <section id="ch__6" class="pml-chapter">
+                                    <h4 class="pml-chapter-title">Ubiquitous Advantages</h4>
+                                    <p class="pml-paragraph">All document markup languages work like this:</p>
+                                    <ul class="pml-list">
+                                        <li class="pml-list-element">
+                                            <p class="pml-paragraph">A markup document consists of <i class="pml-italic">plain text.</i></p>
+                                        </li>
+                                        <li class="pml-list-element">
+                                            <p class="pml-paragraph">Content and presentation are defined in <i class="pml-italic">separate</i> files.</p>
+                                            <p class="pml-paragraph">The <i class="pml-italic">content</i> file contains the text and markup instructions. The <i class="pml-italic">presentation</i> file contains the stylesheet (e.g. a CSS file).</p>
+                                        </li>
+                                    </ul>
+                                    <p class="pml-paragraph">It turns out that these two simple concepts lead to an astonishing set of practical advantages, explained in the following chapters.</p>
+                                    <section id="ch__7" class="pml-chapter">
+                                        <h5 class="pml-chapter-title">Distraction-Free Writing</h5>
+                                        <p class="pml-paragraph">When you write, you focus on content, not on presentation. You focus on what you want to say, instead of how it should be displayed or printed.</p>
+                                        <p class="pml-paragraph">Moreover, you can customize your writing environment (editor) without worrying about the end result. For example, you can use a different font and a different number of characters displayed per line, without thinking about how this will affect the final document.</p>
+                                        <p class="pml-paragraph">Thus, when you write, it's easier to <i class="pml-italic">be in the flow (in the zone)</i>, which Wikipedia <a href="https://en.wikipedia.org/wiki/Flow_(psychology)" class="pml-link">describes</a> as</p>
+                                        <blockquote class="pml-quote">
+                                            <div class="pml-quote-text-block">
+                                                <div class="pml-quote-text-prefix"></div>
+                                                <div class="pml-quote-text">
+                                                    <p class="pml-paragraph">a mental state of operation in which a person performing an activity is fully immersed in a feeling of energized focus, full involvement, and enjoyment in the process of the activity.</p>
+                                                </div>
+                                                <div class="pml-quote-text-suffix"></div>
+                                            </div>
+                                            <div class="pml-quote-source">Flow, Wikipedia</div>
+                                        </blockquote>
+                                        <p class="pml-paragraph">This is a big deal!</p>
+                                    </section>
+                                    <section id="ch__8" class="pml-chapter">
+                                        <h5 class="pml-chapter-title">Choice of Editor</h5>
+                                        <p class="pml-paragraph">You can use <i class="pml-italic">your</i> preferred <a href="https://en.wikipedia.org/wiki/List_of_text_editors" class="pml-link">text editor</a> or Integrated Development Environment (IDE) to write your document. You are not tied to a specific editor. There is no vendor lock-in.</p>
+                                        <p class="pml-paragraph">Imagine a team of writers collaborating on the same document. Everybody just uses the text editor he/she likes the most for the task at hand. For example, Bob and Alice are working on a new user manual, but Bob uses Emacs on Linux, while Alice uses Notepad++ on Windows.</p>
+                                        <p class="pml-paragraph">Some high-end text editors provide incredibly powerful features (some out-of-the-box, some via extensions) and are highly customizable, so that you can setup your ideal writing software. As a result, you have a more enjoyable writing experience and you are more productive than with a WYSIWYG editor.</p>
+                                    </section>
+                                    <section id="ch__9" class="pml-chapter">
+                                        <h5 class="pml-chapter-title">Choice of Presentation</h5>
+                                        <p class="pml-paragraph">Because content and presentation are defined in separate files, you can change presentation by simply choosing another stylesheet (e.g. CSS file) from a predefined set, and adapt it if needed. If your document is read on different reading/printing devices, you can use different presentations for each device.</p>
+                                        <p class="pml-paragraph">Sometimes the same stylesheet is used for many documents. Thus, presentation remains consistent over large sets of documents. Moreover, global presentation changes can often be done in a matter of seconds, because only one file needs to be changed.</p>
+                                    </section>
+                                    <section id="ch__10" class="pml-chapter">
+                                        <h5 class="pml-chapter-title">Choice of Transformation</h5>
+                                        <p class="pml-paragraph">Depending on the language and tools you use, you can transform your markup code into final documents of different formats, such as HTML, PDF, ePub etc.</p>
+                                        <p class="pml-paragraph">And if your tool can't do it, there is <a href="http://pandoc.org/" class="pml-link">Pandoc</a>, the Swiss-army-knife for document conversions. At the time of writing, Pandoc can convert not less than 31 input formats into not less than 49 output formats. That's 31 x 49 = 1,519 transformations supported by one tool.</p>
+                                    </section>
+                                    <section id="ch__11" class="pml-chapter">
+                                        <h5 class="pml-chapter-title">Choice of Text Tools</h5>
+                                        <p class="pml-paragraph">There are many tools and online services available to handle plain text files - some possibly pre-installed on your PC. You can use them to handle your markup documents, in whatever way you want.</p>
+                                        <p class="pml-paragraph">Examples:</p>
+                                        <ul class="pml-list">
+                                            <li class="pml-list-element">
+                                                <p class="pml-paragraph">You can use a version control service such as Github, Gitlab, or Bitbucket to track changes and issues, collaborate on documents, synchronize documents on different devices, and use all other powerful features.</p>
+                                            </li>
+                                            <li class="pml-list-element">
+                                                <p class="pml-paragraph">To get an idea of free tools for technical people, look at this <a href="https://en.wikibooks.org/wiki/Guide_to_Unix/Commands/Text_Processing" class="pml-link">List of Unix Text Processing Tools</a>. Nowadays, you can also easily install these Linux tools on Windows.</p>
+                                            </li>
+                                        </ul>
+                                    </section>
+                                    <section id="ch__12" class="pml-chapter">
+                                        <h5 class="pml-chapter-title">Customized Tools</h5>
+                                        <p class="pml-paragraph">Reading and writing plain text files is very well supported in most programming languages. Therefore it is easier for programmers to develop customized tools to explore and manipulate documents.</p>
+                                        <p class="pml-paragraph">For instance, pre-processors and post-processors can be created to add features and automate recurring tasks. A concrete example would be a tool that displays a sorted list of website links used in your document and checks for any broken links.</p>
+                                        <p class="pml-paragraph">Moreover, it is easy to <i class="pml-italic">programmatically create</i> documents. For instance, a product catalog or a reference manual could be created automatically based on structured data stored in a database.</p>
+                                    </section>
+                                    <section id="ch__13" class="pml-chapter">
+                                        <h5 class="pml-chapter-title">Portability</h5>
+                                        <p class="pml-paragraph">As content and presentation is defined in plain text files, documents are portable among different operating systems (Windows, Unix/Linux, macOS, etc.). All operating systems have very good support for text files.</p>
+                                    </section>
+                                </section>
+                                <section id="ch__14" class="pml-chapter">
+                                    <h4 class="pml-chapter-title">Language-Dependent Advantages</h4>
+                                    <p class="pml-paragraph">In this chapter we'll look at additional advantages found in <i class="pml-italic">some</i> document markup languages.</p>
+                                    <section id="ch__15" class="pml-chapter">
+                                        <h5 class="pml-chapter-title">File Splitting</h5>
+                                        <p class="pml-paragraph">Some markup languages allow you to split a document into different files.</p>
+                                        <p class="pml-paragraph">For example, each chapter of a book (and maybe also each sub-chapter) can be stored in a different file and in a directory hierarchy of your choice.</p>
+                                        <p class="pml-paragraph">This can be a game-changer when a team collaborates on mid-size or big documents, because it makes editing, reorganizing, and collaborating much more convenient.</p>
+                                    </section>
+                                    <section id="ch__16" class="pml-chapter">
+                                        <h5 class="pml-chapter-title">Semantic Markup</h5>
+                                        <p class="pml-paragraph">Some document markup languages support only <i class="pml-italic">presentation</i> tags. The better breed of them prefer <i class="pml-italic">semantic</i> tags over <i class="pml-italic">presentation</i> tags. This means that, when you use markup, you specify the <i class="pml-italic">meaning</i> of a piece of text. You do not specify <i class="pml-italic">how</i> the text will be displayed or printed. You define the <i class="pml-italic">What</i>, not the <i class="pml-italic">How</i>.</p>
+                                        <p class="pml-paragraph">A first benefit is that this leads to much more flexibility in the rendering process.</p>
+                                        <p class="pml-paragraph">Suppose your text contains several warning messages that need to stand out. If you use a markup language that supports only <i class="pml-italic">presentation</i> tags, you could decide to aggressively display a centered text in red on yellow, like this:</p>
+                                        <p style="color:red; background:yellow; padding:0.5em; border:1px dotted lightgrey; font-weight:bold; text-align:center;" class="pml-paragraph">Do not forget to unplug your coffee machine before opening it. </p>
+                                        <p class="pml-paragraph">This works well if the warnings are displayed on a color screen. But if the document is printed on a color-less printer, or displayed on a black-and-white e-ink device, the result is a mess.</p>
+                                        <p class="pml-paragraph">On the other hand, in a markup language that provides <i class="pml-italic">semantic</i> tags, you would simply adorn your warnings with a <code class="pml-inline-code">warning</code> tag. The stylesheet used in the conversion process specifies <i class="pml-italic">how</i> all warnings are displayed. Hence, you can globally change the presentation of all warnings for a given output device by simply changing <i class="pml-italic">one</i> entry in the corresponding stylesheet. For example, in the stylesheet used for e-ink devices, you could specify to display the warnings in <i class="pml-italic"><b class="pml-bold">italics with a bigger font</b></i>. Moreover, if you have other messages that have to stand out, like errors or tips, you can use different, specific tags and handle them separately, without any interference.</p>
+                                        <p class="pml-paragraph">A second advantage is that semantic markup opens the door for searchable documentation databases. You can query your markup code and extract useful information. For example, you could create a tool to count the number of warnings contained in the document or extract and save the warnings in a separate file for further exploration.</p>
+                                    </section>
+                                    <section id="ch__17" class="pml-chapter">
+                                        <h5 class="pml-chapter-title">Parameters</h5>
+                                        <p class="pml-paragraph">Advanced markup languages support <i class="pml-italic">parameters</i> embedded in the markup code. You first define a parameter by assigning a value to a name (e.g. <code class="pml-inline-code">my_email=foo@example.com</code>). Then, later in the document, you use the parameter name, instead of the value. If the value changes later, you just need to change it in one place, which is easy, fast, and less error-prone.</p>
+                                        <p class="pml-paragraph">This is an application of the important <a href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself" class="pml-link">Don't Repeat Yourself (DRY)</a> principle. It improves maintainability, productivity, and reliability. It is useful for all kinds of recurring text and markup attribute values, especially if they are subject to change. For example: your email address, the price of your product, the name of your dog, or whatever.</p>
+                                    </section>
+                                    <section id="ch__18" class="pml-chapter">
+                                        <h5 class="pml-chapter-title">Advanced Features</h5>
+                                        <p class="pml-paragraph">Here is a brief summary of additional powerful options:</p>
+                                        <ul class="pml-list">
+                                            <li class="pml-list-element">
+                                                <div class="pml-node-title">Real-time preview</div>
+                                                <p class="pml-paragraph">Sometimes it is convenient to see a preview of the final document (e.g. a HTML page) <i class="pml-italic">while</i> typing the markup code. As soon as you edit the markup code, you can immediately see the effect, without the need to re-launch the markup processor. Some editors support this kind of immediate feedback out-of-the-box or by plugins. For example, you type the document in one window, and you see the real-time preview in an adjacent window.</p>
+                                                <p class="pml-paragraph">You can think of this as a markup editor with WYSIWYG support.</p>
+                                            </li>
+                                            <li class="pml-list-element">
+                                                <div class="pml-node-title">Public API</div>
+                                                <p class="pml-paragraph">A public <i class="pml-italic">Application Program Interface (API)</i> allows programmers to programmatically execute, change, or extend the markup processor's operations.</p>
+                                                <p class="pml-paragraph">At the bare minimum, an API enables other applications to convert documents. For example, a web server could read markup code stored in a file or entered by the user and convert it to HTML on-the-fly, by using the API. This could be used, for instance, to provide an online markup tester, so that people can try out snippets of markup code, without the need to install anything on their PC.</p>
+                                                <p class="pml-paragraph">More advanced APIs can provide additional functionality, such as:</p>
+                                                <ul class="pml-list">
+                                                    <li class="pml-list-element">
+                                                        <p class="pml-paragraph">Change the rendering of some tags</p>
+                                                    </li>
+                                                    <li class="pml-list-element">
+                                                        <p class="pml-paragraph">Add more tags to the language</p>
+                                                    </li>
+                                                    <li class="pml-list-element">
+                                                        <p class="pml-paragraph">Add more output formats to the converter</p>
+                                                    </li>
+                                                    <li class="pml-list-element">
+                                                        <p class="pml-paragraph">Create a markup document programmatically, by retrieving data from different sources.</p>
+                                                    </li>
+                                                    <li class="pml-list-element">
+                                                        <p class="pml-paragraph">Hooks (also called extension points)</p>
+                                                        <p class="pml-paragraph">Hooks allow programmers to execute functions when specific events occur.</p>
+                                                        <p class="pml-paragraph">For example, once the <i class="pml-italic">Abstract Syntax Tree (AST)</i> (i.e. tree structure) of the document has been created by the markup processor, an extension point can programmatically explore the AST to extract and report useful information, or even change it to implement the most extravagant requirements.</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="pml-list-element">
+                                                <div class="pml-node-title">Templates</div>
+                                                <p class="pml-paragraph">Templates allow you to customize or redefine the rendering of specific tags, by modifying text files containing the template code.</p>
+                                            </li>
+                                            <li class="pml-list-element">
+                                                <div class="pml-node-title">User-defined tags</div>
+                                                <p class="pml-paragraph">You can use configuration files to extend the language and add your own tags to the markup language, and specify how each tag is rendered. </p>
+                                            </li>
+                                            <li class="pml-list-element">
+                                                <div class="pml-node-title">Processor Directives</div>
+                                                <p class="pml-paragraph">Processor Directives are special instructions inserted in the markup code and interpreted by the markup processor.</p>
+                                                <p class="pml-paragraph">Suppose somebody writes a test sheet for students. The sheet contains instructions that should only be visible for teachers. In that case, a directive could be used to display specific text blocks only if the document is printed for teachers.</p>
+                                            </li>
+                                        </ul>
+                                    </section>
+                                </section>
+                            </section>
+                        </section>
+                        <section id="ch__19" class="pml-chapter">
+                            <h2 class="pml-chapter-title">Further readings</h2>
+                            <ul class="pml-list">
+                                <li class="pml-list-element">
+                                    <p class="pml-paragraph">The advice of a technical writer who uses an &quot;&#252;ber-powerful text editor&quot; (spoiler: Emacs) and doesn't like the mouse:<br /> <a href="http://www.alandmoore.com/blog/2012/08/08/how-and-why-to-dump-your-word-processor/" class="pml-link">How and Why to Dump Your Word Processor</a></p>
+                                </li>
+                                <li class="pml-list-element">
+                                    <p class="pml-paragraph">The title says it all:<br /> <a href="http://ricardo.ecn.wfu.edu/~cottrell/wp.html" class="pml-link">Word Processors: Stupid and Inefficient</a></p>
+                                </li>
+                                <li class="pml-list-element">
+                                    <p class="pml-paragraph">An interesting article for novel writers (followed by some insightful comments):<br /> <a href="https://thewritepractice.com/book-writing-software-word-vs-scrivener/" class="pml-link">Best Book Writing Software: Word vs. Scrivener</a>.</p>
+                                </li>
+                            </ul>
+                            <p class="pml-paragraph">I will publish a follow-up article with more specific information and comparisons of different document markup languages.</p>
+                        </section>
+                        <section id="ch__20" class="pml-chapter">
+                            <h2 class="pml-chapter-title">Conclusion</h2>
+                            <p class="pml-paragraph">Should you use a WYSIWYG editor or a markup language?</p>
+                            <p class="pml-paragraph">As so often, the answer depends on your use case.</p>
+                            <p class="pml-paragraph">However, as demonstrated in this article, in many cases a document markup language is the better choice, because you can benefit from considerable advantages. In a nutshell:</p>
+                            <ul class="pml-list">
+                                <li class="pml-list-element">
+                                    <p class="pml-paragraph">When you write, you can <i class="pml-italic">focus on writing</i>, because you don't have to think about presentation, and you can use your preferred text editor with your customized setup.</p>
+                                </li>
+                                <li class="pml-list-element">
+                                    <p class="pml-paragraph">Your writing environment is <i class="pml-italic">more flexible and powerful</i>, because you have a lot of options to handle plain text files.</p>
+                                </li>
+                                <li class="pml-list-element">
+                                    <p class="pml-paragraph">It is easier to <i class="pml-italic">automate and customize</i> your writing process, which saves time and reduces errors.</p>
+                                </li>
+                            </ul>
+                            <p class="pml-paragraph">Ultimately, a well-designed document markup language makes your writing experience more enjoyable and increases your productivity.</p>
+                            <p class="pml-paragraph">What's your own experience? Please share it by leaving a comment.</p>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            window.onload = function() {
+                adaptSplitWidths ( getCurrentElementWidth ( "PMLHsplitLeftPanel" ) );
+            }
+            
+            var dragStartScreenX = 0;
+            var dragStartLeftPanelWidth = 0;
+            
+            function PMLHsplitPanelSeparatorDragStart ( event ) {
+    
+                dragStartScreenX = event.screenX;
+                dragStartLeftPanelWidth = getCurrentElementWidth ( "PMLHsplitLeftPanel" );
+    
+                // This is necessary to make dragging work in Firefox 
+                // see https://stackoverflow.com/questions/19055264/why-doesnt-html5-drag-and-drop-work-in-firefox
+                event.dataTransfer.setData ( 'text', 'anything' );
+            }
+            
+            function PMLHsplitPanelSeparatorDragging ( event ) {
+                
+                // doesn't work in Firefox
+                // adaptSplitWidths ( event.pageX );
+                
+                adaptSplitWidths ( dragStartLeftPanelWidth + event.screenX - dragStartScreenX );
+            }
+            
+            function PMLHsplitPanelSeparatorDragEnd ( event ) {
+                
+                // doesn't work in Firefox
+                // adaptSplitWidths ( event.pageX );
+                
+                adaptSplitWidths ( dragStartLeftPanelWidth + event.screenX - dragStartScreenX );
+            }
+    
+            function adaptSplitWidths ( leftPanelWidth ) {
+            
+                setElementWidth ( "PMLHsplitLeftPanel", leftPanelWidth );
+                
+                // compute left margin of the right panel so that the content is displayed in the center of the browser window
+                
+                const bodyWidth = document.body.clientWidth;
+                const contentMaxWidth = getCSSPropertyIntegerForID ( "PMLHsplitRightPanelContent", "max-width" );
+                const separatorWidth = getCurrentElementWidth ( "PMLHsplitPanelSeparator" );
+                
+                let HsplitRightPanelLeftMargin = bodyWidth / 2 - contentMaxWidth / 2 - leftPanelWidth - separatorWidth;
+                if ( HsplitRightPanelLeftMargin < 0 ) {
+                    HsplitRightPanelLeftMargin = 0;
+                }
+
+                document.getElementById ( "PMLHsplitRightPanel" ).style.marginLeft = HsplitRightPanelLeftMargin + "px";
+            }
+
+            function getCurrentElementWidth ( elementID ) {
+                
+                const element = document.getElementById ( elementID );
+                return element.getBoundingClientRect().width;
+            }
+
+            function setElementWidth ( elementID, width ) {
+                
+                const element = document.getElementById ( elementID );
+                element.style.width = width + "px";
+            }
+
+            function getCSSPropertyIntegerForID ( elementID, CSSPropertyName ) {
+                
+                return parseInt ( getCSSPropertyForID ( elementID, CSSPropertyName ), 10 );
+            }
+
+            function getCSSPropertyForID ( elementID, CSSPropertyName ) {
+                
+                const element = document.getElementById ( elementID );
+                const style = window.getComputedStyle ( element );
+                return style.getPropertyValue ( CSSPropertyName );
+            }
+        </script>
+
+        <script>
+            var branch_prefixes = document.getElementsByClassName ( "pml-toc-branch-prefix" );
+            
+            for ( var i = 0; i < branch_prefixes.length; i++ ) {
+                branch_prefixes[i].addEventListener ( "click", function ( event ) {
+        
+                    const sub_chapters = this.parentElement.parentElement.querySelector ( ".pml-toc-sub-chapters" );
+                    sub_chapters.classList.toggle ( "pml-hidden" );
+                    
+                    if ( sub_chapters.classList.contains ( "pml-hidden" ) ) {
+                        this.classList.remove ( "pml-toc-branch-visible" );
+                        this.classList.add ( "pml-toc-branch-hidden" );
+                    } else {
+                        this.classList.remove ( "pml-toc-branch-hidden" );
+                        this.classList.add ( "pml-toc-branch-visible" );
+                    }
+                });
+            } 
+        </script>
+
+    </body>
+</html>

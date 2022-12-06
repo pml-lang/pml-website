@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="generator" content="PML 3.1.0 (www.pml-lang.dev)" />
+        <title>PML User Manual</title>
+        <link rel="stylesheet" href="css/pml-default.css">
+        <link rel="stylesheet" href="css/pml-print-default.css" media="print">
+
+    </head>
+    <body>
+
+        <div class="pml-doc-wrapper">
+            <header class="pml-doc-header">
+            </header>
+            <div class="pml-doc-content">
+                <aside class="pml-doc-left">
+                    <nav class="pml-toc">
+                        <h2 class="pml-toc-title">Table of Contents</h2>
+                        <div class="pml-toc-tree" id="TOCTree">
+                            <ul>
+                                <li class="pml-toc-leaf-node"><a href="#introduction">Introduction</a></li>
+                                <li class="pml-toc-leaf-node"><a href="#quick_start">Quick Start</a></li>
+                                <li class="pml-toc-branch-node">
+                                    <details>
+                                        <summary><a href="#anatomy">Anatomy of a PML Document</a></summary>
+                                        <ul>
+                                            <li class="pml-toc-leaf-node"><a href="#document_tree">Document Tree</a></li>
+                                            <li class="pml-toc-leaf-node"><a href="#nodes">Nodes</a></li>
+                                            <li class="pml-toc-leaf-node"><a href="#attributes">Attributes</a></li>
+                                            <li class="pml-toc-leaf-node"><a href="#HTML_attributes">HTML Attributes</a></li>
+                                        </ul>
+                                    </details>
+                                </li>
+                                <li class="pml-toc-branch-node">
+                                    <details>
+                                        <summary><a href="#text_processing">Text Processing</a></summary>
+                                        <ul>
+                                            <li class="pml-toc-leaf-node"><a href="#comments">Comments</a></li>
+                                            <li class="pml-toc-leaf-node"><a href="#lenient_parsing">Lenient Parsing</a></li>
+                                            <li class="pml-toc-branch-node">
+                                                <details>
+                                                    <summary><a href="#whitespace_handling">Whitespace Handling</a></summary>
+                                                    <ul>
+                                                        <li class="pml-toc-leaf-node"><a href="#nodes_whitespace">Nodes</a></li>
+                                                        <li class="pml-toc-leaf-node"><a href="#attributes_whitespace">Attributes</a></li>
+                                                    </ul>
+                                                </details>
+                                            </li>
+                                            <li class="pml-toc-branch-node">
+                                                <details>
+                                                    <summary><a href="#escape_characters">Escape Characters</a></summary>
+                                                    <ul>
+                                                        <li class="pml-toc-leaf-node"><a href="#node_escape_characters">Nodes</a></li>
+                                                        <li class="pml-toc-leaf-node"><a href="#attribute_escape_characters">Attributes</a></li>
+                                                    </ul>
+                                                </details>
+                                            </li>
+                                            <li class="pml-toc-leaf-node"><a href="#parameters">Parameters</a></li>
+                                            <li class="pml-toc-leaf-node"><a href="#file_splitting">File Splitting</a></li>
+                                        </ul>
+                                    </details>
+                                </li>
+                                <li class="pml-toc-leaf-node"><a href="#toc">Table of Contents</a></li>
+                                <li class="pml-toc-branch-node">
+                                    <details>
+                                        <summary><a href="#customization">Customization</a></summary>
+                                        <ul>
+                                            <li class="pml-toc-leaf-node"><a href="#options">Options</a></li>
+                                            <li class="pml-toc-leaf-node"><a href="#HTML_attributes_2">HTML Attributes</a></li>
+                                            <li class="pml-toc-leaf-node"><a href="#customized_css">Customized CSS</a></li>
+                                            <li class="pml-toc-leaf-node"><a href="#user_defined_nodes">User-Defined Nodes</a></li>
+                                        </ul>
+                                    </details>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </aside>
+                <article id="doc__" class="pml-doc-text" id="doc__">
+                    <h1 class="pml-doc-title">PML User Manual</h1>
+                    <table class="pml-table">
+                        <tr class="pml-table-body-row">
+                            <td class="pml-table-body-cell">
+                                <p class="pml-paragraph"><b class="pml-bold">PML Version</b></p>
+
+                            </td>
+                            <td class="pml-table-body-cell">
+                                <p class="pml-paragraph">3.1.0 2022-10-03</p>
+
+                            </td>
+
+                        </tr>
+                        <tr class="pml-table-body-row">
+                            <td class="pml-table-body-cell">
+                                <p class="pml-paragraph"><b class="pml-bold">License</b></p>
+
+                            </td>
+                            <td class="pml-table-body-cell">
+                                <p class="pml-paragraph"><a class="pml-link" href="https://creativecommons.org/licenses/by-nd/4.0/">CC BY-ND 4.0</a></p>
+
+                            </td>
+
+                        </tr>
+                        <tr class="pml-table-body-row">
+                            <td class="pml-table-body-cell">
+                                <p class="pml-paragraph"><b class="pml-bold">Author and Copyright</b></p>
+
+                            </td>
+                            <td class="pml-table-body-cell">
+                                <p class="pml-paragraph">Christian Neumanns</p>
+
+                            </td>
+
+                        </tr>
+                        <tr class="pml-table-body-row">
+                            <td class="pml-table-body-cell">
+                                <p class="pml-paragraph"><b class="pml-bold">Website</b></p>
+
+                            </td>
+                            <td class="pml-table-body-cell">
+                                <p class="pml-paragraph"><a class="pml-link" href="https://www.pml-lang.dev">https://www.pml-lang.dev</a></p>
+
+                            </td>
+
+                        </tr>
+                        <tr class="pml-table-body-row">
+                            <td class="pml-table-body-cell">
+                                <p class="pml-paragraph"><b class="pml-bold">PML Markup Code</b></p>
+
+                            </td>
+                            <td class="pml-table-body-cell">
+                                <p class="pml-paragraph"><a class="pml-link" href="https://github.com/pml-lang/user-manual">GitHub</a></p>
+
+                            </td>
+
+                        </tr>
+
+                    </table>
+                    <section id="introduction" class="pml-chapter">
+                        <h2 class="pml-chapter-title">Introduction</h2>
+                        <p class="pml-paragraph">This manual is about creating web articles and books with the <a class="pml-link" href="https://www.pml-lang.dev">Practical Markup Language (PML)</a>.</p>
+                        <p class="pml-paragraph">If you have questions or suggestions then please post a message on <a class="pml-link" href="https://github.com/pml-lang/user-manual/discussions">GitHub discussions</a>, or send an email to contact {at} pml-lang {dot} dev. </p>
+
+                    </section>
+                    <section id="quick_start" class="pml-chapter">
+                        <h2 class="pml-chapter-title">Quick Start</h2>
+                        <p class="pml-paragraph">After <a class="pml-link" href="https://www.pml-lang.dev/downloads/install.html">installing</a> PML, you can create a web document in three easy steps:</p>
+                        <ul class="pml-list">
+                            <li class="pml-list-element">
+                                <p class="pml-paragraph">Create a PML file using any editor</p>
+
+                            </li>
+                            <li class="pml-list-element">
+                                <p class="pml-paragraph">Convert the PML file to an HTML file</p>
+
+                            </li>
+                            <li class="pml-list-element">
+                                <p class="pml-paragraph">Open the HTML file in your browser</p>
+
+                            </li>
+
+                        </ul>
+                        <p class="pml-paragraph">Here is an example of how to proceed:</p>
+                        <div class="pml-header">1. Create a PML file</div>
+                        <p class="pml-paragraph">Use your preferred text editor to create a text file named <code class="pml-inline-code">example.pml</code> in any directory of your choice, and with the following content:</p>
+                        <pre class="pml-code"><code>[doc [title First test]
+    This is a [i simple] example.
+]</code></pre>
+                        <div class="pml-header">2. Convert the PML file to an HTML file</div>
+                        <p class="pml-paragraph">Open a terminal in the directory of file <code class="pml-inline-code">example.pml</code>.</p>
+                        <div class="pml-admonition">
+                            <div class="pml-admonition-label">Note</div>
+                            <div class="pml-admonition-content">
+                                <p class="pml-paragraph">For instructions on how to do this in Windows, search for &quot;open a terminal in Windows&quot;, or refer to <a class="pml-link" href="https://www.howtogeek.com/235101/10-ways-to-open-the-command-prompt-in-windows-10/">this</a> article.</p>
+                            </div>
+                        </div>
+                        <p class="pml-paragraph">Convert the PML file into an HTML file named <code class="pml-inline-code">example.html</code> by entering the following command:</p>
+                        <pre class="pml-input">pmlc PML_to_HTML example.pml</pre>
+                        <div class="pml-admonition">
+                            <div class="pml-admonition-label">Note</div>
+                            <div class="pml-admonition-content">
+                                <p class="pml-paragraph">Alternatively you can also type:</p>
+                                <pre class="pml-input">pmlc p2h example.pml</pre>
+                            </div>
+                        </div>
+                        <p class="pml-paragraph">By default, the resulting HTML file is written to directory <code class="pml-inline-code">output</code> of your current working directory (i.e. <code class="pml-inline-code">output/example.html</code>).</p>
+                        <p class="pml-paragraph">Here is an example of a terminal session in Windows:</p>
+                        <pre class="pml-input">C:\tests&gt;pmlc p2h example.pml
+INFO: Creating HTML file 'output\example.html'.
+C:\tests&gt;</pre>
+                        <div class="pml-header">3. Open the HTML file</div>
+                        <p class="pml-paragraph">Open file <code class="pml-inline-code">output/example.html</code> in your browser. The result looks like this:</p>
+                        <figure style="text-align: left">
+                            <img class="pml-image pml-bordered" src="images/simple_example_result.png">
+                        </figure>
+                        <div class="pml-admonition">
+                            <div class="pml-admonition-label">Tips</div>
+                            <div class="pml-admonition-content">
+                                <p class="pml-paragraph">To see the list of options you can use with command <code class="pml-inline-code">PML_to_HTML</code>, refer to chapter <a class="pml-link" href="https://www.pml-lang.dev/docs/commands_manual/index.html#command_PML_to_HTML">Convert PML to HTML</a> in <a class="pml-link" href="https://www.pml-lang.dev/docs/commands_manual/index.html">PMLC Commands Reference Manual</a>. This manual also lists all other commands you can use with <code class="pml-inline-code">pmlc</code>.</p>
+                                <p class="pml-paragraph">For general help type:</p>
+                                <pre class="pml-input">pmlc -h</pre>
+                            </div>
+                        </div>
+
+                    </section>
+                    <section id="anatomy" class="pml-chapter">
+                        <h2 class="pml-chapter-title">Anatomy of a PML Document</h2>
+                        <section id="document_tree" class="pml-chapter">
+                            <h3 class="pml-chapter-title">Document Tree</h3>
+                            <p class="pml-paragraph">Technically speaking, a PML document is a tree composed of PML nodes.</p>
+                            <p class="pml-paragraph">Here is a visual representation of the tree structure of a simple PML document:</p>
+                            <ul class="pml-list" style="padding-top:1em; padding-bottom:1em; border:1px dashed black; border-radius:7px; background:lightyellow;">
+                                <li class="pml-list-element">
+                                    <p class="pml-paragraph" style="margin:0;"> document </p>
+                                    <ul class="pml-list">
+                                        <li class="pml-list-element" style="list-style-type: disc;">
+                                            <p class="pml-paragraph" style="margin:0;"> chapter </p>
+                                            <ul class="pml-list">
+                                                <li class="pml-list-element" style="list-style-type: disc;">
+                                                    <p class="pml-paragraph" style="margin:0;"> title </p>
+
+                                                </li>
+                                                <li class="pml-list-element" style="list-style-type: disc;">
+                                                    <p class="pml-paragraph" style="margin:0;"> paragraph </p>
+
+                                                </li>
+                                                <li class="pml-list-element" style="list-style-type: disc;">
+                                                    <p class="pml-paragraph" style="margin:0;"> paragraph </p>
+
+                                                </li>
+                                                <li class="pml-list-element" style="list-style-type: disc;">
+                                                    <p class="pml-paragraph" style="margin:0;"> paragraph </p>
+
+                                                </li>
+
+                                            </ul>
+
+                                        </li>
+                                        <li class="pml-list-element" style="list-style-type: disc;">
+                                            <p class="pml-paragraph" style="margin:0;"> chapter </p>
+                                            <ul class="pml-list">
+                                                <li class="pml-list-element" style="list-style-type: disc;">
+                                                    <p class="pml-paragraph" style="margin:0;"> title </p>
+
+                                                </li>
+                                                <li class="pml-list-element" style="list-style-type: disc;">
+                                                    <p class="pml-paragraph" style="margin:0;"> paragraph </p>
+
+                                                </li>
+                                                <li class="pml-list-element" style="list-style-type: disc;">
+                                                    <p class="pml-paragraph" style="margin:0;"> image </p>
+
+                                                </li>
+
+                                            </ul>
+
+                                        </li>
+
+                                    </ul>
+
+                                </li>
+
+                            </ul>
+                            <p class="pml-paragraph">The above document has two chapters. The first chapter is composed of a title and three paragraphs. The second chapter contains a title, a paragraph, and an image.</p>
+                            <p class="pml-paragraph">A real document having the above structure would look like this:</p>
+                            <div class="pml-header">File example.pml</div>
+                            <pre class="pml-code"><code>[doc [title PML Document Example]
+
+    [ch [title Chapter 1]
+
+        Text of paragraph 1.
+
+        Text of paragraph 2.
+
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    ]
+
+    [ch [title Chapter 2]
+
+        Paragraph
+
+        [image source = images/strawberries.jpg]
+    ]
+]</code></pre>
+                            <p class="pml-paragraph">File <code class="pml-inline-code">example.pml</code> can be converted to file <code class="pml-inline-code">output/example.html</code> with the following command:</p>
+                            <pre class="pml-input">pmlc p2h example.pml</pre>
+                            <div class="pml-admonition">
+                                <div class="pml-admonition-label">Note</div>
+                                <div class="pml-admonition-content">
+                                    <p class="pml-paragraph">The above PML document uses image file <code class="pml-inline-code">images/strawberries.jpg</code>. By default, all resources used in a document are located in directory <code class="pml-inline-code">resources</code>. Therefore file <code class="pml-inline-code">resources/images/strawberries.jpg</code> must exist before executing the above command.</p>
+                                </div>
+                            </div>
+                            <p class="pml-paragraph">Now file <code class="pml-inline-code">output/example.html</code> can be opened in the browser, and the result looks like this:</p>
+                            <figure id="simple_document_example" style="text-align: left">
+                                <img class="pml-image pml-bordered" src="images/03_01_document_example.png">
+                            </figure>
+
+                        </section>
+                        <section id="nodes" class="pml-chapter">
+                            <h3 class="pml-chapter-title">Nodes</h3>
+                            <p class="pml-paragraph">There are different <i class="pml-italic">types</i> of nodes in a document tree.</p>
+                            <p class="pml-paragraph">A node's type is determined by a <i class="pml-italic">name</i>. For example:</p>
+                            <ul class="pml-list">
+                                <li class="pml-list-element">
+                                    <p class="pml-paragraph">A <i class="pml-italic">chapter</i> node has the name <code class="pml-inline-code">ch</code>, and represents a chapter of an article or book.</p>
+
+                                </li>
+                                <li class="pml-list-element">
+                                    <p class="pml-paragraph">An <code class="pml-inline-code">image</code> node represents an image to be inserted in the document.</p>
+
+                                </li>
+                                <li class="pml-list-element">
+                                    <p class="pml-paragraph">An <i class="pml-italic">italic</i> node has the name <code class="pml-inline-code">i</code>, and is used to write text in <i class="pml-italic">italics</i>.</p>
+
+                                </li>
+
+                            </ul>
+                            <p class="pml-paragraph">Every node in a document starts with <code class="pml-inline-code">[</code> and ends with <code class="pml-inline-code">]</code>. The node's name (always required) is written immediately after the opening <code class="pml-inline-code">[</code>, without a space (e.g. <code class="pml-inline-code">[doc ... ]</code> or <code class="pml-inline-code">[ch ... ]</code>).</p>
+                            <p class="pml-paragraph">A node can be empty (it has a name, but no content), contain only text, or contain a mixture of text and child nodes. A node's name and its content are separated by a whitespace character (a space, TAB, or new line). Here are three examples:</p>
+                            <pre class="pml-code"><code>[nl]
+[i node containing only text displayed in italics]
+[p A [i simple] paragraph with [b six] words.]</code></pre>
+                            <p class="pml-paragraph">The full list of nodes is documented in the <a class="pml-link" href="https://www.pml-lang.dev/docs/reference_manual/index.html">PML Reference Manual</a>.</p>
+
+                        </section>
+                        <section id="attributes" class="pml-chapter">
+                            <h3 class="pml-chapter-title">Attributes</h3>
+                            <p class="pml-paragraph">Some nodes have attributes.</p>
+                            <p class="pml-paragraph">Some attributes are required, and some are optional.</p>
+                            <p class="pml-paragraph">For example, the <code class="pml-inline-code">image</code> node has a <i class="pml-italic">required</i> attribute named <code class="pml-inline-code">source</code>, which defines the image's file path. Moreover it has some <i class="pml-italic">optional</i> attributes, such as <code class="pml-inline-code">width</code> and <code class="pml-inline-code">height</code>, to explicitly define the image's dimensions in pixels. Here is an example of an <code class="pml-inline-code">image</code> node with values assigned to attributes <code class="pml-inline-code">source</code> and <code class="pml-inline-code">width</code>:</p>
+                            <pre class="pml-code"><code>[image ( source=&quot;images/juicy apple.png&quot; width=&quot;400&quot; ) ]</code></pre>
+                            <p class="pml-paragraph">As we can see:</p>
+                            <ul class="pml-list">
+                                <li class="pml-list-element">
+                                    <p class="pml-paragraph">Attributes are enclosed in parentheses:</p>
+                                    <pre class="pml-code"><code>( ... )</code></pre>
+
+                                </li>
+                                <li class="pml-list-element">
+                                    <p class="pml-paragraph">The syntax <code class="pml-inline-code">name = &quot;value&quot;</code> is used to assign a value to an attribute. For example:</p>
+                                    <pre class="pml-code"><code>width=&quot;400&quot;</code></pre>
+
+                                </li>
+                                <li class="pml-list-element">
+                                    <p class="pml-paragraph">Attribute assignments are separated by a space. No comma is needed:</p>
+                                    <pre class="pml-code"><code>(a1=&quot;v1&quot; a2=&quot;v2&quot;)
+        ^</code></pre>
+
+                                </li>
+
+                            </ul>
+                            <p class="pml-paragraph">The list of available attributes for each node is documented in the <a class="pml-link" href="https://www.pml-lang.dev/docs/reference_manual/index.html">PML Reference Manual</a>.</p>
+
+                        </section>
+                        <section id="HTML_attributes" class="pml-chapter">
+                            <h3 class="pml-chapter-title">HTML Attributes</h3>
+                            <p class="pml-paragraph"><i class="pml-italic">HTML attributes</i> can optionally be specified for some nodes.</p>
+                            <p class="pml-paragraph">This is used to explicitly set HTML attributes in the resulting HTML code. The most frequent use of HTML attributes is to explicitly set the <code class="pml-inline-code">style</code> for a specific element.</p>
+                            <p class="pml-paragraph">An HTML attribute name starts with <code class="pml-inline-code">html_</code>, followed by the real HTML attribute name. Thus, to specify a <code class="pml-inline-code">style</code> attribute in the resulting HTML code, you would write for example: <code class="pml-inline-code">html_style=&quot;color:red;&quot;</code>. Any valid CSS can be assigned to a <code class="pml-inline-code">html_style</code> attribute.</p>
+                            <p class="pml-paragraph">Suppose we want to write a paragraph in red letters, surrounded by a blue dashed border. We can do it like this:</p>
+                            <ul class="pml-list">
+                                <li class="pml-list-element">
+                                    <div class="pml-header">PML code:</div>
+                                    <pre class="pml-code"><code>[p (html_style = &quot;color:red; border:1px dashed blue&quot;)
+    It is important to note that ...
+]</code></pre>
+
+                                </li>
+                                <li class="pml-list-element">
+                                    <div class="pml-header">Result:</div>
+                                    <p class="pml-paragraph" style="color:red; border:1px dashed blue"> It is important to note that ... </p>
+
+                                </li>
+                                <li class="pml-list-element">
+                                    <div class="pml-header">Generated HTML code:</div>
+                                    <pre class="pml-code"><code>&lt;p class=&quot;pml-paragraph&quot; style=&quot;color:red; border:1px dashed blue&quot;&gt;It is important to note that ... &lt;/p&gt;</code></pre>
+
+                                </li>
+
+                            </ul>
+                            <p class="pml-paragraph">To see if HTML attributes are <i class="pml-italic">allowed</i> for a given node, please refer to the <a class="pml-link" href="https://www.pml-lang.dev/docs/reference_manual/index.html">PML Reference Manual</a>.</p>
+                            <p class="pml-paragraph">To see the <i class="pml-italic">list</i> of attributes supported for a given node, please refer to the official HTML specification. PMLC does not check if an HTML attribute is valid.</p>
+
+                        </section>
+
+                    </section>
+                    <section id="text_processing" class="pml-chapter">
+                        <h2 class="pml-chapter-title">Text Processing</h2>
+                        <p class="pml-paragraph">A PML document is written using the <a class="pml-link" href="https://pdml-lang.dev/">PDML</a> syntax. Therefore, all features available in PDML are also supported in PML. You can refer to PDML's <a class="pml-link" href="https://pdml-lang.dev/docs/index.html">documentation</a> to get more information about PDML. In this chapter, we'll have a look at some PDML features that are often used in PML documents.</p>
+                        <section id="comments" class="pml-chapter">
+                            <h3 class="pml-chapter-title">Comments</h3>
+                            <p class="pml-paragraph">A comment starts with <code class="pml-inline-code">[-</code> and ends with <code class="pml-inline-code">-]</code>. Comments can appear anywhere, and they can be nested to any level. Text within comments is ignored.</p>
+                            <p class="pml-paragraph">Example:</p>
+                            <ul class="pml-list">
+                                <li class="pml-list-element">
+                                    <div class="pml-header">PML code:</div>
+                                    <pre class="pml-code"><code>This is [- good -] awesome.
+[- TODO: explain why -]
+
+Text
+[-
+    This [i bad] text not show.
+    [- a
+        nested
+        comment -]
+-]
+
+More text</code></pre>
+
+                                </li>
+                                <li class="pml-list-element">
+                                    <div class="pml-header">Result:</div>
+                                    <pre class="pml-code"><code>This is awesome.
+
+Text
+
+More text</code></pre>
+
+                                </li>
+
+                            </ul>
+
+                        </section>
+                        <section id="lenient_parsing" class="pml-chapter">
+                            <h3 class="pml-chapter-title">Lenient Parsing</h3>
+                            <p class="pml-paragraph">The following rules are applied to make the syntax more concise:</p>
+                            <ul class="pml-list">
+                                <li class="pml-list-element">
+                                    <p class="pml-paragraph">If a node can only have attributes (no child nodes) the parenthesis around attributes can be omitted.</p>
+                                    <p class="pml-paragraph">For example, the <code class="pml-inline-code">image</code> node has no child nodes. Therefore, instead of writing:</p>
+                                    <pre class="pml-code"><code>[image ( source=&quot;images/juicy apple.png&quot; width=&quot;400&quot; ) ]
+       ^                                             ^</code></pre>
+                                    <p class="pml-paragraph">... we can also write:</p>
+                                    <pre class="pml-code"><code>[image source=&quot;images/juicy apple.png&quot; width=&quot;400&quot; ]</code></pre>
+
+                                </li>
+                                <li id="omit_attribute_quotes" class="pml-list-element">
+                                    <p class="pml-paragraph">Quotes around attribute values can be omitted if the value does not contain:</p>
+                                    <ul class="pml-list">
+                                        <li class="pml-list-element">
+                                            <p class="pml-paragraph">whitespace (a space, tab, carriage return or line feed)</p>
+
+                                        </li>
+                                        <li class="pml-list-element">
+                                            <p class="pml-paragraph">any of the following characters: <code class="pml-inline-code">[ ] ( ) &quot; '</code></p>
+
+                                        </li>
+
+                                    </ul>
+                                    <p class="pml-paragraph">Hence, instead of writing:</p>
+                                    <pre class="pml-code"><code>width=&quot;400&quot;
+      ^   ^</code></pre>
+                                    <p class="pml-paragraph">... we can write:</p>
+                                    <pre class="pml-code"><code>width=400</code></pre>
+
+                                </li>
+                                <li class="pml-list-element">
+                                    <p class="pml-paragraph">If a node in a PML document has no attributes, it is not necessary to explicitly state the absence of attributes by writing <code class="pml-inline-code">()</code>. Hence, the following code:</p>
+                                    <pre class="pml-code"><code>[div () text]
+     ^^</code></pre>
+                                    <p class="pml-paragraph">... can be shortened to</p>
+                                    <pre class="pml-code"><code>[div text]</code></pre>
+                                    <p class="pml-paragraph">However, if the node's text starts with <code class="pml-inline-code">(</code>, then <code class="pml-inline-code">()</code> is required.</p>
+                                    <p class="pml-paragraph">Say we want to render the text: <i class="pml-italic">(organic = healthy)</i>. In that case we can't write:</p>
+                                    <pre class="pml-code"><code>[i (organic = healthy)]</code></pre>
+                                    <p class="pml-paragraph">... because the parser would interpret this as an attribute assignment (i.e. the value <code class="pml-inline-code">healthy</code> assigned to attribute <code class="pml-inline-code">organic</code>.</p>
+                                    <p class="pml-paragraph">To eliminate the confusion we have to write:</p>
+                                    <pre class="pml-code"><code>[i() (organic = healthy)]
+  ^^</code></pre>
+
+                                </li>
+
+                            </ul>
+                            <p class="pml-paragraph">If we apply all above rules, then this code:</p>
+                            <pre class="pml-code"><code>[image ( source = &quot;images/juicy apple.png&quot; width = &quot;400&quot; ) ]</code></pre>
+                            <p class="pml-paragraph">... can be shortened to: </p>
+                            <pre class="pml-code"><code>[image source=&quot;images/juicy apple.png&quot; width=400]</code></pre>
+
+                        </section>
+                        <section id="whitespace_handling" class="pml-chapter">
+                            <h3 class="pml-chapter-title">Whitespace Handling</h3>
+                            <p class="pml-paragraph">PML uses whitespace handling rules that aim to be intuitive and practical. It is important to be aware of these rules, because ignoring them can lead to surprising or unwanted results, especially in edge cases.</p>
+                            <p class="pml-paragraph">As there is no standard and unique definition for <i class="pml-italic">whitespace</i>, we first need to define some terms used in the context of PML:</p>
+                            <ul class="pml-list">
+                                <li class="pml-list-element">
+                                    <div class="pml-header">Whitespace character</div>
+                                    <p class="pml-paragraph">There are four <i class="pml-italic">whitespace characters</i>:</p>
+                                    <table class="pml-table">
+                                        <thead class="pml-table-header">
+                                            <tr class="pml-table-header-row">
+<th class="pml-table-header-cell">Name</th><th class="pml-table-header-cell">C-style syntax</th><th class="pml-table-header-cell">Unicode</th></tr>
+                                        </thead>
+                                        <tbody class="pml-table-body">
+                                            <tr class="pml-table-body-row">
+<td class="pml-table-body-cell">Space</td><td class="pml-table-body-cell">' '</td><td class="pml-table-body-cell">U+0020</td></tr>
+                                            <tr class="pml-table-body-row">
+<td class="pml-table-body-cell">Tab</td><td class="pml-table-body-cell">'\t'</td><td class="pml-table-body-cell">U+0009</td></tr>
+                                            <tr class="pml-table-body-row">
+<td class="pml-table-body-cell">Carriage return</td><td class="pml-table-body-cell">'\r'</td><td class="pml-table-body-cell">U+000D</td></tr>
+                                            <tr class="pml-table-body-row">
+<td class="pml-table-body-cell">Line feed</td><td class="pml-table-body-cell">'\n'</td><td class="pml-table-body-cell">U+000A</td></tr>
+                                        </tbody>
+                                    </table>
+                                    <p class="pml-paragraph"><br /></p>
+
+                                </li>
+                                <li class="pml-list-element">
+                                    <div class="pml-header">Whitespace</div>
+                                    <p class="pml-paragraph">The term <i class="pml-italic">whitespace</i> is used to denote any sequence of one or more <i class="pml-italic">whitespace characters</i>. For example: 4 spaces, followed by two tabs and a new line.</p>
+
+                                </li>
+                                <li class="pml-list-element">
+                                    <div class="pml-header">New line</div>
+                                    <p class="pml-paragraph">New lines are defined differently in Unix and Windows. Unix uses a single <code class="pml-inline-code">line feed</code> (LF). Windows uses a <code class="pml-inline-code">carriage return</code>, followed by a <code class="pml-inline-code">line feed</code> (CRLF).</p>
+                                    <p class="pml-paragraph">New line rules in PML depend on whether PML is reading or writing text.</p>
+                                    <p class="pml-paragraph">When PML <i class="pml-italic">reads</i> text, it supports both new line variations (LF and/or CRLF) correctly on Unix and Windows systems, even if a single document uses a mixture of Unix/Windows new lines.</p>
+                                    <p class="pml-paragraph">When PML <i class="pml-italic">writes</i> text (e.g. a HTML file) it uses the operating system's canonical new line (CRLF on Windows, LF on Unix).</p>
+
+                                </li>
+
+                            </ul>
+                            <p class="pml-paragraph">Whitespace is handled differently in nodes and attributes, as explained in the following chapters.</p>
+                            <section id="nodes_whitespace" class="pml-chapter">
+                                <h4 class="pml-chapter-title">Nodes</h4>
+                                <p class="pml-paragraph">Whitespace in nodes is handled as follows:</p>
+                                <ul class="pml-list">
+                                    <li class="pml-list-element">
+                                        <div class="pml-header">Whitespace reduction</div>
+                                        <p class="pml-paragraph">Whitespace in text is replaced by a single space character.</p>
+                                        <p class="pml-paragraph">Writing</p>
+                                        <pre class="pml-code"><code>this     is
+text</code></pre>
+                                        <p class="pml-paragraph">... is the same as:</p>
+                                        <pre class="pml-code"><code>this is text</code></pre>
+                                        <p class="pml-paragraph">To preserve a sequence of several whitespace characters, the node <a class="pml-link" href="https://www.pml-lang.dev/docs/reference_manual/index.html#node_sp">sp</a> can be used to explicitly insert non-breaking spaces, and the node <a class="pml-link" href="https://www.pml-lang.dev/docs/reference_manual/index.html#node_nl">nl</a> can be used to explicitly insert new lines, e.g.:</p>
+                                        <pre class="pml-code"><code>this[sp][sp][sp][sp][sp]is[nl]text</code></pre>
+                                        <p class="pml-paragraph">... is rendered as:</p>
+                                        <pre class="pml-code"><code>this     is
+text</code></pre>
+                                        <p class="pml-paragraph">Moreover, the <a class="pml-link" href="https://www.pml-lang.dev/docs/reference_manual/index.html#node_monospace">monospace</a> node can be used to insert a block of text in which whitespace is preserved (similar to the <code class="pml-inline-code">pre</code> tag in HTML):</p>
+                                        <pre class="pml-code"><code>[monospace
+this     is
+text
+]</code></pre>
+
+                                    </li>
+                                    <li class="pml-list-element">
+                                        <div class="pml-header">Paragraph breaks</div>
+                                        <p class="pml-paragraph">A sequence of two consecutive new lines generates a paragraph break.</p>
+                                        <p class="pml-paragraph">Writing:</p>
+                                        <pre class="pml-code"><code>Paragraph 1.
+
+Paragraph 2.</code></pre>
+                                        <p class="pml-paragraph">... is the same as:</p>
+                                        <pre class="pml-code"><code>[p Paragraph 1.]
+[p Paragraph 2.]</code></pre>
+                                        <p class="pml-paragraph">... and is rendered as:</p>
+                                        <pre class="pml-code"><code>Paragraph 1.
+
+Paragraph 2.</code></pre>
+                                        <p class="pml-paragraph">However, writing:</p>
+                                        <pre class="pml-code"><code>Paragraph 1.
+Paragraph 2.</code></pre>
+                                        <p class="pml-paragraph">... would be the same as</p>
+                                        <pre class="pml-code"><code>[p Paragraph 1. Paragraph 2.]</code></pre>
+                                        <p class="pml-paragraph">... and is rendered as:</p>
+                                        <pre class="pml-code"><code>Paragraph 1. Paragraph 2.</code></pre>
+
+                                    </li>
+                                    <li class="pml-list-element">
+                                        <div class="pml-header">Whitespace removal</div>
+                                        <ul class="pml-list">
+                                            <li class="pml-list-element">
+                                                <p class="pml-paragraph">Leading and trailing whitespace in an auto-generated paragraph is removed.</p>
+
+                                            </li>
+                                            <li class="pml-list-element">
+                                                <p class="pml-paragraph">An auto-generated paragraph containing only whitespace is removed.</p>
+
+                                            </li>
+
+                                        </ul>
+
+                                    </li>
+                                    <li class="pml-list-element">
+                                        <div class="pml-header">Whitespace does not define structure</div>
+                                        <p class="pml-paragraph">Adding or removing whitespace characters in a whitespace segment does not alter a document's structure. Hence, whitespace can be used freely to make documents more readable or visually more appealing.</p>
+                                        <p class="pml-paragraph">For example, instead of writing:</p>
+                                        <pre class="pml-code"><code>[doc [title Doc Title]
+[ch [title Chapter 1] text]
+[ch [title Chapter 2] text]
+]</code></pre>
+                                        <p class="pml-paragraph">... we can make the structure easier to grasp like this:</p>
+                                        <pre class="pml-code"><code>[doc [title Doc Title]
+
+    [ch [title Chapter 1]
+        text
+    ]
+
+    [ch [title Chapter 2]
+        text
+    ]
+]</code></pre>
+
+                                    </li>
+
+                                </ul>
+
+                            </section>
+                            <section id="attributes_whitespace" class="pml-chapter">
+                                <h4 class="pml-chapter-title">Attributes</h4>
+                                <p class="pml-paragraph">Whitespace in attributes is handled as follows:</p>
+                                <ul class="pml-list">
+                                    <li class="pml-list-element">
+                                        <div class="pml-header">Whitespace elimination</div>
+                                        <p class="pml-paragraph">Whitespace around attribute symbols (<code class="pml-inline-code">(</code>, <code class="pml-inline-code">)</code>, and <code class="pml-inline-code">=</code>) is ignored. The following three <code class="pml-inline-code">image</code> nodes are semantically equivalent:</p>
+                                        <pre class="pml-code"><code>[image ( source = &quot;images/juicy apple.png&quot; width = &quot;400&quot; height = &quot;200&quot; ) ]
+
+[image(source=&quot;images/juicy apple.png&quot; width=400 height=200)]
+
+[image (
+    source = &quot;images/juicy apple.png&quot;
+     width = 400
+    height = 200
+) ]</code></pre>
+
+                                    </li>
+                                    <li class="pml-list-element">
+                                        <div class="pml-header">Whitespace in attribute values</div>
+                                        <p class="pml-paragraph">As <a class="pml-xref" href="#omit_attribute_quotes">stated already</a>, <i class="pml-italic">unquoted</i> attribute values cannot contain whitespace. Instead of writing <code class="pml-inline-code">color = light orange</code>, we must write <code class="pml-inline-code">color = &quot;light orange&quot;</code></p>
+                                        <p class="pml-paragraph">On the other hand, <i class="pml-italic">quoted</i> attribute values can contain whitespace (any sequences of spaces, tabs, and new lines). Whitespace within a <i class="pml-italic">quoted</i> value is preserved.</p>
+                                        <p class="pml-paragraph">Suppose we want to assign the following value to attribute <code class="pml-inline-code">quote</code>:</p>
+                                        <pre class="pml-code"><code>He said:
+   &quot;She said: 'Wow!'&quot;</code></pre>
+                                        <p class="pml-paragraph">This can be achieved with:</p>
+                                        <pre class="pml-code"><code>quote = &quot;He said:
+   \&quot;She said: 'Wow!'\&quot;&quot;</code></pre>
+                                        <p class="pml-paragraph">Unix and Windows new lines are supported in attribute values.</p>
+                                        <p class="pml-paragraph">Unix or Windows new lines can be <i class="pml-italic">enforced</i> by using escape sequences. For example, to force Windows new lines in the above example, we can write:</p>
+                                        <pre class="pml-code"><code>quote = &quot;He said:\r\n   \&quot;She said: 'Wow!'\&quot;&quot;</code></pre>
+
+                                    </li>
+
+                                </ul>
+
+                            </section>
+
+                        </section>
+                        <section id="escape_characters" class="pml-chapter">
+                            <h3 class="pml-chapter-title">Escape Characters</h3>
+                            <p class="pml-paragraph">Character escape rules in <i class="pml-italic">node text</i> and <i class="pml-italic">attribute values</i> are slightly different, as explained in the following chapters.</p>
+                            <section id="node_escape_characters" class="pml-chapter">
+                                <h4 class="pml-chapter-title">Nodes</h4>
+                                <p class="pml-paragraph">As seen already, characters <code class="pml-inline-code">[</code> and <code class="pml-inline-code">]</code> define the start and end of a node.</p>
+                                <p class="pml-paragraph">Therefore, if these characters are used in text, they must be escaped, to avoid confusion. This is done by prefixing the character with a backslash (<code class="pml-inline-code">\</code>). For instance, instead of writing <code class="pml-inline-code">[</code>, we have to write <code class="pml-inline-code">\[</code>.</p>
+                                <p class="pml-paragraph">As a backslash is used as escape character, it must itself also be escaped when it is used in text. Hence, instead of writing <code class="pml-inline-code">\</code>, we have to write <code class="pml-inline-code">\\</code>.</p>
+                                <p class="pml-paragraph">Here is an example to demonstrate how escaping works:</p>
+                                <ul class="pml-list">
+                                    <li class="pml-list-element">
+                                        <div class="pml-header">PML code:</div>
+                                        <pre class="pml-code"><code>File path = C:\\tests\\example.txt
+
+Instead of writing \\, we have to write \\\\
+
+Instead of writing \[, we have to write \\\[</code></pre>
+
+                                    </li>
+                                    <li class="pml-list-element">
+                                        <div class="pml-header">Result:</div>
+                                        <p class="pml-paragraph">File path = C:\tests\example.txt</p>
+                                        <p class="pml-paragraph">Instead of writing \, we have to write \\</p>
+                                        <p class="pml-paragraph">Instead of writing [, we have to write \[</p>
+
+                                    </li>
+
+                                </ul>
+                                <p class="pml-paragraph">The final rule is simple: Characters <code class="pml-inline-code">[</code>, <code class="pml-inline-code">]</code>, and <code class="pml-inline-code">\</code> must be preceded by <code class="pml-inline-code">\</code> when they are used in normal text.</p>
+                                <p class="pml-paragraph">Besides characters that <i class="pml-italic">must</i> be escaped, there are also characters that <i class="pml-italic">can</i> be escaped if desired, as shown in the following table:</p>
+                                <table class="pml-table">
+                                    <thead class="pml-table-header">
+                                        <tr class="pml-table-header-row">
+<th class="pml-table-header-cell">Character or name</th><th class="pml-table-header-cell">Escape sequence</th><th class="pml-table-header-cell">Mandatory</th></tr>
+                                    </thead>
+                                    <tbody class="pml-table-body">
+                                        <tr class="pml-table-body-row">
+<td class="pml-table-body-cell">\</td><td class="pml-table-body-cell">\\</td><td class="pml-table-body-cell">yes</td></tr>
+                                        <tr class="pml-table-body-row">
+<td class="pml-table-body-cell">[</td><td class="pml-table-body-cell">\[</td><td class="pml-table-body-cell">yes</td></tr>
+                                        <tr class="pml-table-body-row">
+<td class="pml-table-body-cell">]</td><td class="pml-table-body-cell">\]</td><td class="pml-table-body-cell">yes</td></tr>
+                                        <tr class="pml-table-body-row">
+<td class="pml-table-body-cell">Tab</td><td class="pml-table-body-cell">\t</td><td class="pml-table-body-cell">no</td></tr>
+                                        <tr class="pml-table-body-row">
+<td class="pml-table-body-cell">Carriage return</td><td class="pml-table-body-cell">\r</td><td class="pml-table-body-cell">no</td></tr>
+                                        <tr class="pml-table-body-row">
+<td class="pml-table-body-cell">Line feed</td><td class="pml-table-body-cell">\n</td><td class="pml-table-body-cell">no</td></tr>
+                                        <tr class="pml-table-body-row">
+<td class="pml-table-body-cell">Unicode escape 4 hex digits</td><td class="pml-table-body-cell">\uhhhh (e.g. \u2764 for &quot;heart shape&quot;: ♥)</td><td class="pml-table-body-cell">no</td></tr>
+                                        <tr class="pml-table-body-row">
+<td class="pml-table-body-cell">Unicode escape 8 hex digits</td><td class="pml-table-body-cell">\Uhhhhhhhh (e.g. \U0001F600 for &quot;grinning face&quot;: 😀)</td><td class="pml-table-body-cell">no</td></tr>
+                                    </tbody>
+                                </table>
+
+                            </section>
+                            <section id="attribute_escape_characters" class="pml-chapter">
+                                <h4 class="pml-chapter-title">Attributes</h4>
+                                <p class="pml-paragraph">Escape sequences are not supported in <i class="pml-italic">un</i>quoted attribute values.</p>
+                                <p class="pml-paragraph">If an attribute value is quoted, the following escape sequences are supported:</p>
+                                <table class="pml-table">
+                                    <thead class="pml-table-header">
+                                        <tr class="pml-table-header-row">
+<th class="pml-table-header-cell">Character or name</th><th class="pml-table-header-cell">Escape sequence</th><th class="pml-table-header-cell">Mandatory</th></tr>
+                                    </thead>
+                                    <tbody class="pml-table-body">
+                                        <tr class="pml-table-body-row">
+<td class="pml-table-body-cell">&quot;</td><td class="pml-table-body-cell">\&quot;</td><td class="pml-table-body-cell">yes</td></tr>
+                                        <tr class="pml-table-body-row">
+<td class="pml-table-body-cell">\</td><td class="pml-table-body-cell">\\</td><td class="pml-table-body-cell">yes</td></tr>
+                                        <tr class="pml-table-body-row">
+<td class="pml-table-body-cell">[</td><td class="pml-table-body-cell">\[</td><td class="pml-table-body-cell">no</td></tr>
+                                        <tr class="pml-table-body-row">
+<td class="pml-table-body-cell">]</td><td class="pml-table-body-cell">\]</td><td class="pml-table-body-cell">no</td></tr>
+                                        <tr class="pml-table-body-row">
+<td class="pml-table-body-cell">Tab</td><td class="pml-table-body-cell">\t</td><td class="pml-table-body-cell">no</td></tr>
+                                        <tr class="pml-table-body-row">
+<td class="pml-table-body-cell">Carriage return</td><td class="pml-table-body-cell">\r</td><td class="pml-table-body-cell">no</td></tr>
+                                        <tr class="pml-table-body-row">
+<td class="pml-table-body-cell">Line feed</td><td class="pml-table-body-cell">\n</td><td class="pml-table-body-cell">no</td></tr>
+                                        <tr class="pml-table-body-row">
+<td class="pml-table-body-cell">Unicode escape 4 hex digits</td><td class="pml-table-body-cell">\uhhhh (e.g. \u2764 for &quot;heart shape&quot;: ♥)</td><td class="pml-table-body-cell">no</td></tr>
+                                        <tr class="pml-table-body-row">
+<td class="pml-table-body-cell">Unicode escape 8 hex digits</td><td class="pml-table-body-cell">\Uhhhhhhhh (e.g. \U0001F600 for &quot;grinning face&quot;: 😀)</td><td class="pml-table-body-cell">no</td></tr>
+                                    </tbody>
+                                </table>
+                                <p class="pml-paragraph">Example: Suppose we want to assign the value <code class="pml-inline-code">C:\temp\test.txt</code> to attribute <code class="pml-inline-code">path</code>. In this case the value can be quoted or unquoted. If the value is quoted then <code class="pml-inline-code">\</code> must be escaped:</p>
+                                <table class="pml-table">
+                                    <tbody class="pml-table-body">
+                                        <tr class="pml-table-body-row">
+<td class="pml-table-body-cell pml-text-align-right">Quoted:</td><td class="pml-table-body-cell pml-text-align-left">path = &quot;C:\\temp\\test.txt&quot;</td></tr>
+                                        <tr class="pml-table-body-row">
+<td class="pml-table-body-cell pml-text-align-right">Unquoted:</td><td class="pml-table-body-cell pml-text-align-left">path = C:\temp\test.txt</td></tr>
+                                    </tbody>
+                                </table>
+
+                            </section>
+
+                        </section>
+                        <section id="parameters" class="pml-chapter">
+                            <h3 class="pml-chapter-title">Parameters</h3>
+                            <p class="pml-paragraph">Sometimes the same text or markup code appears several times in a document. In such cases you can use a <i class="pml-italic">parameter</i> to avoid retyping or copy/pasting the same text again and again.</p>
+                            <p class="pml-paragraph">A parameter is composed of an <i class="pml-italic">identifier</i> (unique name) and a <i class="pml-italic">value</i>. The syntax for assigning a value to a parameter is:</p>
+                            <pre class="pml-code"><code>[u:set name = value]</code></pre>
+                            <p class="pml-paragraph">Note the mandatory <code class="pml-inline-code">u:</code> before the node name <code class="pml-inline-code">set</code>. The prefix <code class="pml-inline-code">u:</code> defines a namespace with identifier <code class="pml-inline-code">u</code>, which stands for <i class="pml-italic">utility</i> node. This is necessary to make a distinction between normal PML nodes that <i class="pml-italic">contain</i> text, and other nodes that are used to <i class="pml-italic">handle</i> text (text processing).</p>
+                            <p class="pml-paragraph">The value assigned to a parameter can be re-used in the document with the following syntax:</p>
+                            <pre class="pml-code"><code>[u:get name]</code></pre>
+                            <p class="pml-paragraph">Here is an example of a URL that is re-used two times.</p>
+                            <ul class="pml-list">
+                                <li class="pml-list-element">
+                                    <div class="pml-header">PML code:</div>
+                                    <pre class="pml-code"><code>[u:set docs_root_URL = http://www.example.com/project/docs/public]
+
+For an overview please read the article [link url=[u:get docs_root_URL]/concepts.html text=&quot;Basic Concepts&quot;].
+
+For detailed information please refer to the [link url=[u:get docs_root_URL]/user_manual.html text=&quot;User Manual&quot;].</code></pre>
+
+                                </li>
+                                <li class="pml-list-element">
+                                    <div class="pml-header">Result:</div>
+                                    <p class="pml-paragraph">For an overview please read the article <a class="pml-link" href="http://www.example.com/project/docs/public/concepts.html">Basic Concepts</a>.</p>
+                                    <p class="pml-paragraph">For detailed information please refer to the <a class="pml-link" href="http://www.example.com/project/docs/public/user_manual.html">User Manual</a>.</p>
+
+                                </li>
+
+                            </ul>
+                            <p class="pml-paragraph">You can define any number of parameters, anywhere in the document. Parameters are often defined at the beginning of the document, just after the <code class="pml-inline-code">doc</code> node. After declaring a parameter, its value can be re-used any number of times in the document.</p>
+                            <p class="pml-paragraph">After assigning a value to a parameter, its value cannot be changed later in the document. Parameters are like <i class="pml-italic">constants</i> in programming languages.</p>
+                            <p class="pml-paragraph">The syntax rules for assigning values to parameters are the same as those for attributes (<a class="pml-xref" href="#lenient_parsing">lenient parsing</a>, <a class="pml-xref" href="#attributes_whitespace">whitespace handling</a>, and <a class="pml-xref" href="#attribute_escape_characters">character escapes</a>).</p>
+                            <p class="pml-paragraph">A parameter identifier must start with a letter or an underscore, and can be followed by any number of letters, digits, underscores, hyphens, and dots. Note for programmers: The regex of an identifier is: <code class="pml-inline-code">[a-zA-Z_][a-zA-Z0-9_\.-]*</code>. Identifiers are case-sensitive. The following identifiers are all different: <code class="pml-inline-code">name</code>, <code class="pml-inline-code">Name</code>, and <code class="pml-inline-code">NAME</code>.</p>
+                            <p class="pml-paragraph">You can assign several parameters in a single <code class="pml-inline-code">set</code> node. For example:</p>
+                            <pre class="pml-code"><code>[u:set
+    color = &quot;deep blue&quot;
+    default_width = 300
+]</code></pre>
+                            <p class="pml-paragraph">Besides assigning simple <i class="pml-italic">text</i> snippets to parameters, you can also assign <i class="pml-italic">markup</i> snippets to re-reuse. Imagine, for example, that a company logo needs to be inserted several times in the document. Suppose that the markup code to be inserted is:</p>
+                            <pre class="pml-code"><code>[image source=images/company_logo.png width=200 height=200 border=yes]</code></pre>
+                            <p class="pml-paragraph">Re-inserting this code several times would be cumbersome. Worse, it would be hard to maintain. For example, if the logo's dimensions are changed later, the change must be done everywhere the node is used. These inconveniences can easily be eliminated by using a parameter. Here is the code to define the code once and re-use it two times:</p>
+                            <pre class="pml-code"><code>[u:set company_logo = &quot;[image source=images/company_logo.png width=200 height=200 border=yes]&quot;]
+...
+[u:get company_logo]
+...
+[u:get company_logo]</code></pre>
+                            <p class="pml-paragraph"> If the dimensions are changed later, you just need to make the change at one place.</p>
+                            <p class="pml-paragraph">Parameters can use other parameters that have already been defined in the document. For example, you might want to define a common root directory once, and re-use it in the definition of subsequent parameters:</p>
+                            <pre class="pml-code"><code>[u:set root_directory = /foo/bar/]
+[u:set images_directory = &quot;[u:get root_directory]images&quot;]
+[u:set examples_directory = &quot;[u:get root_directory]examples&quot;]
+
+[p Images: [u:get images_directory]]
+[p Examples: [u:get examples_directory]]</code></pre>
+                            <p class="pml-paragraph">This is rendered as:</p>
+                            <p class="pml-paragraph">Images: /foo/bar/images</p>
+                            <p class="pml-paragraph">Examples: /foo/bar/examples</p>
+
+                        </section>
+                        <section id="file_splitting" class="pml-chapter">
+                            <h3 class="pml-chapter-title">File Splitting</h3>
+                            <p class="pml-paragraph">If you create a big document, it is useful to split it up into several files, instead of having one big file that contains all the text. For example, each chapter could be defined in a separate <code class="pml-inline-code">pml</code> file.</p>
+                            <p class="pml-paragraph">The syntax to insert a <code class="pml-inline-code">pml</code> file at the current location is:</p>
+                            <pre class="pml-code"><code>[u:ins_file path = file_path]</code></pre>
+                            <p class="pml-paragraph"><code class="pml-inline-code">file_path</code> can be an absolute or relative path. If it's a relative path, it's relative to the directory of the <code class="pml-inline-code">pml</code> file in which <code class="pml-inline-code">ins_file</code> is used.</p>
+                            <p class="pml-paragraph"><b class="pml-bold">Example</b></p>
+                            <p class="pml-paragraph">Suppose we create a PML document composed of two chapters. We want each chapter to be defined in its own file, in sub-directory <code class="pml-inline-code">chapters</code> (relative to the main document).</p>
+                            <ul class="pml-list">
+                                <li class="pml-list-element">
+                                    <div class="pml-header">PML code:</div>
+                                    <p class="pml-paragraph">We create file <code class="pml-inline-code">chapters/chapter_1.pml</code> with this content:</p>
+                                    <pre class="pml-code"><code>[ch [title Chapter 1]
+    blah blah blah
+]</code></pre>
+                                    <p class="pml-paragraph">We also create file <code class="pml-inline-code">chapters/chapter_2.pml</code>:</p>
+                                    <pre class="pml-code"><code>[ch [title Chapter 2]
+    blah blah blah
+]</code></pre>
+                                    <p class="pml-paragraph">The main file <code class="pml-inline-code">book.pml</code> is defined like this:</p>
+                                    <pre class="pml-code"><code>[doc [title Book]
+    [u:ins_file path = chapters/chapter_1.pml]
+    [u:ins_file path = chapters/chapter_2.pml]
+]</code></pre>
+
+                                </li>
+                                <li class="pml-list-element">
+                                    <div class="pml-header">Result:</div>
+                                    <figure style="text-align: left">
+                                        <img class="pml-image" src="images/insert_example.png">
+                                    </figure>
+
+                                </li>
+
+                            </ul>
+
+                        </section>
+
+                    </section>
+                    <section id="toc" class="pml-chapter">
+                        <h2 class="pml-chapter-title">Table of Contents</h2>
+                        <p class="pml-paragraph">By default, a table of contents (TOC) is created on the left side of the HTML page, as shown <a class="pml-xref" href="#simple_document_example">before</a>.</p>
+                        <p class="pml-paragraph">The TOC is automatically created based on the chapters defined in the document. As chapters can be nested, the TOC results in a tree, which the user can expand or collapse. When the document is first displayed, all TOC chapters beyond level 1 are collapsed. Only chapters of level 1 are displayed. The user can then expand chapters and sub-chapters, and click on a chapter's title to see its content.</p>
+                        <p class="pml-paragraph">PML's default behavior for the TOC can be customized with the following options:</p>
+                        <ul class="pml-list">
+                            <li class="pml-list-element">
+                                <p class="pml-paragraph"><code class="pml-inline-code">TOC_title</code>: change or remove the title displayed at the top of the TOC</p>
+
+                            </li>
+                            <li class="pml-list-element">
+                                <p class="pml-paragraph"><code class="pml-inline-code">TOC_position</code>: define the TOC's position. Allowed values are:</p>
+                                <ul class="pml-list">
+                                    <li class="pml-list-element">
+                                        <p class="pml-paragraph"><code class="pml-inline-code">left</code>: Display the TOC at the left side. This is the default value.</p>
+
+                                    </li>
+                                    <li class="pml-list-element">
+                                        <p class="pml-paragraph"><code class="pml-inline-code">top</code>: Display the TOC at the top of the document, after the document's title.</p>
+
+                                    </li>
+                                    <li class="pml-list-element">
+                                        <p class="pml-paragraph"><code class="pml-inline-code">none</code>: Don't display a TOC.</p>
+
+                                    </li>
+
+                                </ul>
+
+                            </li>
+                            <li class="pml-list-element">
+                                <p class="pml-paragraph"><code class="pml-inline-code">TOC_max_level</code>: the maximum chapter level that is included in the table of contents. Chapters with a higher level are excluded from the TOC.</p>
+
+                            </li>
+
+                        </ul>
+                        <p class="pml-paragraph">Here is an example of using an <a class="pml-xref" href="#options">options</a> node to set the TOC's title to &quot;Inhaltsverzeichnis&quot;, display the TOC at the top, and include only chapters up to level 4:</p>
+                        <pre class="pml-code"><code>[doc [title TOC test]
+
+    [options
+        [TOC_title Inhaltsverzeichnis]
+        [TOC_position top]
+        [TOC_max_level 4]
+    ]
+
+    lorem ipsum tralala ...
+]</code></pre>
+
+                    </section>
+                    <section id="customization" class="pml-chapter">
+                        <h2 class="pml-chapter-title">Customization</h2>
+                        <p class="pml-paragraph">A major goal of PMLC is to give you full control over how PML documents are converted to HTML or other formats.  Therefore PMLC provides several features allowing you to partially or fully customize the conversion process, so that the target document's look and feel honors your preferences and specific requirements.</p>
+                        <p class="pml-paragraph">Customization is currently supported in the following ways:</p>
+                        <ul class="pml-list">
+                            <li class="pml-list-element">
+                                <p class="pml-paragraph">A set of options that can be specified at the command line, in the PML document, or in a shared options file.</p>
+
+                            </li>
+                            <li class="pml-list-element">
+                                <p class="pml-paragraph">HTML Attributes.</p>
+
+                            </li>
+                            <li class="pml-list-element">
+                                <p class="pml-paragraph">Customized CSS files to style the HTML document.</p>
+
+                            </li>
+                            <li class="pml-list-element">
+                                <p class="pml-paragraph">User-defined nodes that allow you to add new nodes to PML, or to override PML's standard nodes.</p>
+
+                            </li>
+
+                        </ul>
+                        <p class="pml-paragraph">The following features are planned to be supported in future versions:</p>
+                        <ul class="pml-list">
+                            <li class="pml-list-element">
+                                <p class="pml-paragraph">HTML templates to easily customize HTML code generation for specific nodes.</p>
+
+                            </li>
+                            <li class="pml-list-element">
+                                <p class="pml-paragraph">Custom HTML node writers to programmatically generate specific HTML code for individual (or all) nodes.</p>
+
+                            </li>
+                            <li class="pml-list-element">
+                                <p class="pml-paragraph">Custom writers to programmatically convert PML documents into other formats, such as plain text, JSON, XML, PDF, etc.</p>
+
+                            </li>
+                            <li class="pml-list-element">
+                                <p class="pml-paragraph">AST interception to programmatically change the AST produced by the PML parser (i.e. change, add, and remove PML nodes and attributes).</p>
+
+                            </li>
+
+                        </ul>
+                        <section id="options" class="pml-chapter">
+                            <h3 class="pml-chapter-title">Options</h3>
+                            <p class="pml-paragraph">To see the list of options available when a PML document is converted to HTML, please refer to section &quot;Input Parameters&quot; in chapter <a class="pml-link" href="https://www.pml-lang.dev/docs/commands_manual/index.html#command_PML_to_HTML">Convert PML to HTML</a> of the <a class="pml-link" href="https://www.pml-lang.dev/docs/commands_manual/index.html">PMLC Commands Reference Manual</a>.</p>
+                            <p class="pml-paragraph">When PMLC executes command <code class="pml-inline-code">PML_to_HTML</code>, it looks for options in the following order:</p>
+                            <ul class="pml-list" style="list-style-type:decimal">
+                                <li class="pml-list-element">
+                                    <p class="pml-paragraph">If the value for an option is explicitly specified as a command line argument, then this value is applied. Options defined on the command line always have highest priority.</p>
+                                    <p class="pml-paragraph">For example, the title and position for the table of contents can be explicitly defined on the command line like this:</p>
+                                    <pre class="pml-input">--TOC_title &quot;Book Content&quot; --TOC_position top</pre>
+
+                                </li>
+                                <li class="pml-list-element">
+                                    <p class="pml-paragraph">If no value is specified on the command line, then PMLC looks for a value specified within an <code class="pml-inline-code">options</code> node in the PML document. If a value is found then this value is applied.</p>
+                                    <p class="pml-paragraph">The <code class="pml-inline-code">options</code> node must be defined as a direct child node of the <code class="pml-inline-code">doc</code> node.</p>
+                                    <p class="pml-paragraph">For example, the title and position for the table of contents can be defined in the PML document as follows:</p>
+                                    <pre class="pml-code"><code>[doc [title Options Example]
+
+    [options
+        [TOC_title Book Content]
+        [TOC_position top]
+    ]
+
+    text ...
+]</code></pre>
+
+                                </li>
+                                <li class="pml-list-element">
+                                    <p class="pml-paragraph">If a value is neither specified on the command line nor in the PML document, then PMLC looks for a value specified in a shared options file.</p>
+                                    <p class="pml-paragraph">The relative path of this file is <code class="pml-inline-code">config/PML_to_HTML/options.pdml</code>. The file's root directory depends on the operating system. For example, on Windows it is normally a subdirectory of <code class="pml-inline-code">%APPDATA%</code>. To know the exact location on your machine, you can run command <code class="pml-inline-code">pmlc info</code> in a terminal. Then look for the field labeled <code class="pml-inline-code">Shared data dir.</code>, which shows the root directory. A typical value on Windows would be <code class="pml-inline-code">C:\Users\Albert\AppData\Roaming\PMLC_3.0\</code>. In this case the full path of the options file would be<br /> <code class="pml-inline-code">C:\Users\Albert\AppData\Roaming\PMLC_3.0\config\PML_to_HTML\options.pdml</code></p>
+                                    <p class="pml-paragraph">Note that file <code class="pml-inline-code">config/PML_to_HTML/options.pdml</code> is itself optional. If it doesn't exist, you need to create it manually to store shared options.</p>
+                                    <p class="pml-paragraph">If the file exists, and a value is found for an option, then this value is applied.</p>
+                                    <p class="pml-paragraph">The content of the file is the same as the <code class="pml-inline-code">options</code> node in a PML document.</p>
+                                    <p class="pml-paragraph">For example, the default title and position for the table of contents can be defined as follows:</p>
+                                    <div class="pml-caption">File <code class="pml-inline-code">config/PML_to_HTML/options.pdml</code></div>
+                                    <pre class="pml-code"><code>[options
+    [TOC_title Book Content]
+    [TOC_position top]
+]</code></pre>
+                                    <div class="pml-admonition">
+                                        <div class="pml-admonition-label">Tip</div>
+                                        <div class="pml-admonition-content">
+                                            <p class="pml-paragraph">You should consider using the <code class="pml-inline-code">options.pdml</code> file for options that are needed in most or all of your PML documents. Defining options in the shared <code class="pml-inline-code">options.pdml</code> file eliminates the need to repeat the same options again and again in different PML documents or as command arguments.</p>
+                                        </div>
+                                    </div>
+
+                                </li>
+                                <li class="pml-list-element">
+                                    <p class="pml-paragraph">If a value is neither specified on the command line, nor in the PML document, nor in a shared options file, then PMLC applies a hard-coded default value.</p>
+
+                                </li>
+
+                            </ul>
+                            <div class="pml-admonition">
+                                <div class="pml-admonition-label">Note</div>
+                                <div class="pml-admonition-content">
+                                    <p class="pml-paragraph">The following options are only available as command line arguments. They cannot be used in a PML document or in a shared options file:<br /> <code class="pml-inline-code">input, output, verbosity, open_file_cmd</code></p>
+                                </div>
+                            </div>
+
+                        </section>
+                        <section id="HTML_attributes_2" class="pml-chapter">
+                            <h3 class="pml-chapter-title">HTML Attributes</h3>
+                            <p class="pml-paragraph">If you want to change the style of a <i class="pml-italic">single</i> node, you can define an <i class="pml-italic">HTML attribute</i> for that node, as explained <a class="pml-xref" href="#HTML_attributes">previously</a>. You can assign any valid <a class="pml-link" href="https://www.w3schools.com/css/">CSS</a> to the node's <code class="pml-inline-code">html_style</code> attribute, or you can use an <code class="pml-inline-code">html_class</code> attribute.</p>
+                            <p class="pml-paragraph">Besides customizing CSS, <i class="pml-italic">HTML attributes</i> defined for a PML node can also be used to set other HTML attributes in the target HTML document.</p>
+                            <p class="pml-paragraph">Please refer to chapter <a class="pml-xref" href="#HTML_attributes">HTML Attributes</a> for more information.</p>
+
+                        </section>
+                        <section id="customized_css" class="pml-chapter">
+                            <h3 class="pml-chapter-title">Customized CSS</h3>
+                            <p class="pml-paragraph">Option <code class="pml-inline-code">CSS_files</code> can be used to specify one or more customized CSS files to be applied in the final HTML document. For more information, please refer to parameter <code class="pml-inline-code">CSS_files</code> in section &quot;Input Parameters&quot; of chapter <a class="pml-link" href="https://www.pml-lang.dev/docs/commands_manual/index.html#command_PML_to_HTML">Convert PML to HTML</a>.</p>
+                            <p class="pml-paragraph">Each tag in the final HTML document has a <code class="pml-inline-code">class</code> attribute. Hence, the <code class="pml-inline-code">class</code> value can be used in any CSS file to style the HTML node. All CSS class names used in PML are prefixed with <code class="pml-inline-code">pml-</code>, so that PML styling doesn't interfere with other styling rules that might exist in the final HTML page.</p>
+                            <p class="pml-paragraph">For example, the document title's class is <code class="pml-inline-code">pml-doc-title</code>. Hence, to change the appearance (font, size, color, etc.) of the document's title, you can apply any CSS rule to class <code class="pml-inline-code">pml-doc-title</code> in a CSS file.</p>
+                            <p class="pml-paragraph">If you want to change the style just for an <i class="pml-italic">individual</i> node, you can use the <code class="pml-inline-code">html_style</code> attribute, as <a class="pml-xref" href="#HTML_attributes">seen already</a>. Alternatively, you can define an <i class="pml-italic">identifier</i> for the node, and then use the identifier in the CSS file to change the style.</p>
+                            <p class="pml-paragraph">For example, to display a single paragraph with a yellow background, you would write the following PML code:</p>
+                            <pre class="pml-code"><code>[p (id = my-id)
+    This text is displayed on a yellow background.
+]</code></pre>
+                            <p class="pml-paragraph">Then you can add the following rule in a CSS file:</p>
+                            <pre class="pml-code"><code>#my-id {
+    background-color: yellow;
+}</code></pre>
+                            <p class="pml-paragraph">Result:</p>
+                            <p class="pml-paragraph" style="background-color: yellow;"> This text is displayed on a yellow background. </p>
+
+                        </section>
+                        <section id="user_defined_nodes" class="pml-chapter">
+                            <h3 class="pml-chapter-title">User-Defined Nodes</h3>
+                            <p class="pml-paragraph">Please refer to chapter <a class="pml-link" href="https://www.pml-lang.dev/docs/advanced_features/index.html#user_defined_nodes">User-Defined Nodes</a> for more information.</p>
+
+                        </section>
+
+                    </section>
+                </article>
+                <aside class="pml-doc-right">
+                </aside>
+            </div>
+            <footer class="pml-doc-footer">
+            </footer>
+        </div>
+
+    </body>
+</html>

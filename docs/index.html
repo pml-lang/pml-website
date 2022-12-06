@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Practical Markup Language (PML)</title> 
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="content-language" content="en-us">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Practical Markup Language (PML): lightweight and powerful markup language to write beautiful web articles and books.">
+		<meta name="keywords" content="practical markup language, PML, write article book">
+
+		<link rel="stylesheet" href="./css/pml.css">
+		<link rel="icon" href="./favicon.ico" type="image/x-icon" />
+
+
+
+	</head>
+
+	<body>
+		<script>
+			window.onload = function() {
+				const path = window.location.pathname;
+				// console.log ( path );
+				var tab_name = "none";
+				if ( path.includes ( "/about" ) ) {
+					tab_name = "about";
+				} else if ( path.includes ( "/docs" ) ) {
+					tab_name = "docs";
+				} else if ( path.includes ( "/downloads" ) ) {
+					tab_name = "downloads";
+				} else if ( path.includes ( "/help" ) ) {
+					tab_name = "help";
+				}
+				if ( tab_name !== "none" ) {
+					document.getElementById(tab_name).style.background = "lightgrey";
+				}
+			};
+		</script>
+
+		<div id="left_margin"></div>
+		
+		<div id="page">
+		
+			<a href="./index.html" class="no_link_decoration">
+			<div id="header">
+				<div id="header_name">Practical Markup Language (PML)</div>
+				<div id="header_slogan">markup on steroids</div>
+			</div>
+			</a>
+
+			<div id="menu">
+				<div class="menu-item" id="about">
+					<a href="./about/faq.html" class="menu-link">About</a>
+				</div>
+				<div class="menu-item" id="docs">
+					<a href="./docs/index.html" class="menu-link">Docs</a>
+				</div>
+				<div class="menu-item" id="downloads">
+					<a href="./downloads/index.html" class="menu-link">Downloads</a>
+				</div>
+				<div class="menu-item" id="help">
+					<a href="./help/index.html" class="menu-link">Help</a>
+				</div>
+			</div>
+
+			<div id="menu_content_separator"></div>
+
+
+<div id="content">
+
+	<div style="display: flex">
+        <div><img src="images/quotes_noto.png" style="width: 40px;"></div>
+        <div style="font-family: 'Comic Sans MS', Georgia; font-size: 1.4em; font-style: italic; letter-spacing: 0.1em; line-height:1.5em; margin-left: 7px; margin-top: 12px;">Creating beautiful web articles and books should be<br />easy for everybody.</div>
+    </div>
+    <div style="text-align: right; font-size: 0.9em; font-style: italic;">- The PML Philosophy</div>
+
+    <hr style="color:lightgrey; margin-top:1em;" />
+
+
+	<div style="display: flex; background: #F5F5F5; margin-top:2em; align-items: center; border-radius: 1em;">
+		<div style="width: 50%; background: #F5F5F5;">
+			<p style="text-align:center; font-size:1.5em; font-weight: bold; font-family: 'Comic Sans MS'; ">What is PML?</p>
+		</div>
+		<div style="width: 50%; background: #E8E8E8; border-top-right-radius: 1em; border-bottom-right-radius: 1em;">
+			<div style="padding-left:1em; padding-right:1em;">
+				<p>The Practical Markup Language (PML) is a free, open source (<a href="https://github.com/pml-lang">Github</a>), advanced document <a href="https://techterms.com/definition/markup_language">markup language</a>.</p>
+				<p>PML simplifies the process of writing technical and non-technical web articles and books that look good out-of-the-box and are highly customizable.</p>
+			</div>
+		</div>
+	</div>
+
+
+
+	<div style="display: flex; background: #F5F5F5; margin-top:2em; align-items: center; border-radius: 1em; flex-direction: row-reverse">
+		<div style="width: 50%; background: #F5F5F5;">
+			<p style="text-align:center; font-size:1.5em; font-weight: bold; font-family: 'Comic Sans MS'; ">Why PML?</p>
+		</div>
+		<div style="width: 50%; background: #E8E8E8; border-top-left-radius: 1em; border-bottom-left-radius: 1em;">
+			<div style="padding-left:1em; padding-right:1em;">
+				<p>PML has been carefully designed from the ground up to get rid of <a href="docs/articles/practical-document-markup-language/index.html">problems, limitations, and impracticalities</a> encountered with existing markup languages. PML works well even if your documents are big and/or complex.</p>
+				<p>PML provides a set of powerful <a href=about/faq.html#features>features</a> to simplify, customize, and automate the writing process as far as possible.</p>
+				<!--
+				<p>PML's final goal is to be a <i>"Markup on Steroids for power-writers; suitable for big and complex documents"</i>.</p>
+				-->
+			</div>
+		</div>
+	</div>
+
+
+
+	<h2 style="background: #F5F5F5; margin-top:1em; padding:0.5em; border-radius: 0.5em; font-family: 'Comic Sans MS';">How does it work?</h2>
+
+    <p>Suppose we want to create the following simple web document:</p>
+
+    <img src="images/landing_page_example.png" style="border:1px solid black;">
+
+    <p>Here is the PML code to create the above web page:</p>
+    <p><i>File example.pml</i></p>
+    <pre style="background: #f5f5f5; border-radius: 1em; line-height: 1.4; padding: 1em; font-family: Consolas, 'DejaVu Sans Mono', monospace;">
+<span class="pml-node">[doc</span> <span class="pml-node">[title</span> PML Demo<span class="pml-node">]</span>
+
+    <span class="pml-node">[ch</span> <span class="pml-node">[title </span>Introduction<span class="pml-node">]</span>
+        This is a <span class="pml-node">[i</span> simple<span class="pml-node">]</span> example.
+
+        You can add images, audio, and videos:
+        <span class="pml-node">[image </span><span class="pml-attribute">(</span>
+            <span class="pml-attribute">source = images/strawberries.jpg</span>
+            <span class="pml-attribute"> width = 300</span>
+            <span class="pml-attribute"> align = center</span>
+        <span class="pml-attribute">)</span><span class="pml-node">]</span>
+    <span class="pml-node">]</span>
+
+    <span class="pml-node">[ch</span> <span class="pml-node">[title </span>Source Code<span class="pml-node">]</span>
+        You can show highlighted source code:
+        <span class="pml-node">[code</span> <span class="pml-attribute">(lang=java)</span>
+            // Simple Java example
+            public static void sayHello ( String name ) {
+                System.out.println ( "Hello " + name );
+            }        
+        <span class="pml-node">code]</span>
+    <span class="pml-node">]</span>
+<span class="pml-node">]</span></pre>
+
+    <p>To create the HTML file, you type a simple command like the following one in a terminal:</p>
+    <pre style="font-family: Consolas, 'DejaVu Sans Mono', monospace;">pmlc p2h example.pml</pre>
+
+<!--
+	<p>If you prefer a graphical user interface you can use PML's desktop application.</p>
+-->
+
+    <p>The presentation and style of the final document (table of contents, font, color, etc.) can be customized to match your preferences.</p>
+
+
+	<h2 style="background: #F5F5F5; margin-top:1em; padding:0.5em; border-radius: 0.5em; font-family: 'Comic Sans MS';">Should you give it a try?</h2>
+
+	<p><b>Yes if:</b></p>
+
+	<div style="display: inline-grid; grid-template-columns: auto auto; margin-left:2em;">
+		
+		<div style="font-size: 26px; color:green">&#x2714;</div>
+		<div style="padding-left: 0.5em; padding-bottom: 0.5em;">You want to <i>focus on writing</i>. You don't want to worry about impracticalities and corner-cases that require tricky workarounds and distract from writing.</div>
+
+		<div style="font-size: 26px; color:green">&#x2714;</div>
+		<div style="padding-left: 0.5em; padding-bottom: 0.5em;">You write complex or big documents, such as technical articles, user manuals, or books.</div>  
+		
+		<div style="font-size: 26px; color:green">&#x2714;</div>
+		<div style="padding-left: 0.5em; padding-bottom: 0.5em;">You need a tool that:
+            <ul>
+                <li>runs on Windows, Linux, and macOS</li>
+                <li>provides a desktop application (GUI), command line interface (CLI), and application program interface (API)</li>
+                <li>is free, open-source, easy to learn and use, and simple to install (no dependencies)</li>
+            </ul>
+			You want to get results quickly.
+        </div>
+		
+<!--
+		<div style="font-size: 26px; color:green">&#x2714;</div>
+		<div style="padding-left: 0.5em;">You need a tool that is easy to learn and use, free, and easy to install. You want to get results quickly.</div>
+-->
+	</div>
+
+	<p><b>No if:</b></p>
+
+	<div style="display: inline-grid; grid-template-columns: auto auto; margin-left:2em;">
+		<div style="font-size: 3em; color:red">&#x2a2f;</div>
+		<div style="padding-left: 0.5em; padding-bottom: 0.5em;">You write only small and simple documents, and you are happy with Markdown.</div>  
+		
+		<div style="font-size: 3em; color:red">&#x2a2f;</div>
+		<div style="padding-left: 0.5em; padding-bottom: 0.5em;">You are not interested in bleeding-edge technology or products that aren't mainstream yet.</div>
+		
+		<div style="font-size: 3em; color:red">&#x2a2f;</div>
+		<div style="padding-left: 0.5em; padding-bottom: 0.5em;">You prefer using a word processor instead of a markup language, despite the numerous <a href="docs/articles/advantages-markup-language-vs-word-processor/index.html">advantages</a> of a good markup language.</div>
+	</div>
+
+
+    <p><a href="about/faq.html">Discover more ...</a></p>
+    <p>Or read: <a href="docs/articles/practical-document-markup-language/index.html" target="_blank">We Need a New Document Markup Language - Here is Why.</a></p>
+
+</div>
+
+			<div id="footer"></div>
+		
+		</div>
+		
+		<div id="right_margin"></div>
+	</body>
+</html>
+

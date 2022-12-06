@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>PML Help</title> 
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="content-language" content="en-us">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Practical Markup Language (PML): lightweight and powerful markup language to write beautiful web articles and books.">
+		<meta name="keywords" content="practical markup language, PML, write article book">
+
+		<link rel="stylesheet" href="../css/pml.css">
+		<link rel="icon" href="../favicon.ico" type="image/x-icon" />
+
+
+
+	</head>
+
+	<body>
+		<script>
+			window.onload = function() {
+				const path = window.location.pathname;
+				// console.log ( path );
+				var tab_name = "none";
+				if ( path.includes ( "/about" ) ) {
+					tab_name = "about";
+				} else if ( path.includes ( "/docs" ) ) {
+					tab_name = "docs";
+				} else if ( path.includes ( "/downloads" ) ) {
+					tab_name = "downloads";
+				} else if ( path.includes ( "/help" ) ) {
+					tab_name = "help";
+				}
+				if ( tab_name !== "none" ) {
+					document.getElementById(tab_name).style.background = "lightgrey";
+				}
+			};
+		</script>
+
+		<div id="left_margin"></div>
+		
+		<div id="page">
+		
+			<a href="../index.html" class="no_link_decoration">
+			<div id="header">
+				<div id="header_name">Practical Markup Language (PML)</div>
+				<div id="header_slogan">markup on steroids</div>
+			</div>
+			</a>
+
+			<div id="menu">
+				<div class="menu-item" id="about">
+					<a href="../about/faq.html" class="menu-link">About</a>
+				</div>
+				<div class="menu-item" id="docs">
+					<a href="../docs/index.html" class="menu-link">Docs</a>
+				</div>
+				<div class="menu-item" id="downloads">
+					<a href="../downloads/index.html" class="menu-link">Downloads</a>
+				</div>
+				<div class="menu-item" id="help">
+					<a href="../help/index.html" class="menu-link">Help</a>
+				</div>
+			</div>
+
+			<div id="menu_content_separator"></div>
+
+			<div id="content">
+
+                <h2>Help</h2>
+
+				<h3>Question?</h3>
+				<p>Before asking a question, please try to:</p>
+				<ul>
+					<li>search the <a href="../docs/user_manual/index.html">User Manual</a></li>
+					<li>search the <a href="../docs/reference_manual/index.html">Reference Manual</a></li>
+					<!-- <li>type <code>pmlc help</code> in a terminal</li> -->
+				</ul>
+				<p>If you can't find the answer then please use <a href="https://github.com/pml-lang/pml-companion/discussions">GitHub discussions</a> to ask a question.</p>
+				<p>Suggestions, ideas, feature requests, and any kind of constructive feedback are very welcome.</p>
+
+				<h3>Bug Report</h3>
+				<p>Bugs can be submitted by opening an <a href="https://github.com/pml-lang/pml-companion/issues">issue</a> on GitHub.<p>
+
+				<h3>Contact the Author</h3>
+				<p>You can contact me at chris {at} pml-lang {dot} dev.</p>
+
+			</div>
+
+			<div id="footer"></div>
+		
+		</div>
+		
+		<div id="right_margin"></div>
+	</body>
+</html>
+

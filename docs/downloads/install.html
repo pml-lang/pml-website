@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>PML Installation</title> 
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="content-language" content="en-us">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Practical Markup Language (PML): lightweight and powerful markup language to write beautiful web articles and books.">
+		<meta name="keywords" content="practical markup language, PML, write article book">
+
+		<link rel="stylesheet" href="../css/pml.css">
+		<link rel="icon" href="../favicon.ico" type="image/x-icon" />
+
+
+
+	</head>
+
+	<body>
+		<script>
+			window.onload = function() {
+				const path = window.location.pathname;
+				// console.log ( path );
+				var tab_name = "none";
+				if ( path.includes ( "/about" ) ) {
+					tab_name = "about";
+				} else if ( path.includes ( "/docs" ) ) {
+					tab_name = "docs";
+				} else if ( path.includes ( "/downloads" ) ) {
+					tab_name = "downloads";
+				} else if ( path.includes ( "/help" ) ) {
+					tab_name = "help";
+				}
+				if ( tab_name !== "none" ) {
+					document.getElementById(tab_name).style.background = "lightgrey";
+				}
+			};
+		</script>
+
+		<div id="left_margin"></div>
+		
+		<div id="page">
+		
+			<a href="../index.html" class="no_link_decoration">
+			<div id="header">
+				<div id="header_name">Practical Markup Language (PML)</div>
+				<div id="header_slogan">markup on steroids</div>
+			</div>
+			</a>
+
+			<div id="menu">
+				<div class="menu-item" id="about">
+					<a href="../about/faq.html" class="menu-link">About</a>
+				</div>
+				<div class="menu-item" id="docs">
+					<a href="../docs/index.html" class="menu-link">Docs</a>
+				</div>
+				<div class="menu-item" id="downloads">
+					<a href="../downloads/index.html" class="menu-link">Downloads</a>
+				</div>
+				<div class="menu-item" id="help">
+					<a href="../help/index.html" class="menu-link">Help</a>
+				</div>
+			</div>
+
+			<div id="menu_content_separator"></div>
+
+			<div id="content">
+
+<h2>Install the <i>PML Companion (PMLC)</i> version 3.1.0</h2>
+
+<p>Note: If you are using an older version of PMLC then please have a look at the <a href=https://www.pml-lang.dev/docs/changelog/index.html>Changelog</a> first, to see if there are any backwards-incompatible changes in the newest version.</p>
+
+<p>Please select your operating system:</p>
+
+<ul>
+	<li><p><a href="windows/index.html">Windows</a></p></li>
+	<li><p><a href="linux/index.html">Linux</a></p></li>
+	<li><p><a href="macos/index.html">macOS</a></p></li>
+</ul>
+
+<!--
+<p>Note:</p>
+<ul>
+    <li>PML does not use Log4j, and is therefore not affected by the Log4j vulnerability.</li>
+</ul>
+-->
+
+			</div>
+
+			<div id="footer"></div>
+		
+		</div>
+		
+		<div id="right_margin"></div>
+	</body>
+</html>
+

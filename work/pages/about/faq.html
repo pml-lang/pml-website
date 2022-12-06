@@ -1,0 +1,200 @@
+---
+[title FAQ of the Practical Markup Language]
+[template HTML_page]
+---
+
+			<div id="content">
+
+<h2>FAQ (Frequently Asked Questions)</h2>
+
+<p><a href="#what">What is PML?</a></p>
+<p><a href="#why">Why PML?</a></p>
+<p><a href="#how">How does it work?</a></p>
+<p><a href="#examples">Can I see some real-life examples?</a></p>
+<p><a href="#features">Which features are supported?</a></p>
+<p><a href="#maturity">How mature is PML?</a></p>
+<p><a href="#cost">Do I have to pay to use PML?</a></p>
+<p><a href="#license">Which license is used?</a></p>
+<p><a href="#needs">What do I need to use PML?</a></p>
+<p><a href="#start">How do I get started?</a></p>
+<p><a href="#creator">Who created PML?</a></p>
+
+
+<br />
+
+<a id="faq_start"></a>
+
+<br />
+<a name="what"></a> 
+<h3>What is PML?</h3>
+
+<p><b>PML</b> is an acronym for <em><b>P</b>ractical <b>M</b>arkup <b>L</b>anguage</em>. It is a human-friendly <a href="https://techterms.com/definition/markup_language">markup language</a> (<a href="https://en.wikipedia.org/wiki/Markup_language">Wikipedia</a>) designed to write articles, books, reports, and other documents.</p>
+<p>A PML document is converted into a HTML document with a tool called <b>PML Companion (PMLC)</b>. You can use this tool to quickly create beautiful web documents.</p>
+
+
+<br />
+<a name="why"></a> 
+<h3>Why PML?</h3>
+
+<blockquote>
+    Note: For an elaborated discussion of the benefits of PML, please read:<br />
+    <a href="../docs/articles/practical-document-markup-language/index.html" target="_blank">We Need a New Document Markup Language - Here is Why.</a>.
+</blockquote>
+
+<p>PML has been meticulously designed to get rid of some problems encountered with other markup languages.</p>
+
+<p>The main objectives are:</p>
+<ul>
+    <li><p>Well-structured and unambiguous documents (like XML, XHTML and Docbook; unlike Markdown, Asciidoc, Restructedtext, etc.).</p></li>
+    <li><p>A syntax that is easy to read and write for humans (like Markdown and Asciidoc; unlike XML, XHTML and Docbook).</p></li>
+    <li><p>Powerful features and suitable for complex and big documents (like Docbook; unlike Markdown).</p></li>
+    <li><p>Good-looking documents by default - customizable if needed.</p></li>
+    <li><p>Easy to get started: one-click installation and no dependencies.</p></li>
+    <li><p>Free (no charge), no ads.</p></li>
+</ul>
+
+
+<br />
+<a name="how"></a> 
+<h3>How does it work?</h3>
+
+<p>It's easy.</p>
+<ol>
+    <li>
+        <p>Create a text file named <code>example.pml</code> with the following content:</p>
+        <pre style="background:#f7f7f7;">[doc [title First test]
+    This is a [i simple] example.
+]</pre>
+    </li>
+
+    <li>
+        <p>Convert this PML file into a HTML file by entering the following command in a terminal:</p>
+        <pre>pmlc p2h example.pml</pre>
+    </li>
+
+    <li>
+        <p>Open file <code>output/example.html</code> in your browser. The result looks like this:</p>
+        <img src="result.png" style="border: 1px solid black;" />
+    </li>
+</ol>
+
+<p>You can change the style and customize the result with standard CSS.</p>
+
+
+<br />
+<a name="examples"></a> 
+<h3>Can I see some real-life examples?</h3>
+
+<p>PML's <a href="../docs/user_manual/index.html">User Manual</a> and <a href="../docs/reference_manual/index.html">Reference Manual</a> have been created with PML. You can look at the User Manual's markup code <a href="https://github.com/pml-lang/user-manual">here</a>.</p>
+<p>There are a number of blog posts that have been written in PML, such as <a href="https://www.ppl-lang.dev/blog/introduction-to-monads-with-java/index.html">this one</a> and <a href="https://www.ppl-lang.dev/blog/suggestion-for-better-xml-html/index.html">this one</a>.</p>
+<!--
+<p>The <a href="https://www.ppl-lang.dev/ppl/docs/manuals/how-to-guide">How to Guide</a> of the Practical Programming Language (PPL) has also been created with PML.</p>
+-->
+
+
+<br />
+<a name="maturity"></a> 
+<h3>How mature is PML?</h3>
+
+<p>PML is still in its early days. Some planned features are not yet implemented (see below).</p>
+<p>If you miss a feature or encounter a bug, then please follow the instructions on the <a href="../help/index.html">help page</a>. Bugs are always treated with highest priority - you'll probably get an update within a few days.</p>
+
+
+<br />
+<a name="features"></a> 
+<h3>Which features are supported?</h3>
+
+<p>List of current features:</p>
+    <ul>
+        <li>Runs on Windows, Linux and macOS</li>
+        <li>Can be used as a desktop application (GUI) or a command line interface (CLI)</li>
+        <li>Easy to:
+            <ul>
+                <li>install (no dependencies)</li>
+                <li>learn</li>
+                <li>use</li>
+            </ul>
+        </li>
+        <li>Supports all tags commonly used in text documents (chapters, lists, quotes, etc.), including media (images, audio, and video), as well as some special tags used in articles about software development (for a full list please refer to the <a href="../docs/reference_manual/index.html">Reference Manual</a>).</li>
+        <li>Good-looking documents out-of-the-box, but presentation (font, color, etc.) is fully customizable through standard CSS</li>
+        <li>Suitable for big and complex documents, because PML doesn't have the <a href="../docs/articles/practical-document-markup-language/index.html">problems and limitations</a> encountered with other popular markup languages.</li>
+        <li>Features:
+            <ul>
+                <li>tables created from CSV data and HTML-like tables with complex content</li>
+                <li>automatic creation of expandable table of contents</li>
+                <li>cross-references</li>
+                <li>file splitting (useful for big documents and shared text snippets)</li>
+                <li>text parameters (to avoid duplication of recurring text snippets)</li>
+                <li>supports all HTML attributes for PML's standard tags</li>
+                <li>embedded HTML code (can be imported from an external file or URL)</li>
+                <li>inline and block source code (can be highlighted, and imported from an external file or URL)</li>
+                <li>nested multi-line comments</li>
+                <li>online and CLI documentation with lots of examples</li>
+            </ul>
+        </li>
+        <li>The generated HTML code:
+            <ul>
+                <li>uses modern, semantic HTML tags (e.g. <code>article/section/time</code> instead of just <code>div</code>)</li>
+                <li>is simple and indented by default to make it human-readable</li>
+                <li>uses a simple CSS file that can easily be adapted</li>
+            </ul>
+        </li>
+        <li>Support for user-defined nodes/tags. Allows you to define new nodes, in addition to PML's standard nodes. HTML rendering is defined by Javascript code in an external configuration file. User-defined nodes can be shared with other users.</li>
+        <li>Provides all <a href ="../docs/articles/advantages-markup-language-vs-word-processor/index.html#advantages">advantages</a> of markup languages over text processors</li> 
+        <li>Dynamic, programmable content. Parts of the PML document can be defined by programs written in Javascript or Python. Programs are embedded in the PML document, or can be loaded from a local file or a URL (shared with other users). Usage examples: insert current date/time automatically; retrieve some text sections from URLs (and sanitize them); create embedded tables programmatically by retrieving data from a database; etc.</li>
+        <li>Java Application Program Interface (API) to programmatically call PML from other Java applications.</li>
+    </ul>
+		
+<p>Additional features planned in upcoming versions:</p>
+    <ul>
+        <li>IDE support, such as syntax highlighting and code completion. A plugin for Sublime Text by Tristano Ajmone is under development. It's still a work in progress, but you can have a look at it on <a href=https://github.com/tajmone/Sublime-PML>Githib</a>, try it out, and send feedback.</li>
+        <li>Embedded Markdown, Latex, Mathjax, and Gist sections</li>
+        <li>Hooks to programmatically modify/extend/automate the document creation process</li>
+    </ul>
+
+<!-- <p>If you miss a feature or need a planned feature now, then please send a request to contact {at} pml-lang {dot} dev.</p> -->
+	
+
+<br />
+<a name="cost"></a> 
+<h3>Do I have to pay to use PML?</h3>
+
+<p>No. PML is free of charge for everybody. However, you are politely asked to please send feedback after using PML, because user-feedback is essential to improve PML. Your voice counts!</p>
+
+
+<br />
+<a name="license"></a> 
+<h3>Which license is used?</h3>
+
+<p>The <i>PML Companion (PMLC)</i> is open-sourced and licensed under the <a href="https://www.gnu.org/licenses/old-licenses/gpl-2.0.txt">GNU General Public License Version 2</a> (GPL 2). The source code is available on <a href="https://github.com/pml-lang/converter">Github</a></p>
+
+
+<br />
+<a name="needs"></a> 
+<h3>What do I need to use PML?</h3>
+
+<p>You just need a standard Windows/Linux/Mac desktop/laptop. You can then <a href="../downloads/install.html">install</a> the <i>PML Companion</i> and use any text editor to write your PML documents and convert them to HTML.</p>
+
+
+<br />
+<a name="start"></a> 
+<h3>How do I get started?</h3>
+
+<ol>
+    <li><p><a href="../downloads/install.html">Install</a> the <i>PML Companion</i>.</p></li>
+    <li><p>Read the beginning of the <a href="../docs/user_manual/index.html">User Manual</a>. Then refer to the <a href="../docs/reference_manual/index.html">Reference Manual</a> when needed.</p></li>
+    <li><p>Visit the <a href="../help/index.html">help page</a> for further assistance.</p></li>
+</ol>
+
+<p>Enjoy!</p>
+
+
+
+<br />
+<a name="creator"></a> 
+<h3>Who created PML?</h3>
+
+<p>Hello. My name is Christian Neumanns, born in Luxembourg, Europe. I am a curious software developer, a zealous simplifier, and a lifelong student of life. I created and maintain the <a href="https://www.pml-lang.dev">Practical Markup Language</a> (PML), the <a href="https://pdml-lang.dev/">Practical Data and Markup Language</a> (PDML) and the <a href="https://www.ppl-lang.dev">Practical Programming Language</a> (PPL).</p>
+<p>You can contact me at chris {at} pml-lang {dot} dev.</p>
+
+			</div>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>PMLC Windows Installation</title> 
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="content-language" content="en-us">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Practical Markup Language (PML): lightweight and powerful markup language to write beautiful web articles and books.">
+		<meta name="keywords" content="practical markup language, PML, write article book">
+
+		<link rel="stylesheet" href="../../css/pml.css">
+		<link rel="icon" href="../../favicon.ico" type="image/x-icon" />
+
+
+
+	</head>
+
+	<body>
+		<script>
+			window.onload = function() {
+				const path = window.location.pathname;
+				// console.log ( path );
+				var tab_name = "none";
+				if ( path.includes ( "/about" ) ) {
+					tab_name = "about";
+				} else if ( path.includes ( "/docs" ) ) {
+					tab_name = "docs";
+				} else if ( path.includes ( "/downloads" ) ) {
+					tab_name = "downloads";
+				} else if ( path.includes ( "/help" ) ) {
+					tab_name = "help";
+				}
+				if ( tab_name !== "none" ) {
+					document.getElementById(tab_name).style.background = "lightgrey";
+				}
+			};
+		</script>
+
+		<div id="left_margin"></div>
+		
+		<div id="page">
+		
+			<a href="../../index.html" class="no_link_decoration">
+			<div id="header">
+				<div id="header_name">Practical Markup Language (PML)</div>
+				<div id="header_slogan">markup on steroids</div>
+			</div>
+			</a>
+
+			<div id="menu">
+				<div class="menu-item" id="about">
+					<a href="../../about/faq.html" class="menu-link">About</a>
+				</div>
+				<div class="menu-item" id="docs">
+					<a href="../../docs/index.html" class="menu-link">Docs</a>
+				</div>
+				<div class="menu-item" id="downloads">
+					<a href="../../downloads/index.html" class="menu-link">Downloads</a>
+				</div>
+				<div class="menu-item" id="help">
+					<a href="../../help/index.html" class="menu-link">Help</a>
+				</div>
+			</div>
+
+			<div id="menu_content_separator"></div>
+
+			<div id="content">
+
+<h2>Install the <i>PML Companion (PMLC) version 3.1.0</i> on Windows</h2>
+
+
+<br />
+<h3>Overview</h3>
+
+<p>PMLC is available as:</p>
+<ul>
+    <li>A standalone binary executable (single <code>pmlc.exe</code> file, no dependencies)</li>
+    <li>A set of Java <code>.jar</code> files (requires Java to be installed on your system)</li>
+    <li>Java source code files (requires PMLC to be build with Java)</li>
+</ul>
+<p>If you don't know which option to choose then choose the first one.</p>
+
+
+<br />
+<h3>Installation</h3>
+
+<p>Please choose:</p>
+
+<details>
+    <summary>Standalone executable</summary>
+	<ul>
+		<li>
+            <p>Download <a href=https://github.com/pml-lang/pml-companion/releases/download/v3.1.0/pmlc.exe>pmlc.exe</a> into any directory of your choice.</p>
+        </li>
+		<li>
+            <p>Add the directory of <code>pmlc.exe</code> to your OS <code>PATH</code> environment variable.</p>
+            <p>Notes:</p>
+            <ul>
+                <li>If you need instructions, please search the internet for "change path variable on windows", or visit <a href="https://www.computerhope.com/issues/ch000549.htm">this page</a>.</li>
+                <li>You might need to restart your PC for the change to take effect.</li>
+            </ul>
+        </li>
+	</ul>
+</details>
+
+<br />
+<details>
+    <summary>Java <code>.jar</code> files</summary>
+	<ul>
+		<li>
+            <p>Prerequisite: If not done already, you need to install Java version 17 or later.</p>
+            <p>If you need instructions, please search the internet for "install java on windows".</p>
+        </li>
+		<li>
+            <p>Download <a href=https://github.com/pml-lang/pml-companion/releases/download/v3.1.0/pmlc-3.1.0.zip>pmlc-3.1.0.zip</a>.</p>
+        </li>
+		<li>
+            <p>Unzip the dowloaded file into any directory of your choice.</p>
+            <p>For instructions, please search the internet for "unzip file on windows".</p>
+        </li>
+		<li>
+            <p>Add the <code>bin</code> sub-directory of the extracted files to your OS <code>PATH</code> environment variable.</p>
+            <p>Notes:</p>
+            <ul>
+                <li>If you need instructions, please search the internet for "change path variable on windows", or visit <a href="https://www.computerhope.com/issues/ch000549.htm">this page</a>.</li>
+                <li>You might need to restart your PC for the change to take effect.</li>
+            </ul>
+        </li>
+	</ul>
+</details>
+
+<br />
+<details>
+    <summary>Java source code files</summary>
+    <p>You can build PMLC from the Java source code files which are available on <a href="https://github.com/pml-lang/pml-companion">Github</a></p>
+</details>
+
+
+<br />
+<h3>Test</h3>
+
+<p>After installing PMLC, proceed as follows:</p>
+
+<ul>
+    <li>
+        <p>To check the installation, open a terminal and type:</p>
+        <pre>pmlc info</pre>
+        <p>You should see a message like the following one:</p>
+        <pre>Application name: PML Companion
+      Short name: PMLC
+         Version: 3.1.0
+    Version date: 2022-10-03
+             ...</pre>
+    </li>
+
+    <li>
+        <p>Follow the instructions in <a href=https://www.pml-lang.dev/docs/user_manual/index.html#quick_start>Quick Start</a> to create a PML document and convert it into HTML.</p>
+    </li>
+
+    <li>
+        <p>Enjoy!</p>
+    </li>
+</ul>
+
+			</div>
+
+			<div id="footer"></div>
+		
+		</div>
+		
+		<div id="right_margin"></div>
+	</body>
+</html>
+

@@ -1,0 +1,1972 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="generator" content="PML 3.1.0 (www.pml-lang.dev)" />
+        <title>PMLC Commands Reference Manual</title>
+        <link rel="stylesheet" href="css/pml-default.css">
+        <link rel="stylesheet" href="css/pml-print-default.css" media="print">
+
+    </head>
+    <body>
+
+        <div class="pml-doc-wrapper">
+            <header class="pml-doc-header">
+            </header>
+            <div class="pml-doc-content">
+                <aside class="pml-doc-left">
+                    <nav class="pml-toc">
+                        <h2 class="pml-toc-title">Table of Contents</h2>
+                        <div class="pml-toc-tree" id="TOCTree">
+                            <ul>
+                                <li class="pml-toc-leaf-node"><a href="#introduction">Introduction</a></li>
+                                <li class="pml-toc-branch-node">
+                                    <details>
+                                        <summary><a href="#commands">Commands</a></summary>
+                                        <ul>
+                                            <li class="pml-toc-leaf-node"><a href="#command_PML_to_HTML">Convert PML to HTML</a></li>
+                                            <li class="pml-toc-leaf-node"><a href="#command_info">Display PMLC Info</a></li>
+                                            <li class="pml-toc-leaf-node"><a href="#command_version">Display PMLC's Version Number</a></li>
+                                            <li class="pml-toc-leaf-node"><a href="#command_PDML_to_XML">Convert PDML to XML</a></li>
+                                            <li class="pml-toc-leaf-node"><a href="#command_PDML_to_standalone">Create Standalone PDML</a></li>
+                                            <li class="pml-toc-leaf-node"><a href="#command_export_tags">Export PML Nodes And Attributes Data to a JSON File</a></li>
+                                            <li class="pml-toc-leaf-node"><a href="#command_create_nodes_reference_manual">Create Nodes Reference Manual</a></li>
+                                            <li class="pml-toc-leaf-node"><a href="#command_create_commands_reference_manual">Create Commands Reference Manual</a></li>
+                                        </ul>
+                                    </details>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </aside>
+                <article id="doc__" class="pml-doc-text" id="doc__">
+                    <h1 class="pml-doc-title">PMLC Commands Reference Manual</h1>
+                    <table class="pml-table">
+                        <tr class="pml-table-body-row">
+                            <td class="pml-table-body-cell">
+                                <p class="pml-paragraph"><b class="pml-bold">PML Version</b></p>
+
+                            </td>
+                            <td class="pml-table-body-cell">
+                                <p class="pml-paragraph">PMLC 3.1.0 2022-10-03</p>
+
+                            </td>
+
+                        </tr>
+                        <tr class="pml-table-body-row">
+                            <td class="pml-table-body-cell">
+                                <p class="pml-paragraph"><b class="pml-bold">License</b></p>
+
+                            </td>
+                            <td class="pml-table-body-cell">
+                                <p class="pml-paragraph"><a class="pml-link" href="https://creativecommons.org/licenses/by-nd/4.0/">CC BY-ND 4.0</a></p>
+
+                            </td>
+
+                        </tr>
+                        <tr class="pml-table-body-row">
+                            <td class="pml-table-body-cell">
+                                <p class="pml-paragraph"><b class="pml-bold">Author and Copyright</b></p>
+
+                            </td>
+                            <td class="pml-table-body-cell">
+                                <p class="pml-paragraph">Christian Neumanns</p>
+
+                            </td>
+
+                        </tr>
+                        <tr class="pml-table-body-row">
+                            <td class="pml-table-body-cell">
+                                <p class="pml-paragraph"><b class="pml-bold">Website</b></p>
+
+                            </td>
+                            <td class="pml-table-body-cell">
+                                <p class="pml-paragraph"><a class="pml-link" href="https://www.pml-lang.dev/">https://www.pml-lang.dev/</a></p>
+
+                            </td>
+
+                        </tr>
+
+                    </table>
+                    <section id="introduction" class="pml-chapter">
+                        <h2 class="pml-chapter-title">Introduction</h2>
+                        <p class="pml-paragraph">This document describes the commands supported by PMLC's command line interface (CLI).</p>
+                        <div class="pml-admonition">
+                            <div class="pml-admonition-label">Note</div>
+                            <div class="pml-admonition-content">
+                                <p class="pml-paragraph">All command names and options are case-insensitive. For example, instead of writing <code class="pml-inline-code">PML_to_HTML</code>, you can also write <code class="pml-inline-code">pml_to_html</code>.</p>
+                            </div>
+                        </div>
+
+                    </section>
+                    <section id="commands" class="pml-chapter">
+                        <h2 class="pml-chapter-title">Commands</h2>
+                        <section id="command_PML_to_HTML" class="pml-chapter">
+                            <h3 class="pml-chapter-title">Convert PML to HTML</h3>
+                            <p class="pml-paragraph"><b class="pml-bold">Name: </b><code class="pml-inline-code">PML_to_HTML</code></p>
+                            <p class="pml-paragraph"><b class="pml-bold">Alternative name: </b><code class="pml-inline-code">p2h</code></p>
+                            <div class="pml-header">Description</div>
+                            <p class="pml-paragraph">Convert a PML document into an HTML document.</p>
+                            <div class="pml-header">Examples</div>
+                            <pre class="pml-input">pmlc p2h article.pml
+pmlc p2h --output ../website/docs/about/index.html about.pml</pre>
+                            <div class="pml-header">Input Parameters</div>
+                            <ul class="pml-list">
+                                <li class="pml-list-element">
+                                    <div class="pml-header">PML Input File</div>
+                                    <table class="pml-table">
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Name</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">input</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Alternative name</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">i</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Is positional parameter</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">Yes (# 1)</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Description</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">The path of the PML file to be converted to HTML.<br />If this parameter is not specified, or if the value is explicitly set to 'stdin' then the PML input is read from the OS's standard input device.</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Type</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">file_path or null</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Required</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">no</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Default Value</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">null</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Example(s)</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">input/text/article.pml</p>
+
+                                            </td>
+
+                                        </tr>
+
+                                    </table>
+
+                                </li>
+                                <li class="pml-list-element">
+                                    <div class="pml-header">CSS Files</div>
+                                    <table class="pml-table">
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Name</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">CSS_files</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Alternative name</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">css</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Is positional parameter</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">No</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Description</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">This parameter is used to explicitly specify one or more CSS files to be used in the final HTML document.<br /><br />The value is a comma separated list of directories and/or files.<br />If a directory is specified, then all files in the directory (including files in sub-directories) are used.<br />All directory and file paths can be absolute or relative.<br />Each file must be a valid CSS file.<br /><br />By default, file(s) in sub-directory 'config/PML_to_HTML/css' of PMLC's shared data directory are used.<br />If these default files are to be used together with other CSS files specified by this parameter, then the default files location must also explicitly be specified in the parameter</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Type</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">directory_or_file_paths or null</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Required</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">no</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Default Value</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">[C:\Users\Lisa\AppData\Roaming\PML_Companion\3_0\config\PML_to_HTML\css\pml-default.css, C:\Users\Lisa\AppData\Roaming\PML_Companion\3_0\config\PML_to_HTML\css\pml-print-default.css]</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Example(s)</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">../../shared/css, css</p>
+
+                                            </td>
+
+                                        </tr>
+
+                                    </table>
+
+                                </li>
+                                <li class="pml-list-element">
+                                    <div class="pml-header">HTML Footer Template File</div>
+                                    <table class="pml-table">
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Name</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">HTML_page_footer</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Alternative name</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">pf</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Is positional parameter</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">No</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Description</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">The path of the HTML footer template file.<br />The path can be absolute or relative</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Type</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">file_path or null</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Required</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">no</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Default Value</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">C:\Users\Lisa\AppData\Roaming\PML_Companion\3_0\config\PML_to_HTML\html\default_html_footer_template.txt</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Example(s)</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">../../shared/HTML_footer.txt</p>
+
+                                            </td>
+
+                                        </tr>
+
+                                    </table>
+
+                                </li>
+                                <li class="pml-list-element">
+                                    <div class="pml-header">HTML Header Template File</div>
+                                    <table class="pml-table">
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Name</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">HTML_page_header</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Alternative name</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">ph</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Is positional parameter</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">No</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Description</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">The path of the HTML header template file.<br />The path can be absolute or relative</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Type</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">file_path or null</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Required</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">no</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Default Value</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">C:\Users\Lisa\AppData\Roaming\PML_Companion\3_0\config\PML_to_HTML\html\default_html_header_template.txt</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Example(s)</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">../../shared/HTML_header.txt</p>
+
+                                            </td>
+
+                                        </tr>
+
+                                    </table>
+
+                                </li>
+                                <li class="pml-list-element">
+                                    <div class="pml-header">Table of Contents Max Level</div>
+                                    <table class="pml-table">
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Name</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">TOC_max_level</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Alternative name</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">tm</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Is positional parameter</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">No</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Description</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">The maximum chapter level that is included in the table of contents.</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Type</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">integer32</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Required</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">no</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Default Value</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">100</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Example(s)</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">4</p>
+
+                                            </td>
+
+                                        </tr>
+
+                                    </table>
+
+                                </li>
+                                <li class="pml-list-element">
+                                    <div class="pml-header">Table of Contents Position</div>
+                                    <table class="pml-table">
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Name</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">TOC_position</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Alternative name</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">tp</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Is positional parameter</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">No</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Description</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">The position of the table of contents.<br />Valid values are:left, top, none (case-insensitive)</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Type</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">tocposition</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Required</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">no</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Default Value</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">LEFT</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Allowed Values</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">left, top, none (case-insensitive)</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Example(s)</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">left</p>
+
+                                            </td>
+
+                                        </tr>
+
+                                    </table>
+
+                                </li>
+                                <li class="pml-list-element">
+                                    <div class="pml-header">Table of Contents Title</div>
+                                    <table class="pml-table">
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Name</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">TOC_title</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Alternative name</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">tt</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Is positional parameter</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">No</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Description</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">The title of the table of contents.</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Type</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">string or null</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Required</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">no</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Default Value</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">Table of Contents</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Example(s)</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">Contents</p>
+
+                                            </td>
+
+                                        </tr>
+
+                                    </table>
+
+                                </li>
+                                <li class="pml-list-element">
+                                    <div class="pml-header">Source Code Highlighter</div>
+                                    <table class="pml-table">
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Name</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">highlighter</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Alternative name</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">hi</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Is positional parameter</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">No</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Description</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">The name of the highlighter used to highlight source code.<br />Valid values are:highlightjs, prism, none (case-insensitive)</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Type</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">sourcecodehighlighter</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Required</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">no</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Default Value</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">NONE</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Allowed Values</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">highlightjs, prism, none (case-insensitive)</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Example(s)</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">none</p>
+
+                                            </td>
+
+                                        </tr>
+
+                                    </table>
+
+                                </li>
+                                <li class="pml-list-element">
+                                    <div class="pml-header">Omit CSS</div>
+                                    <table class="pml-table">
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Name</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">omit_CSS</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Alternative name</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">oc</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Is positional parameter</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">No</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Description</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">If set to yes (true), CSS classes are omitted in the resulting HTML.</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Type</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">boolean</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Required</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">no</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Default Value</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">false</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Allowed Values</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">yes, no, true, false (case-insensitive)</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Example(s)</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">yes</p>
+
+                                            </td>
+
+                                        </tr>
+
+                                    </table>
+
+                                </li>
+                                <li class="pml-list-element">
+                                    <div class="pml-header">Open File OS Command</div>
+                                    <table class="pml-table">
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Name</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">open_file_cmd</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Alternative name</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">ofc</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Is positional parameter</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">No</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Description</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">This parameter specifies an OS command template to open an editor for the first file in which an error was detected.<br />The following placeholders can be used:<br />[[file]]<br /> the full path of the file in which the error was detected<br />[[line]]<br /> the line number of the error (first line = 1)<br />[[column]]<br /> the column number of the error (first column = 1)<br /><br />Note:<br />Be careful to correctly quote file paths that include spaces.<br />Different OS environments have different rules. Please consult your OS documentation for further information.<br /></p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Type</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">string or null</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Required</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">no</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Default Value</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">null</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Example(s)</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">// open VSCode in Windows:<br />--open_file_cmd &quot;cmd.exe /c code --goto \&quot;[[file]]:[[line]]:[[column]]\&quot;&quot;<br />// alternative (replace {username} with the name on your machine):<br />--open_file_cmd &quot;\&quot;C:\Users\{username}\AppData\Local\Programs\Microsoft VS Code\Code.exe\&quot; --goto \&quot;[[file]]:[[line]]:[[column]]\&quot;&quot;<br /><br />// open Sublime Text in Windows (subl must be on the OS path)<br />--open_file_cmd &quot;cmd.exe /c subl \&quot;[[file]]:[[line]]:[[column]]\&quot;&quot;<br /></p>
+
+                                            </td>
+
+                                        </tr>
+
+                                    </table>
+
+                                </li>
+                                <li class="pml-list-element">
+                                    <div class="pml-header">HTML Output File</div>
+                                    <table class="pml-table">
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Name</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">output</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Alternative name</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">o</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Is positional parameter</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">No</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Description</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">The path of the HTML file to be created.<br /><br />The default value is defined as follows:<br />- If the input is a file, then the output will be 'output/{input_file_name}.html' (where {input_file_name} is replaced by the input file's name, without its extension).<br />- If the input is read from STDIN, then the output is written to STDOUT.<br /><br />If the value of this parameter is explicitly set to 'stdout', then the output is written to STDOUT</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Type</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">file_path or null</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Required</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">no</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Default Value</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">null</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Example(s)</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">../website/blog/top10-brain-boosters/index.html</p>
+
+                                            </td>
+
+                                        </tr>
+
+                                    </table>
+
+                                </li>
+                                <li class="pml-list-element">
+                                    <div class="pml-header">Resources</div>
+                                    <table class="pml-table">
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Name</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">resources</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Alternative name</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">r</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Is positional parameter</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">No</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Description</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">A comma separated list of resources that will be copied into the output directory.<br /><br />Each resource can be a directory or file path. Each path can be absolute or relative.<br />If a directory is specified then all files in the directory are used, including files in subdirectories.<br />By default directory 'resources' in the current working directory is used.</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Type</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">directory_or_file_paths or null</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Required</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">no</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Default Value</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">null</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Example(s)</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">../../shared/images, resources</p>
+
+                                            </td>
+
+                                        </tr>
+
+                                    </table>
+
+                                </li>
+                                <li class="pml-list-element">
+                                    <div class="pml-header">Verbosity</div>
+                                    <table class="pml-table">
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Name</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">verbosity</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Alternative name</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">vb</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Is positional parameter</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">No</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Description</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">The level of verbosity.<br />Defines which kinds of messages are displayed when the command is executed.<br />Valid values are:quiet, error, warning, info, all (case-insensitive)</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Type</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">loglevel</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Required</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">no</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Default Value</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">INFO</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Allowed Values</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">quiet, error, warning, info, all (case-insensitive)</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Example(s)</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">all</p>
+
+                                            </td>
+
+                                        </tr>
+
+                                    </table>
+
+                                </li>
+
+                            </ul>
+
+                        </section>
+                        <section id="command_info" class="pml-chapter">
+                            <h3 class="pml-chapter-title">Display PMLC Info</h3>
+                            <p class="pml-paragraph"><b class="pml-bold">Name: </b><code class="pml-inline-code">info</code></p>
+                            <div class="pml-header">Description</div>
+                            <p class="pml-paragraph">Write info about PMLC to the standard output device.</p>
+                            <div class="pml-header">Examples</div>
+                            <pre class="pml-input">pmlc info</pre>
+                            <div class="pml-header">Input Parameters</div>
+                            <p class="pml-paragraph">This command has no input parameters</p>
+
+                        </section>
+                        <section id="command_version" class="pml-chapter">
+                            <h3 class="pml-chapter-title">Display PMLC's Version Number</h3>
+                            <p class="pml-paragraph"><b class="pml-bold">Name: </b><code class="pml-inline-code">version</code></p>
+                            <div class="pml-header">Description</div>
+                            <p class="pml-paragraph">Write the PMLC version number to the standard output device.</p>
+                            <div class="pml-header">Examples</div>
+                            <pre class="pml-input">pmlc version</pre>
+                            <div class="pml-header">Input Parameters</div>
+                            <p class="pml-paragraph">This command has no input parameters</p>
+
+                        </section>
+                        <section id="command_PDML_to_XML" class="pml-chapter">
+                            <h3 class="pml-chapter-title">Convert PDML to XML</h3>
+                            <p class="pml-paragraph"><b class="pml-bold">Name: </b><code class="pml-inline-code">PDML_to_XML</code></p>
+                            <p class="pml-paragraph"><b class="pml-bold">Alternative name: </b><code class="pml-inline-code">pdml2xml</code></p>
+                            <div class="pml-header">Description</div>
+                            <p class="pml-paragraph">Convert a PDML document into a standalone XML document.<br />Note: This command is not suitable to convert PML documents into XML.</p>
+                            <div class="pml-header">Examples</div>
+                            <pre class="pml-input">pdml pdml2xml input/doc.pdml output/doc.xml</pre>
+                            <div class="pml-header">Input Parameters</div>
+                            <ul class="pml-list">
+                                <li class="pml-list-element">
+                                    <div class="pml-header">PDML Input File</div>
+                                    <table class="pml-table">
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Name</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">input</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Alternative name</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">i</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Is positional parameter</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">Yes (# 1)</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Description</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">The path of the PDML file to be converted to XML. The path can be absolute or relative.</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Type</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">file_path or null</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Required</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">no</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Default Value</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">null</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Example(s)</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">text/input/index.pml</p>
+
+                                            </td>
+
+                                        </tr>
+
+                                    </table>
+
+                                </li>
+                                <li class="pml-list-element">
+                                    <div class="pml-header">XML Output File</div>
+                                    <table class="pml-table">
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Name</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">output</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Alternative name</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">o</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Is positional parameter</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">Yes (# 2)</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Description</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">The path of the XML file to be created. The path can be absolute or relative.</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Type</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">file_path or null</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Required</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">no</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Default Value</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">null</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Example(s)</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">output/index.xml</p>
+
+                                            </td>
+
+                                        </tr>
+
+                                    </table>
+
+                                </li>
+
+                            </ul>
+
+                        </section>
+                        <section id="command_PDML_to_standalone" class="pml-chapter">
+                            <h3 class="pml-chapter-title">Create Standalone PDML</h3>
+                            <p class="pml-paragraph"><b class="pml-bold">Name: </b><code class="pml-inline-code">PDML_to_standalone</code></p>
+                            <p class="pml-paragraph"><b class="pml-bold">Alternative name: </b><code class="pml-inline-code">pdml2sa</code></p>
+                            <div class="pml-header">Description</div>
+                            <p class="pml-paragraph">Convert a PDML document into a standalone PDML document.<br />Note: This command is not suitable to convert PML documents into a standalone PDML document.</p>
+                            <div class="pml-header">Examples</div>
+                            <pre class="pml-input">pdml pdml2sa input/book.pml output/standalone_book.pml</pre>
+                            <div class="pml-header">Input Parameters</div>
+                            <ul class="pml-list">
+                                <li class="pml-list-element">
+                                    <div class="pml-header">PDML Input File</div>
+                                    <table class="pml-table">
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Name</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">input</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Alternative name</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">i</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Is positional parameter</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">Yes (# 1)</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Description</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">The path of the PDML file to be converted to a standalone file. The path can be absolute or relative.</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Type</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">file_path or null</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Required</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">no</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Default Value</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">null</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Example(s)</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">input/book.pml</p>
+
+                                            </td>
+
+                                        </tr>
+
+                                    </table>
+
+                                </li>
+                                <li class="pml-list-element">
+                                    <div class="pml-header">PDML Output File</div>
+                                    <table class="pml-table">
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Name</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">output</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Alternative name</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">o</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Is positional parameter</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">Yes (# 2)</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Description</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">The path of the standalone PDML file to be created. The path can be absolute or relative.</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Type</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">file_path or null</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Required</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">no</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Default Value</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">null</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Example(s)</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">output/standalone_book.pml</p>
+
+                                            </td>
+
+                                        </tr>
+
+                                    </table>
+
+                                </li>
+
+                            </ul>
+
+                        </section>
+                        <section id="command_export_tags" class="pml-chapter">
+                            <h3 class="pml-chapter-title">Export PML Nodes And Attributes Data to a JSON File</h3>
+                            <p class="pml-paragraph"><b class="pml-bold">Name: </b><code class="pml-inline-code">export_tags</code></p>
+                            <p class="pml-paragraph"><b class="pml-bold">Alternative name: </b><code class="pml-inline-code">et</code></p>
+                            <div class="pml-header">Description</div>
+                            <p class="pml-paragraph">This command creates a JSON file describing PML nodes and attributes.<br />The JSON file can be used by editor plugins and tools to get structured data about PML nodes and attributes.</p>
+                            <div class="pml-header">Examples</div>
+                            <pre class="pml-input">pmlc export_tags</pre>
+                            <div class="pml-header">Input Parameters</div>
+                            <ul class="pml-list">
+                                <li class="pml-list-element">
+                                    <div class="pml-header">JSON Output File Path</div>
+                                    <table class="pml-table">
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Name</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">output_file</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Alternative name</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">of</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Is positional parameter</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">No</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Description</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">The absolute or relative path of the JSON file to be created.<br />If the path is relative, it is relative to the current working directory.<br />The default value is file 'pml_tags.json' created in the current working directory.<br />If the file exists already it will be overwritten.</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Type</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">file_path</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Required</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">no</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Default Value</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">pml_tags.json</p>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr class="pml-table-body-row">
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph"><b class="pml-bold">Example(s)</b></p>
+
+                                            </td>
+                                            <td class="pml-table-body-cell">
+                                                <p class="pml-paragraph">--output_file pml/tags.json</p>
+
+                                            </td>
+
+                                        </tr>
+
+                                    </table>
+
+                                </li>
+
+                            </ul>
+
+                        </section>
+                        <section id="command_create_nodes_reference_manual" class="pml-chapter">
+                            <h3 class="pml-chapter-title">Create Nodes Reference Manual</h3>
+                            <p class="pml-paragraph"><b class="pml-bold">Name: </b><code class="pml-inline-code">create_nodes_reference_manual</code></p>
+                            <p class="pml-paragraph"><b class="pml-bold">Alternative name: </b><code class="pml-inline-code">cnrm</code></p>
+                            <div class="pml-header">Description</div>
+                            <p class="pml-paragraph">This command creates the 'PML Nodes Reference Manual'.<br />The auto-generated PML file is stored in sub-directory 'input' of the current working directory.<br />The HTML output is stored in sub-directory 'output' of the current working directory.</p>
+                            <div class="pml-header">Examples</div>
+                            <pre class="pml-input">pmlc create_reference_manual</pre>
+                            <div class="pml-header">Input Parameters</div>
+                            <p class="pml-paragraph">This command has no input parameters</p>
+
+                        </section>
+                        <section id="command_create_commands_reference_manual" class="pml-chapter">
+                            <h3 class="pml-chapter-title">Create Commands Reference Manual</h3>
+                            <p class="pml-paragraph"><b class="pml-bold">Name: </b><code class="pml-inline-code">create_commands_reference_manual</code></p>
+                            <p class="pml-paragraph"><b class="pml-bold">Alternative name: </b><code class="pml-inline-code">ccrm</code></p>
+                            <div class="pml-header">Description</div>
+                            <p class="pml-paragraph">This command creates the 'PML Commands Reference Manual'.<br />The auto-generated PML file is stored in sub-directory 'input' of the current working directory.<br />The output is stored in sub-directory 'output' of the current working directory.</p>
+                            <div class="pml-header">Examples</div>
+                            <pre class="pml-input">pmlc create_commands_manual</pre>
+                            <div class="pml-header">Input Parameters</div>
+                            <p class="pml-paragraph">This command has no input parameters</p>
+
+                        </section>
+
+                    </section>
+                </article>
+                <aside class="pml-doc-right">
+                </aside>
+            </div>
+            <footer class="pml-doc-footer">
+            </footer>
+        </div>
+
+    </body>
+</html>

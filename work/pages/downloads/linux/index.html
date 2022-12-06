@@ -1,0 +1,110 @@
+---
+[title PMLC Linux Installation]
+[template HTML_page]
+---
+			<div id="content">
+
+<h2>Install the <i>PML Companion (PMLC) version 3.1.0</i> on Linux</h2>
+
+
+<br />
+<h3>Overview</h3>
+
+<p>PMLC is available as:</p>
+<ul>
+    <li>A standalone binary executable (single <code>pmlc</code> file, no dependencies)</li>
+    <li>A set of Java <code>.jar</code> files (requires Java to be installed on your system)</li>
+    <li>Java source code files (requires PMLC to be build with Java)</li>
+</ul>
+<p>If you don't know which option to choose then choose the first one.</p>
+
+
+<br />
+<h3>Installation</h3>
+
+<p>Please choose:</p>
+
+<details>
+    <summary>Standalone executable</summary>
+	<ul>
+		<li>
+            <p>Download <a href=https://github.com/pml-lang/pml-companion/releases/download/v3.1.0/pmlc>pmlc</a> into any directory of your choice.</p>
+        </li>
+		<li>
+            <p>Add the directory of <code>pmlc</code> to your OS <code>PATH</code> environment variable.</p>
+            <p>Note:</p>
+            <ul>
+                <li>If you need instructions, please search the internet for "set path variable on linux", or visit <a href="https://www.makeuseof.com/set-path-variable-in-linux/">this page</a>.</li>
+                <!-- <li>You might need to restart your PC for the change to take effect.</li> -->
+            </ul>
+        </li>
+	</ul>
+</details>
+
+<br />
+<details>
+    <summary>Java <code>.jar</code> files</summary>
+	<ul>
+		<li>
+            <p>Prerequisite: If not done already, you need to install Java version 17 or later.</p>
+            <p>If you need instructions, please search the internet for "install java on linux".</p>
+        </li>
+		<li>
+            <p>Download <a href=https://github.com/pml-lang/pml-companion/releases/download/v3.1.0/pmlc-3.1.0.zip>pmlc-3.1.0.zip</a>.</p>
+            <!--
+                <p>Download <a href="pmlc-x.x.x.tar.gz">pmlc-x.x.x.tar.gz</a>.</p>
+            -->
+        </li>
+		<li>
+            <p>Unzip the dowloaded file into any directory of your choice.</p>
+            <p>For instructions, please search the internet for "extract zip file on linux".</p>
+            <!--
+                <p>Unzip the dowloaded file into any directory of your choice (e.g. <code>tar -xf pmlc.tar.gz</code>).</p>
+                <p>For instructions, please search the internet for "extract tar.gz file on linux".</p>
+            -->
+        </li>
+		<li>
+            <p>Add the <code>bin</code> sub-directory of the extracted files to your OS <code>PATH</code> environment variable.</p>
+            <p>Note:</p>
+            <ul>
+                <li>If you need instructions, please search the internet for "set path variable on linux", or visit <a href="https://www.makeuseof.com/set-path-variable-in-linux/">this page</a>.</li>
+                <!-- <li>You might need to restart your PC for the change to take effect.</li> -->
+            </ul>
+        </li>
+	</ul>
+</details>
+
+<br />
+<details>
+    <summary>Java source code files</summary>
+    <p>You can build PMLC from the Java source code files which are available on <a href="https://github.com/pml-lang/pml-companion">Github</a></p>
+</details>
+
+
+<br />
+<h3>Test</h3>
+
+<p>After installing PMLC, proceed as follows:</p>
+
+<ul>
+    <li>
+        <p>To check the installation, open a terminal and type:</p>
+        <pre>pmlc info</pre>
+        <p>You should see a message like the following one:</p>
+        <pre>Application name: PML Companion
+      Short name: PMLC
+         Version: 3.1.0
+    Version date: 2022-10-03
+             ...</pre>
+    </li>
+
+    <li>
+        <p>Follow the instructions in <a href=https://www.pml-lang.dev/docs/user_manual/index.html#quick_start>Quick Start</a> to create a PML document and convert it into HTML.</p>
+    </li>
+
+    <li>
+        <p>Enjoy!</p>
+    </li>
+</ul>
+
+			</div>

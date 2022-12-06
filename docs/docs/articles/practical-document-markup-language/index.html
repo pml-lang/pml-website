@@ -1,0 +1,1268 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>We Need a New Document Markup Language - Here is Why</title>
+        <link rel="stylesheet" href="pml-default.css">
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.6/build/styles/default.min.css">
+    </head>
+    <body>
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.6/build/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+        <div class="pml-hsplit-panel">
+            <div class="pml-hsplit-left-panel" id="PMLHsplitLeftPanel">
+                <div class="pml-toc">
+                    <h2 class="pml-toc-title"></h2>
+                    <div class="pml-toc-content">
+                        <ul class="pml-toc-tree">
+                            <li>
+                                <div class="pml-toc-leaf-node">
+                                    <div class="pml-toc-leaf-prefix"></div>
+                                    <a class="pml-toc-leaf-link" href="#ch__1">Introduction: What's the Problem?</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="pml-toc-leaf-node">
+                                    <div class="pml-toc-leaf-prefix"></div>
+                                    <a class="pml-toc-leaf-link" href="#ch__2">Preliminary Remarks</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="pml-toc-branch-node">
+                                    <div class="pml-toc-branch-prefix pml-toc-branch-hidden"></div>
+                                    <a class="pml-toc-branch-link" href="#ch__3">Inconveniences / Part 1</a>
+                                </div>
+                                <ul class="pml-toc-sub-chapters pml-hidden">
+                                    <li>
+                                        <div class="pml-toc-leaf-node">
+                                            <div class="pml-toc-leaf-prefix"></div>
+                                            <a class="pml-toc-leaf-link" href="#ch__4">HTML</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="pml-toc-leaf-node">
+                                            <div class="pml-toc-leaf-prefix"></div>
+                                            <a class="pml-toc-leaf-link" href="#ch__5">Markdown</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="pml-toc-leaf-node">
+                                            <div class="pml-toc-leaf-prefix"></div>
+                                            <a class="pml-toc-leaf-link" href="#ch__6">Docbook</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="pml-toc-leaf-node">
+                                            <div class="pml-toc-leaf-prefix"></div>
+                                            <a class="pml-toc-leaf-link" href="#ch__7">LaTeX</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="pml-toc-leaf-node">
+                                            <div class="pml-toc-leaf-prefix"></div>
+                                            <a class="pml-toc-leaf-link" href="#ch__8">Popular for Big Documents</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <div class="pml-toc-leaf-node">
+                                    <div class="pml-toc-leaf-prefix"></div>
+                                    <a class="pml-toc-leaf-link" href="#PML_chapter">Practical Markup Language (PML)</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="pml-toc-branch-node">
+                                    <div class="pml-toc-branch-prefix pml-toc-branch-hidden"></div>
+                                    <a class="pml-toc-branch-link" href="#problems">Inconveniences / Part 2</a>
+                                </div>
+                                <ul class="pml-toc-sub-chapters pml-hidden">
+                                    <li>
+                                        <div class="pml-toc-branch-node">
+                                            <div class="pml-toc-branch-prefix pml-toc-branch-hidden"></div>
+                                            <a class="pml-toc-branch-link" href="#ch__9">Font Styles</a>
+                                        </div>
+                                        <ul class="pml-toc-sub-chapters pml-hidden">
+                                            <li>
+                                                <div class="pml-toc-leaf-node">
+                                                    <div class="pml-toc-leaf-prefix"></div>
+                                                    <a class="pml-toc-leaf-link" href="#ch__10">Part of a Sentence in Italics</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="pml-toc-leaf-node">
+                                                    <div class="pml-toc-leaf-prefix"></div>
+                                                    <a class="pml-toc-leaf-link" href="#ch__11">Part of a Word in Italics</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="pml-toc-leaf-node">
+                                                    <div class="pml-toc-leaf-prefix"></div>
+                                                    <a class="pml-toc-leaf-link" href="#ch__12">Text in Bold And Italic</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="pml-toc-leaf-node">
+                                                    <div class="pml-toc-leaf-prefix"></div>
+                                                    <a class="pml-toc-leaf-link" href="#ch__13">Real-Life Example</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="pml-toc-leaf-node">
+                                                    <div class="pml-toc-leaf-prefix"></div>
+                                                    <a class="pml-toc-leaf-link" href="#ch__14">Nested Font Styles</a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <div class="pml-toc-branch-node">
+                                            <div class="pml-toc-branch-prefix pml-toc-branch-hidden"></div>
+                                            <a class="pml-toc-branch-link" href="#ch__15">Nested Chapters</a>
+                                        </div>
+                                        <ul class="pml-toc-sub-chapters pml-hidden">
+                                            <li>
+                                                <div class="pml-toc-leaf-node">
+                                                    <div class="pml-toc-leaf-prefix"></div>
+                                                    <a class="pml-toc-leaf-link" href="#ch__16">HTML</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="pml-toc-leaf-node">
+                                                    <div class="pml-toc-leaf-prefix"></div>
+                                                    <a class="pml-toc-leaf-link" href="#ch__17">Asciidoctor</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="pml-toc-leaf-node">
+                                                    <div class="pml-toc-leaf-prefix"></div>
+                                                    <a class="pml-toc-leaf-link" href="#ch__18">reStructuredText</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="pml-toc-leaf-node">
+                                                    <div class="pml-toc-leaf-prefix"></div>
+                                                    <a class="pml-toc-leaf-link" href="#ch__19">PML</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="pml-toc-leaf-node">
+                                                    <div class="pml-toc-leaf-prefix"></div>
+                                                    <a class="pml-toc-leaf-link" href="#ch__20">Bottom Line</a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <div class="pml-toc-leaf-node">
+                                            <div class="pml-toc-leaf-prefix"></div>
+                                            <a class="pml-toc-leaf-link" href="#ch__21">Lists</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="pml-toc-branch-node">
+                                            <div class="pml-toc-branch-prefix pml-toc-branch-hidden"></div>
+                                            <a class="pml-toc-branch-link" href="#ch__22">Comments</a>
+                                        </div>
+                                        <ul class="pml-toc-sub-chapters pml-hidden">
+                                            <li>
+                                                <div class="pml-toc-leaf-node">
+                                                    <div class="pml-toc-leaf-prefix"></div>
+                                                    <a class="pml-toc-leaf-link" href="#ch__23">Single-Line Comment</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="pml-toc-leaf-node">
+                                                    <div class="pml-toc-leaf-prefix"></div>
+                                                    <a class="pml-toc-leaf-link" href="#ch__24">Trailing Comment</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="pml-toc-leaf-node">
+                                                    <div class="pml-toc-leaf-prefix"></div>
+                                                    <a class="pml-toc-leaf-link" href="#ch__25">Inline Comment</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="pml-toc-leaf-node">
+                                                    <div class="pml-toc-leaf-prefix"></div>
+                                                    <a class="pml-toc-leaf-link" href="#ch__26">Multi-Line Comment</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="pml-toc-leaf-node">
+                                                    <div class="pml-toc-leaf-prefix"></div>
+                                                    <a class="pml-toc-leaf-link" href="#ch__27">Nested Comments</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="pml-toc-leaf-node">
+                                                    <div class="pml-toc-leaf-prefix"></div>
+                                                    <a class="pml-toc-leaf-link" href="#ch__28">Removed Comments</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="pml-toc-leaf-node">
+                                                    <div class="pml-toc-leaf-prefix"></div>
+                                                    <a class="pml-toc-leaf-link" href="#ch__29">Conclusion</a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <div class="pml-toc-leaf-node">
+                                            <div class="pml-toc-leaf-prefix"></div>
+                                            <a class="pml-toc-leaf-link" href="#whitespace">Whitespace And Indentation</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="pml-toc-leaf-node">
+                                            <div class="pml-toc-leaf-prefix"></div>
+                                            <a class="pml-toc-leaf-link" href="#ch__30">Other Inconveniences</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <div class="pml-toc-leaf-node">
+                                    <div class="pml-toc-leaf-prefix"></div>
+                                    <a class="pml-toc-leaf-link" href="#ch__31">My Own Experience</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="pml-toc-leaf-node">
+                                    <div class="pml-toc-leaf-prefix"></div>
+                                    <a class="pml-toc-leaf-link" href="#ch__32">Conclusion</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="pml-hsplit-panel-separator" id="PMLHsplitPanelSeparator" draggable="true" ondragstart="PMLHsplitPanelSeparatorDragStart(event)" ondrag="PMLHsplitPanelSeparatorDragging(event)" ondragend="PMLHsplitPanelSeparatorDragEnd(event)"></div>
+            <div class="pml-hsplit-right-panel" id="PMLHsplitRightPanel">
+                <div class="pml-hsplit-right-panel-content" id="PMLHsplitRightPanelContent">
+                    <div class="pml-document">
+                        <div class="pml-document-header">
+                            <h1 class="pml-document-title">We Need a New Document Markup Language - Here is Why</h1>
+                            <div class="pml-document-authors">Christian Neumanns</div>
+                            <div class="pml-document-date-time">2019-03-11</div>
+                        </div>
+                        <p class="pml-paragraph"><br /></p>
+                        <div style="text-align: center">
+                            <img class="pml-image pml-bordered" src="images/header_picture_black_on_white.png" width="600">
+                        </div>
+                        <div id="ch__1" class="pml-chapter">
+                            <h1 class="pml-chapter-title">Introduction: What's the Problem?</h1>
+                            <p class="pml-paragraph">There are many document markup languages available already. Wikipedia lists over 70 variations in its <a href="https://en.wikipedia.org/wiki/List_of_document_markup_languages" class="pml-link">List of document markup languages</a> - among them HTML, Markdown, Docbook, Asciidoctor, reStructuredText, etc.</p>
+                            <p class="pml-paragraph">Why, then, does the title of this article suggest we need <i class="pml-italic">yet another one</i> ???</p>
+                            <p class="pml-paragraph">What's the problem?</p>
+                            <p class="pml-paragraph">There are two fundamental problems with the existing document markup languages: Either they are not easy to use, or they are not well suited to write complex documents, such as technical articles, user manuals, or books. An example of &quot;not easy to use, but suited for complex documents&quot; would be Docbook. An example of &quot;easy to use, but not suited for complex documents&quot; would be Markdown.</p>
+                            <p class="pml-paragraph">Of course, the above categorization is simplistic. But it should serve as a good starting point to get the gist of this article which aims to delineate the kind of problems that occur in practice. You'll see many representative examples of markup code that illustrates what's wrong, complemented by links to more information.</p>
+                            <p class="pml-paragraph">You'll also discover a <i class="pml-italic">new</i> markup language. Lots of examples will demonstrate how a new syntax can lead to a language that is &quot;easy to use and suited for complex documents&quot;. A <i class="pml-italic">proof-of-concept</i> implementation is already available. More on this later.</p>
+                        </div>
+                        <div id="ch__2" class="pml-chapter">
+                            <h1 class="pml-chapter-title">Preliminary Remarks</h1>
+                            <p class="pml-paragraph">Please note:</p>
+                            <ul class="pml-list">
+                                <li class="pml-list-element">
+                                    <p class="pml-paragraph">This article is about document markup languages used to write <i class="pml-italic">text documents</i>, such as books and articles published on the net. There are other markup languages used to describe specific data, such as mathematical formulas, images, and geographic information, but these are out of scope of this article. However, some ideas presented in this article might be applied to other kinds of markup languages as well.</p>
+                                </li>
+                                <li class="pml-list-element">
+                                    <p class="pml-paragraph">This article focuses solely on the <i class="pml-italic">syntax</i> of markup languages. We will not discuss other aspects that are also important in the choice of a suitable markup language, such as: support on your OS, ease of installation and dependencies, the tool chain available to create final documents, the quality of documentation, price, customer/user support, etc.</p>
+                                </li>
+                                <li class="pml-list-element">
+                                    <p class="pml-paragraph">Readers of this article should have some basic experience with a markup language like HTML, Markdown, Asciidoctor, or similar.</p>
+                                </li>
+                                <li class="pml-list-element">
+                                    <p class="pml-paragraph">Readers not aware of the <i class="pml-italic">many</i> advantages of document markup languages might first want to read:<br /> <a href="https://www.pml-lang.dev/docs/articles/advantages-markup-language-vs-word-processor/index.html" class="pml-link">Advantages of Document Markup Languages vs WYSIWYG Editors (Word Processors)</a></p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="ch__3" class="pml-chapter">
+                            <h1 class="pml-chapter-title">Inconveniences / Part 1</h1>
+                            <p class="pml-paragraph">Let us first consider some well-known markup languages and show some inconveniences.</p>
+                            <div id="ch__4" class="pml-chapter">
+                                <h2 class="pml-chapter-title">HTML</h2>
+                                <p class="pml-paragraph">HTML is the language of the web. So, why not write everything in HTML? The reasons to discard this option are well known. Let's quickly recapitulate them:</p>
+                                <ul class="pml-list">
+                                    <li class="pml-list-element">
+                                        <p class="pml-paragraph">HTML is cumbersome to write. Nobody wants to write XML code by hand, although editors with HTML/XML support might help.</p>
+                                    </li>
+                                    <li class="pml-list-element">
+                                        <p class="pml-paragraph">Some frequent writing tasks require non-trivial HTML code.</p>
+                                        <p class="pml-paragraph">Suppose we want to display a horizontally centered image with a simple black border and a link. The HTML code an inexperienced user would expect to work could look like this:</p>
+                                        <pre class="pml-code"><code class="nohighlight">&lt;img src=&quot;ball.png&quot; align=&quot;center&quot; border=&quot;yes&quot; link=&quot;http://www.example.com/ball&quot;&gt;</code></pre>
+                                        <p class="pml-paragraph">But the code he or she actually has to write is cumbersome and there are different ways to do it. Here is one way:</p>
+                                        <pre class="pml-code"><code class="nohighlight">&lt;div style=&quot;text-align: center&quot;&gt;
+    &lt;a href=&quot;http://www.example.com/ball&quot;&gt;
+        &lt;img src=&quot;ball.png&quot; style=&quot;border:1px solid black;&quot;&gt;
+    &lt;/a&gt;
+&lt;/div&gt;</code></pre>
+                                    </li>
+                                    <li class="pml-list-element">
+                                        <p class="pml-paragraph">HTML lacks &quot;productivity features for writers&quot;, such as:</p>
+                                        <ul class="pml-list">
+                                            <li class="pml-list-element">
+                                                <p class="pml-paragraph">Automatic generation of a table of contents, index, glossary, etc.</p>
+                                            </li>
+                                            <li class="pml-list-element">
+                                                <p class="pml-paragraph">Variables used to hold recurring values</p>
+                                            </li>
+                                            <li class="pml-list-element">
+                                                <p class="pml-paragraph">Splitting a document into different files</p>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="pml-list-element">
+                                        <p class="pml-paragraph">Other inconveniences will be shown later.</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div id="ch__5" class="pml-chapter">
+                                <h2 class="pml-chapter-title">Markdown</h2>
+                                <p class="pml-paragraph"><a href="https://en.wikipedia.org/wiki/Markdown" class="pml-link">Markdown</a> is a very popular, lightweight markup languages. It is easy to learn and use, and well suited for short and simple texts, such as comments in forums, readme files, etc.</p>
+                                <p class="pml-paragraph">However, it suffers from the following problems that make it unsuitable for complex or big documents (e.g. technical articles, user manuals, and books):</p>
+                                <ul class="pml-list">
+                                    <li class="pml-list-element">
+                                        <p class="pml-paragraph">The original Markdown defined by John Gruber lacks many features expected by writers, such as tables (only embedded HTML tables are supported), automatic generation of table of contents, syntax highlighting, file splitting, etc.</p>
+                                    </li>
+                                    <li class="pml-list-element">
+                                        <p class="pml-paragraph">There is no unique, unambiguous specification for Markdown. Many flavors of Markdown exists, with different rules and different features supported. This leads to incompatibility issues when markup code is shared. <a href="https://commonmark.org/" class="pml-link">CommonMark</a> is an attempt to solve this problem. However, the specification is huge and not completed yet (at the time of writing (February 2019) version 0.28, dated 2017-08-01, is the latest one).</p>
+                                    </li>
+                                    <li class="pml-list-element">
+                                        <p class="pml-paragraph">Markdown has similar problems and limitations to those shown in chapter <a href="#problems" class="pml-xref">Inconveniences / Part 2</a>. These flaws can quickly become an annoyance when you use Markdown for anything else than short, simple texts.</p>
+                                    </li>
+                                </ul>
+                                <p class="pml-paragraph">Here is a list of articles with more information about Markdown's shortcomings:</p>
+                                <ul class="pml-list">
+                                    <li class="pml-list-element">
+                                        <p class="pml-paragraph"><a href="http://www.ericholscher.com/blog/2016/mar/15/dont-use-markdown-for-technical-docs/" class="pml-link">Why You Shouldn&#8217;t Use &#8220;Markdown&#8221; for Documentation</a></p>
+                                    </li>
+                                    <li class="pml-list-element">
+                                        <p class="pml-paragraph"><a href="https://www.red-gate.com/simple-talk/blogs/sundown-on-markdown/" class="pml-link">Sundown on Markdown?</a></p>
+                                    </li>
+                                    <li class="pml-list-element">
+                                        <p class="pml-paragraph"><a href="http://www.wilfred.me.uk/blog/2012/07/30/why-markdown-is-not-my-favourite-language/" class="pml-link">Why Markdown Is Not My Favourite Language</a></p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div id="ch__6" class="pml-chapter">
+                                <h2 class="pml-chapter-title">Docbook</h2>
+                                <p class="pml-paragraph"><a href="https://docbook.org/" class="pml-link">Docbook</a> is an XML-based markup language that uses semantic tags to describe documents.</p>
+                                <p class="pml-paragraph">It has probably the most complete set of features among all markup languages. It has been used by many authors, is pre-installed on some Linux distributions, and is supported by many organizations and publishers. Docbook has been successfully used to create, publish, and print lots of big documents of all kinds.</p>
+                                <p class="pml-paragraph">But it has the following drawbacks:</p>
+                                <ul class="pml-list">
+                                    <li class="pml-list-element">
+                                        <p class="pml-paragraph">It uses XML and a verbose syntax.</p>
+                                        <p class="pml-paragraph">Look at the following example, borrowed from <a href="https://en.wikipedia.org/wiki/DocBook" class="pml-link">Wikipedia</a>:</p>
+                                        <pre class="pml-code"><code class="nohighlight">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;book xml:id=&quot;simple_book&quot; xmlns=&quot;http://docbook.org/ns/docbook&quot; version=&quot;5.0&quot;&gt;
+    &lt;title&gt;Very simple book&lt;/title&gt;
+    &lt;chapter xml:id=&quot;chapter_1&quot;&gt;
+        &lt;title&gt;Chapter 1&lt;/title&gt;
+        &lt;para&gt;Hello world!&lt;/para&gt;
+        &lt;para&gt;I hope that your day is proceeding &lt;emphasis&gt;splendidly&lt;/emphasis&gt;!&lt;/para&gt;
+    &lt;/chapter&gt;
+    &lt;chapter xml:id=&quot;chapter_2&quot;&gt;
+        &lt;title&gt;Chapter 2&lt;/title&gt;
+        &lt;para&gt;Hello again, world!&lt;/para&gt;
+    &lt;/chapter&gt;
+&lt;/book&gt;        </code></pre>
+                                        <p class="pml-paragraph">Would you enjoy writing and maintaining such code?</p>
+                                        <p class="pml-paragraph">Now compare the above code with the following one, written in a modern markup language like Asciidoctor:</p>
+                                        <pre class="pml-code"><code class="nohighlight">= Very simple book
+
+== Chapter 1
+
+Hello world!
+
+I hope that your day is proceeding _splendidly_!
+
+== Chapter 2
+
+Hello again, world!</code></pre>
+                                    </li>
+                                    <li class="pml-list-element">
+                                        <p class="pml-paragraph">Docbook is complex, and therefore hard to learn and use.</p>
+                                    </li>
+                                    <li class="pml-list-element">
+                                        <p class="pml-paragraph">Output produced by Docbook, especially HTML, looks old-fashioned (see examples on its website). Of course, presentation can be customized, but this is not an easy task.</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div id="ch__7" class="pml-chapter">
+                                <h2 class="pml-chapter-title">LaTeX</h2>
+                                <p class="pml-paragraph"><a href="https://en.wikipedia.org/wiki/LaTeX" class="pml-link">LaTeX</a> is a high-quality typesetting system. It is widely used in academia to create scientific documents. It is considered to be the best option for writing PDF documents containing lots of mathematic formulas and equations.</p>
+                                <p class="pml-paragraph">I never used LaTeX myself, because I don't write scientific documents - just articles and books to be published on the web. Therefore, I don't want to comment on it too much. However, it is important to mention it because of its popularity in academia.</p>
+                                <p class="pml-paragraph">LaTeX's unique syntax seems verbose to me, and a bit complex. Here is an abbreviated example from <a href="https://en.wikipedia.org/wiki/LaTeX#Example" class="pml-link">Wikipedia</a>:</p>
+                                <pre class="pml-code"><code class="nohighlight">\documentclass{article}
+\usepackage{amsmath}
+\title{\LaTeX}
+
+\begin{document}
+    \maketitle
+    \LaTeX{} is a document preparation system ...
+
+    % This is a comment
+    \begin{align}
+        E_0 &amp;= mc^2 \\
+        E &amp;= \frac{mc^2}{\sqrt{1-\frac{v^2}{c^2}}}
+    \end{align}  
+\end{document}</code></pre>
+                                <p class="pml-paragraph">The article <a href="https://texfaq.org/FAQ-LaTeX2HTML" class="pml-link">Conversion from (La)TeX to HTML</a> states that converting LaTeX math to HTML is &quot;a challenge&quot;.</p>
+                                <p class="pml-paragraph">Some markup languages allow LaTeX snippets to be embedded in their markup code, which can be very useful if you need the power of LaTeX for maths. There are other options to display maths on the web, such as <a href="https://www.mathjax.org/" class="pml-link">Mathjax</a> or <a href="https://en.wikipedia.org/wiki/MathML" class="pml-link">MathML</a> (an ISO standard and part of HTML5).</p>
+                            </div>
+                            <div id="ch__8" class="pml-chapter">
+                                <h2 class="pml-chapter-title">Popular for Big Documents</h2>
+                                <p class="pml-paragraph">A impressive number of markup languages have emerged. Many of them use a syntax similar to Markup, and are therefore easy to learn and use. Some have more features than Markdown and are even extensible. However, as soon as we start writing complex documents, corner-cases and limits diminish the initial joy of using them.</p>
+                                <p class="pml-paragraph">Two popular markup languages used for big documents are Asciidoctor (an improved version of <a href="https://en.wikipedia.org/wiki/AsciiDoc" class="pml-link">Asciidoc</a>), and <a href="https://en.wikipedia.org/wiki/ReStructuredText" class="pml-link">reStructuredText</a> (an improved version of StructuredText). We will have a look at them soon.</p>
+                            </div>
+                        </div>
+                        <div id="PML_chapter" class="pml-chapter">
+                            <h1 class="pml-chapter-title">Practical Markup Language (PML)</h1>
+                            <p class="pml-paragraph">Before moving on to the most interesting part of this article, let me briefly introduce the new markup language I mentioned already in the introduction.</p>
+                            <p class="pml-paragraph">The language is called <i class="pml-italic"><b class="pml-bold">Practical</b> Markup Language (PML)</i>.</p>
+                            <blockquote class="pml-quote">
+                                <div class="pml-quote-text-block">
+                                    <div class="pml-quote-text-prefix"></div>
+                                    <div class="pml-quote-text">
+                                        <p class="pml-paragraph">fitting the needs of a particular situation in a helpful way; helping to solve a problem or difficulty; effective or suitable</p>
+                                    </div>
+                                    <div class="pml-quote-text-suffix"></div>
+                                </div>
+                                <div class="pml-quote-source">definition of 'practical' in the Cambridge Dictionary</div>
+                            </blockquote>
+                            <p class="pml-paragraph">I started the <a href="https://www.pml-lang.dev" class="pml-link">PML project</a> a few months ago because I couldn't find a markup language that was easy to use <i class="pml-italic">and</i> well suited for big, complex documents.</p>
+                            <p class="pml-paragraph">In the next chapter we'll look at examples of markup code written in PML, compared to code written in other languages. So let's first mention two basic PML syntax rules needed to understand the upcoming examples:</p>
+                            <ul class="pml-list">
+                                <li class="pml-list-element">
+                                    <p class="pml-paragraph">A PML document is a tree of nodes (similar to an XML/XHTML document). Each node starts with a <code class="pml-inline-code">{</code>, followed by a tag name. Each node ends with a <code class="pml-inline-code">}</code>. A node can contain text or child nodes.</p>
+                                    <p class="pml-paragraph">For example, here is a node containing text that will be rendered in italics:</p>
+                                    <pre class="pml-code"><code class="nohighlight">{i bright}</code></pre>
+                                    <p class="pml-paragraph">This node starts with <code class="pml-inline-code">{i </code>, and ends with <code class="pml-inline-code">}</code>. <code class="pml-inline-code">i</code> is the tag name. In this case <code class="pml-inline-code">i</code> is an abbreviation for <code class="pml-inline-code">italic</code>, which means that the node's content will be rendered in <i class="pml-italic">italics</i>. The content of this node is the text <code class="pml-inline-code">bright</code>. The above PML markup code will be rendered as:<br /> <i class="pml-italic">bright</i></p>
+                                </li>
+                                <li class="pml-list-element">
+                                    <p class="pml-paragraph">Some nodes have attributes, used to specify additional properties of the node (besides its tag name).</p>
+                                    <p class="pml-paragraph">For example, the title of a chapter is defined with attribute <code class="pml-inline-code">title</code>, as follows:</p>
+                                    <pre class="pml-code"><code class="nohighlight">{chapter title=A Nice Surprise
+    Once upon a time ...
+}</code></pre>
+                                </li>
+                            </ul>
+                            <p class="pml-paragraph">There is not much more to say about the basic concept of PML syntax. For more insight, and a description of features not used in this article, please consult the <a href="https://www.pml-lang.dev/docs/user_manual/index.html" class="pml-link">PML User Manual</a>.</p>
+                            <p class="pml-paragraph">You can download and play around with a free implementation of PML. But please note:</p>
+                            <div class="pml-admonition">
+                                <div class="pml-admonition-label">IMPORTANT</div>
+                                <div class="pml-admonition-content">
+                                    <p class="pml-paragraph">PML is a <i class="pml-italic">work in progress</i>. There are missing features, you might encounter bugs, and backwards compatibility is currently not guaranteed.</p>
+                                </div>
+                            </div>
+                            <p class="pml-paragraph">I use PML myself to write all my web documents, such as this article. For links to more real-life examples please visit the <a href="https://www.pml-lang.dev/about/faq.html#examples" class="pml-link">FAQ</a>.</p>
+                        </div>
+                        <div id="problems" class="pml-chapter">
+                            <h1 class="pml-chapter-title">Inconveniences / Part 2</h1>
+                            <p class="pml-paragraph">I this chapter we'll look at examples that reveal <i class="pml-italic">some</i> problems encountered with markup languages. This is by no means an exhaustive enumeration of all troubles and corner cases. The aim is to just show a few examples that demonstrate the kind of inconveniences and limits encountered in the real world.</p>
+                            <p class="pml-paragraph">For each example the markup code will be shown in <a href="https://www.w3.org/TR/html/" class="pml-link">HTML</a>, <a href="https://asciidoctor.org/" class="pml-link">Asciidoctor</a>, <a href="http://docutils.sourceforge.net/rst.html" class="pml-link">reStructuredText</a>, and <a href="https://www.pml-lang.dev" class="pml-link">PML</a>.</p>
+                            <p class="pml-paragraph">If you want to try out some code, you can use the following online testers (no need to install anything on your PC):</p>
+                            <ul class="pml-list">
+                                <li class="pml-list-element">
+                                    <p class="pml-paragraph"><a href="https://www.w3schools.com/tryit/" class="pml-link">HTML</a></p>
+                                </li>
+                                <li class="pml-list-element">
+                                    <p class="pml-paragraph"><a href="https://asciidoclive.com" class="pml-link">Asciidoctor</a></p>
+                                </li>
+                                <li class="pml-list-element">
+                                    <p class="pml-paragraph"><a href="http://rst.ninjs.org" class="pml-link">reStructuredText</a></p>
+                                </li>
+                            </ul>
+                            <p class="pml-paragraph">An online tester for PML is not yet available. You have to install PML on a Windows PC if you want to try it out.</p>
+                            <div id="ch__9" class="pml-chapter">
+                                <h2 class="pml-chapter-title">Font Styles</h2>
+                                <p class="pml-paragraph">Font styles (<i class="pml-italic">italic</i>, <b class="pml-bold">bold</b>, <code class="pml-inline-code">monospace</code>, etc.) are often used in all kinds of documents, so good support is essential.</p>
+                                <p class="pml-paragraph">But as we will see, surprises and limits can emerge, as soon as we have to deal with non-trivial cases. Let's look at <i class="pml-italic">some</i> examples to illustrate this.</p>
+                                <div id="ch__10" class="pml-chapter">
+                                    <h3 class="pml-chapter-title">Part of a Sentence in Italics</h3>
+                                    <p class="pml-paragraph">Suppose we want to write:<br /> They called it <i class="pml-italic">Harmonic States</i>, a good name.</p>
+                                    <p class="pml-paragraph">This is a trivial case, and all languages support it.</p>
+                                    <ul class="pml-list">
+                                        <li class="pml-list-element">
+                                            <div class="pml-node-title">HTML</div>
+                                            <pre class="pml-code"><code class="nohighlight">They called it &lt;i&gt;Harmonic States&lt;/i&gt;, a good name.</code></pre>
+                                        </li>
+                                        <li class="pml-list-element">
+                                            <div class="pml-node-title">Asciidoctor</div>
+                                            <pre class="pml-code"><code class="nohighlight">They called it _Harmonic States_, a good name.</code></pre>
+                                        </li>
+                                        <li class="pml-list-element">
+                                            <div class="pml-node-title">reStructuredText</div>
+                                            <pre class="pml-code"><code class="nohighlight">They called it *Harmonic States*, a good name.</code></pre>
+                                        </li>
+                                        <li class="pml-list-element">
+                                            <div class="pml-node-title">PML</div>
+                                            <pre class="pml-code"><code class="nohighlight">They called it {i Harmonic States}, a good name.</code></pre>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div id="ch__11" class="pml-chapter">
+                                    <h3 class="pml-chapter-title">Part of a Word in Italics</h3>
+                                    <p class="pml-paragraph">We want to write:<br /> She <i class="pml-italic">un</i>wrapped the challenge first.</p>
+                                    <ul class="pml-list">
+                                        <li class="pml-list-element">
+                                            <div class="pml-node-title">HTML</div>
+                                            <pre class="pml-code"><code class="nohighlight">She &lt;i&gt;un&lt;/i&gt;wrapped the challenge first.</code></pre>
+                                        </li>
+                                        <li class="pml-list-element">
+                                            <div class="pml-node-title">Asciidoctor</div>
+                                            <pre class="pml-code"><code class="nohighlight">She __un__wrapped the challenge first.</code></pre>
+                                            <p class="pml-paragraph">Note that we have to use two underscores. Using a single underscore (as in the first example), would result in:<br /> She _un_wrapped the challenge first.</p>
+                                        </li>
+                                        <li class="pml-list-element">
+                                            <div class="pml-node-title">reStructuredText</div>
+                                            <pre class="pml-code"><code class="nohighlight">She *un*\wrapped the challenge first.</code></pre>
+                                            <p class="pml-paragraph">Note that the letter w has to be escaped (preceded by a backslash) for reasons explained <a href="http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html#character-level-inline-markup" class="pml-link">here</a>. If the letter is not escaped then a warning is displayed and the result is:<br /> She *un*wrapped the challenge first.</p>
+                                        </li>
+                                        <li class="pml-list-element">
+                                            <div class="pml-node-title">PML</div>
+                                            <pre class="pml-code"><code class="nohighlight">She {i un}wrapped the challenge first.</code></pre>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div id="ch__12" class="pml-chapter">
+                                    <h3 class="pml-chapter-title">Text in Bold And Italic</h3>
+                                    <p class="pml-paragraph">We want to write:<br /> They were all <b class="pml-bold"><i class="pml-italic">totally flabbergasted</i></b>.</p>
+                                    <ul class="pml-list">
+                                        <li class="pml-list-element">
+                                            <div class="pml-node-title">HTML</div>
+                                            <pre class="pml-code"><code class="nohighlight">They were all &lt;b&gt;&lt;i&gt;totally flabbergasted&lt;/i&gt;&lt;/b&gt;.</code></pre>
+                                        </li>
+                                        <li class="pml-list-element">
+                                            <div class="pml-node-title">Asciidoctor</div>
+                                            <pre class="pml-code"><code class="nohighlight">They were all *_totally flabbergasted_*.</code></pre>
+                                        </li>
+                                        <li class="pml-list-element">
+                                            <div class="pml-node-title">reStructuredText</div>
+                                            <p class="pml-paragraph">Combining bold and italic is not supported in reStructuredText, but there are some <a href="https://stackoverflow.com/questions/11984652/bold-italic-in-restructuredtext" class="pml-link">complicated workarounds</a>.</p>
+                                        </li>
+                                        <li class="pml-list-element">
+                                            <div class="pml-node-title">PML</div>
+                                            <pre class="pml-code"><code class="nohighlight">They were all {b {i totally flabbergasted}}.</code></pre>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div id="ch__13" class="pml-chapter">
+                                    <h3 class="pml-chapter-title">Real-Life Example</h3>
+                                    <p class="pml-paragraph">Here is an example inspired by an Asciidoctor user who <a href="https://github.com/asciidoctor/asciidoctor/issues/2020" class="pml-link">asked</a> how to display:<br /> <b class="pml-bold">_id</b> <i class="pml-italic">optional</i>.</p>
+                                    <p class="pml-paragraph">Let's make the exercise a little bit more interesting by also displaying:<br /> <i class="pml-italic">_id</i> <b class="pml-bold">optional</b>.</p>
+                                    <ul class="pml-list">
+                                        <li class="pml-list-element">
+                                            <div class="pml-node-title">HTML</div>
+                                            <pre class="pml-code"><code class="nohighlight">&lt;b&gt;_id&lt;/b&gt; &lt;i&gt;optional&lt;/i&gt;
+&lt;i&gt;_id&lt;/i&gt; &lt;b&gt;optional&lt;/b&gt;</code></pre>
+                                            <p class="pml-paragraph">No surprise here. It just works as expected.</p>
+                                        </li>
+                                        <li class="pml-list-element">
+                                            <div class="pml-node-title">Asciidoctor</div>
+                                            <p class="pml-paragraph">Intuitive attempt:</p>
+                                            <pre class="pml-code"><code class="nohighlight">*_id* _optional_
+__id_ *optional*</code></pre>
+                                            <p class="pml-paragraph">The first line doesn't work, it produces:<br /> <i class="pml-italic"><b class="pml-bold">id</b> _optional</i></p>
+                                            <p class="pml-paragraph">However, the second line works, which is a bit counterintuitive.</p>
+                                            <p class="pml-paragraph">If normal text includes a character that is also used for markup (in our case the <code class="pml-inline-code">_</code> preceding <code class="pml-inline-code">id</code>), then the character must be escaped. This is a fundamental rule in pretty much all markup languages. For example in HTML a <code class="pml-inline-code">&lt;</code> must be escaped with <code class="pml-inline-code">&amp;lt;</code>. Many languages (including Asciidoctor and PML) use a backslash prefix (e.g. <code class="pml-inline-code">\r</code>) to escape. So let's rewrite the code:</p>
+                                            <pre class="pml-code"><code class="nohighlight">*\_id* _optional_
+_\_id_ *optional*</code></pre>
+                                            <p class="pml-paragraph">This doesn't work in Asciidoctor. It produces<br /> <b class="pml-bold">_id</b> _optional_<br />and<br />\_id <b class="pml-bold">optional</b></p>
+                                            <p class="pml-paragraph">Here is a correct version, as suggested in an answer to the user's question:</p>
+                                            <pre class="pml-code"><code class="nohighlight">*pass:[_]id* _optional_
+_pass:[_]id_ *optional*</code></pre>
+                                            <p class="pml-paragraph">Another answer suggests this solution:</p>
+                                            <pre class="pml-code"><code class="nohighlight">*_id* __optional__
+___id__ *optional*</code></pre>
+                                            <p class="pml-paragraph">More edge case are documented in chapters <a href="https://asciidoctor.org/docs/user-manual/#unconstrained-formatting-edge-cases" class="pml-link">Unconstrained formatting edge cases</a> and <a href="https://asciidoctor.org/docs/user-manual/#escaping-unconstrained-quotes" class="pml-link">Escaping unconstrained quotes</a> of the Asciidoctor User Manual.</p>
+                                        </li>
+                                        <li class="pml-list-element">
+                                            <div class="pml-node-title">reStructuredText</div>
+                                            <pre class="pml-code"><code class="nohighlight">**_id** *optional*
+*_id* **optional**</code></pre>
+                                            <p class="pml-paragraph">There is no problem here, because the character <code class="pml-inline-code">_</code> is not used in reStructuredText to define markup.</p>
+                                            <p class="pml-paragraph">However, suppose we wanted to write:<br /> <i class="pml-italic">*id*</i> <b class="pml-bold">*optional*</b>.</p>
+                                            <p class="pml-paragraph">Here is the code:</p>
+                                            <pre class="pml-code"><code class="nohighlight">*\*id\** ***optional***</code></pre>
+                                            <p class="pml-paragraph">Note that the <code class="pml-inline-code">*</code>s in <code class="pml-inline-code">id</code> must be escaped, but the <code class="pml-inline-code">*</code>s in <code class="pml-inline-code">optional</code> don't need to be escaped.</p>
+                                        </li>
+                                        <li class="pml-list-element">
+                                            <div class="pml-node-title">PML</div>
+                                            <pre class="pml-code"><code class="nohighlight">{b _id} {i optional}
+{i _id} {b optional}</code></pre>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div id="ch__14" class="pml-chapter">
+                                    <h3 class="pml-chapter-title">Nested Font Styles</h3>
+                                    <p class="pml-paragraph">Nested font styles of the same kind (e.g. <code class="pml-inline-code">&lt;i&gt;...&lt;i&gt;...&lt;/i&gt;...&lt;/i&gt;</code>) occur rarely in text written by humans, but they could be more or less frequent in auto-generated markup code. If they are not supported then the tool that generates the markup code becomes more complicated to implement, because it must track the font styles that are active already, in order to avoid nesting them.</p>
+                                    <p class="pml-paragraph">So, how is this supported in the different languages?</p>
+                                    <ul class="pml-list">
+                                        <li class="pml-list-element">
+                                            <div class="pml-node-title">HTML</div>
+                                            <pre class="pml-code"><code class="nohighlight">&lt;i&gt;This is &lt;i&gt;excellent&lt;/i&gt;, isn't it?&lt;/i&gt;</code></pre>
+                                            <p class="pml-paragraph">No problem, it produces<br /><i class="pml-italic">This is excellent, isn't it?</i></p>
+                                        </li>
+                                        <li class="pml-list-element">
+                                            <div class="pml-node-title">Asciidoctor</div>
+                                            <pre class="pml-code"><code class="nohighlight">_This is _excellent_, isn't it?_</code></pre>
+                                            <p class="pml-paragraph">The above code is obviously ambiguous: Are the italics nested or do we want to italicize &quot;This is &quot; and &quot;, isn't it?&quot;. When I tested it, the result was neither of it:<br /><i class="pml-italic">This is _excellent</i>, isn&#8217;t it?_</p>
+                                            <p class="pml-paragraph">As far as I now, Asciidoctor doesn't support nested font styles of the same kind.</p>
+                                        </li>
+                                        <li class="pml-list-element">
+                                            <div class="pml-node-title">reStructuredText</div>
+                                            <p class="pml-paragraph">The reStructuredText specification <a href="http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html#inline-markup" class="pml-link">states</a>: &quot;Inline markup cannot be nested.&quot; However, no error is displayed if it <i class="pml-italic">is</i> nested, and the result is unspecified.</p>
+                                        </li>
+                                        <li class="pml-list-element">
+                                            <div class="pml-node-title">PML</div>
+                                            <pre class="pml-code"><code class="nohighlight">{i This is {i excellent}, isn't it?}</code></pre>
+                                            <p class="pml-paragraph">Font styles of the same kind can be nested in PML. The above code results in:<br /><i class="pml-italic">This is <i class="pml-italic">excellent</i>, isn't it?</i></p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div id="ch__15" class="pml-chapter">
+                                <h2 class="pml-chapter-title">Nested Chapters</h2>
+                                <p class="pml-paragraph">Suppose we are writing an article titled &quot;New Awesome Product&quot; that contains four chapters. The structure looks as follows:</p>
+                                <pre class="pml-code"><code class="nohighlight">New Awesome Product
+    Introduction
+    More features
+    Faster
+    Less resources</code></pre>
+                                <p class="pml-paragraph">Later on we decide to insert chapter &quot;Advantages&quot; as a parent of the three last chapters. The structure now becomes:</p>
+                                <pre class="pml-code"><code class="nohighlight">New Awesome Product
+    Introduction
+    Advantages
+        More features
+        Faster
+        Less resources</code></pre>
+                                <p class="pml-paragraph">What are the <i class="pml-italic">changes</i> required in the markup code to pass from version 1 to version 2? Can you simply insert the code for a new chapter? Let's see.</p>
+                                <div id="ch__16" class="pml-chapter">
+                                    <h3 class="pml-chapter-title">HTML</h3>
+            <table>
+                <tr>
+                    <td style="vertical-align: top;">
+                        <p><b>first version:</b></p>
+                        <pre style="font-family: Consolas; background-color:#f5f5f5; border-radius: 7px; padding:1em;">
+&lt;h1&gt;New Awesome Product&lt;/h1&gt;
+&lt;h2&gt;Introduction&lt;/h2&gt;
+&lt;h2&gt;More features&lt;/h2&gt;
+&lt;h2&gt;Faster&lt;/h2&gt;
+&lt;h2&gt;Less resources&lt;/h2&gt;</pre>
+                    </td>
+                    <td style="vertical-align: top; padding-left:1em;">
+                        <p><b>second version:</b></p>
+                        <pre style="font-family: Consolas; background-color:#f5f5f5; border-radius: 7px; padding:1em;">
+&lt;h1&gt;New Awesome Product&lt;/h1&gt;
+&lt;h2&gt;Introduction&lt;/h2&gt;
+<b>&lt;h2&gt;Advantages&lt;/h2&gt;</b>
+<b>&lt;h3&gt;</b>More features<b>&lt;/h3&gt;</b>
+<b>&lt;h3&gt;</b>Faster<b>&lt;/h3&gt;</b>
+<b>&lt;h3&gt;</b>Less resources<b>&lt;/h3&gt;</b></pre>
+                    </td>
+                </tr>
+            </table>                                    <div class="pml-admonition">
+                                        <div class="pml-admonition-label">Note</div>
+                                        <div class="pml-admonition-content">
+                                            <p class="pml-paragraph">Code <i class="pml-italic">changes</i> are displayed in bold.</p>
+                                        </div>
+                                    </div>
+                                    <p class="pml-paragraph">As shown above, besides inserting the new chapter, we have to change the markup for the three child chapters: <code class="pml-inline-code">h2</code> must be changed to <code class="pml-inline-code">h3</code></p>
+                                </div>
+                                <div id="ch__17" class="pml-chapter">
+                                    <h3 class="pml-chapter-title">Asciidoctor</h3>
+            <table>
+                <tr>
+                    <td style="vertical-align: top;">
+                        <p><b>first version:</b></p>
+                        <pre style="font-family: Consolas; background-color:#f5f5f5; border-radius: 7px; padding:1em;">
+= New Awesome Product
+
+== Introduction
+
+== More features
+
+== Faster
+
+== Less resources</pre>
+                    </td>
+                    <td style="vertical-align: top; padding-left:1em;">
+                        <p><b>second version:</b></p>
+                        <pre style="font-family: Consolas; background-color:#f5f5f5; border-radius: 7px; padding:1em;">
+= New Awesome Product
+
+== Introduction
+
+<b>== Advantages</b>
+
+<b>===</b> More features
+
+<b>===</b> Faster
+
+<b>===</b> Less resources</pre>
+                    </td>
+                </tr>
+            </table>                                    <p class="pml-paragraph">Again, we have to change the markup for the three child chapters: <code class="pml-inline-code">==</code> must be changed to <code class="pml-inline-code">===</code></p>
+                                    <div class="pml-admonition">
+                                        <div class="pml-admonition-label">Note</div>
+                                        <div class="pml-admonition-content">
+                                            <p class="pml-paragraph">The blank lines between the chapters are required, otherwise the document is not rendered correctly.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="ch__18" class="pml-chapter">
+                                    <h3 class="pml-chapter-title">reStructuredText</h3>
+            <table>
+                <tr>
+                    <td style="vertical-align: top;">
+                        <p><b>first version:</b></p>
+                        <pre style="font-family: Consolas; background-color:#f5f5f5; border-radius: 7px; padding:1em;">
+*******************
+New Awesome Product
+*******************
+Introduction
+============
+More features
+=============
+Faster
+======
+Less resources
+==============</pre>
+                    </td>
+                    <td style="vertical-align: top; padding-left:1em;">
+                        <p><b>second version:</b></p>
+                        <pre style="font-family: Consolas; background-color:#f5f5f5; border-radius: 7px; padding:1em;">
+*******************
+New Awesome Product
+*******************
+Introduction
+============
+<b>Advantages
+==========</b>
+More features
+<b>-------------</b>
+Faster
+<b>------</b>
+Less resources
+<b>--------------</b></pre>
+                    </td>
+                </tr>
+            </table>                                    <p class="pml-paragraph">The markup for the three child chapters must be changed: All occurrences of <code class="pml-inline-code">=</code> must be changed to <code class="pml-inline-code">-</code></p>
+                                    <p class="pml-paragraph">The non-trivial rules for reStructuredText's sections can be looked up <a href="http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html#sections" class="pml-link">here</a>.</p>
+                                </div>
+                                <div id="ch__19" class="pml-chapter">
+                                    <h3 class="pml-chapter-title">PML</h3>
+            <table>
+                <tr>
+                    <td style="vertical-align: top;">
+                        <p><b>first version:</b></p>
+                        <pre style="font-family: Consolas; background-color:#f5f5f5; border-radius: 7px; padding:1em;">
+{doc title=New Awesome Product
+    {ch title=Introduction}
+    {ch title=More features}
+    {ch title=Faster}
+    {ch title=Less resources}
+}</pre>
+                    </td>
+                    <td style="vertical-align: top; padding-left:1em;">
+                        <p><b>second version:</b></p>
+                        <pre style="font-family: Consolas; background-color:#f5f5f5; border-radius: 7px; padding:1em;">
+{doc title=New Awesome Product
+    {ch title=Introduction}
+    <b>{ch title=Advantages</b>
+        {ch title=More features}
+        {ch title=Faster}
+        {ch title=Less resources}
+    <b>}</b>
+}</pre>
+                    </td>
+                </tr>
+            </table>                                    <p class="pml-paragraph">In PML, there is no need to change the code of the three child chapters.</p>
+                                </div>
+                                <div id="ch__20" class="pml-chapter">
+                                    <h3 class="pml-chapter-title">Bottom Line</h3>
+                                    <p class="pml-paragraph">In all languages, except PML, the markup code of all child chapters must be adapted if a parent chapter is inserted.</p>
+                                    <p class="pml-paragraph">This is not a deal-breaker in case of small articles with few chapters. But image you are writing your next big article or book with lots of chapters and frequent changes. Now, the necessity to manually update child chapters can quickly turn into a daunting, boring, and error-prone task.</p>
+                                    <div class="pml-admonition">
+                                        <div class="pml-admonition-label">Note</div>
+                                        <div class="pml-admonition-content">
+                                            <p class="pml-paragraph">Asciidoctor provides a <code class="pml-inline-code">leveloffset</code> variable that can be used to change the level of chapters. This might be useful in some cases, but it also creates additional unneeded complexity, as can be seen <a href="https://github.com/asciidoctor/asciidoctor/issues/530" class="pml-link">here</a> and <a href="https://github.com/asciidoctor/asciidoctor/issues/1616" class="pml-link">here</a>.</p>
+                                        </div>
+                                    </div>
+                                    <p class="pml-paragraph">A more serious kind of problem can arise in the following situation: Imagine a set of different documents that share some common chapters. To avoid code duplication, the common chapters are stored in different files, and an <code class="pml-inline-code">insert file</code> directive is used in the main documents. This works fine as long as the levels of all common chapters are the same in all documents. But troubles emerge if this is not the case.</p>
+                                    <p class="pml-paragraph">It is also worth to mention that HTML, Asciidoctor and reStructuredText don't protect you against wrong chapter hierarchies. For example, you don't get a warning or error if a chapter of level 2 contains a direct child chapter of level 4.</p>
+                                    <p class="pml-paragraph">In a language like PML, the above problems simply don't exist, because the level is not specified in the markup code. All chapters (of any level) are defined with the same, unique syntax. The chapters' tree structure (i.e. the level of each chapter) is automatically defined by the parser. And wrong hierarchies in the markup code, such as a missing <code class="pml-inline-code">}</code> to close a chapter, are flagged by an error message.</p>
+                                </div>
+                            </div>
+                            <div id="ch__21" class="pml-chapter">
+                                <h2 class="pml-chapter-title">Lists</h2>
+                                <p class="pml-paragraph">In Asciidoctor the kind of problems we have seen with chapter hierarchies can also arise with list hierarchies (e.g. lists that contain lists). The reason is the same as for chapters: <a href="https://asciidoctor.org/docs/user-manual/#nested" class="pml-link">Asciidoctor lists</a> use different markup code to explicitly specify the level of list items (<code class="pml-inline-code">*</code> for level 1, <code class="pml-inline-code">**</code> for level 2, etc.). Moreover, there are a number of complications you have to be aware of when working with <a href="https://asciidoctor.org/docs/user-manual/#complex-list-content" class="pml-link">complex list content</a>.</p>
+                                <p class="pml-paragraph">In reStructuredText, <a href="https://stackoverflow.com/questions/5550089/how-to-create-a-nested-list-in-restructuredtext" class="pml-link">nested lists</a> are created using indentation and blank lines. This works fine for simple nested lists, but creates other problems in more complex cases (not discussed here). Using whitespace (e.g. blank lines and indentation) to define structure in markup code is a bad idea, as we'll see <a href="#whitespace" class="pml-xref">later</a>.</p>
+                                <p class="pml-paragraph">In HTML and PML, the above problems don't exist with lists because the syntax for parent- and child nodes is the same (not shown here).</p>
+                            </div>
+                            <div id="ch__22" class="pml-chapter">
+                                <h2 class="pml-chapter-title">Comments</h2>
+                                <p class="pml-paragraph">Good support for comments is important, because they are used frequently, especially in collaborative environments. So, how well are they supported?</p>
+                                <div id="ch__23" class="pml-chapter">
+                                    <h3 class="pml-chapter-title">Single-Line Comment</h3>
+                                    <p class="pml-paragraph">A single-line comment is a line that contains only a comment (no markup). They are supported in all languages.</p>
+                                    <ul class="pml-list">
+                                        <li class="pml-list-element">
+                                            <div class="pml-node-title">HTML</div>
+                                            <p class="pml-paragraph">A HTML (or XML) comment starts with <code class="pml-inline-code">&lt;!--</code> at any position, and ends with <code class="pml-inline-code">--&gt;</code> at any subsequent position. Example:</p>
+                                            <pre class="pml-code"><code class="nohighlight">&lt;!-- comment --&gt;</code></pre>
+                                        </li>
+                                        <li class="pml-list-element">
+                                            <div class="pml-node-title">Asciidoctor</div>
+                                            <p class="pml-paragraph">A single-line comment starts with <code class="pml-inline-code">//</code> at the beginning of a line:</p>
+                                            <pre class="pml-code"><code class="nohighlight">// comment</code></pre>
+                                        </li>
+                                        <li class="pml-list-element">
+                                            <div class="pml-node-title">reStructuredText</div>
+                                            <p class="pml-paragraph">A single-line comment starts with <code class="pml-inline-code">..</code> at the beginning of a line and must be followed by an empty line</p>
+                                            <pre class="pml-code"><code class="nohighlight">.. comment
+  </code></pre>
+                                        </li>
+                                        <li class="pml-list-element">
+                                            <div class="pml-node-title">PML</div>
+                                            <p class="pml-paragraph">A comment starts with <code class="pml-inline-code">{-</code> at any position, and ends with <code class="pml-inline-code">-}</code> at any subsequent position.</p>
+                                            <pre class="pml-code"><code class="nohighlight">{- comment -}</code></pre>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div id="ch__24" class="pml-chapter">
+                                    <h3 class="pml-chapter-title">Trailing Comment</h3>
+                                    <p class="pml-paragraph">A trailing comment appears at the end of a line, after markup code.</p>
+                                    <ul class="pml-list">
+                                        <li class="pml-list-element">
+                                            <div class="pml-node-title">HTML</div>
+                                            <pre class="pml-code"><code class="nohighlight">The reason will be explained later &lt;!-- TODO: add link --&gt;</code></pre>
+                                        </li>
+                                        <li class="pml-list-element">
+                                            <div class="pml-node-title">Asciidoctor</div>
+                                            <p class="pml-paragraph">At the time of writing, trailing comments are not supported in Asciidoctor (see <a href="https://github.com/asciidoctor/asciidoctor/issues/991" class="pml-link">issue 991</a> on Github).</p>
+                                        </li>
+                                        <li class="pml-list-element">
+                                            <div class="pml-node-title">reStructuredText</div>
+                                            <p class="pml-paragraph">Trailing comments are not supported in reStructuredText.</p>
+                                        </li>
+                                        <li class="pml-list-element">
+                                            <div class="pml-node-title">PML</div>
+                                            <pre class="pml-code"><code class="nohighlight">The reason will be explained later {- TODO: add link -}</code></pre>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div id="ch__25" class="pml-chapter">
+                                    <h3 class="pml-chapter-title">Inline Comment</h3>
+                                    <p class="pml-paragraph">An inline comment is preceded and followed by markup code.</p>
+                                    <ul class="pml-list">
+                                        <li class="pml-list-element">
+                                            <div class="pml-node-title">HTML</div>
+                                            <pre class="pml-code"><code class="nohighlight">This is &lt;!-- good --&gt; awesome.</code></pre>
+                                        </li>
+                                        <li class="pml-list-element">
+                                            <div class="pml-node-title">Asciidoctor</div>
+                                            <p class="pml-paragraph">Inline comments are not supported in Asciidoctor.</p>
+                                        </li>
+                                        <li class="pml-list-element">
+                                            <div class="pml-node-title">reStructuredText</div>
+                                            <p class="pml-paragraph">Inline comments are not supported in reStructuredText.</p>
+                                        </li>
+                                        <li class="pml-list-element">
+                                            <div class="pml-node-title">PML</div>
+                                            <pre class="pml-code"><code class="nohighlight">This is {- good -} awesome.</code></pre>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div id="ch__26" class="pml-chapter">
+                                    <h3 class="pml-chapter-title">Multi-Line Comment</h3>
+                                    <p class="pml-paragraph">A multi comment starts at a given line, and ends at a subsequent line.</p>
+                                    <ul class="pml-list">
+                                        <li class="pml-list-element">
+                                            <div class="pml-node-title">HTML</div>
+                                            <pre class="pml-code"><code class="nohighlight">&lt;!--
+comment line 1
+comment line 2
+comment line 3
+--&gt;</code></pre>
+                                        </li>
+                                        <li class="pml-list-element">
+                                            <div class="pml-node-title">Asciidoctor</div>
+                                            <p class="pml-paragraph">A multi-line comment starts with <code class="pml-inline-code">////</code> on a line, and ends with with <code class="pml-inline-code">////</code> on a subsequent line:</p>
+                                            <pre class="pml-code"><code class="nohighlight">////
+comment line 1
+comment line 2
+comment line 3
+////</code></pre>
+                                        </li>
+                                        <li class="pml-list-element">
+                                            <div class="pml-node-title">reStructuredText</div>
+                                            <p class="pml-paragraph">The <a href="http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html#comments" class="pml-link">rules</a> for multi-line comments are a bit 'surprising'. User Cecil Curry puts it more bluntly in a <a href="https://stackoverflow.com/questions/4783814/how-to-comment-a-string-in-restructured-text" class="pml-link">Stackoverflow question</a>: &quot;It's non-trivial, non-obvious, and tragically fragile.&quot;</p>
+                                            <p class="pml-paragraph">Here is an example:</p>
+                                            <pre class="pml-code"><code class="nohighlight">..
+  comment line 1
+  comment line 2
+  comment line 3</code></pre>
+                                            <p class="pml-paragraph">All lines after the <code class="pml-inline-code">..</code> must be indented. In practice, this means that unindented text must first be indented to include it in a multi-line comment. If the text is later uncommented then the indent must be removed. Quite inconvenient and fragile, indeed.</p>
+                                        </li>
+                                        <li class="pml-list-element">
+                                            <div class="pml-node-title">PML</div>
+                                            <pre class="pml-code"><code class="nohighlight">{-
+comment line 1
+comment line 2
+comment line 3
+-}</code></pre>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div id="ch__27" class="pml-chapter">
+                                    <h3 class="pml-chapter-title">Nested Comments</h3>
+                                    <p class="pml-paragraph">Nested comments are useful when we want to comment a block of text that contains already one or more comments.</p>
+                                    <p class="pml-paragraph">Nested comments are not supported in HTML, Asciidoctor, and reStructuredText. However, there are some tricky workarounds in HTML, as explained <a href="https://stackoverflow.com/questions/18145886/html-nested-comments" class="pml-link">here</a></p>
+                                    <p class="pml-paragraph">PML supports nested comments to any level. Here is a simple example.</p>
+                                    <pre class="pml-code"><code class="nohighlight">{-
+These lines
+will not {- nested comment -}
+appear in the final document.
+-}</code></pre>
+                                </div>
+                                <div id="ch__28" class="pml-chapter">
+                                    <h3 class="pml-chapter-title">Removed Comments</h3>
+                                    <p class="pml-paragraph">By definition, comments are not displayed to the readers. But it is also important that comments are <i class="pml-italic">removed in the final document</i>, because otherwise readers might be able to see them. This rule is applied in Asciidoctor, reStructuredText, PML, and probably most other markup languages. But not in <i class="pml-italic">hand-coded</i> HTML. This can lead to troubles. Imagine the following scenario:</p>
+                                    <ul class="pml-list">
+                                        <li class="pml-list-element">
+                                            <p class="pml-paragraph">Boss to Bob: &quot;Please remove my private mobile number from the website&quot;.</p>
+                                        </li>
+                                        <li class="pml-list-element">
+                                            <p class="pml-paragraph">Bob to Boss: &quot;Ok&quot;.</p>
+                                        </li>
+                                        <li class="pml-list-element">
+                                            <p class="pml-paragraph">Bob comments the HTML code containing the mobile number.</p>
+                                        </li>
+                                        <li class="pml-list-element">
+                                            <p class="pml-paragraph">Boss checks the new version and is happy because his number is no more displayed.</p>
+                                        </li>
+                                        <li class="pml-list-element">
+                                            <p class="pml-paragraph">A website visitor clicks on &quot;Display Source Code&quot; in the browser's context menu, and ... discovers the boss's private mobile number.</p>
+                                        </li>
+                                    </ul>
+                                    <p class="pml-paragraph">I had to learn the hard way that silly things like this do happen. And yes, I was the 'Bob'.</p>
+                                </div>
+                                <div id="ch__29" class="pml-chapter">
+                                    <h3 class="pml-chapter-title">Conclusion</h3>
+                                    <p class="pml-paragraph">The following table summarizes the support for comments:</p>
+            <table style="border: 1px solid black; text-align: center;">
+                <tr><th></th><th>&nbsp;Single-line&nbsp;</th><th>&nbsp;Trailing&nbsp;</th><th>&nbsp;Inline&nbsp;</th><th>&nbsp;Multi-line&nbsp;</th><th>&nbsp;Nested&nbsp;</th><th>&nbsp;Removed&nbsp;</th></tr>
+                <tr><th style="text-align: right;">HTML</th>            <td>&#x2714;</td><td>&#x2714;</td><td>&#x2714;</td><td>&#x2714;</td><td>&#x274C;</td><td>&#x274C;</td></tr>
+                <tr><th style="text-align: right;">Asciidoctor</th>     <td>&#x2714;</td><td>&#x274C;</td><td>&#x274C;</td><td>&#x2714;</td><td>&#x274C;</td><td>&#x2714;</td></tr>
+                <tr><th style="text-align: right;">reStructuredText</th><td>&#x2714;</td><td>&#x274C;</td><td>&#x274C;</td><td>&#x2714;</td><td>&#x274C;</td><td>&#x2714;</td></tr>
+                <tr><th style="text-align: right;">PML</th>             <td>&#x2714;</td><td>&#x2714;</td><td>&#x2714;</td><td>&#x2714;</td><td>&#x2714;</td><td>&#x2714;</td></tr>
+            </table>                                </div>
+                            </div>
+                            <div id="whitespace" class="pml-chapter">
+                                <h2 class="pml-chapter-title">Whitespace And Indentation</h2>
+                                <p class="pml-paragraph">At first, using whitespace to define structure seams like a good idea. Look at the following example:</p>
+                                <pre class="pml-code"><code class="nohighlight">parent
+    child 1
+    child 2</code></pre>
+                                <p class="pml-paragraph">The structure is very easy to read <i class="pml-italic">and</i> write. No noisy special markup characters are needed.</p>
+                                <p class="pml-paragraph">It is therefore tempting for markup language designers to use whitespace as a simple way to define structure. Unfortunately, this works well only for simple structures, and has other inconveniences we'll see soon.</p>
+                                <p class="pml-paragraph">Therefore, a simple, but important rule must be applied in markup languages designed to work well with complex content:</p>
+                                <blockquote class="pml-quote">
+                                    <div class="pml-quote-text-block">
+                                        <div class="pml-quote-text-prefix"></div>
+                                        <div class="pml-quote-text">
+                                            <p class="pml-paragraph">Whitespace doesn't change the structure or semantics of the document.</p>
+                                        </div>
+                                        <div class="pml-quote-text-suffix"></div>
+                                    </div>
+                                    <div class="pml-quote-source">whitespace-insignificant-rule</div>
+                                </blockquote>
+                                <p class="pml-paragraph">What does this mean?</p>
+                                <p class="pml-paragraph">First, let us define <i class="pml-italic">whitespace</i>: Whitespace is any set of one or more consecutive spaces, tabs, new lines, and other Unicode characters that represent space.</p>
+                                <p class="pml-paragraph">In our context, the above rule means that:</p>
+                                <ul class="pml-list">
+                                    <li class="pml-list-element">
+                                        <p class="pml-paragraph">Within text, a set of <i class="pml-italic">several</i> (i.e. more than one) whitespace characters is treated the same as a <i class="pml-italic">single</i> space character.</p>
+                                        <p class="pml-paragraph">For example, this code:</p>
+                                        <pre class="pml-code"><code class="nohighlight">a beautiful
+    flower</code></pre>
+                                        <p class="pml-paragraph">... is identical to this one:</p>
+                                        <pre class="pml-code"><code class="nohighlight">a beautiful flower</code></pre>
+                                    </li>
+                                    <li class="pml-list-element">
+                                        <p class="pml-paragraph">Between structural elements, a set of whitespace characters is insignificant.</p>
+                                        <p class="pml-paragraph">For example, this code:</p>
+                                        <pre class="pml-code"><code class="nohighlight">&lt;table&gt;
+
+    &lt;tr&gt;</code></pre>
+                                        <p class="pml-paragraph">... is identical to this one:</p>
+                                        <pre class="pml-code"><code class="nohighlight">&lt;table&gt;&lt;tr&gt;</code></pre>
+                                    </li>
+                                </ul>
+                                <p class="pml-paragraph">A special case of whitespace is <i class="pml-italic">indentation</i> (leading whitespace at the beginning of a line). The above rule implies that indentation is insignificant too. Indentation doesn't change the result of the final document.</p>
+                                <p class="pml-paragraph">Applying the <i class="pml-italic">whitespace-insignificant</i> rule is important, because it leads to significant advantages:</p>
+                                <ul class="pml-list">
+                                    <li class="pml-list-element">
+                                        <p class="pml-paragraph">There is no need to learn, apply and worry about complex whitespace rules (see examples below).</p>
+                                        <p class="pml-paragraph">Violating the <i class="pml-italic">whitespace-insignificant</i> rule in a markup specification adds unneeded complexity, and can lead to markup code that is ugly, error-prone, and difficult to maintain, especially in the case of nested lists.</p>
+                                    </li>
+                                    <li class="pml-list-element">
+                                        <p class="pml-paragraph">Whitespace can freely be used by authors to format the markup code in a more understandable, presentable and attractive way (pretty printing). For example, lists (and lists of lists) can be indented to display their structure in a visually clear and maintainable way, without the risk of changing the underlying structure.</p>
+                                    </li>
+                                    <li class="pml-list-element">
+                                        <p class="pml-paragraph">Text blocks can be copy/pasted without the need to adapt whitespace.</p>
+                                    </li>
+                                    <li class="pml-list-element">
+                                        <p class="pml-paragraph">If shared text blocks (stored in different files) are imported into several documents with different structures, there is no risk of changing or breaking the structure.</p>
+                                    </li>
+                                    <li class="pml-list-element">
+                                        <p class="pml-paragraph">There is no unexpected or obscure behavior if the whitespace is not visible for human readers. Some examples:</p>
+                                        <ul class="pml-list">
+                                            <li class="pml-list-element">
+                                                <p class="pml-paragraph">a mixture of whitespace characters, such as spaces and tabs, especially when used to indent code</p>
+                                            </li>
+                                            <li class="pml-list-element">
+                                                <p class="pml-paragraph">whitespace at the end of a line</p>
+                                            </li>
+                                            <li class="pml-list-element">
+                                                <p class="pml-paragraph">whitespace in empty lines</p>
+                                            </li>
+                                            <li class="pml-list-element">
+                                                <p class="pml-paragraph">visually impaired (blind) people who can't read whitespace</p>
+                                            </li>
+                                        </ul>
+                                        <p class="pml-paragraph">Note: To alleviate the pain, some editors provide a <i class="pml-italic">display-whitespace</i> mode.</p>
+                                    </li>
+                                    <li class="pml-list-element">
+                                        <p class="pml-paragraph">Tools that generate markup code, as well as markup parsers are generally easier to create.</p>
+                                    </li>
+                                    <li class="pml-list-element">
+                                        <p class="pml-paragraph">In some situations it is useful to reduce whitespace to a minimum (e.g. no new lines), in order to save storage space and improve performance.</p>
+                                    </li>
+                                </ul>
+                                <p class="pml-paragraph">If you want a few examples demonstrating the kind of technical problems that arise if whitespace is significant, you can read:</p>
+                                <ul class="pml-list">
+                                    <li class="pml-list-element">
+                                        <p class="pml-paragraph"><a href="https://www.quora.com/What-are-the-downsides-to-whitespace-indentation-rather-than-requiring-curly-braces" class="pml-link">What are the downsides to whitespace indentation rather than requiring curly braces?</a></p>
+                                    </li>
+                                    <li class="pml-list-element">
+                                        <p class="pml-paragraph"><a href="https://fsharpforfunandprofit.com/posts/fsharp-syntax/" class="pml-link">F# syntax: indentation and verbosity</a></p>
+                                    </li>
+                                    <li class="pml-list-element">
+                                        <p class="pml-paragraph"><a href="https://github.com/nodeca/js-yaml/issues/80" class="pml-link">Issue in nodeca/js-yaml</a></p>
+                                    </li>
+                                </ul>
+                                <p class="pml-paragraph">So, how is whitespace handled in the languages we are discussing in this article?</p>
+                                <ul class="pml-list">
+                                    <li class="pml-list-element">
+                                        <div class="pml-node-title">HTML</div>
+                                        <p class="pml-paragraph">HTML applies the <i class="pml-italic">whitespace-insignificant</i> rule.</p>
+                                        <p class="pml-paragraph">For a thorough explanation, look at this excellent article written by Patrick Brosset: <a href="https://medium.com/@patrickbrosset/when-does-white-space-matter-in-html-b90e8a7cdd33" class="pml-link">When does white space matter in HTML?</a>.</p>
+                                    </li>
+                                    <li class="pml-list-element">
+                                        <div class="pml-node-title">Asciidoctor</div>
+                                        <p class="pml-paragraph">In Asciidoctor, whitespace is significant in some cases.</p>
+                                        <p class="pml-paragraph">This can lead to surprising behavior and problems with no easy or no satisfying solution. Some examples can be seen <a href="https://github.com/asciidoctor/asciidoctor/issues/686" class="pml-link">here</a> and <a href="https://github.com/asciidoctor/asciidoctor/issues/623" class="pml-link">here</a>.</p>
+                                    </li>
+                                    <li class="pml-list-element">
+                                        <div class="pml-node-title">reStructuredText</div>
+                                        <p class="pml-paragraph">reStructuredText has whitespace rules that are 'a bit surprising'.</p>
+                                        <p class="pml-paragraph">For example, writing <code class="pml-inline-code">*very*</code> results in <i class="pml-italic">very</i> (text in italics, as expected). However, <code class="pml-inline-code">* very*</code> results in * very* (no italics!), because of the whitespace preceding &quot;very&quot;. To understand why, the answer might be found in chapter <a href="http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html#whitespace" class="pml-link">Whitespace</a> of the specification.</p>
+                                    </li>
+                                    <li class="pml-list-element">
+                                        <div class="pml-node-title">PML</div>
+                                        <p class="pml-paragraph">Similar to HTML, PML applies the <i class="pml-italic">whitespace-insignificant</i> rule.</p>
+                                        <p class="pml-paragraph">There is one exception: For practical reasons, a blank line between two text blocks results in a paragraph break. This means that instead of writing:</p>
+                                        <pre class="pml-code"><code class="nohighlight">{p text of paragraph 1}
+{p text of paragraph 2}</code></pre>
+                                        <p class="pml-paragraph">... we can simply write:</p>
+                                        <pre class="pml-code"><code class="nohighlight">text of paragraph 1
+
+text of paragraph 2</code></pre>
+                                    </li>
+                                </ul>
+                                <div class="pml-admonition">
+                                    <div class="pml-admonition-label">Note</div>
+                                    <div class="pml-admonition-content">
+                                        <p class="pml-paragraph">Sometimes, whitespace <i class="pml-italic">is</i> significant in text. For example whitespace must be preserved in source code examples. Or, in verbatim text, several consecutive spaces or new lines must be preserved in the final document. All languages support this. However, in reStructuredText it's not always obvious how to it, as shown <a href="https://stackoverflow.com/questions/51198270/how-do-i-create-a-new-line-with-restructuredtext" class="pml-link">here</a>.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="ch__30" class="pml-chapter">
+                                <h2 class="pml-chapter-title">Other Inconveniences</h2>
+                                <p class="pml-paragraph">As seen already, some markup languages systematically use opening and closing tags. An example would be <code class="pml-inline-code">&lt;i&gt;</code> and <code class="pml-inline-code">&lt;/i&gt;</code> in HTML. All XML-based languages, as well as PML belong to this class of languages.</p>
+                                <p class="pml-paragraph">Without digging into details, here are some drawbacks that can occur in languages that do <i class="pml-italic">not</i> (or not always) use pairs of distinct opening/closing tags (e.g. Markdown, Asciidoctor, and reStructuredText):</p>
+                                <ul class="pml-list">
+                                    <li class="pml-list-element">
+                                        <div class="pml-node-title">Editor support</div>
+                                        <p class="pml-paragraph">Creating good, reliable editor support is more difficult to develop. Examples of useful editor features are:</p>
+                                        <ul class="pml-list">
+                                            <li class="pml-list-element">
+                                                <p class="pml-paragraph">syntax highlighting for markup code</p>
+                                            </li>
+                                            <li class="pml-list-element">
+                                                <p class="pml-paragraph">markup code completion</p>
+                                            </li>
+                                            <li class="pml-list-element">
+                                                <p class="pml-paragraph">visualizing pairs of block start/end marks (e.g. <code class="pml-inline-code">{</code> and its corresponding <code class="pml-inline-code">}</code>)</p>
+                                            </li>
+                                            <li class="pml-list-element">
+                                                <p class="pml-paragraph">block collapsing/expanding</p>
+                                            </li>
+                                        </ul>
+                                        <p class="pml-paragraph">In the case of languages that use distinct opening/closing tags, the two last features work out-of-the-box in some editors. For example, PML uses <code class="pml-inline-code">{</code> and <code class="pml-inline-code">}</code> for node boundaries. This is also used in many programming languages (C, Java, Javascript, etc.) and therefore block features implemented for programming languages will also work for PML.</p>
+                                    </li>
+                                    <li class="pml-list-element">
+                                        <div class="pml-node-title">Document validation</div>
+                                        <p class="pml-paragraph">Fewer syntax and structure errors can be detected automatically. This can lead to more time spent on debugging documents. Or, even worse, there might be silently ignored errors that end up in wrong output (Did I really fail to spot the missing warning block on page 267 of my 310 pages book?).</p>
+                                    </li>
+                                    <li class="pml-list-element">
+                                        <div class="pml-node-title">Parsers</div>
+                                        <p class="pml-paragraph">It is more difficult to create parsers (i.e. programs that read markup code) that work well in all cases. If different parsers read the same markup code, there is an increased risk of getting different results for corner-cases.</p>
+                                    </li>
+                                    <li class="pml-list-element">
+                                        <div class="pml-node-title">Auto-generated markup code</div>
+                                        <p class="pml-paragraph">Tools that generate markup code programmatically are more difficult to create. For example, if whitespace is significant, or font styles cannot be nested, then additional state must be updated and tracked, in order to respect these rules.</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div id="ch__31" class="pml-chapter">
+                            <h1 class="pml-chapter-title">My Own Experience</h1>
+                            <p class="pml-paragraph">When I started writing technical documents a few years ago, I used Docbook. It took me some time to learn it, but after that I never stumbled on anything I couldn't do. Docbook is powerful. However, I disliked typing verbose XML code. I tried some XML editors, but gave up. Finally I just wrote complete text blocks unformatted in Notepad++, and then adorned the text with the necessary markup code. It was frustrating and time-consuming. Moreover, I couldn't find a stylesheet that produced good-looking web documents, and I didn't have the patience, motivation, and experience to fiddle around with big, complex CSS files and adapt them.</p>
+                            <p class="pml-paragraph">Later on I discovered Asciidoctor. What a relief. Everything was so much simpler and the web documents were beautiful, out of the box. Asciidoctor's documentation is great, and I think the community is helpful and active. However, when I started to write more complex and bigger documents, I had to deal with problems similar to those described in the previous chapters. At one point, I had to develop a specific pre- and post-processor to solve a problem for which I couldn't find a solution in Asciidoctor/Gitbook.</p>
+                            <p class="pml-paragraph">An intriguing question emerged: &quot;Why do these problems not exist in Docbook?&quot;.</p>
+                            <p class="pml-paragraph">To make a long story short, I concluded that we need a new markup syntax. The key points to success would be:</p>
+                            <ul class="pml-list">
+                                <li class="pml-list-element">
+                                    <p class="pml-paragraph">easy to learn: few, simple, consistent and predictable rules (no exceptions)</p>
+                                </li>
+                                <li class="pml-list-element">
+                                    <p class="pml-paragraph">easy to write and read</p>
+                                </li>
+                                <li class="pml-list-element">
+                                    <p class="pml-paragraph">well-structured documents with no ambiguities</p>
+                                </li>
+                                <li class="pml-list-element">
+                                    <p class="pml-paragraph">powerful enough to create big, complex documents without the need for &quot;special rules, tricks, or workarounds&quot;</p>
+                                </li>
+                            </ul>
+                            <p class="pml-paragraph">After a period of investigating, pondering, programming, testing and improving, the <a href="https://www.pml-lang.dev" class="pml-link">Practical Markup Language (PML)</a> was born. Since then, I never looked back again. Today I write all my web documents in PML (including this article). Of course, when I started to create PML, it was to cover my own needs. So, I am probably biased. Hopefully this article contains enough factual examples, but I encourage you to leave a comment if you see anything wrong, unfair, or missing. I appreciate constructive feedback of any kind, and I will update the article if needed.</p>
+                        </div>
+                        <div id="ch__32" class="pml-chapter">
+                            <h1 class="pml-chapter-title">Conclusion</h1>
+                            <p class="pml-paragraph">As demonstrated in this article, a good number of problems encountered with existing document markup languages vanish with the PML syntax.</p>
+                            <p class="pml-paragraph">Now we should come together to improve PML and make it more powerful, so that it covers more use cases and more people can benefit from it.</p>
+                            <p class="pml-paragraph">Please help to spread the word. Or try out PML and send feedback, so that we know what needs to be refined. Your voice counts!</p>
+                            <p class="pml-paragraph">The vision is to create the best possible document markup language and all necessary tools, so that writers can focus on writing and enjoy creating beautiful documents in a minimum of time - without worrying about unneeded complexity.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            window.onload = function() {
+                adaptSplitWidths ( getCurrentElementWidth ( "PMLHsplitLeftPanel" ) );
+            }
+            
+            var dragStartScreenX = 0;
+            var dragStartLeftPanelWidth = 0;
+            
+            function PMLHsplitPanelSeparatorDragStart ( event ) {
+    
+                dragStartScreenX = event.screenX;
+                dragStartLeftPanelWidth = getCurrentElementWidth ( "PMLHsplitLeftPanel" );
+    
+                // This is necessary to make dragging work in Firefox 
+                // see https://stackoverflow.com/questions/19055264/why-doesnt-html5-drag-and-drop-work-in-firefox
+                event.dataTransfer.setData ( 'text', 'anything' );
+            }
+            
+            function PMLHsplitPanelSeparatorDragging ( event ) {
+                
+                // doesn't work in Firefox
+                // adaptSplitWidths ( event.pageX );
+                
+                adaptSplitWidths ( dragStartLeftPanelWidth + event.screenX - dragStartScreenX );
+            }
+            
+            function PMLHsplitPanelSeparatorDragEnd ( event ) {
+                
+                // doesn't work in Firefox
+                // adaptSplitWidths ( event.pageX );
+                
+                adaptSplitWidths ( dragStartLeftPanelWidth + event.screenX - dragStartScreenX );
+            }
+    
+            function adaptSplitWidths ( leftPanelWidth ) {
+            
+                setElementWidth ( "PMLHsplitLeftPanel", leftPanelWidth );
+                
+                // compute left margin of the right panel so that the content is displayed in the center of the browser window
+                
+                const bodyWidth = document.body.clientWidth;
+                const contentMaxWidth = getCSSPropertyIntegerForID ( "PMLHsplitRightPanelContent", "max-width" );
+                const separatorWidth = getCurrentElementWidth ( "PMLHsplitPanelSeparator" );
+                
+                let HsplitRightPanelLeftMargin = bodyWidth / 2 - contentMaxWidth / 2 - leftPanelWidth - separatorWidth;
+                if ( HsplitRightPanelLeftMargin < 0 ) {
+                    HsplitRightPanelLeftMargin = 0;
+                }
+
+                document.getElementById ( "PMLHsplitRightPanel" ).style.marginLeft = HsplitRightPanelLeftMargin + "px";
+            }
+
+            function getCurrentElementWidth ( elementID ) {
+                
+                const element = document.getElementById ( elementID );
+                return element.getBoundingClientRect().width;
+            }
+
+            function setElementWidth ( elementID, width ) {
+                
+                const element = document.getElementById ( elementID );
+                element.style.width = width + "px";
+            }
+
+            function getCSSPropertyIntegerForID ( elementID, CSSPropertyName ) {
+                
+                return parseInt ( getCSSPropertyForID ( elementID, CSSPropertyName ), 10 );
+            }
+
+            function getCSSPropertyForID ( elementID, CSSPropertyName ) {
+                
+                const element = document.getElementById ( elementID );
+                const style = window.getComputedStyle ( element );
+                return style.getPropertyValue ( CSSPropertyName );
+            }
+        </script>
+
+        <script>
+            var branch_prefixes = document.getElementsByClassName ( "pml-toc-branch-prefix" );
+            
+            for ( var i = 0; i < branch_prefixes.length; i++ ) {
+                branch_prefixes[i].addEventListener ( "click", function ( event ) {
+        
+                    const sub_chapters = this.parentElement.parentElement.querySelector ( ".pml-toc-sub-chapters" );
+                    sub_chapters.classList.toggle ( "pml-hidden" );
+                    
+                    if ( sub_chapters.classList.contains ( "pml-hidden" ) ) {
+                        this.classList.remove ( "pml-toc-branch-visible" );
+                        this.classList.add ( "pml-toc-branch-hidden" );
+                    } else {
+                        this.classList.remove ( "pml-toc-branch-hidden" );
+                        this.classList.add ( "pml-toc-branch-visible" );
+                    }
+                });
+            } 
+        </script>
+
+    </body>
+</html>

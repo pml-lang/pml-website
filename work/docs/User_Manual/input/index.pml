@@ -8,7 +8,7 @@
         [tr [tc [b License]][tc [link (url=https://creativecommons.org/licenses/by-nd/4.0/) CC BY-ND 4.0]]]
         [tr [tc [b Author]][tc Christian Neumanns]]
         [tr [tc [b Website]][tc [link (url=[u:get pml_website])]]]
-        [tr [tc [b PML Markup Code]][tc [link (url=https://github.com/pml-lang/user-manual) GitHub]]]
+        [tr [tc [b PML Markup Code]][tc [link (url=https://github.com/pml-lang/pml-website/tree/main/work/docs/User_Manual) GitHub]]]
     ]
 
     [u:ins_file path=01_introduction.pml]

@@ -10,7 +10,7 @@
         [tr [tc [b License]][tc [link (url=https://creativecommons.org/licenses/by-nd/4.0/) CC BY-ND 4.0]]]
         [tr [tc [b Author]][tc Christian Neumanns]]
         [tr [tc [b Website]][tc [link (url=https://pml-lang.dev/)]]]
-        [tr [tc [b PML Markup Code]][tc [link (url=https://github.com/pml-lang/changelog) Github]]]
+        [tr [tc [b PML Markup Code]][tc [link (url=https://github.com/pml-lang/pml-website/tree/main/work/docs/Changelog) Github]]]
     ]
 
     This document lists the changes in PML, sorted in descending order by version number and date.

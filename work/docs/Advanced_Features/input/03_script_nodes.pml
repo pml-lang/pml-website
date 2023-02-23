@@ -41,7 +41,7 @@
         [el
             Dynamically generate and insert graphical components like diagrams into a PML document.
 
-            Example: Insert [link url=https://plantuml.com/ text=PlantUML] source code into a document, and render it as a MindMap diagram in the target document.
+            Example: Insert [link (url=https://plantuml.com/) PlantUML] source code into a document, and render it as a MindMap diagram in the target document.
         ]
 
         [el
@@ -57,15 +57,15 @@
         ]
     ]
 
-    [i Script Nodes] is a feature of the [link url=https://pdml-lang.dev/ text="Practical Data and Markup Language (PDML)"].
+    [i Script Nodes] is a feature of the [link (url=https://pdml-lang.dev/) Practical Data and Markup Language (PDML)].
     But since PML uses PDML under the hood, [i Script Nodes], as well as all other PDML features, are supported in PML too.
     All documentation related to [i Script Nodes] is available on PDML's website.
     Please refer to the following links for more information:
     [list
-        [el Chapter [link url=[!get pdml_extensions_online_docs]user_manual/index.html#script_nodes text="Script Nodes"] in the [link url=[!get pdml_extensions_online_docs]user_manual/index.html text="PDML Extensions User Manual"]]
+        [el Chapter [link (url=[u:get pdml_extensions_online_docs]user_manual/index.html#script_nodes) Script Nodes] in the [link (url=[u:get pdml_extensions_online_docs]user_manual/index.html) PDML Extensions User Manual]]
 
-        [el Chapter [link url=[!get pdml_extensions_online_docs]reference_manual/index.html#scripting_api text="Scripting API"] in the [link url=[!get pdml_extensions_online_docs]reference_manual/index.html text="PDML Extensions Reference Manual"]]
+        [el Chapter [link (url=[u:get pdml_extensions_online_docs]reference_manual/index.html#scripting_api) Scripting API] in the [link (url=[u:get pdml_extensions_online_docs]reference_manual/index.html) PDML Extensions Reference Manual]]
 
-        [el [link url=[!get pdml_extensions_online_docs]scripting_examples/index.html text="PDML Scripting Examples"]]
+        [el [link (url=[u:get pdml_extensions_online_docs]scripting_examples/index.html) PDML Scripting Examples]]
     ]
 ]

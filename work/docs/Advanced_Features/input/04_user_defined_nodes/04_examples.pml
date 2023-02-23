@@ -14,7 +14,7 @@
 
                 This works because PML documents are encoded in UTF-8, which means that all Unicode characters can be inserted into a document.
 
-                To copy/paste the smiley you could search the net for 'unicode smiley', head to a page like [link url=https://unicode.org/emoji/charts/full-emoji-list.html text="this one"], and copy/paste the smiley.
+                To copy/paste the smiley you could search the net for 'unicode smiley', head to a page like [link (url=https://unicode.org/emoji/charts/full-emoji-list.html) this one], and copy/paste the smiley.
 
                 Your PML code would look like this:
                 [code
@@ -32,7 +32,7 @@
             ]
 
             [el
-                Insert the smiley's [link url=https://www.pml-lang.dev/docs/user_manual/index.html#escape_characters text="Unicode escape sequence"], which is [c U+1F600].
+                Insert the smiley's [link (url=https://www.pml-lang.dev/docs/user_manual/index.html#escape_characters) Unicode escape sequence], which is [c U+1F600].
 
                 PML code:
                 [code
@@ -41,7 +41,7 @@
             ]
 
             [el
-                Use a [link url=https://www.pml-lang.dev/docs/reference_manual/index.html#node_verbatim text=verbatim] node to insert the HTML escape sequence, which is [c &#128515;].
+                Use a [link (url=https://www.pml-lang.dev/docs/reference_manual/index.html#node_verbatim) verbatim] node to insert the HTML escape sequence, which is [c &#128515;].
 
                 PML code:
                 [code
@@ -54,7 +54,7 @@
         [list
             [el
                 Create file [c smiley.pdml] in directory [c config/nodes], with the following content:
-                [insert_code file=[!get UDN_examples_dir]/config/nodes/Unicode_chars/smiley.pdml]
+                [insert_code file=[u:get UDN_examples_dir]/config/nodes/Unicode_chars/smiley.pdml]
 
                 The [c smiley] UDN is now ready to be used.
             ]
@@ -74,12 +74,12 @@
             ]
         ]
 
-        You can create your own UDNs for all Unicode characters you use often in your documents. For example you could define a set of UDNs for emojis, math symbols, foreign language characters, arrows and other symbols, etc. Look at a Unicode table like [link url=https://unicode-table.com text="this one"] to get inspired.
+        You can create your own UDNs for all Unicode characters you use often in your documents. For example you could define a set of UDNs for emojis, math symbols, foreign language characters, arrows and other symbols, etc. Look at a Unicode table like [link (url=https://unicode-table.com) this one] to get inspired.
 
         Here is an example of a single UDN definition file for three math symbols:
 
         [caption File config/nodes/maths.pdml]
-        [insert_code file=[!get UDN_examples_dir]/config/nodes/Unicode_chars/maths.pdml]
+        [insert_code file=[u:get UDN_examples_dir]/config/nodes/Unicode_chars/maths.pdml]
 
         These UDNs will allow you to write PML code like this:
         [code
@@ -100,7 +100,7 @@
         output]
 
         [note
-            If you think that the above UDN definition file [c maths.pdml] risks to become unmaintainable, repetitive boilerplate code that should be changed from WET to [link url=https://en.wikipedia.org/wiki/Don%27t_repeat_yourself text=DRY], you are not alone.
+            If you think that the above UDN definition file [c maths.pdml] risks to become unmaintainable, repetitive boilerplate code that should be changed from WET to [link (url=https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) DRY], you are not alone.
 
             A future version will allow you to create a Javascript function that eliminates the code repetition. Then the three math nodes can be defined with simple function calls like this:
             [code

@@ -8,21 +8,27 @@
                 The title can no longer be defined with an attribute.
                 Instead of writing:
                 [code
+                    ~~~
                     [ch (title="My Title")
                         text
                     ]
-                code]
+                    ~~~
+                ]
                 ... we have to write:
                 [code
+                    ~~~
                     [ch [title My Title]
                         text
                     ]
-                code]
+                    ~~~
+                ]
                 [note
                     While the [c title] attribute was limited to plain text, any inline markup can now be used in [c title] nodes, e.g.
                     [code
+                        ~~~
                         [title A [i nice] side effect]
-                    code]
+                        ~~~
+                    ]
                 ]
             ]
 
@@ -31,19 +37,23 @@
 
                 Instead of a [c title] [i attribute], a [c title] [i node] must be used (as for chapters), e.g.
                 [code
+                    ~~~
                     [doc [title My Title]
                         text
                     ]
-                code]
+                    ~~~
+                ]
 
                 Instead of [c authors] and [c date] attributes, these information can simply be written as text, e.g.:
                 [code
+                    ~~~
                     [doc [title My Title]
                         Author: your name
 
                         Published: 2021-09-03
                     ]
-                code]
+                    ~~~
+                ]
 
                 In a future version there will be a dedicated [c meta] node that will hold data like author, date, version, abstract, etc., as well as other, user-defined meta-data
             ]
@@ -57,16 +67,20 @@
 
                 Old code:
                 [code
+                    ~~~
                     [el (title = "List element header")
                         ...
                     ]
-                code]
+                    ~~~
+                ]
                 New code:
                 [code
+                    ~~~
                     [el [header List element header]
                         ...
                     ]
-                code]
+                    ~~~
+                ]
             ]
 
             [el
@@ -85,7 +99,7 @@
 
                         Example: [c() path = "name with spaces.png"]
 
-                        For more information please refer to the [link url=https://www.pml-lang.dev/docs/user_manual/index.html#lenient_parsing text="user manual"].
+                        For more information please refer to the [link (url=https://www.pml-lang.dev/docs/user_manual/index.html#lenient_parsing) user manual].
                     ]
                 ]
             ]
@@ -95,36 +109,48 @@
 
                 The syntax for declaring a constant changed from:
                 [code
+                    ~~~
                     [const name = value]
-                code]
+                    ~~~
+                ]
                 ... to:
                 [code
+                    ~~~
                     [!set name = value]
-                code]
+                    ~~~
+                ]
 
                 Using a constant changed from:
                 [code
+                    ~~~
                     <<value>>
-                code]
+                    ~~~
+                ]
                 ... to:
                 [code
+                    ~~~
                     [!get name]
-                code]
+                    ~~~
+                ]
 
-                For more information please refer to the [link url=https://www.pml-lang.dev/docs/user_manual/index.html#parameters text="user manual"]
+                For more information please refer to the [link (url=https://www.pml-lang.dev/docs/user_manual/index.html#parameters) user manual]
             ]
 
             [el
                 The syntax for inserting a file has changed from:
                 [code
+                    ~~~
                     [insert file=sub-chapter.pml]
-                code]
+                    ~~~
+                ]
                 ... to:
                 [code
+                    ~~~
                     [!ins-file path=sub-chapter.pml]
-                code]
+                    ~~~
+                ]
 
-                For more information please refer to the [link url=https://www.pml-lang.dev/docs/user_manual/index.html#file_splitting text="user manual"]
+                For more information please refer to the [link (url=https://www.pml-lang.dev/docs/user_manual/index.html#file_splitting) user manual]
 
                 [note
                     [c ins-url] and [c ins-env] (OS environment variable) will be added in a future version.
@@ -148,8 +174,10 @@
 
                 For more information, type the following command in a terminal, and look for parameter [c open_file_cmd]:
                 [input
+                    ~~~
                     pmlc command_info -command convert
-                input]
+                    ~~~
+                ]
             ]
             [el Better format for error messages displayed in the terminal.]
             [el If there are several errors, they are all displayed in the terminal (not just the first one)]
@@ -174,22 +202,26 @@
         [note
             Inline markup can be used in [c title], [c subtitle], and [c header] nodes, e.g.
             [code
+                ~~~
                 [title A [i nice] side effect]
-            code]
+                ~~~
+            ]
         ]
-        Please refer to the [link url=https://www.pml-lang.dev/docs/reference_manual/ text="reference manual"] for more information.
+        Please refer to the [link (url=https://www.pml-lang.dev/docs/reference_manual/) reference manual] for more information.
 
         [header More powerful text parameters]
             Text parameters are no more limited to text snippets. They can define markup code to be used repetitively.
             Example:
             [code
+                ~~~
                 [!set reused_image="[image source=my-image.png width=600 height=400]"]
                 ...
                 [!get reused_image]
                 ...
                 [!get reused_image]
-            code]
-            For more information please refer to the [link url=https://www.pml-lang.dev/docs/user_manual/index.html#parameters text="user manual"].
+                ~~~
+            ]
+            For more information please refer to the [link (url=https://www.pml-lang.dev/docs/user_manual/index.html#parameters) user manual].
     ]
 
     [ch [title Bug Fixes]
@@ -207,10 +239,10 @@
                     [el using XML technology for PML documents (e.g. querying, modifying, transforming and validating a PML AST)]
                     [el using new, future pXML features in PML too (e.g. creating standalone documents, inserting PML snippets retrieved from a URL, etc.)]
                 ]
-                For more information on pXML please visit its [link url=https://pxml-lang.github.io text=website].
+                For more information on pXML please visit its [link (url=https://pxml-lang.github.io) website].
             ]
 
-            [el [header [link url=https://www.pml-lang.dev/docs/user_manual text="User manual"]]
+            [el [header [link (url=https://www.pml-lang.dev/docs/user_manual) User manual]]
                 [list
                     [el Updated to the changes in version 2.0.0]
                     [el

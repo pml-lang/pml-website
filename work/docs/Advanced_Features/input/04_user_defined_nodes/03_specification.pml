@@ -2,7 +2,7 @@
 
     [ch [title Defining UDNs]
 
-        UDNs are defined in a [link url=https://pdml-lang.dev/ text=PDML] document.
+        UDNs are defined in a [link (url=https://pdml-lang.dev/) PDML] document.
 
         The mandatory root node of a UDN is named [c node].
 
@@ -43,7 +43,7 @@
             Here is a working example of a UDN named [c smiley] that can be used to insert a smiley in a PML document with the syntax [c \[smiley\]]:
 
             [caption File config/nodes/smiley.pdml]
-            [insert_code file=[!get UDN_examples_dir]/config/nodes/Unicode_chars/smiley.pdml]
+            [insert_code file=[u:get UDN_examples_dir]/config/nodes/Unicode_chars/smiley.pdml]
 
             As can be seen, the Javascript code [c context.write ( '...' )] is used to write HTML code.
         ]

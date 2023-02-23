@@ -11,7 +11,7 @@
     [ch [title Improvements]
         [list
             [el
-                File CHANGELOG.txt in the converter's directory has been replaced by by an [link url=https://www.pml-lang.dev/docs/changelog/index.html text="online document"] written in PML. The PML source code is available in [link url=https://github.com/pml-lang/changelog text="Github repository"].
+                File CHANGELOG.txt in the converter's directory has been replaced by by an [link (url=https://www.pml-lang.dev/docs/changelog/index.html) online document] written in PML. The PML source code is available in [link (url=https://github.com/pml-lang/changelog) Github repository].
             ]
         ]
     ]

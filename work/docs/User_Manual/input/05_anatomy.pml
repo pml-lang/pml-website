@@ -39,8 +39,10 @@
         File [c example.pml] can be converted to file [c output/example.html] with the following command:
 
         [input
+            ~~~
             pmlc p2h example.pml
-        input]
+            ~~~
+        ]
 
         [note The above PML document uses image file [c images/strawberries.jpg]. By default, all resources used in a document are located in directory [c resources]. Therefore file [c resources/images/strawberries.jpg] must exist before executing the above command.]
 
@@ -67,12 +69,14 @@
         Here are three examples:
 
         [code
+            ~~~
             [nl]
             [i node containing only text displayed in italics]
             [p A [i simple] paragraph with [b six] words.]
-        code]
+            ~~~
+        ]
 
-        The full list of nodes is documented in the [link url=[u:get pml_website]/docs/reference_manual/index.html text = "PML Reference Manual"].
+        The full list of nodes is documented in the [link (url=[u:get pml_website]/docs/reference_manual/index.html ) PML Reference Manual].
     ]
 
     [ch (id=attributes) [title Attributes]
@@ -86,8 +90,10 @@
         Here is an example of an [c image] node with values assigned to attributes [c source] and [c width]:
 
         [code
+            ~~~
             [image ( source="images/juicy apple.png" width="400" ) ]
-        code]
+            ~~~
+        ]
 
         As we can see:
 
@@ -95,28 +101,35 @@
 
             [el
                 Attributes are enclosed in parentheses:
-                [code()
+                [code
+                    ~~~
                     ( ... )
-                code]
+                    ~~~
+                ]
             ]
 
             [el
                 The syntax [c name = "value"] is used to assign a value to an attribute. For example:
                 [code
+                    ~~~
                     width="400"
-                code]
+                    ~~~
+                ]
             ]
 
             [el
-                Attribute assignments are separated by a space. No comma is needed:
-                [code()
+                Attribute assignments are separated by whitespace (a sequence of one or more spaces, tabs, and/or new lines).
+                No comma is needed:
+                [code
+                    ~~~
                     (a1="v1" a2="v2")
                             ^
-                code]
+                    ~~~
+                ]
             ]
         ]
 
-        The list of available attributes for each node is documented in the [link url=[u:get pml_website]/docs/reference_manual/index.html text = "PML Reference Manual"].
+        The list of available attributes for each node is documented in the [link (url=[u:get pml_website]/docs/reference_manual/index.html ) PML Reference Manual].
     ]
 
     [ch (id=HTML_attributes) [title HTML Attributes]
@@ -133,10 +146,12 @@
 
             [el [header PML code:]
                 [code
+                    ~~~
                     [p (html_style = "color:red; border:1px dashed blue")
                         It is important to note that ...
                     ]
-                code]
+                    ~~~
+                ]
             ]
 
             [el [header Result:]
@@ -147,12 +162,14 @@
 
             [el [header Generated HTML code:]
                 [code
+                    ~~~
                     <p class="pml-paragraph" style="color:red; border:1px dashed blue">It is important to note that ... </p>
-                code]
+                    ~~~
+                ]
             ]
         ]
 
-        To see if HTML attributes are [i allowed] for a given node, please refer to the [link url=[u:get pml_website]/docs/reference_manual/index.html text = "PML Reference Manual"].
+        To see if HTML attributes are [i allowed] for a given node, please refer to the [link (url=[u:get pml_website]/docs/reference_manual/index.html ) PML Reference Manual].
 
         To see the [i list] of attributes supported for a given node, please refer to the official HTML specification. PMLC does not check if an HTML attribute is valid.
     ]
@@ -160,7 +177,7 @@
 [- TODO Uncomment as soon as command 'tag_info' is available again
     [ch [title Documentation]
 
-        As said already, all nodes and their attributes are documented in the [link url=[u:get pml_website]/docs/reference_manual/index.html text = "PML Reference Manual"].
+        As said already, all nodes and their attributes are documented in the [link (url=[u:get pml_website]/docs/reference_manual/index.html ) PML Reference Manual].
 
         Another way to get information about nodes is to use the integrated help of the PML Converter. You can type the following command in a terminal to get an overview of how to use it:
         [input

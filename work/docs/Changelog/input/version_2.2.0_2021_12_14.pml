@@ -5,7 +5,7 @@
             [el
                 [i User-defined nodes] have been added. They allow you to create your own, customized PML nodes (in addition to PML's standard nodes) and use them in your documents.
 
-                For more information please refer to chapter [link url=https://www.pml-lang.dev/docs/advanced_features/index.html#user_defined_nodes text="User-Defined Nodes"].
+                For more information please refer to chapter [link (url=https://www.pml-lang.dev/docs/advanced_features/index.html#user_defined_nodes) User-Defined Nodes].
             ]
 
             [el
@@ -15,7 +15,7 @@
 
                 The new (additional) syntax for 8 hex digits Unicode escapes is [c \\Uhhhhhhhh]. Note the uppercase U which is used to denote that 8 hex digits are used.
 
-                Examples are shown in chapter [link url=https://www.pml-lang.dev/docs/user_manual/index.html#escape_characters text="Escape Characters"] of the user manual.
+                Examples are shown in chapter [link (url=https://www.pml-lang.dev/docs/user_manual/index.html#escape_characters) Escape Characters] of the user manual.
             ]
 
             [el

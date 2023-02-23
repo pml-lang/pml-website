@@ -14,7 +14,7 @@
             [el
                 The PMLC command line interface (CLI) has changed.
 
-                Please refer to the [link url=[u:get pml_docs_url]commands_manual/index.html text="Commands Reference Manual"] to see the updated list of commands and arguments.
+                Please refer to the [link (url=[u:get pml_docs_url]commands_manual/index.html) Commands Reference Manual] to see the updated list of commands and arguments.
 
                 Most important breaking change:
 
@@ -64,13 +64,13 @@
             ]
 
             [el
-                The [c !] node-name prefix, [xref node_id=v_2_3_0_deprecated text=deprecated] in version 2.3.0, is no longer supported.
+                The [c !] node-name prefix, [xref (ref_id=v_2_3_0_deprecated) deprecated] in version 2.3.0, is no longer supported.
                 For example, instead of writing [c \[!ins-file ...\]] you need to write [c \[u:ins_file ...\]].
             ]
 
             [el
                 The [c caption] [i attribute] for nodes [c image], [c audio], [c video], [c youtube_video] and [c table] is no longer supported.
-                Please use the new [link url=[u:get pml_docs_url]reference_manual/index.html#node_caption text=caption] [i node] instead.
+                Please use the new [link (url=[u:get pml_docs_url]reference_manual/index.html#node_caption) caption] [i node] instead.
             ]
 
             [el
@@ -103,7 +103,7 @@
         [list
             [el
                 Besides defining options via the command line, it is now also possible to define them inside the PML document, or in a shared options file.
-                Please read [link url=[u:get pml_docs_url]user_manual/index.html#options text="Options"] for more information.
+                Please read [link (url=[u:get pml_docs_url]user_manual/index.html#options) Options] for more information.
             ]
 
             [el
@@ -115,7 +115,7 @@
                     [el [c create_commands_manual]]
                 ]
 
-                Please refer to the [link url=[u:get pml_docs_url]commands_manual/index.html text="Commands Reference Manual"] for more information.
+                Please refer to the [link (url=[u:get pml_docs_url]commands_manual/index.html) Commands Reference Manual] for more information.
                 [note
                     The [c PDML_to_XML] and [c PDML_to_standalone] commands cannot be used to convert PML documents (only PDML documents are supported).
                     Commands [c PML_to_XML] and [c PML_to_standalone] will be added later.
@@ -123,7 +123,7 @@
             ]
 
             [el
-                [link url=[u:get pml_docs_url]user_manual/index.html#customized_css text="Custom CSS files"] are now supported.
+                [link (url=[u:get pml_docs_url]user_manual/index.html#customized_css) Custom CSS files] are now supported.
             ]
 
             [el
@@ -146,7 +146,7 @@
             ]
 
             [el
-                There is now an auto-generated [link url=[u:get pml_docs_url]commands_manual/index.html text="Commands Reference Manual"] describing all PMLC commands.
+                There is now an auto-generated [link (url=[u:get pml_docs_url]commands_manual/index.html) Commands Reference Manual] describing all PMLC commands.
             ]
 
             [el

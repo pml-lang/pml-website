@@ -7,6 +7,7 @@
     [list
         [el [header PML code:]
             [code
+                ~~~
                 This is [- good -] awesome.
                 [- TODO: explain why -]
 
@@ -19,17 +20,20 @@
                 -]
 
                 More text
-            code]
+                ~~~
+            ]
         ]
 
         [el [header Result:]
             [code
+                ~~~
                 This is awesome.
 
                 Text
 
                 More text
-            code]
+                ~~~
+            ]
         ]
     ]
 ]

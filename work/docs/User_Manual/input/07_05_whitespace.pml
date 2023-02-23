@@ -8,14 +8,16 @@
         [el [header Whitespace character]
 
             There are four [i whitespace characters]:
-            [table_data
+            [sim_table
+                ~~~
                 Name, C-style syntax, Unicode
                 -
                 Space, ' ', U+0020
                 Tab, '\t', U+0009
                 Carriage return, '\r', U+000D
                 Line feed, '\n', U+000A
-            table_data]
+                ~~~
+            ]
             [nl]
         ]
 
@@ -49,31 +51,41 @@
 
                 Writing
                 [code
+                    ~~~
                     this     is
                     text
-                code]
+                    ~~~
+                ]
                 ... is the same as:
                 [code
+                    ~~~
                     this is text
-                code]
+                    ~~~
+                ]
 
-                To preserve a sequence of several whitespace characters, the node [link url=[u:get pml_website]/docs/reference_manual/index.html#node_sp text=sp] can be used to explicitly insert non-breaking spaces, and the node [link url=[u:get pml_website]/docs/reference_manual/index.html#node_nl text=nl] can be used to explicitly insert new lines, e.g.:
+                To preserve a sequence of several whitespace characters, the node [link (url=[u:get pml_website]/docs/reference_manual/index.html#node_sp) sp] can be used to explicitly insert non-breaking spaces, and the node [link (url=[u:get pml_website]/docs/reference_manual/index.html#node_nl ) nl] can be used to explicitly insert new lines, e.g.:
                 [code
+                    ~~~
                     this[sp][sp][sp][sp][sp]is[nl]text
-                code]
+                    ~~~
+                ]
                 ... is rendered as:
                 [code
+                    ~~~
                     this     is
                     text
-                code]
+                    ~~~
+                ]
 
-                Moreover, the [link url=[u:get pml_website]/docs/reference_manual/index.html#node_monospace text=monospace] node can be used to insert a block of text in which whitespace is preserved (similar to the [c pre] tag in HTML):
+                Moreover, the [link (url=[u:get pml_website]/docs/reference_manual/index.html#node_monospace ) monospace] node can be used to insert a block of text in which whitespace is preserved (similar to the [c pre] tag in HTML):
                 [code
+                    ~~~
                     [monospace
                     this     is
                     text
                     ]
-                code]
+                    ~~~
+                ]
             ]
 
             [el [header Paragraph breaks]
@@ -82,35 +94,47 @@
 
                 Writing:
                 [code
+                    ~~~
                     Paragraph 1.
 
                     Paragraph 2.
-                code]
+                    ~~~
+                ]
                 ... is the same as:
                 [code
+                    ~~~
                     [p Paragraph 1.]
                     [p Paragraph 2.]
-                code]
+                    ~~~
+                ]
                 ... and is rendered as:
                 [code
+                    ~~~
                     Paragraph 1.
 
                     Paragraph 2.
-                code]
+                    ~~~
+                ]
 
                 However, writing:
                 [code
+                    ~~~
                     Paragraph 1.
                     Paragraph 2.
-                code]
+                    ~~~
+                ]
                 ... would be the same as
                 [code
+                    ~~~
                     [p Paragraph 1. Paragraph 2.]
-                code]
+                    ~~~
+                ]
                 ... and is rendered as:
                 [code
+                    ~~~
                     Paragraph 1. Paragraph 2.
-                code]
+                    ~~~
+                ]
             ]
 
             [el [header Whitespace removal]
@@ -127,13 +151,16 @@
 
                 For example, instead of writing:
                 [code
+                    ~~~
                     [doc [title Doc Title]
                     [ch [title Chapter 1] text]
                     [ch [title Chapter 2] text]
                     ]
-                code]
+                    ~~~
+                ]
                 ... we can make the structure easier to grasp like this:
                 [code
+                    ~~~
                     [doc [title Doc Title]
 
                         [ch [title Chapter 1]
@@ -144,21 +171,26 @@
                             text
                         ]
                     ]
-                code]
+                    ~~~
+                ]
 
 [-
                 Whitespace can also be used to make long lists of attributes more readable. For example, instead of writing:
                 [code
+                    ~~~
                     [image(source=images/ball.png width=500 height=500)]
-                code]
+                    ~~~
+                ]
                 ... we can improve readability by writing:
                 [code
+                    ~~~
                     [image (
                         source = images/ball.png
                         width = 500
                         height = 500
                     ) ]
-                code]
+                    ~~~
+                ]
 -]
             ]
         ]
@@ -173,6 +205,7 @@
 
                 Whitespace around attribute symbols ([c() (], [c )], and [c =]) is ignored. The following three [c image] nodes are semantically equivalent:
                 [code
+                    ~~~
                     [image ( source = "images/juicy apple.png" width = "400" height = "200" ) ]
 
                     [image(source="images/juicy apple.png" width=400 height=200)]
@@ -182,31 +215,38 @@
                          width = 400
                         height = 200
                     ) ]
-                code]
+                    ~~~
+                ]
             ]
 
             [el [header Whitespace in attribute values]
 
-                As [xref node_id=omit_attribute_quotes text="stated already"], [i unquoted] attribute values cannot contain whitespace. Instead of writing [c color = light orange], we must write [c color = "light orange"]
+                As [xref (ref_id=omit_attribute_quotes) stated already], [i unquoted] attribute values cannot contain whitespace. Instead of writing [c color = light orange], we must write [c color = "light orange"]
 
                 On the other hand, [i quoted] attribute values can contain whitespace (any sequences of spaces, tabs, and new lines). Whitespace within a [i quoted] value is preserved.
 
                 Suppose we want to assign the following value to attribute [c quote]:
                 [code
+                    ~~~
                     He said:
                        "She said: 'Wow!'"
-                code]
+                    ~~~
+                ]
                 This can be achieved with:
                 [code
+                    ~~~
                     quote = "He said:
                        \"She said: 'Wow!'\""
-                code]
+                    ~~~
+                ]
                 Unix and Windows new lines are supported in attribute values.
 
                 Unix or Windows new lines can be [i enforced] by using escape sequences. For example, to force Windows new lines in the above example, we can write:
                 [code
+                    ~~~
                     quote = "He said:\r\n   \"She said: 'Wow!'\""
-                code]
+                    ~~~
+                ]
             ]
         ]
     ]

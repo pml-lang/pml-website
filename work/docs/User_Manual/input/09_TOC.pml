@@ -1,6 +1,6 @@
 [ch (id=toc) [title Table of Contents]
 
-    By default, a table of contents (TOC) is created on the left side of the HTML page, as shown [xref node_id=simple_document_example text=before].
+    By default, a table of contents (TOC) is created on the left side of the HTML page, as shown [xref (ref_id=simple_document_example) before].
 
     The TOC is automatically created based on the chapters defined in the document.
     As chapters can be nested, the TOC results in a tree, which the user can expand or collapse.
@@ -21,19 +21,20 @@
         [el [c TOC_max_level]: the maximum chapter level that is included in the table of contents. Chapters with a higher level are excluded from the TOC.]
     ]
 
-    Here is an example of using an [xref node_id=options text=options] node to set the TOC's title to "Inhaltsverzeichnis", display the TOC at the top, and include only chapters up to level 4:
+    Here is an example of using an [xref (ref_id=options) options] node to set the TOC's title to "Inhaltsverzeichnis", display the TOC at the top, and include only chapters up to level 4:
 
 
     [code
+        ~~~
+        [options
+            [TOC_title Inhaltsverzeichnis]
+            [TOC_position top]
+            [TOC_max_level 4]
+        ]
+
         [doc [title TOC test]
-
-            [options
-                [TOC_title Inhaltsverzeichnis]
-                [TOC_position top]
-                [TOC_max_level 4]
-            ]
-
             lorem ipsum tralala ...
         ]
-    code]
+        ~~~
+    ]
 ]

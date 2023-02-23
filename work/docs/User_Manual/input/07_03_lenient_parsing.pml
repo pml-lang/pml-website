@@ -9,13 +9,17 @@
 
             For example, the [c image] node has no child nodes. Therefore, instead of writing:
             [code
+                ~~~
                 [image ( source="images/juicy apple.png" width="400" ) ]
                        ^                                             ^
-            code]
+                ~~~
+            ]
             ... we can also write:
             [code
+                ~~~
                 [image source="images/juicy apple.png" width="400" ]
-            code]
+                ~~~
+            ]
         ]
 
         [el (id=omit_attribute_quotes)
@@ -27,13 +31,17 @@
 
             Hence, instead of writing:
             [code
+                ~~~
                 width="400"
                       ^   ^
-            code]
+                ~~~
+            ]
             ... we can write:
             [code
+                ~~~
                 width=400
-            code]
+                ~~~
+            ]
         ]
 
 [-
@@ -42,13 +50,17 @@
 
             For example, the default attribute for node [c image] is [c source]. Therefore, instead of writing:
             [code
+                ~~~
                 [image ( source="images/juicy apple.png" width="400" ) ]
                          ^^^^^^^
-            code]
+                ~~~
+            ]
             ... we can write:
             [code
+                ~~~
                 [image ( "images/juicy apple.png" width="400" ) ]
-            code]
+                ~~~
+            ]
         ]
 -]
 
@@ -56,42 +68,56 @@
             If a node in a PML document has no attributes, it is not necessary to explicitly state the absence of attributes by writing [c() ()].
             Hence, the following code:
             [code
+                ~~~
                 [div () text]
                      ^^
-            code]
+                ~~~
+            ]
             ... can be shortened to
             [code
+                ~~~
                 [div text]
-            code]
+                ~~~
+            ]
 
             However, if the node's text starts with [c() (], then [c() ()] is required.
 
             Say we want to render the text: [i() (organic = healthy)]. In that case we can't write:
             [code
+                ~~~
                 [i (organic = healthy)]
-            code]
+                ~~~
+            ]
             ... because the parser would interpret this as an attribute assignment (i.e. the value [c healthy] assigned to attribute [c organic].
 
             To eliminate the confusion we have to write:
             [code
+                ~~~
                 [i() (organic = healthy)]
                   ^^
-            code]
+                ~~~
+            ]
         ]
     ]
 
     If we apply all above rules, then this code:
     [code
+        ~~~
         [image ( source = "images/juicy apple.png" width = "400" ) ]
-    code]
+        ~~~
+    ]
     ... can be shortened to:
 [-
     [code
+        ~~~
         [image "images/juicy apple.png" width=400]
-    code]
+        ~~~
+    ]
 -]
     [code
+        ~~~
         [image source="images/juicy apple.png" width=400]
-    code]
+        ~~~
+    ]
 ]
 

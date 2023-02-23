@@ -5,7 +5,7 @@
             [el
                 [i Script Nodes] have been added.
                 Script nodes enable you to embed source code in a PML document, and execute it when the document is parsed.
-                For more information please refer to [link url=https://www.pml-lang.dev/docs/advanced_features/index.html#script_nodes text="Script Nodes"].
+                For more information please refer to [link (url=https://www.pml-lang.dev/docs/advanced_features/index.html#script_nodes) Script Nodes].
             ]
 
             [el
@@ -29,7 +29,7 @@
             ]
 
             [el
-                The method to define user-defined-nodes will probably change in the future, as explained [link url=https://www.pml-lang.dev/docs/advanced_features/index.html#UDN_how text=here].
+                The method to define user-defined-nodes will probably change in the future, as explained [link (url=https://www.pml-lang.dev/docs/advanced_features/index.html#UDN_how) here].
             ]
         ]
     ]

@@ -15,12 +15,14 @@
         [list
             [el [header PML code:]
                 [code
+                    ~~~
                     File path = C:\\tests\\example.txt
 
                     Instead of writing \\, we have to write \\\\
 
                     Instead of writing \[, we have to write \\\[
-                code]
+                    ~~~
+                ]
             ]
 
             [el [header Result:]
@@ -35,7 +37,8 @@
         The final rule is simple: Characters [c \[], [c \]], and [c \\] must be preceded by [c \\] when they are used in normal text.
 
         Besides characters that [i must] be escaped, there are also characters that [i can] be escaped if desired, as shown in the following table:
-        [table_data
+        [sim_table
+            ~~~
             Character or name, Escape sequence, Mandatory
             -
             \, \\, yes
@@ -46,7 +49,8 @@
             Line feed, \n, no
             Unicode escape 4 hex digits, \uhhhh (e.g. \u2764 for "heart shape": ♥), no
             Unicode escape 8 hex digits, \Uhhhhhhhh (e.g. \U0001F600 for "grinning face": 😀), no
-        table_data]
+            ~~~
+        ]
     ]
 
     [ch (id=attribute_escape_characters) [title Attributes]
@@ -54,7 +58,8 @@
         Escape sequences are not supported in [i un]quoted attribute values.
 
         If an attribute value is quoted, the following escape sequences are supported:
-        [table_data
+        [sim_table
+            ~~~
             Character or name, Escape sequence, Mandatory
             -
             ", \", yes
@@ -66,12 +71,15 @@
             Line feed, \n, no
             Unicode escape 4 hex digits, \uhhhh (e.g. \u2764 for "heart shape": ♥), no
             Unicode escape 8 hex digits, \Uhhhhhhhh (e.g. \U0001F600 for "grinning face": 😀), no
-        table_data]
+            ~~~
+        ]
 
         Example: Suppose we want to assign the value [c C:\\temp\\test.txt] to attribute [c path]. In this case the value can be quoted or unquoted. If the value is quoted then [c \\] must be escaped:
-        [table_data (halign="R,L")
+        [sim_table (halign="R,L")
+            ~~~
             Quoted:, path = "C:\\temp\\test.txt"
             Unquoted:, path = C:\temp\test.txt
-        table_data]
+            ~~~
+        ]
     ]
 ]

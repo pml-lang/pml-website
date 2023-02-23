@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="generator" content="PML 3.1.0 (www.pml-lang.dev)" />
+        <meta name="generator" content="PML 4.0.0 (www.pml-lang.dev)" />
         <title>PML User Manual</title>
         <link rel="stylesheet" href="css/pml-default.css">
         <link rel="stylesheet" href="css/pml-print-default.css" media="print">
@@ -77,7 +77,7 @@
                         </div>
                     </nav>
                 </aside>
-                <article id="doc__" class="pml-doc-text" id="doc__">
+                <article id="doc__" class="pml-doc-text">
                     <h1 class="pml-doc-title">PML User Manual</h1>
                     <table class="pml-table">
                         <tr class="pml-table-body-row">
@@ -86,7 +86,7 @@
 
                             </td>
                             <td class="pml-table-body-cell">
-                                <p class="pml-paragraph">3.1.0 2022-10-03</p>
+                                <p class="pml-paragraph">4.0.0 2023-02-23</p>
 
                             </td>
 
@@ -104,7 +104,7 @@
                         </tr>
                         <tr class="pml-table-body-row">
                             <td class="pml-table-body-cell">
-                                <p class="pml-paragraph"><b class="pml-bold">Author and Copyright</b></p>
+                                <p class="pml-paragraph"><b class="pml-bold">Author</b></p>
 
                             </td>
                             <td class="pml-table-body-cell">
@@ -170,7 +170,10 @@
                         <div class="pml-header">2. Convert the PML file to an HTML file</div>
                         <p class="pml-paragraph">Open a terminal in the directory of file <code class="pml-inline-code">example.pml</code>.</p>
                         <div class="pml-admonition">
-                            <div class="pml-admonition-label">Note</div>
+                            <div class="pml-admonition-label">
+                                <p class="pml-paragraph">Note</p>
+
+                            </div>
                             <div class="pml-admonition-content">
                                 <p class="pml-paragraph">For instructions on how to do this in Windows, search for &quot;open a terminal in Windows&quot;, or refer to <a class="pml-link" href="https://www.howtogeek.com/235101/10-ways-to-open-the-command-prompt-in-windows-10/">this</a> article.</p>
                             </div>
@@ -178,7 +181,10 @@
                         <p class="pml-paragraph">Convert the PML file into an HTML file named <code class="pml-inline-code">example.html</code> by entering the following command:</p>
                         <pre class="pml-input">pmlc PML_to_HTML example.pml</pre>
                         <div class="pml-admonition">
-                            <div class="pml-admonition-label">Note</div>
+                            <div class="pml-admonition-label">
+                                <p class="pml-paragraph">Note</p>
+
+                            </div>
                             <div class="pml-admonition-content">
                                 <p class="pml-paragraph">Alternatively you can also type:</p>
                                 <pre class="pml-input">pmlc p2h example.pml</pre>
@@ -195,7 +201,10 @@ C:\tests&gt;</pre>
                             <img class="pml-image pml-bordered" src="images/simple_example_result.png">
                         </figure>
                         <div class="pml-admonition">
-                            <div class="pml-admonition-label">Tips</div>
+                            <div class="pml-admonition-label">
+                                <p class="pml-paragraph">Tips</p>
+
+                            </div>
                             <div class="pml-admonition-content">
                                 <p class="pml-paragraph">To see the list of options you can use with command <code class="pml-inline-code">PML_to_HTML</code>, refer to chapter <a class="pml-link" href="https://www.pml-lang.dev/docs/commands_manual/index.html#command_PML_to_HTML">Convert PML to HTML</a> in <a class="pml-link" href="https://www.pml-lang.dev/docs/commands_manual/index.html">PMLC Commands Reference Manual</a>. This manual also lists all other commands you can use with <code class="pml-inline-code">pmlc</code>.</p>
                                 <p class="pml-paragraph">For general help type:</p>
@@ -286,7 +295,10 @@ C:\tests&gt;</pre>
                             <p class="pml-paragraph">File <code class="pml-inline-code">example.pml</code> can be converted to file <code class="pml-inline-code">output/example.html</code> with the following command:</p>
                             <pre class="pml-input">pmlc p2h example.pml</pre>
                             <div class="pml-admonition">
-                                <div class="pml-admonition-label">Note</div>
+                                <div class="pml-admonition-label">
+                                    <p class="pml-paragraph">Note</p>
+
+                                </div>
                                 <div class="pml-admonition-content">
                                     <p class="pml-paragraph">The above PML document uses image file <code class="pml-inline-code">images/strawberries.jpg</code>. By default, all resources used in a document are located in directory <code class="pml-inline-code">resources</code>. Therefore file <code class="pml-inline-code">resources/images/strawberries.jpg</code> must exist before executing the above command.</p>
                                 </div>
@@ -343,7 +355,7 @@ C:\tests&gt;</pre>
 
                                 </li>
                                 <li class="pml-list-element">
-                                    <p class="pml-paragraph">Attribute assignments are separated by a space. No comma is needed:</p>
+                                    <p class="pml-paragraph">Attribute assignments are separated by whitespace (a sequence of one or more spaces, tabs, and/or new lines). No comma is needed:</p>
                                     <pre class="pml-code"><code>(a1=&quot;v1&quot; a2=&quot;v2&quot;)
         ^</code></pre>
 
@@ -760,9 +772,9 @@ Instead of writing \[, we have to write \\\[</code></pre>
                                     <div class="pml-header">PML code:</div>
                                     <pre class="pml-code"><code>[u:set docs_root_URL = http://www.example.com/project/docs/public]
 
-For an overview please read the article [link url=[u:get docs_root_URL]/concepts.html text=&quot;Basic Concepts&quot;].
+For an overview please read the article [link (url=[u:get docs_root_URL]/concepts.html ) Basic Concepts].
 
-For detailed information please refer to the [link url=[u:get docs_root_URL]/user_manual.html text=&quot;User Manual&quot;].</code></pre>
+For detailed information please refer to the [link (url=[u:get docs_root_URL]/user_manual.html ) User Manual].</code></pre>
 
                                 </li>
                                 <li class="pml-list-element">
@@ -878,14 +890,13 @@ For detailed information please refer to the [link url=[u:get docs_root_URL]/use
 
                         </ul>
                         <p class="pml-paragraph">Here is an example of using an <a class="pml-xref" href="#options">options</a> node to set the TOC's title to &quot;Inhaltsverzeichnis&quot;, display the TOC at the top, and include only chapters up to level 4:</p>
-                        <pre class="pml-code"><code>[doc [title TOC test]
+                        <pre class="pml-code"><code>[options
+    [TOC_title Inhaltsverzeichnis]
+    [TOC_position top]
+    [TOC_max_level 4]
+]
 
-    [options
-        [TOC_title Inhaltsverzeichnis]
-        [TOC_position top]
-        [TOC_max_level 4]
-    ]
-
+[doc [title TOC test]
     lorem ipsum tralala ...
 ]</code></pre>
 
@@ -913,26 +924,6 @@ For detailed information please refer to the [link url=[u:get docs_root_URL]/use
                             </li>
 
                         </ul>
-                        <p class="pml-paragraph">The following features are planned to be supported in future versions:</p>
-                        <ul class="pml-list">
-                            <li class="pml-list-element">
-                                <p class="pml-paragraph">HTML templates to easily customize HTML code generation for specific nodes.</p>
-
-                            </li>
-                            <li class="pml-list-element">
-                                <p class="pml-paragraph">Custom HTML node writers to programmatically generate specific HTML code for individual (or all) nodes.</p>
-
-                            </li>
-                            <li class="pml-list-element">
-                                <p class="pml-paragraph">Custom writers to programmatically convert PML documents into other formats, such as plain text, JSON, XML, PDF, etc.</p>
-
-                            </li>
-                            <li class="pml-list-element">
-                                <p class="pml-paragraph">AST interception to programmatically change the AST produced by the PML parser (i.e. change, add, and remove PML nodes and attributes).</p>
-
-                            </li>
-
-                        </ul>
                         <section id="options" class="pml-chapter">
                             <h3 class="pml-chapter-title">Options</h3>
                             <p class="pml-paragraph">To see the list of options available when a PML document is converted to HTML, please refer to section &quot;Input Parameters&quot; in chapter <a class="pml-link" href="https://www.pml-lang.dev/docs/commands_manual/index.html#command_PML_to_HTML">Convert PML to HTML</a> of the <a class="pml-link" href="https://www.pml-lang.dev/docs/commands_manual/index.html">PMLC Commands Reference Manual</a>.</p>
@@ -946,15 +937,14 @@ For detailed information please refer to the [link url=[u:get docs_root_URL]/use
                                 </li>
                                 <li class="pml-list-element">
                                     <p class="pml-paragraph">If no value is specified on the command line, then PMLC looks for a value specified within an <code class="pml-inline-code">options</code> node in the PML document. If a value is found then this value is applied.</p>
-                                    <p class="pml-paragraph">The <code class="pml-inline-code">options</code> node must be defined as a direct child node of the <code class="pml-inline-code">doc</code> node.</p>
+                                    <p class="pml-paragraph">The <code class="pml-inline-code">options</code> node must be defined before the <code class="pml-inline-code">doc</code> node.</p>
                                     <p class="pml-paragraph">For example, the title and position for the table of contents can be defined in the PML document as follows:</p>
-                                    <pre class="pml-code"><code>[doc [title Options Example]
+                                    <pre class="pml-code"><code>[options
+    [TOC_title Book Content]
+    [TOC_position top]
+]
 
-    [options
-        [TOC_title Book Content]
-        [TOC_position top]
-    ]
-
+[doc [title Options Example]
     text ...
 ]</code></pre>
 
@@ -972,7 +962,10 @@ For detailed information please refer to the [link url=[u:get docs_root_URL]/use
     [TOC_position top]
 ]</code></pre>
                                     <div class="pml-admonition">
-                                        <div class="pml-admonition-label">Tip</div>
+                                        <div class="pml-admonition-label">
+                                            <p class="pml-paragraph">Tip</p>
+
+                                        </div>
                                         <div class="pml-admonition-content">
                                             <p class="pml-paragraph">You should consider using the <code class="pml-inline-code">options.pdml</code> file for options that are needed in most or all of your PML documents. Defining options in the shared <code class="pml-inline-code">options.pdml</code> file eliminates the need to repeat the same options again and again in different PML documents or as command arguments.</p>
                                         </div>
@@ -986,9 +979,12 @@ For detailed information please refer to the [link url=[u:get docs_root_URL]/use
 
                             </ul>
                             <div class="pml-admonition">
-                                <div class="pml-admonition-label">Note</div>
+                                <div class="pml-admonition-label">
+                                    <p class="pml-paragraph">Note</p>
+
+                                </div>
                                 <div class="pml-admonition-content">
-                                    <p class="pml-paragraph">The following options are only available as command line arguments. They cannot be used in a PML document or in a shared options file:<br /> <code class="pml-inline-code">input, output, verbosity, open_file_cmd</code></p>
+                                    <p class="pml-paragraph">Option <code class="pml-inline-code">input</code> is only supported as a command line argument. This option cannot be used in a PML document or in a shared options file.</p>
                                 </div>
                             </div>
 

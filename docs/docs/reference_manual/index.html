@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="generator" content="PML 3.1.0 (www.pml-lang.dev)" />
+        <meta name="generator" content="PML 4.0.0 (www.pml-lang.dev)" />
         <title>PML Nodes Reference Manual</title>
         <link rel="stylesheet" href="css/pml-default.css">
         <link rel="stylesheet" href="css/pml-print-default.css" media="print">
@@ -33,7 +33,6 @@
                                                         <li class="pml-toc-leaf-node"><a href="#node_ch">Chapter</a></li>
                                                         <li class="pml-toc-leaf-node"><a href="#node_title">Chapter Title</a></li>
                                                         <li class="pml-toc-leaf-node"><a href="#node_subtitle">Chapter Subtitle</a></li>
-                                                        <li class="pml-toc-leaf-node"><a href="#node_options">Options</a></li>
                                                     </ul>
                                                 </details>
                                             </li>
@@ -54,7 +53,7 @@
                                                             <details>
                                                                 <summary><a href="#table_nodes">Table</a></summary>
                                                                 <ul>
-                                                                    <li class="pml-toc-leaf-node"><a href="#node_table_data">Table Data</a></li>
+                                                                    <li class="pml-toc-leaf-node"><a href="#node_sim_table">Simple Table</a></li>
                                                                     <li class="pml-toc-leaf-node"><a href="#node_table">Table</a></li>
                                                                     <li class="pml-toc-leaf-node"><a href="#node_theader">Table Header</a></li>
                                                                     <li class="pml-toc-leaf-node"><a href="#node_tfooter">Table Footer</a></li>
@@ -148,7 +147,7 @@
                         </div>
                     </nav>
                 </aside>
-                <article id="doc__" class="pml-doc-text" id="doc__">
+                <article id="doc__" class="pml-doc-text">
                     <h1 class="pml-doc-title">PML Nodes Reference Manual</h1>
                     <table class="pml-table">
                         <tr class="pml-table-body-row">
@@ -157,7 +156,7 @@
 
                             </td>
                             <td class="pml-table-body-cell">
-                                <p class="pml-paragraph">PMLC 3.1.0 2022-10-03</p>
+                                <p class="pml-paragraph">PMLC 4.0.0 2023-02-23</p>
 
                             </td>
 
@@ -247,7 +246,7 @@
 
                                                 </td>
                                                 <td class="pml-table-body-cell">
-                                                    <p class="pml-paragraph">A unique identifier for the node.<br /><br />An id can be used to:<br />- identify a node so that an internal link can be done with an 'xref' (cross reference) node.<br />- identify a node so that it can be styled individually with CSS<br />- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.<br /><br />An identifier must start with a letter or an underscore, and can be followed by any number of letters, digits, underscores, dots, and hyphens. Note for programmers: The regex of an identifier is: [a-zA-Z_][a-zA-Z0-9_\.-]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.<br /></p>
+                                                    <p class="pml-paragraph">A unique identifier for the node.<br /><br />An id can be used to:<br />- identify a node so that an internal link can be done with an 'xref' (cross reference) node.<br />- identify a node so that it can be styled individually with CSS<br />- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.<br /><br />An identifier must start with a letter or an underscore (_), and can be followed by any number of letters, digits, underscores (_), dots (.), and hyphens (-).. Note for programmers: The regex of an identifier is: [a-zA-Z_][a-zA-Z0-9_\.-]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.<br /></p>
 
                                                 </td>
 
@@ -258,7 +257,7 @@
 
                                                 </td>
                                                 <td class="pml-table-body-cell">
-                                                    <p class="pml-paragraph">string or null</p>
+                                                    <p class="pml-paragraph">id or null</p>
 
                                                 </td>
 
@@ -377,7 +376,7 @@
 
                                                 </td>
                                                 <td class="pml-table-body-cell">
-                                                    <p class="pml-paragraph">A unique identifier for the node.<br /><br />An id can be used to:<br />- identify a node so that an internal link can be done with an 'xref' (cross reference) node.<br />- identify a node so that it can be styled individually with CSS<br />- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.<br /><br />An identifier must start with a letter or an underscore, and can be followed by any number of letters, digits, underscores, dots, and hyphens. Note for programmers: The regex of an identifier is: [a-zA-Z_][a-zA-Z0-9_\.-]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.<br /></p>
+                                                    <p class="pml-paragraph">A unique identifier for the node.<br /><br />An id can be used to:<br />- identify a node so that an internal link can be done with an 'xref' (cross reference) node.<br />- identify a node so that it can be styled individually with CSS<br />- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.<br /><br />An identifier must start with a letter or an underscore (_), and can be followed by any number of letters, digits, underscores (_), dots (.), and hyphens (-).. Note for programmers: The regex of an identifier is: [a-zA-Z_][a-zA-Z0-9_\.-]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.<br /></p>
 
                                                 </td>
 
@@ -388,7 +387,7 @@
 
                                                 </td>
                                                 <td class="pml-table-body-cell">
-                                                    <p class="pml-paragraph">string or null</p>
+                                                    <p class="pml-paragraph">id or null</p>
 
                                                 </td>
 
@@ -508,7 +507,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
                                                 </td>
                                                 <td class="pml-table-body-cell">
-                                                    <p class="pml-paragraph">A unique identifier for the node.<br /><br />An id can be used to:<br />- identify a node so that an internal link can be done with an 'xref' (cross reference) node.<br />- identify a node so that it can be styled individually with CSS<br />- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.<br /><br />An identifier must start with a letter or an underscore, and can be followed by any number of letters, digits, underscores, dots, and hyphens. Note for programmers: The regex of an identifier is: [a-zA-Z_][a-zA-Z0-9_\.-]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.<br /></p>
+                                                    <p class="pml-paragraph">A unique identifier for the node.<br /><br />An id can be used to:<br />- identify a node so that an internal link can be done with an 'xref' (cross reference) node.<br />- identify a node so that it can be styled individually with CSS<br />- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.<br /><br />An identifier must start with a letter or an underscore (_), and can be followed by any number of letters, digits, underscores (_), dots (.), and hyphens (-).. Note for programmers: The regex of an identifier is: [a-zA-Z_][a-zA-Z0-9_\.-]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.<br /></p>
 
                                                 </td>
 
@@ -519,7 +518,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
                                                 </td>
                                                 <td class="pml-table-body-cell">
-                                                    <p class="pml-paragraph">string or null</p>
+                                                    <p class="pml-paragraph">id or null</p>
 
                                                 </td>
 
@@ -662,7 +661,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
                                                 </td>
                                                 <td class="pml-table-body-cell">
-                                                    <p class="pml-paragraph">A unique identifier for the node.<br /><br />An id can be used to:<br />- identify a node so that an internal link can be done with an 'xref' (cross reference) node.<br />- identify a node so that it can be styled individually with CSS<br />- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.<br /><br />An identifier must start with a letter or an underscore, and can be followed by any number of letters, digits, underscores, dots, and hyphens. Note for programmers: The regex of an identifier is: [a-zA-Z_][a-zA-Z0-9_\.-]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.<br /></p>
+                                                    <p class="pml-paragraph">A unique identifier for the node.<br /><br />An id can be used to:<br />- identify a node so that an internal link can be done with an 'xref' (cross reference) node.<br />- identify a node so that it can be styled individually with CSS<br />- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.<br /><br />An identifier must start with a letter or an underscore (_), and can be followed by any number of letters, digits, underscores (_), dots (.), and hyphens (-).. Note for programmers: The regex of an identifier is: [a-zA-Z_][a-zA-Z0-9_\.-]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.<br /></p>
 
                                                 </td>
 
@@ -673,7 +672,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
                                                 </td>
                                                 <td class="pml-table-body-cell">
-                                                    <p class="pml-paragraph">string or null</p>
+                                                    <p class="pml-paragraph">id or null</p>
 
                                                 </td>
 
@@ -793,7 +792,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
                                                 </td>
                                                 <td class="pml-table-body-cell">
-                                                    <p class="pml-paragraph">A unique identifier for the node.<br /><br />An id can be used to:<br />- identify a node so that an internal link can be done with an 'xref' (cross reference) node.<br />- identify a node so that it can be styled individually with CSS<br />- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.<br /><br />An identifier must start with a letter or an underscore, and can be followed by any number of letters, digits, underscores, dots, and hyphens. Note for programmers: The regex of an identifier is: [a-zA-Z_][a-zA-Z0-9_\.-]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.<br /></p>
+                                                    <p class="pml-paragraph">A unique identifier for the node.<br /><br />An id can be used to:<br />- identify a node so that an internal link can be done with an 'xref' (cross reference) node.<br />- identify a node so that it can be styled individually with CSS<br />- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.<br /><br />An identifier must start with a letter or an underscore (_), and can be followed by any number of letters, digits, underscores (_), dots (.), and hyphens (-).. Note for programmers: The regex of an identifier is: [a-zA-Z_][a-zA-Z0-9_\.-]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.<br /></p>
 
                                                 </td>
 
@@ -804,7 +803,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
                                                 </td>
                                                 <td class="pml-table-body-cell">
-                                                    <p class="pml-paragraph">string or null</p>
+                                                    <p class="pml-paragraph">id or null</p>
 
                                                 </td>
 
@@ -888,49 +887,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
                                 </ul>
 
                             </section>
-                            <section id="node_options" class="pml-chapter">
-                                <h4 class="pml-chapter-title">Options</h4>
-                                <p class="pml-paragraph"><b class="pml-bold">Name: </b><code class="pml-inline-code">options</code></p>
-                                <p class="pml-paragraph"><b class="pml-bold">Kind:</b> Node without child nodes</p>
-                                <div class="pml-header">Description</div>
-                                <p class="pml-paragraph">Used to define a set of options applied to the document.<br />If used, this node must be the first child node of the 'doc' node.<br />Please consult the user manual and/or the CLI manual to see the list of options available.</p>
-                                <div class="pml-header">Attributes</div>
-                                <p class="pml-paragraph">This node doesn't have attributes.</p>
-                                <p class="pml-paragraph"><b class="pml-bold">HTML Attributes:</b> not allowed</p>
-                                <div class="pml-header">Example</div>
-                                <ul class="pml-list">
-                                    <li class="pml-list-element">
-                                        <p class="pml-paragraph">PML code:</p>
-                                        <pre class="pml-code"><code>[doc [title Options Demo]
-    [options
-        [TOCPosition top]
-        [TOCTitle Inhaltsverzeichnis]
-    ]
-    text
-]</code></pre>
-
-                                    </li>
-                                    <li class="pml-list-element">
-                                        <p class="pml-paragraph">Result:</p>
-                                        <div class="pml-html"><div style="border: 1px dotted grey; padding-left: 1em; padding-right: 1em;border-radius: 7px;">
-<h1 class="pml-doc-title">Options Demo</h1>
-<p class="pml-paragraph">text </p>
-
-</div>
-</div>
-
-                                    </li>
-                                    <li class="pml-list-element">
-                                        <p class="pml-paragraph">HTML code generated:</p>
-                                        <pre class="pml-code"><code>&lt;h1 class=&quot;pml-doc-title&quot;&gt;Options Demo&lt;/h1&gt;
-&lt;p class=&quot;pml-paragraph&quot;&gt;text &lt;/p&gt;
-</code></pre>
-
-                                    </li>
-
-                                </ul>
-
-                            </section>
 
                         </section>
                         <section id="common_nodes" class="pml-chapter">
@@ -976,7 +932,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
                                                     </td>
                                                     <td class="pml-table-body-cell">
-                                                        <p class="pml-paragraph">A unique identifier for the node.<br /><br />An id can be used to:<br />- identify a node so that an internal link can be done with an 'xref' (cross reference) node.<br />- identify a node so that it can be styled individually with CSS<br />- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.<br /><br />An identifier must start with a letter or an underscore, and can be followed by any number of letters, digits, underscores, dots, and hyphens. Note for programmers: The regex of an identifier is: [a-zA-Z_][a-zA-Z0-9_\.-]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.<br /></p>
+                                                        <p class="pml-paragraph">A unique identifier for the node.<br /><br />An id can be used to:<br />- identify a node so that an internal link can be done with an 'xref' (cross reference) node.<br />- identify a node so that it can be styled individually with CSS<br />- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.<br /><br />An identifier must start with a letter or an underscore (_), and can be followed by any number of letters, digits, underscores (_), dots (.), and hyphens (-).. Note for programmers: The regex of an identifier is: [a-zA-Z_][a-zA-Z0-9_\.-]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.<br /></p>
 
                                                     </td>
 
@@ -987,7 +943,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
                                                     </td>
                                                     <td class="pml-table-body-cell">
-                                                        <p class="pml-paragraph">string or null</p>
+                                                        <p class="pml-paragraph">id or null</p>
 
                                                     </td>
 
@@ -1243,7 +1199,7 @@ Text for marker:
 
                                                     </td>
                                                     <td class="pml-table-body-cell">
-                                                        <p class="pml-paragraph">A unique identifier for the node.<br /><br />An id can be used to:<br />- identify a node so that an internal link can be done with an 'xref' (cross reference) node.<br />- identify a node so that it can be styled individually with CSS<br />- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.<br /><br />An identifier must start with a letter or an underscore, and can be followed by any number of letters, digits, underscores, dots, and hyphens. Note for programmers: The regex of an identifier is: [a-zA-Z_][a-zA-Z0-9_\.-]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.<br /></p>
+                                                        <p class="pml-paragraph">A unique identifier for the node.<br /><br />An id can be used to:<br />- identify a node so that an internal link can be done with an 'xref' (cross reference) node.<br />- identify a node so that it can be styled individually with CSS<br />- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.<br /><br />An identifier must start with a letter or an underscore (_), and can be followed by any number of letters, digits, underscores (_), dots (.), and hyphens (-).. Note for programmers: The regex of an identifier is: [a-zA-Z_][a-zA-Z0-9_\.-]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.<br /></p>
 
                                                     </td>
 
@@ -1254,7 +1210,7 @@ Text for marker:
 
                                                     </td>
                                                     <td class="pml-table-body-cell">
-                                                        <p class="pml-paragraph">string or null</p>
+                                                        <p class="pml-paragraph">id or null</p>
 
                                                     </td>
 
@@ -1376,9 +1332,9 @@ Text for marker:
                             </section>
                             <section id="table_nodes" class="pml-chapter">
                                 <h4 class="pml-chapter-title">Table</h4>
-                                <section id="node_table_data" class="pml-chapter">
-                                    <h5 class="pml-chapter-title">Table Data</h5>
-                                    <p class="pml-paragraph"><b class="pml-bold">Name: </b><code class="pml-inline-code">table_data</code></p>
+                                <section id="node_sim_table" class="pml-chapter">
+                                    <h5 class="pml-chapter-title">Simple Table</h5>
+                                    <p class="pml-paragraph"><b class="pml-bold">Name: </b><code class="pml-inline-code">sim_table</code></p>
                                     <p class="pml-paragraph"><b class="pml-bold">Kind:</b> Node with raw text content</p>
                                     <div class="pml-header">Description</div>
                                     <p class="pml-paragraph">Simple table data defined as plain text, and rendered as a table.<br />Each line of text represents a row.<br />All cell values in all rows are separated by the same character which can be: a vertical bar (|), a semicolon (;), or a comma (,).<br />The content of each cell can only be plain text. If formatted text or complex cell content (e.g. picture in a cell, or table in a table) is needed, then please use the 'table' tag.<br />A header and footer can optionally be defined.<br />The horizontal alignment (left, center, or right) can be specified for each column.<br />The data will be rendered as a table.<br />The following format rules apply:<br />- Rows are separated by a line break. Empty lines are ignored.<br />- Cells can be separated by a comma or a TAB character, but both separators cannot be mixed in a table.<br />- Spaces before or after cell values are ignored.<br />- If the second line is a dash (-) then the first line is a header.<br />- If the second-last line is a dash (-) then the last line is a footer.<br /></p>
@@ -1499,7 +1455,7 @@ Text for marker:
 
                                                     </td>
                                                     <td class="pml-table-body-cell">
-                                                        <p class="pml-paragraph">A unique identifier for the node.<br /><br />An id can be used to:<br />- identify a node so that an internal link can be done with an 'xref' (cross reference) node.<br />- identify a node so that it can be styled individually with CSS<br />- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.<br /><br />An identifier must start with a letter or an underscore, and can be followed by any number of letters, digits, underscores, dots, and hyphens. Note for programmers: The regex of an identifier is: [a-zA-Z_][a-zA-Z0-9_\.-]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.<br /></p>
+                                                        <p class="pml-paragraph">A unique identifier for the node.<br /><br />An id can be used to:<br />- identify a node so that an internal link can be done with an 'xref' (cross reference) node.<br />- identify a node so that it can be styled individually with CSS<br />- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.<br /><br />An identifier must start with a letter or an underscore (_), and can be followed by any number of letters, digits, underscores (_), dots (.), and hyphens (-).. Note for programmers: The regex of an identifier is: [a-zA-Z_][a-zA-Z0-9_\.-]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.<br /></p>
 
                                                     </td>
 
@@ -1510,7 +1466,7 @@ Text for marker:
 
                                                     </td>
                                                     <td class="pml-table-body-cell">
-                                                        <p class="pml-paragraph">string or null</p>
+                                                        <p class="pml-paragraph">id or null</p>
 
                                                     </td>
 
@@ -1560,14 +1516,16 @@ Text for marker:
                                         <li class="pml-list-element">
                                             <p class="pml-paragraph">PML code:</p>
                                             <pre class="pml-code"><code>Simple table:
-[table_data
+[sim_table
+    ~~~
     cell 1.1, cell 1.2
     cell 2.1, cell 2.2
-table_data]
+    ~~~
+]
 
 Table with header, footer, and column alignments:
 
-[table_data (halign=&quot;C,L,R&quot;)
+[sim_table (halign=&quot;C,L,R&quot;)
     ~~~
     Position, Product, Price
     -
@@ -1771,7 +1729,7 @@ Table with header, footer, and column alignments:
 
                                                     </td>
                                                     <td class="pml-table-body-cell">
-                                                        <p class="pml-paragraph">A unique identifier for the node.<br /><br />An id can be used to:<br />- identify a node so that an internal link can be done with an 'xref' (cross reference) node.<br />- identify a node so that it can be styled individually with CSS<br />- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.<br /><br />An identifier must start with a letter or an underscore, and can be followed by any number of letters, digits, underscores, dots, and hyphens. Note for programmers: The regex of an identifier is: [a-zA-Z_][a-zA-Z0-9_\.-]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.<br /></p>
+                                                        <p class="pml-paragraph">A unique identifier for the node.<br /><br />An id can be used to:<br />- identify a node so that an internal link can be done with an 'xref' (cross reference) node.<br />- identify a node so that it can be styled individually with CSS<br />- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.<br /><br />An identifier must start with a letter or an underscore (_), and can be followed by any number of letters, digits, underscores (_), dots (.), and hyphens (-).. Note for programmers: The regex of an identifier is: [a-zA-Z_][a-zA-Z0-9_\.-]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.<br /></p>
 
                                                     </td>
 
@@ -1782,7 +1740,7 @@ Table with header, footer, and column alignments:
 
                                                     </td>
                                                     <td class="pml-table-body-cell">
-                                                        <p class="pml-paragraph">string or null</p>
+                                                        <p class="pml-paragraph">id or null</p>
 
                                                     </td>
 
@@ -2098,7 +2056,7 @@ Table with header and footer:
 
                                                     </td>
                                                     <td class="pml-table-body-cell">
-                                                        <p class="pml-paragraph">A unique identifier for the node.<br /><br />An id can be used to:<br />- identify a node so that an internal link can be done with an 'xref' (cross reference) node.<br />- identify a node so that it can be styled individually with CSS<br />- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.<br /><br />An identifier must start with a letter or an underscore, and can be followed by any number of letters, digits, underscores, dots, and hyphens. Note for programmers: The regex of an identifier is: [a-zA-Z_][a-zA-Z0-9_\.-]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.<br /></p>
+                                                        <p class="pml-paragraph">A unique identifier for the node.<br /><br />An id can be used to:<br />- identify a node so that an internal link can be done with an 'xref' (cross reference) node.<br />- identify a node so that it can be styled individually with CSS<br />- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.<br /><br />An identifier must start with a letter or an underscore (_), and can be followed by any number of letters, digits, underscores (_), dots (.), and hyphens (-).. Note for programmers: The regex of an identifier is: [a-zA-Z_][a-zA-Z0-9_\.-]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.<br /></p>
 
                                                     </td>
 
@@ -2109,7 +2067,7 @@ Table with header and footer:
 
                                                     </td>
                                                     <td class="pml-table-body-cell">
-                                                        <p class="pml-paragraph">string or null</p>
+                                                        <p class="pml-paragraph">id or null</p>
 
                                                     </td>
 
@@ -2329,7 +2287,7 @@ Table with header and footer:
 
                                                     </td>
                                                     <td class="pml-table-body-cell">
-                                                        <p class="pml-paragraph">A unique identifier for the node.<br /><br />An id can be used to:<br />- identify a node so that an internal link can be done with an 'xref' (cross reference) node.<br />- identify a node so that it can be styled individually with CSS<br />- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.<br /><br />An identifier must start with a letter or an underscore, and can be followed by any number of letters, digits, underscores, dots, and hyphens. Note for programmers: The regex of an identifier is: [a-zA-Z_][a-zA-Z0-9_\.-]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.<br /></p>
+                                                        <p class="pml-paragraph">A unique identifier for the node.<br /><br />An id can be used to:<br />- identify a node so that an internal link can be done with an 'xref' (cross reference) node.<br />- identify a node so that it can be styled individually with CSS<br />- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.<br /><br />An identifier must start with a letter or an underscore (_), and can be followed by any number of letters, digits, underscores (_), dots (.), and hyphens (-).. Note for programmers: The regex of an identifier is: [a-zA-Z_][a-zA-Z0-9_\.-]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.<br /></p>
 
                                                     </td>
 
@@ -2340,7 +2298,7 @@ Table with header and footer:
 
                                                     </td>
                                                     <td class="pml-table-body-cell">
-                                                        <p class="pml-paragraph">string or null</p>
+                                                        <p class="pml-paragraph">id or null</p>
 
                                                     </td>
 
@@ -2560,7 +2518,7 @@ Table with header and footer:
 
                                                     </td>
                                                     <td class="pml-table-body-cell">
-                                                        <p class="pml-paragraph">A unique identifier for the node.<br /><br />An id can be used to:<br />- identify a node so that an internal link can be done with an 'xref' (cross reference) node.<br />- identify a node so that it can be styled individually with CSS<br />- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.<br /><br />An identifier must start with a letter or an underscore, and can be followed by any number of letters, digits, underscores, dots, and hyphens. Note for programmers: The regex of an identifier is: [a-zA-Z_][a-zA-Z0-9_\.-]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.<br /></p>
+                                                        <p class="pml-paragraph">A unique identifier for the node.<br /><br />An id can be used to:<br />- identify a node so that an internal link can be done with an 'xref' (cross reference) node.<br />- identify a node so that it can be styled individually with CSS<br />- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.<br /><br />An identifier must start with a letter or an underscore (_), and can be followed by any number of letters, digits, underscores (_), dots (.), and hyphens (-).. Note for programmers: The regex of an identifier is: [a-zA-Z_][a-zA-Z0-9_\.-]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.<br /></p>
 
                                                     </td>
 
@@ -2571,7 +2529,7 @@ Table with header and footer:
 
                                                     </td>
                                                     <td class="pml-table-body-cell">
-                                                        <p class="pml-paragraph">string or null</p>
+                                                        <p class="pml-paragraph">id or null</p>
 
                                                     </td>
 
@@ -2752,7 +2710,7 @@ Table with header and footer:
 
                                                     </td>
                                                     <td class="pml-table-body-cell">
-                                                        <p class="pml-paragraph">A unique identifier for the node.<br /><br />An id can be used to:<br />- identify a node so that an internal link can be done with an 'xref' (cross reference) node.<br />- identify a node so that it can be styled individually with CSS<br />- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.<br /><br />An identifier must start with a letter or an underscore, and can be followed by any number of letters, digits, underscores, dots, and hyphens. Note for programmers: The regex of an identifier is: [a-zA-Z_][a-zA-Z0-9_\.-]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.<br /></p>
+                                                        <p class="pml-paragraph">A unique identifier for the node.<br /><br />An id can be used to:<br />- identify a node so that an internal link can be done with an 'xref' (cross reference) node.<br />- identify a node so that it can be styled individually with CSS<br />- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.<br /><br />An identifier must start with a letter or an underscore (_), and can be followed by any number of letters, digits, underscores (_), dots (.), and hyphens (-).. Note for programmers: The regex of an identifier is: [a-zA-Z_][a-zA-Z0-9_\.-]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.<br /></p>
 
                                                     </td>
 
@@ -2763,7 +2721,7 @@ Table with header and footer:
 
                                                     </td>
                                                     <td class="pml-table-body-cell">
-                                                        <p class="pml-paragraph">string or null</p>
+                                                        <p class="pml-paragraph">id or null</p>
 
                                                     </td>
 
@@ -2946,7 +2904,7 @@ Table with header and footer:
 
                                                 </td>
                                                 <td class="pml-table-body-cell">
-                                                    <p class="pml-paragraph">A unique identifier for the node.<br /><br />An id can be used to:<br />- identify a node so that an internal link can be done with an 'xref' (cross reference) node.<br />- identify a node so that it can be styled individually with CSS<br />- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.<br /><br />An identifier must start with a letter or an underscore, and can be followed by any number of letters, digits, underscores, dots, and hyphens. Note for programmers: The regex of an identifier is: [a-zA-Z_][a-zA-Z0-9_\.-]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.<br /></p>
+                                                    <p class="pml-paragraph">A unique identifier for the node.<br /><br />An id can be used to:<br />- identify a node so that an internal link can be done with an 'xref' (cross reference) node.<br />- identify a node so that it can be styled individually with CSS<br />- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.<br /><br />An identifier must start with a letter or an underscore (_), and can be followed by any number of letters, digits, underscores (_), dots (.), and hyphens (-).. Note for programmers: The regex of an identifier is: [a-zA-Z_][a-zA-Z0-9_\.-]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.<br /></p>
 
                                                 </td>
 
@@ -2957,7 +2915,7 @@ Table with header and footer:
 
                                                 </td>
                                                 <td class="pml-table-body-cell">
-                                                    <p class="pml-paragraph">string or null</p>
+                                                    <p class="pml-paragraph">id or null</p>
 
                                                 </td>
 
@@ -3092,7 +3050,7 @@ Table with header and footer:
 
                                                 </td>
                                                 <td class="pml-table-body-cell">
-                                                    <p class="pml-paragraph">A unique identifier for the node.<br /><br />An id can be used to:<br />- identify a node so that an internal link can be done with an 'xref' (cross reference) node.<br />- identify a node so that it can be styled individually with CSS<br />- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.<br /><br />An identifier must start with a letter or an underscore, and can be followed by any number of letters, digits, underscores, dots, and hyphens. Note for programmers: The regex of an identifier is: [a-zA-Z_][a-zA-Z0-9_\.-]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.<br /></p>
+                                                    <p class="pml-paragraph">A unique identifier for the node.<br /><br />An id can be used to:<br />- identify a node so that an internal link can be done with an 'xref' (cross reference) node.<br />- identify a node so that it can be styled individually with CSS<br />- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.<br /><br />An identifier must start with a letter or an underscore (_), and can be followed by any number of letters, digits, underscores (_), dots (.), and hyphens (-).. Note for programmers: The regex of an identifier is: [a-zA-Z_][a-zA-Z0-9_\.-]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.<br /></p>
 
                                                 </td>
 
@@ -3103,7 +3061,7 @@ Table with header and footer:
 
                                                 </td>
                                                 <td class="pml-table-body-cell">
-                                                    <p class="pml-paragraph">string or null</p>
+                                                    <p class="pml-paragraph">id or null</p>
 
                                                 </td>
 
@@ -3213,7 +3171,7 @@ Table with header and footer:
 
                                                 </td>
                                                 <td class="pml-table-body-cell">
-                                                    <p class="pml-paragraph">A unique identifier for the node.<br /><br />An id can be used to:<br />- identify a node so that an internal link can be done with an 'xref' (cross reference) node.<br />- identify a node so that it can be styled individually with CSS<br />- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.<br /><br />An identifier must start with a letter or an underscore, and can be followed by any number of letters, digits, underscores, dots, and hyphens. Note for programmers: The regex of an identifier is: [a-zA-Z_][a-zA-Z0-9_\.-]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.<br /></p>
+                                                    <p class="pml-paragraph">A unique identifier for the node.<br /><br />An id can be used to:<br />- identify a node so that an internal link can be done with an 'xref' (cross reference) node.<br />- identify a node so that it can be styled individually with CSS<br />- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.<br /><br />An identifier must start with a letter or an underscore (_), and can be followed by any number of letters, digits, underscores (_), dots (.), and hyphens (-).. Note for programmers: The regex of an identifier is: [a-zA-Z_][a-zA-Z0-9_\.-]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.<br /></p>
 
                                                 </td>
 
@@ -3224,7 +3182,7 @@ Table with header and footer:
 
                                                 </td>
                                                 <td class="pml-table-body-cell">
-                                                    <p class="pml-paragraph">string or null</p>
+                                                    <p class="pml-paragraph">id or null</p>
 
                                                 </td>
 
@@ -3266,90 +3224,6 @@ Table with header and footer:
                                         </table>
 
                                     </li>
-                                    <li class="pml-list-element">
-                                        <div class="pml-header">Label</div>
-                                        <table class="pml-table">
-                                            <tr class="pml-table-body-row">
-                                                <td class="pml-table-body-cell">
-                                                    <p class="pml-paragraph"><b class="pml-bold">Name</b></p>
-
-                                                </td>
-                                                <td class="pml-table-body-cell">
-                                                    <p class="pml-paragraph">label</p>
-
-                                                </td>
-
-                                            </tr>
-                                            <tr class="pml-table-body-row">
-                                                <td class="pml-table-body-cell">
-                                                    <p class="pml-paragraph"><b class="pml-bold">Is positional parameter</b></p>
-
-                                                </td>
-                                                <td class="pml-table-body-cell">
-                                                    <p class="pml-paragraph">No</p>
-
-                                                </td>
-
-                                            </tr>
-                                            <tr class="pml-table-body-row">
-                                                <td class="pml-table-body-cell">
-                                                    <p class="pml-paragraph"><b class="pml-bold">Description</b></p>
-
-                                                </td>
-                                                <td class="pml-table-body-cell">
-                                                    <p class="pml-paragraph">The admonition's label, such as 'Note', 'Tip', 'Warning', etc.</p>
-
-                                                </td>
-
-                                            </tr>
-                                            <tr class="pml-table-body-row">
-                                                <td class="pml-table-body-cell">
-                                                    <p class="pml-paragraph"><b class="pml-bold">Type</b></p>
-
-                                                </td>
-                                                <td class="pml-table-body-cell">
-                                                    <p class="pml-paragraph">string</p>
-
-                                                </td>
-
-                                            </tr>
-                                            <tr class="pml-table-body-row">
-                                                <td class="pml-table-body-cell">
-                                                    <p class="pml-paragraph"><b class="pml-bold">Required</b></p>
-
-                                                </td>
-                                                <td class="pml-table-body-cell">
-                                                    <p class="pml-paragraph">yes</p>
-
-                                                </td>
-
-                                            </tr>
-                                            <tr class="pml-table-body-row">
-                                                <td class="pml-table-body-cell">
-                                                    <p class="pml-paragraph"><b class="pml-bold">Default Value</b></p>
-
-                                                </td>
-                                                <td class="pml-table-body-cell">
-                                                    <p class="pml-paragraph">none</p>
-
-                                                </td>
-
-                                            </tr>
-                                            <tr class="pml-table-body-row">
-                                                <td class="pml-table-body-cell">
-                                                    <p class="pml-paragraph"><b class="pml-bold">Example(s)</b></p>
-
-                                                </td>
-                                                <td class="pml-table-body-cell">
-                                                    <p class="pml-paragraph">label = Tip</p>
-
-                                                </td>
-
-                                            </tr>
-
-                                        </table>
-
-                                    </li>
 
                                 </ul>
                                 <p class="pml-paragraph"><b class="pml-bold">HTML Attributes:</b> allowed</p>
@@ -3357,8 +3231,9 @@ Table with header and footer:
                                 <ul class="pml-list">
                                     <li class="pml-list-element">
                                         <p class="pml-paragraph">PML code:</p>
-                                        <pre class="pml-code"><code>[admon (label=Tip)
-    We will have a look at some [i striking] examples later in the book.
+                                        <pre class="pml-code"><code>[admon
+    [alabel Tip]
+    Later you'll see some [i striking] examples.
 ]</code></pre>
 
                                     </li>
@@ -3366,9 +3241,12 @@ Table with header and footer:
                                         <p class="pml-paragraph">Result:</p>
                                         <div class="pml-html"><div style="border: 1px dotted grey; padding-left: 1em; padding-right: 1em;border-radius: 7px;">
 <div class="pml-admonition">
-    <div class="pml-admonition-label">Tip</div>
+    <div class="pml-admonition-label">
+        <p class="pml-paragraph">Tip</p>
+
+    </div>
     <div class="pml-admonition-content">
-        <p class="pml-paragraph">We will have a look at some <i class="pml-italic">striking</i> examples later in the book. </p>
+        <p class="pml-paragraph">Later you'll see some <i class="pml-italic">striking</i> examples. </p>
     </div>
 </div>
 
@@ -3379,9 +3257,12 @@ Table with header and footer:
                                     <li class="pml-list-element">
                                         <p class="pml-paragraph">HTML code generated:</p>
                                         <pre class="pml-code"><code>&lt;div class=&quot;pml-admonition&quot;&gt;
-    &lt;div class=&quot;pml-admonition-label&quot;&gt;Tip&lt;/div&gt;
+    &lt;div class=&quot;pml-admonition-label&quot;&gt;
+        &lt;p class=&quot;pml-paragraph&quot;&gt;Tip&lt;/p&gt;
+
+    &lt;/div&gt;
     &lt;div class=&quot;pml-admonition-content&quot;&gt;
-        &lt;p class=&quot;pml-paragraph&quot;&gt;We will have a look at some &lt;i class=&quot;pml-italic&quot;&gt;striking&lt;/i&gt; examples later in the book. &lt;/p&gt;
+        &lt;p class=&quot;pml-paragraph&quot;&gt;Later you'll see some &lt;i class=&quot;pml-italic&quot;&gt;striking&lt;/i&gt; examples. &lt;/p&gt;
     &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
@@ -3430,7 +3311,7 @@ Table with header and footer:
 
                                                 </td>
                                                 <td class="pml-table-body-cell">
-                                                    <p class="pml-paragraph">A unique identifier for the node.<br /><br />An id can be used to:<br />- identify a node so that an internal link can be done with an 'xref' (cross reference) node.<br />- identify a node so that it can be styled individually with CSS<br />- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.<br /><br />An identifier must start with a letter or an underscore, and can be followed by any number of letters, digits, underscores, dots, and hyphens. Note for programmers: The regex of an identifier is: [a-zA-Z_][a-zA-Z0-9_\.-]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.<br /></p>
+                                                    <p class="pml-paragraph">A unique identifier for the node.<br /><br />An id can be used to:<br />- identify a node so that an internal link can be done with an 'xref' (cross reference) node.<br />- identify a node so that it can be styled individually with CSS<br />- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.<br /><br />An identifier must start with a letter or an underscore (_), and can be followed by any number of letters, digits, underscores (_), dots (.), and hyphens (-).. Note for programmers: The regex of an identifier is: [a-zA-Z_][a-zA-Z0-9_\.-]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.<br /></p>
 
                                                 </td>
 
@@ -3441,7 +3322,7 @@ Table with header and footer:
 
                                                 </td>
                                                 <td class="pml-table-body-cell">
-                                                    <p class="pml-paragraph">string or null</p>
+                                                    <p class="pml-paragraph">id or null</p>
 
                                                 </td>
 
@@ -3497,7 +3378,10 @@ Table with header and footer:
                                         <p class="pml-paragraph">Result:</p>
                                         <div class="pml-html"><div style="border: 1px dotted grey; padding-left: 1em; padding-right: 1em;border-radius: 7px;">
 <div class="pml-admonition">
-    <div class="pml-admonition-label">Note</div>
+    <div class="pml-admonition-label">
+        <p class="pml-paragraph">Note</p>
+
+    </div>
     <div class="pml-admonition-content">
         <p class="pml-paragraph">Please remember that ...</p>
     </div>
@@ -3510,7 +3394,10 @@ Table with header and footer:
                                     <li class="pml-list-element">
                                         <p class="pml-paragraph">HTML code generated:</p>
                                         <pre class="pml-code"><code>&lt;div class=&quot;pml-admonition&quot;&gt;
-    &lt;div class=&quot;pml-admonition-label&quot;&gt;Note&lt;/div&gt;
+    &lt;div class=&quot;pml-admonition-label&quot;&gt;
+        &lt;p class=&quot;pml-paragraph&quot;&gt;Note&lt;/p&gt;
+
+    &lt;/div&gt;
     &lt;div class=&quot;pml-admonition-content&quot;&gt;
         &lt;p class=&quot;pml-paragraph&quot;&gt;Please remember that ...&lt;/p&gt;
     &lt;/div&gt;
@@ -3527,7 +3414,7 @@ Table with header and footer:
                                 <p class="pml-paragraph"><b class="pml-bold">Name: </b><code class="pml-inline-code">quote</code></p>
                                 <p class="pml-paragraph"><b class="pml-bold">Kind:</b> Node with child nodes</p>
                                 <div class="pml-header">Description</div>
-                                <p class="pml-paragraph">A piece of text said or written by somebody else.</p>
+                                <p class="pml-paragraph">The exact words said or written by somebody else.</p>
                                 <div class="pml-header">Attributes</div>
                                 <ul class="pml-list">
                                     <li class="pml-list-element">
@@ -3561,7 +3448,7 @@ Table with header and footer:
 
                                                 </td>
                                                 <td class="pml-table-body-cell">
-                                                    <p class="pml-paragraph">A unique identifier for the node.<br /><br />An id can be used to:<br />- identify a node so that an internal link can be done with an 'xref' (cross reference) node.<br />- identify a node so that it can be styled individually with CSS<br />- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.<br /><br />An identifier must start with a letter or an underscore, and can be followed by any number of letters, digits, underscores, dots, and hyphens. Note for programmers: The regex of an identifier is: [a-zA-Z_][a-zA-Z0-9_\.-]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.<br /></p>
+                                                    <p class="pml-paragraph">A unique identifier for the node.<br /><br />An id can be used to:<br />- identify a node so that an internal link can be done with an 'xref' (cross reference) node.<br />- identify a node so that it can be styled individually with CSS<br />- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.<br /><br />An identifier must start with a letter or an underscore (_), and can be followed by any number of letters, digits, underscores (_), dots (.), and hyphens (-).. Note for programmers: The regex of an identifier is: [a-zA-Z_][a-zA-Z0-9_\.-]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.<br /></p>
 
                                                 </td>
 
@@ -3572,7 +3459,7 @@ Table with header and footer:
 
                                                 </td>
                                                 <td class="pml-table-body-cell">
-                                                    <p class="pml-paragraph">string or null</p>
+                                                    <p class="pml-paragraph">id or null</p>
 
                                                 </td>
 
@@ -3614,90 +3501,6 @@ Table with header and footer:
                                         </table>
 
                                     </li>
-                                    <li class="pml-list-element">
-                                        <div class="pml-header">Source of Quote</div>
-                                        <table class="pml-table">
-                                            <tr class="pml-table-body-row">
-                                                <td class="pml-table-body-cell">
-                                                    <p class="pml-paragraph"><b class="pml-bold">Name</b></p>
-
-                                                </td>
-                                                <td class="pml-table-body-cell">
-                                                    <p class="pml-paragraph">source</p>
-
-                                                </td>
-
-                                            </tr>
-                                            <tr class="pml-table-body-row">
-                                                <td class="pml-table-body-cell">
-                                                    <p class="pml-paragraph"><b class="pml-bold">Is positional parameter</b></p>
-
-                                                </td>
-                                                <td class="pml-table-body-cell">
-                                                    <p class="pml-paragraph">No</p>
-
-                                                </td>
-
-                                            </tr>
-                                            <tr class="pml-table-body-row">
-                                                <td class="pml-table-body-cell">
-                                                    <p class="pml-paragraph"><b class="pml-bold">Description</b></p>
-
-                                                </td>
-                                                <td class="pml-table-body-cell">
-                                                    <p class="pml-paragraph">The source of the quote, such as the name of a person, the title of an article, etc.</p>
-
-                                                </td>
-
-                                            </tr>
-                                            <tr class="pml-table-body-row">
-                                                <td class="pml-table-body-cell">
-                                                    <p class="pml-paragraph"><b class="pml-bold">Type</b></p>
-
-                                                </td>
-                                                <td class="pml-table-body-cell">
-                                                    <p class="pml-paragraph">string or null</p>
-
-                                                </td>
-
-                                            </tr>
-                                            <tr class="pml-table-body-row">
-                                                <td class="pml-table-body-cell">
-                                                    <p class="pml-paragraph"><b class="pml-bold">Required</b></p>
-
-                                                </td>
-                                                <td class="pml-table-body-cell">
-                                                    <p class="pml-paragraph">no</p>
-
-                                                </td>
-
-                                            </tr>
-                                            <tr class="pml-table-body-row">
-                                                <td class="pml-table-body-cell">
-                                                    <p class="pml-paragraph"><b class="pml-bold">Default Value</b></p>
-
-                                                </td>
-                                                <td class="pml-table-body-cell">
-                                                    <p class="pml-paragraph">null</p>
-
-                                                </td>
-
-                                            </tr>
-                                            <tr class="pml-table-body-row">
-                                                <td class="pml-table-body-cell">
-                                                    <p class="pml-paragraph"><b class="pml-bold">Example(s)</b></p>
-
-                                                </td>
-                                                <td class="pml-table-body-cell">
-                                                    <p class="pml-paragraph">source = Dalai Lama</p>
-
-                                                </td>
-
-                                            </tr>
-
-                                        </table>
-
-                                    </li>
 
                                 </ul>
                                 <p class="pml-paragraph"><b class="pml-bold">HTML Attributes:</b> allowed</p>
@@ -3705,8 +3508,9 @@ Table with header and footer:
                                 <ul class="pml-list">
                                     <li class="pml-list-element">
                                         <p class="pml-paragraph">PML code:</p>
-                                        <pre class="pml-code"><code>[quote (source=&quot;Albert Einstein, physicist&quot;)
+                                        <pre class="pml-code"><code>[quote
     Everything should be as simple as possible, but not simpler.
+    [qsource [i Albert Einstein, physicist]]
 ]</code></pre>
 
                                     </li>
@@ -3717,11 +3521,14 @@ Table with header and footer:
     <div class="pml-quote-text-block">
         <div class="pml-quote-text-prefix"></div>
         <div class="pml-quote-text">
-            <p class="pml-paragraph">Everything should be as simple as possible, but not simpler. </p>
+            <p class="pml-paragraph">Everything should be as simple as possible, but not simpler.</p>
         </div>
         <div class="pml-quote-text-suffix"></div>
     </div>
-    <div class="pml-quote-source">Albert Einstein, physicist</div>
+    <div class="pml-quote-source">
+        <p class="pml-paragraph"><i class="pml-italic">Albert Einstein, physicist</i></p>
+
+    </div>
 </blockquote>
 
 </div>
@@ -3734,11 +3541,14 @@ Table with header and footer:
     &lt;div class=&quot;pml-quote-text-block&quot;&gt;
         &lt;div class=&quot;pml-quote-text-prefix&quot;&gt;&lt;/div&gt;
         &lt;div class=&quot;pml-quote-text&quot;&gt;
-            &lt;p class=&quot;pml-paragraph&quot;&gt;Everything should be as simple as possible, but not simpler. &lt;/p&gt;
+            &lt;p class=&quot;pml-paragraph&quot;&gt;Everything should be as simple as possible, but not simpler.&lt;/p&gt;
         &lt;/div&gt;
         &lt;div class=&quot;pml-quote-text-suffix&quot;&gt;&lt;/div&gt;
     &lt;/div&gt;
-    &lt;div class=&quot;pml-quote-source&quot;&gt;Albert Einstein, physicist&lt;/div&gt;
+    &lt;div class=&quot;pml-quote-source&quot;&gt;
+        &lt;p class=&quot;pml-paragraph&quot;&gt;&lt;i class=&quot;pml-italic&quot;&gt;Albert Einstein, physicist&lt;/i&gt;&lt;/p&gt;
+
+    &lt;/div&gt;
 &lt;/blockquote&gt;
 </code></pre>
 
@@ -3786,7 +3596,7 @@ Table with header and footer:
 
                                                 </td>
                                                 <td class="pml-table-body-cell">
-                                                    <p class="pml-paragraph">A unique identifier for the node.<br /><br />An id can be used to:<br />- identify a node so that an internal link can be done with an 'xref' (cross reference) node.<br />- identify a node so that it can be styled individually with CSS<br />- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.<br /><br />An identifier must start with a letter or an underscore, and can be followed by any number of letters, digits, underscores, dots, and hyphens. Note for programmers: The regex of an identifier is: [a-zA-Z_][a-zA-Z0-9_\.-]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.<br /></p>
+                                                    <p class="pml-paragraph">A unique identifier for the node.<br /><br />An id can be used to:<br />- identify a node so that an internal link can be done with an 'xref' (cross reference) node.<br />- identify a node so that it can be styled individually with CSS<br />- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.<br /><br />An identifier must start with a letter or an underscore (_), and can be followed by any number of letters, digits, underscores (_), dots (.), and hyphens (-).. Note for programmers: The regex of an identifier is: [a-zA-Z_][a-zA-Z0-9_\.-]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.<br /></p>
 
                                                 </td>
 
@@ -3797,7 +3607,7 @@ Table with header and footer:
 
                                                 </td>
                                                 <td class="pml-table-body-cell">
-                                                    <p class="pml-paragraph">string or null</p>
+                                                    <p class="pml-paragraph">id or null</p>
 
                                                 </td>
 
@@ -3926,7 +3736,7 @@ Table with header and footer:
 
                                                 </td>
                                                 <td class="pml-table-body-cell">
-                                                    <p class="pml-paragraph">A unique identifier for the node.<br /><br />An id can be used to:<br />- identify a node so that an internal link can be done with an 'xref' (cross reference) node.<br />- identify a node so that it can be styled individually with CSS<br />- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.<br /><br />An identifier must start with a letter or an underscore, and can be followed by any number of letters, digits, underscores, dots, and hyphens. Note for programmers: The regex of an identifier is: [a-zA-Z_][a-zA-Z0-9_\.-]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.<br /></p>
+                                                    <p class="pml-paragraph">A unique identifier for the node.<br /><br />An id can be used to:<br />- identify a node so that an internal link can be done with an 'xref' (cross reference) node.<br />- identify a node so that it can be styled individually with CSS<br />- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.<br /><br />An identifier must start with a letter or an underscore (_), and can be followed by any number of letters, digits, underscores (_), dots (.), and hyphens (-).. Note for programmers: The regex of an identifier is: [a-zA-Z_][a-zA-Z0-9_\.-]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.<br /></p>
 
                                                 </td>
 
@@ -3937,7 +3747,7 @@ Table with header and footer:
 
                                                 </td>
                                                 <td class="pml-table-body-cell">
-                                                    <p class="pml-paragraph">string or null</p>
+                                                    <p class="pml-paragraph">id or null</p>
 
                                                 </td>
 
@@ -4055,7 +3865,7 @@ Table with header and footer:
 
                                                 </td>
                                                 <td class="pml-table-body-cell">
-                                                    <p class="pml-paragraph">A unique identifier for the node.<br /><br />An id can be used to:<br />- identify a node so that an internal link can be done with an 'xref' (cross reference) node.<br />- identify a node so that it can be styled individually with CSS<br />- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.<br /><br />An identifier must start with a letter or an underscore, and can be followed by any number of letters, digits, underscores, dots, and hyphens. Note for programmers: The regex of an identifier is: [a-zA-Z_][a-zA-Z0-9_\.-]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.<br /></p>
+                                                    <p class="pml-paragraph">A unique identifier for the node.<br /><br />An id can be used to:<br />- identify a node so that an internal link can be done with an 'xref' (cross reference) node.<br />- identify a node so that it can be styled individually with CSS<br />- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.<br /><br />An identifier must start with a letter or an underscore (_), and can be followed by any number of letters, digits, underscores (_), dots (.), and hyphens (-).. Note for programmers: The regex of an identifier is: [a-zA-Z_][a-zA-Z0-9_\.-]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.<br /></p>
 
                                                 </td>
 
@@ -4066,7 +3876,7 @@ Table with header and footer:
 
                                                 </td>
                                                 <td class="pml-table-body-cell">
-                                                    <p class="pml-paragraph">string or null</p>
+                                                    <p class="pml-paragraph">id or null</p>
 
                                                 </td>
 
@@ -4458,7 +4268,7 @@ Table with header and footer:
 
                                                 </td>
                                                 <td class="pml-table-body-cell">
-                                                    <p class="pml-paragraph">A unique identifier for the node.<br /><br />An id can be used to:<br />- identify a node so that an internal link can be done with an 'xref' (cross reference) node.<br />- identify a node so that it can be styled individually with CSS<br />- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.<br /><br />An identifier must start with a letter or an underscore, and can be followed by any number of letters, digits, underscores, dots, and hyphens. Note for programmers: The regex of an identifier is: [a-zA-Z_][a-zA-Z0-9_\.-]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.<br /></p>
+                                                    <p class="pml-paragraph">A unique identifier for the node.<br /><br />An id can be used to:<br />- identify a node so that an internal link can be done with an 'xref' (cross reference) node.<br />- identify a node so that it can be styled individually with CSS<br />- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.<br /><br />An identifier must start with a letter or an underscore (_), and can be followed by any number of letters, digits, underscores (_), dots (.), and hyphens (-).. Note for programmers: The regex of an identifier is: [a-zA-Z_][a-zA-Z0-9_\.-]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.<br /></p>
 
                                                 </td>
 
@@ -4469,7 +4279,7 @@ Table with header and footer:
 
                                                 </td>
                                                 <td class="pml-table-body-cell">
-                                                    <p class="pml-paragraph">string or null</p>
+                                                    <p class="pml-paragraph">id or null</p>
 
                                                 </td>
 
@@ -5035,7 +4845,7 @@ Table with header and footer:
 
                                                 </td>
                                                 <td class="pml-table-body-cell">
-                                                    <p class="pml-paragraph">A unique identifier for the node.<br /><br />An id can be used to:<br />- identify a node so that an internal link can be done with an 'xref' (cross reference) node.<br />- identify a node so that it can be styled individually with CSS<br />- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.<br /><br />An identifier must start with a letter or an underscore, and can be followed by any number of letters, digits, underscores, dots, and hyphens. Note for programmers: The regex of an identifier is: [a-zA-Z_][a-zA-Z0-9_\.-]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.<br /></p>
+                                                    <p class="pml-paragraph">A unique identifier for the node.<br /><br />An id can be used to:<br />- identify a node so that an internal link can be done with an 'xref' (cross reference) node.<br />- identify a node so that it can be styled individually with CSS<br />- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.<br /><br />An identifier must start with a letter or an underscore (_), and can be followed by any number of letters, digits, underscores (_), dots (.), and hyphens (-).. Note for programmers: The regex of an identifier is: [a-zA-Z_][a-zA-Z0-9_\.-]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.<br /></p>
 
                                                 </td>
 
@@ -5046,7 +4856,7 @@ Table with header and footer:
 
                                                 </td>
                                                 <td class="pml-table-body-cell">
-                                                    <p class="pml-paragraph">string or null</p>
+                                                    <p class="pml-paragraph">id or null</p>
 
                                                 </td>
 
@@ -5528,7 +5338,7 @@ Table with header and footer:
 
                                                 </td>
                                                 <td class="pml-table-body-cell">
-                                                    <p class="pml-paragraph">A unique identifier for the node.<br /><br />An id can be used to:<br />- identify a node so that an internal link can be done with an 'xref' (cross reference) node.<br />- identify a node so that it can be styled individually with CSS<br />- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.<br /><br />An identifier must start with a letter or an underscore, and can be followed by any number of letters, digits, underscores, dots, and hyphens. Note for programmers: The regex of an identifier is: [a-zA-Z_][a-zA-Z0-9_\.-]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.<br /></p>
+                                                    <p class="pml-paragraph">A unique identifier for the node.<br /><br />An id can be used to:<br />- identify a node so that an internal link can be done with an 'xref' (cross reference) node.<br />- identify a node so that it can be styled individually with CSS<br />- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.<br /><br />An identifier must start with a letter or an underscore (_), and can be followed by any number of letters, digits, underscores (_), dots (.), and hyphens (-).. Note for programmers: The regex of an identifier is: [a-zA-Z_][a-zA-Z0-9_\.-]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.<br /></p>
 
                                                 </td>
 
@@ -5539,7 +5349,7 @@ Table with header and footer:
 
                                                 </td>
                                                 <td class="pml-table-body-cell">
-                                                    <p class="pml-paragraph">string or null</p>
+                                                    <p class="pml-paragraph">id or null</p>
 
                                                 </td>
 
@@ -6105,7 +5915,7 @@ Table with header and footer:
 
                                                 </td>
                                                 <td class="pml-table-body-cell">
-                                                    <p class="pml-paragraph">A unique identifier for the node.<br /><br />An id can be used to:<br />- identify a node so that an internal link can be done with an 'xref' (cross reference) node.<br />- identify a node so that it can be styled individually with CSS<br />- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.<br /><br />An identifier must start with a letter or an underscore, and can be followed by any number of letters, digits, underscores, dots, and hyphens. Note for programmers: The regex of an identifier is: [a-zA-Z_][a-zA-Z0-9_\.-]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.<br /></p>
+                                                    <p class="pml-paragraph">A unique identifier for the node.<br /><br />An id can be used to:<br />- identify a node so that an internal link can be done with an 'xref' (cross reference) node.<br />- identify a node so that it can be styled individually with CSS<br />- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.<br /><br />An identifier must start with a letter or an underscore (_), and can be followed by any number of letters, digits, underscores (_), dots (.), and hyphens (-).. Note for programmers: The regex of an identifier is: [a-zA-Z_][a-zA-Z0-9_\.-]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.<br /></p>
 
                                                 </td>
 
@@ -6116,7 +5926,7 @@ Table with header and footer:
 
                                                 </td>
                                                 <td class="pml-table-body-cell">
-                                                    <p class="pml-paragraph">string or null</p>
+                                                    <p class="pml-paragraph">id or null</p>
 
                                                 </td>
 
@@ -6409,7 +6219,7 @@ Table with header and footer:
 
                                                 </td>
                                                 <td class="pml-table-body-cell">
-                                                    <p class="pml-paragraph">A unique identifier for the node.<br /><br />An id can be used to:<br />- identify a node so that an internal link can be done with an 'xref' (cross reference) node.<br />- identify a node so that it can be styled individually with CSS<br />- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.<br /><br />An identifier must start with a letter or an underscore, and can be followed by any number of letters, digits, underscores, dots, and hyphens. Note for programmers: The regex of an identifier is: [a-zA-Z_][a-zA-Z0-9_\.-]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.<br /></p>
+                                                    <p class="pml-paragraph">A unique identifier for the node.<br /><br />An id can be used to:<br />- identify a node so that an internal link can be done with an 'xref' (cross reference) node.<br />- identify a node so that it can be styled individually with CSS<br />- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.<br /><br />An identifier must start with a letter or an underscore (_), and can be followed by any number of letters, digits, underscores (_), dots (.), and hyphens (-).. Note for programmers: The regex of an identifier is: [a-zA-Z_][a-zA-Z0-9_\.-]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.<br /></p>
 
                                                 </td>
 
@@ -6420,7 +6230,7 @@ Table with header and footer:
 
                                                 </td>
                                                 <td class="pml-table-body-cell">
-                                                    <p class="pml-paragraph">string or null</p>
+                                                    <p class="pml-paragraph">id or null</p>
 
                                                 </td>
 
@@ -6649,7 +6459,7 @@ Table with header and footer:
 
                                                 </td>
                                                 <td class="pml-table-body-cell">
-                                                    <p class="pml-paragraph">A unique identifier for the node.<br /><br />An id can be used to:<br />- identify a node so that an internal link can be done with an 'xref' (cross reference) node.<br />- identify a node so that it can be styled individually with CSS<br />- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.<br /><br />An identifier must start with a letter or an underscore, and can be followed by any number of letters, digits, underscores, dots, and hyphens. Note for programmers: The regex of an identifier is: [a-zA-Z_][a-zA-Z0-9_\.-]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.<br /></p>
+                                                    <p class="pml-paragraph">A unique identifier for the node.<br /><br />An id can be used to:<br />- identify a node so that an internal link can be done with an 'xref' (cross reference) node.<br />- identify a node so that it can be styled individually with CSS<br />- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.<br /><br />An identifier must start with a letter or an underscore (_), and can be followed by any number of letters, digits, underscores (_), dots (.), and hyphens (-).. Note for programmers: The regex of an identifier is: [a-zA-Z_][a-zA-Z0-9_\.-]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.<br /></p>
 
                                                 </td>
 
@@ -6660,7 +6470,7 @@ Table with header and footer:
 
                                                 </td>
                                                 <td class="pml-table-body-cell">
-                                                    <p class="pml-paragraph">string or null</p>
+                                                    <p class="pml-paragraph">id or null</p>
 
                                                 </td>
 
@@ -6716,7 +6526,7 @@ Table with header and footer:
 ]
 
 [fnote_def (id=fn_2)
-    [table_data
+    [sim_table
         ~~~
         c11 | c12 | c13
         c21 | c22 | c23
@@ -6945,7 +6755,7 @@ text [fnote_ref did=fn_2] text [fnote_ref did=fn_1] text
 
                                                 </td>
                                                 <td class="pml-table-body-cell">
-                                                    <p class="pml-paragraph">A unique identifier for the node.<br /><br />An id can be used to:<br />- identify a node so that an internal link can be done with an 'xref' (cross reference) node.<br />- identify a node so that it can be styled individually with CSS<br />- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.<br /><br />An identifier must start with a letter or an underscore, and can be followed by any number of letters, digits, underscores, dots, and hyphens. Note for programmers: The regex of an identifier is: [a-zA-Z_][a-zA-Z0-9_\.-]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.<br /></p>
+                                                    <p class="pml-paragraph">A unique identifier for the node.<br /><br />An id can be used to:<br />- identify a node so that an internal link can be done with an 'xref' (cross reference) node.<br />- identify a node so that it can be styled individually with CSS<br />- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.<br /><br />An identifier must start with a letter or an underscore (_), and can be followed by any number of letters, digits, underscores (_), dots (.), and hyphens (-).. Note for programmers: The regex of an identifier is: [a-zA-Z_][a-zA-Z0-9_\.-]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.<br /></p>
 
                                                 </td>
 
@@ -6956,7 +6766,7 @@ text [fnote_ref did=fn_2] text [fnote_ref did=fn_1] text
 
                                                 </td>
                                                 <td class="pml-table-body-cell">
-                                                    <p class="pml-paragraph">string or null</p>
+                                                    <p class="pml-paragraph">id or null</p>
 
                                                 </td>
 
@@ -7424,7 +7234,7 @@ text [fnote_ref did=fn_2] text [fnote_ref did=fn_1] text
 
                                                 </td>
                                                 <td class="pml-table-body-cell">
-                                                    <p class="pml-paragraph">A unique identifier for the node.<br /><br />An id can be used to:<br />- identify a node so that an internal link can be done with an 'xref' (cross reference) node.<br />- identify a node so that it can be styled individually with CSS<br />- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.<br /><br />An identifier must start with a letter or an underscore, and can be followed by any number of letters, digits, underscores, dots, and hyphens. Note for programmers: The regex of an identifier is: [a-zA-Z_][a-zA-Z0-9_\.-]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.<br /></p>
+                                                    <p class="pml-paragraph">A unique identifier for the node.<br /><br />An id can be used to:<br />- identify a node so that an internal link can be done with an 'xref' (cross reference) node.<br />- identify a node so that it can be styled individually with CSS<br />- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.<br /><br />An identifier must start with a letter or an underscore (_), and can be followed by any number of letters, digits, underscores (_), dots (.), and hyphens (-).. Note for programmers: The regex of an identifier is: [a-zA-Z_][a-zA-Z0-9_\.-]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.<br /></p>
 
                                                 </td>
 
@@ -7435,7 +7245,7 @@ text [fnote_ref did=fn_2] text [fnote_ref did=fn_1] text
 
                                                 </td>
                                                 <td class="pml-table-body-cell">
-                                                    <p class="pml-paragraph">string or null</p>
+                                                    <p class="pml-paragraph">id or null</p>
 
                                                 </td>
 
@@ -7915,7 +7725,7 @@ function start
 
                                                 </td>
                                                 <td class="pml-table-body-cell">
-                                                    <p class="pml-paragraph">A unique identifier for the node.<br /><br />An id can be used to:<br />- identify a node so that an internal link can be done with an 'xref' (cross reference) node.<br />- identify a node so that it can be styled individually with CSS<br />- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.<br /><br />An identifier must start with a letter or an underscore, and can be followed by any number of letters, digits, underscores, dots, and hyphens. Note for programmers: The regex of an identifier is: [a-zA-Z_][a-zA-Z0-9_\.-]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.<br /></p>
+                                                    <p class="pml-paragraph">A unique identifier for the node.<br /><br />An id can be used to:<br />- identify a node so that an internal link can be done with an 'xref' (cross reference) node.<br />- identify a node so that it can be styled individually with CSS<br />- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.<br /><br />An identifier must start with a letter or an underscore (_), and can be followed by any number of letters, digits, underscores (_), dots (.), and hyphens (-).. Note for programmers: The regex of an identifier is: [a-zA-Z_][a-zA-Z0-9_\.-]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.<br /></p>
 
                                                 </td>
 
@@ -7926,7 +7736,7 @@ function start
 
                                                 </td>
                                                 <td class="pml-table-body-cell">
-                                                    <p class="pml-paragraph">string or null</p>
+                                                    <p class="pml-paragraph">id or null</p>
 
                                                 </td>
 
@@ -8040,7 +7850,7 @@ function start
 
                                                 </td>
                                                 <td class="pml-table-body-cell">
-                                                    <p class="pml-paragraph">A unique identifier for the node.<br /><br />An id can be used to:<br />- identify a node so that an internal link can be done with an 'xref' (cross reference) node.<br />- identify a node so that it can be styled individually with CSS<br />- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.<br /><br />An identifier must start with a letter or an underscore, and can be followed by any number of letters, digits, underscores, dots, and hyphens. Note for programmers: The regex of an identifier is: [a-zA-Z_][a-zA-Z0-9_\.-]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.<br /></p>
+                                                    <p class="pml-paragraph">A unique identifier for the node.<br /><br />An id can be used to:<br />- identify a node so that an internal link can be done with an 'xref' (cross reference) node.<br />- identify a node so that it can be styled individually with CSS<br />- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.<br /><br />An identifier must start with a letter or an underscore (_), and can be followed by any number of letters, digits, underscores (_), dots (.), and hyphens (-).. Note for programmers: The regex of an identifier is: [a-zA-Z_][a-zA-Z0-9_\.-]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.<br /></p>
 
                                                 </td>
 
@@ -8051,7 +7861,7 @@ function start
 
                                                 </td>
                                                 <td class="pml-table-body-cell">
-                                                    <p class="pml-paragraph">string or null</p>
+                                                    <p class="pml-paragraph">id or null</p>
 
                                                 </td>
 
@@ -8368,95 +8178,11 @@ SOLD OUT!</code></pre>
                         <section id="node_link" class="pml-chapter">
                             <h3 class="pml-chapter-title">URL Link</h3>
                             <p class="pml-paragraph"><b class="pml-bold">Name: </b><code class="pml-inline-code">link</code></p>
-                            <p class="pml-paragraph"><b class="pml-bold">Kind:</b> Node without child nodes</p>
+                            <p class="pml-paragraph"><b class="pml-bold">Kind:</b> Node with child nodes</p>
                             <div class="pml-header">Description</div>
                             <p class="pml-paragraph">A URL link to a resource, such as a website or a file to download.</p>
                             <div class="pml-header">Attributes</div>
                             <ul class="pml-list">
-                                <li class="pml-list-element">
-                                    <div class="pml-header">URL Text</div>
-                                    <table class="pml-table">
-                                        <tr class="pml-table-body-row">
-                                            <td class="pml-table-body-cell">
-                                                <p class="pml-paragraph"><b class="pml-bold">Name</b></p>
-
-                                            </td>
-                                            <td class="pml-table-body-cell">
-                                                <p class="pml-paragraph">text</p>
-
-                                            </td>
-
-                                        </tr>
-                                        <tr class="pml-table-body-row">
-                                            <td class="pml-table-body-cell">
-                                                <p class="pml-paragraph"><b class="pml-bold">Is positional parameter</b></p>
-
-                                            </td>
-                                            <td class="pml-table-body-cell">
-                                                <p class="pml-paragraph">No</p>
-
-                                            </td>
-
-                                        </tr>
-                                        <tr class="pml-table-body-row">
-                                            <td class="pml-table-body-cell">
-                                                <p class="pml-paragraph"><b class="pml-bold">Description</b></p>
-
-                                            </td>
-                                            <td class="pml-table-body-cell">
-                                                <p class="pml-paragraph">The text to be displayed instead of the URL. If no text is specified then the URL itself is displayed.</p>
-
-                                            </td>
-
-                                        </tr>
-                                        <tr class="pml-table-body-row">
-                                            <td class="pml-table-body-cell">
-                                                <p class="pml-paragraph"><b class="pml-bold">Type</b></p>
-
-                                            </td>
-                                            <td class="pml-table-body-cell">
-                                                <p class="pml-paragraph">string or null</p>
-
-                                            </td>
-
-                                        </tr>
-                                        <tr class="pml-table-body-row">
-                                            <td class="pml-table-body-cell">
-                                                <p class="pml-paragraph"><b class="pml-bold">Required</b></p>
-
-                                            </td>
-                                            <td class="pml-table-body-cell">
-                                                <p class="pml-paragraph">no</p>
-
-                                            </td>
-
-                                        </tr>
-                                        <tr class="pml-table-body-row">
-                                            <td class="pml-table-body-cell">
-                                                <p class="pml-paragraph"><b class="pml-bold">Default Value</b></p>
-
-                                            </td>
-                                            <td class="pml-table-body-cell">
-                                                <p class="pml-paragraph">null</p>
-
-                                            </td>
-
-                                        </tr>
-                                        <tr class="pml-table-body-row">
-                                            <td class="pml-table-body-cell">
-                                                <p class="pml-paragraph"><b class="pml-bold">Example(s)</b></p>
-
-                                            </td>
-                                            <td class="pml-table-body-cell">
-                                                <p class="pml-paragraph">text = our website</p>
-
-                                            </td>
-
-                                        </tr>
-
-                                    </table>
-
-                                </li>
                                 <li class="pml-list-element">
                                     <div class="pml-header">URL</div>
                                     <table class="pml-table">
@@ -8548,7 +8274,7 @@ SOLD OUT!</code></pre>
                             <ul class="pml-list">
                                 <li class="pml-list-element">
                                     <p class="pml-paragraph">PML code:</p>
-                                    <pre class="pml-code"><code>Please have a look at [link url=https://www.pml-lang.dev/docs/articles/practical-document-markup-language/index.html text=&quot;this article&quot;] for more information.</code></pre>
+                                    <pre class="pml-code"><code>Please have a look at [link (url=https://www.pml-lang.dev/docs/articles/practical-document-markup-language/index.html) this article] for more information.</code></pre>
 
                                 </li>
                                 <li class="pml-list-element">
@@ -8575,7 +8301,7 @@ SOLD OUT!</code></pre>
                             <p class="pml-paragraph"><b class="pml-bold">Name: </b><code class="pml-inline-code">verbatim</code></p>
                             <p class="pml-paragraph"><b class="pml-bold">Kind:</b> Node with raw text content</p>
                             <div class="pml-header">Description</div>
-                            <p class="pml-paragraph">Raw, verbatim text that is rendered as is, without any transformations</p>
+                            <p class="pml-paragraph">Raw, verbatim text that is rendered as is, without any transformations.<br />Note: The text still has to be escaped, according to the standard PML escaping rules.</p>
                             <div class="pml-header">Attributes</div>
                             <p class="pml-paragraph">This node doesn't have attributes.</p>
                             <p class="pml-paragraph"><b class="pml-bold">HTML Attributes:</b> allowed</p>
@@ -8608,7 +8334,7 @@ SOLD OUT!</code></pre>
                         <section id="node_xref" class="pml-chapter">
                             <h3 class="pml-chapter-title">Cross-Reference</h3>
                             <p class="pml-paragraph"><b class="pml-bold">Name: </b><code class="pml-inline-code">xref</code></p>
-                            <p class="pml-paragraph"><b class="pml-bold">Kind:</b> Node without child nodes</p>
+                            <p class="pml-paragraph"><b class="pml-bold">Kind:</b> Node with child nodes</p>
                             <div class="pml-header">Description</div>
                             <p class="pml-paragraph">A cross-reference (link) to another node in the same document.</p>
                             <div class="pml-header">Attributes</div>
@@ -8622,7 +8348,7 @@ SOLD OUT!</code></pre>
 
                                             </td>
                                             <td class="pml-table-body-cell">
-                                                <p class="pml-paragraph">node_id</p>
+                                                <p class="pml-paragraph">ref_id</p>
 
                                             </td>
 
@@ -8697,90 +8423,6 @@ SOLD OUT!</code></pre>
                                     </table>
 
                                 </li>
-                                <li class="pml-list-element">
-                                    <div class="pml-header">Text</div>
-                                    <table class="pml-table">
-                                        <tr class="pml-table-body-row">
-                                            <td class="pml-table-body-cell">
-                                                <p class="pml-paragraph"><b class="pml-bold">Name</b></p>
-
-                                            </td>
-                                            <td class="pml-table-body-cell">
-                                                <p class="pml-paragraph">text</p>
-
-                                            </td>
-
-                                        </tr>
-                                        <tr class="pml-table-body-row">
-                                            <td class="pml-table-body-cell">
-                                                <p class="pml-paragraph"><b class="pml-bold">Is positional parameter</b></p>
-
-                                            </td>
-                                            <td class="pml-table-body-cell">
-                                                <p class="pml-paragraph">No</p>
-
-                                            </td>
-
-                                        </tr>
-                                        <tr class="pml-table-body-row">
-                                            <td class="pml-table-body-cell">
-                                                <p class="pml-paragraph"><b class="pml-bold">Description</b></p>
-
-                                            </td>
-                                            <td class="pml-table-body-cell">
-                                                <p class="pml-paragraph">The text to be displayed for the cross-reference.<br />If this attribute is omitted, then the title of the target node is displayed. If the target node doesn't have a title, then the target node's identifier is displayed instead.</p>
-
-                                            </td>
-
-                                        </tr>
-                                        <tr class="pml-table-body-row">
-                                            <td class="pml-table-body-cell">
-                                                <p class="pml-paragraph"><b class="pml-bold">Type</b></p>
-
-                                            </td>
-                                            <td class="pml-table-body-cell">
-                                                <p class="pml-paragraph">string or null</p>
-
-                                            </td>
-
-                                        </tr>
-                                        <tr class="pml-table-body-row">
-                                            <td class="pml-table-body-cell">
-                                                <p class="pml-paragraph"><b class="pml-bold">Required</b></p>
-
-                                            </td>
-                                            <td class="pml-table-body-cell">
-                                                <p class="pml-paragraph">no</p>
-
-                                            </td>
-
-                                        </tr>
-                                        <tr class="pml-table-body-row">
-                                            <td class="pml-table-body-cell">
-                                                <p class="pml-paragraph"><b class="pml-bold">Default Value</b></p>
-
-                                            </td>
-                                            <td class="pml-table-body-cell">
-                                                <p class="pml-paragraph">null</p>
-
-                                            </td>
-
-                                        </tr>
-                                        <tr class="pml-table-body-row">
-                                            <td class="pml-table-body-cell">
-                                                <p class="pml-paragraph"><b class="pml-bold">Example(s)</b></p>
-
-                                            </td>
-                                            <td class="pml-table-body-cell">
-                                                <p class="pml-paragraph">text = &quot;Hello World example&quot;</p>
-
-                                            </td>
-
-                                        </tr>
-
-                                    </table>
-
-                                </li>
 
                             </ul>
                             <p class="pml-paragraph"><b class="pml-bold">HTML Attributes:</b> allowed</p>
@@ -8793,7 +8435,9 @@ SOLD OUT!</code></pre>
 ]
 
 [ch [title Conclusion]
-    As we saw in chapter [xref node_id=solution], it is ...
+    As we saw in chapter [xref (ref_id=solution)], ...
+    ...
+    As we saw [xref (ref_id=solution) previously], ...
 ]
 </code></pre>
 
@@ -8808,7 +8452,7 @@ SOLD OUT!</code></pre>
 </section>
 <section id="ch__2" class="pml-chapter">
     <h2 class="pml-chapter-title">Conclusion</h2>
-    <p class="pml-paragraph">As we saw in chapter <a class="pml-xref" href="#solution">A Beautiful Solution</a>, it is ... </p>
+    <p class="pml-paragraph">As we saw in chapter <a class="pml-xref" href="#solution">A Beautiful Solution</a>, ... ... As we saw <a class="pml-xref" href="#solution">previously</a>, ... </p>
 
 </section>
 
@@ -8825,7 +8469,7 @@ SOLD OUT!</code></pre>
 &lt;/section&gt;
 &lt;section id=&quot;ch__2&quot; class=&quot;pml-chapter&quot;&gt;
     &lt;h2 class=&quot;pml-chapter-title&quot;&gt;Conclusion&lt;/h2&gt;
-    &lt;p class=&quot;pml-paragraph&quot;&gt;As we saw in chapter &lt;a class=&quot;pml-xref&quot; href=&quot;#solution&quot;&gt;A Beautiful Solution&lt;/a&gt;, it is ... &lt;/p&gt;
+    &lt;p class=&quot;pml-paragraph&quot;&gt;As we saw in chapter &lt;a class=&quot;pml-xref&quot; href=&quot;#solution&quot;&gt;A Beautiful Solution&lt;/a&gt;, ... ... As we saw &lt;a class=&quot;pml-xref&quot; href=&quot;#solution&quot;&gt;previously&lt;/a&gt;, ... &lt;/p&gt;
 
 &lt;/section&gt;
 </code></pre>
@@ -9264,17 +8908,17 @@ text text [fnote
                                 <ul class="pml-list">
                                     <li class="pml-list-element">
                                         <p class="pml-paragraph">PML code:</p>
-                                        <pre class="pml-code"><code>text [fnote_ref did=1] text
+                                        <pre class="pml-code"><code>text [fnote_ref did=f1] text
 
-Advice for life [fnote_ref did=2 text=&quot;Rodegast 1987&quot;].
+Advice for life [fnote_ref did=f2 text=&quot;Rodegast 1987&quot;].
 
-text [fnote_ref did=1] [fnote_ref did=2] text
+text [fnote_ref did=f1] [fnote_ref did=f2] text
 
-[fnote_def (id=1)
+[fnote_def (id=f1)
     Text of [i footnote 1]
 ]
 
-[fnote_def (id=2)
+[fnote_def (id=f2)
     Rodegast, P. (1987). [i Emmanuel's Book: A Manual for Living Comfortably in the Cosmos.] Bantam.
 ]
 
@@ -9285,20 +8929,20 @@ text [fnote_ref did=1] [fnote_ref did=2] text
                                     <li class="pml-list-element">
                                         <p class="pml-paragraph">Result:</p>
                                         <div class="pml-html"><div style="border: 1px dotted grey; padding-left: 1em; padding-right: 1em;border-radius: 7px;">
-<p class="pml-paragraph">text <sup id="fnr__1" class="pml-footnote-ref"><a href="#1">1</a></sup> text</p>
-<p class="pml-paragraph">Advice for life <sup id="fnr__2" class="pml-footnote-ref"><a href="#2">Rodegast 1987</a></sup>.</p>
-<p class="pml-paragraph">text <sup id="fnr__3" class="pml-footnote-ref"><a href="#1">1</a></sup> <sup id="fnr__4" class="pml-footnote-ref"><a href="#2">2</a></sup> text</p>
+<p class="pml-paragraph">text <sup id="fnr__1" class="pml-footnote-ref"><a href="#f1">1</a></sup> text</p>
+<p class="pml-paragraph">Advice for life <sup id="fnr__2" class="pml-footnote-ref"><a href="#f2">Rodegast 1987</a></sup>.</p>
+<p class="pml-paragraph">text <sup id="fnr__3" class="pml-footnote-ref"><a href="#f1">1</a></sup> <sup id="fnr__4" class="pml-footnote-ref"><a href="#f2">2</a></sup> text</p>
 <div class="pml-header">Footnotes</div>
 <div class="pml-footnotes">
     <table>
-        <tr id="1" class="pml-footnote">
+        <tr id="f1" class="pml-footnote">
             <td style="vertical-align: top;">1.</td>
             <td class="pml-footnote-backlink" style="vertical-align: top;"><a href="#fnr__1">^</a><a href="#fnr__3">^</a></td>
             <td>
                 <p class="pml-paragraph">Text of <i class="pml-italic">footnote 1</i></p>
             </td>
         </tr>
-        <tr id="2" class="pml-footnote">
+        <tr id="f2" class="pml-footnote">
             <td style="vertical-align: top;">2.</td>
             <td class="pml-footnote-backlink" style="vertical-align: top;"><a href="#fnr__2">^</a><a href="#fnr__4">^</a></td>
             <td>
@@ -9314,20 +8958,20 @@ text [fnote_ref did=1] [fnote_ref did=2] text
                                     </li>
                                     <li class="pml-list-element">
                                         <p class="pml-paragraph">HTML code generated:</p>
-                                        <pre class="pml-code"><code>&lt;p class=&quot;pml-paragraph&quot;&gt;text &lt;sup id=&quot;fnr__1&quot; class=&quot;pml-footnote-ref&quot;&gt;&lt;a href=&quot;#1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; text&lt;/p&gt;
-&lt;p class=&quot;pml-paragraph&quot;&gt;Advice for life &lt;sup id=&quot;fnr__2&quot; class=&quot;pml-footnote-ref&quot;&gt;&lt;a href=&quot;#2&quot;&gt;Rodegast 1987&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
-&lt;p class=&quot;pml-paragraph&quot;&gt;text &lt;sup id=&quot;fnr__3&quot; class=&quot;pml-footnote-ref&quot;&gt;&lt;a href=&quot;#1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; &lt;sup id=&quot;fnr__4&quot; class=&quot;pml-footnote-ref&quot;&gt;&lt;a href=&quot;#2&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; text&lt;/p&gt;
+                                        <pre class="pml-code"><code>&lt;p class=&quot;pml-paragraph&quot;&gt;text &lt;sup id=&quot;fnr__1&quot; class=&quot;pml-footnote-ref&quot;&gt;&lt;a href=&quot;#f1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; text&lt;/p&gt;
+&lt;p class=&quot;pml-paragraph&quot;&gt;Advice for life &lt;sup id=&quot;fnr__2&quot; class=&quot;pml-footnote-ref&quot;&gt;&lt;a href=&quot;#f2&quot;&gt;Rodegast 1987&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;p class=&quot;pml-paragraph&quot;&gt;text &lt;sup id=&quot;fnr__3&quot; class=&quot;pml-footnote-ref&quot;&gt;&lt;a href=&quot;#f1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; &lt;sup id=&quot;fnr__4&quot; class=&quot;pml-footnote-ref&quot;&gt;&lt;a href=&quot;#f2&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; text&lt;/p&gt;
 &lt;div class=&quot;pml-header&quot;&gt;Footnotes&lt;/div&gt;
 &lt;div class=&quot;pml-footnotes&quot;&gt;
     &lt;table&gt;
-        &lt;tr id=&quot;1&quot; class=&quot;pml-footnote&quot;&gt;
+        &lt;tr id=&quot;f1&quot; class=&quot;pml-footnote&quot;&gt;
             &lt;td style=&quot;vertical-align: top;&quot;&gt;1.&lt;/td&gt;
             &lt;td class=&quot;pml-footnote-backlink&quot; style=&quot;vertical-align: top;&quot;&gt;&lt;a href=&quot;#fnr__1&quot;&gt;^&lt;/a&gt;&lt;a href=&quot;#fnr__3&quot;&gt;^&lt;/a&gt;&lt;/td&gt;
             &lt;td&gt;
                 &lt;p class=&quot;pml-paragraph&quot;&gt;Text of &lt;i class=&quot;pml-italic&quot;&gt;footnote 1&lt;/i&gt;&lt;/p&gt;
             &lt;/td&gt;
         &lt;/tr&gt;
-        &lt;tr id=&quot;2&quot; class=&quot;pml-footnote&quot;&gt;
+        &lt;tr id=&quot;f2&quot; class=&quot;pml-footnote&quot;&gt;
             &lt;td style=&quot;vertical-align: top;&quot;&gt;2.&lt;/td&gt;
             &lt;td class=&quot;pml-footnote-backlink&quot; style=&quot;vertical-align: top;&quot;&gt;&lt;a href=&quot;#fnr__2&quot;&gt;^&lt;/a&gt;&lt;a href=&quot;#fnr__4&quot;&gt;^&lt;/a&gt;&lt;/td&gt;
             &lt;td&gt;

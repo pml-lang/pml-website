@@ -11,7 +11,7 @@
 
     Experimental features are tagged by the suffix [c() (Experimental)] in their title.
 
-    If you encounter a bug or miss an important functionality, then please submit an [link url=https://github.com/pml-lang/advanced-features-manual/issues text=issue].
+    If you encounter a bug or miss an important functionality, then please submit an [link (url=https://github.com/pml-lang/advanced-features-manual/issues) issue].
 
-    If you have a question or want to discuss anything (e.g. an idea or enhancement), then please create a [link url=https://github.com/pml-lang/advanced-features-manual/discussions text=discussion].
+    If you have a question or want to discuss anything (e.g. an idea or enhancement), then please create a [link (url=https://github.com/pml-lang/advanced-features-manual/discussions) discussion].
 ]

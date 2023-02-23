@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="generator" content="PML 3.1.0 (www.pml-lang.dev)" />
+        <meta name="generator" content="PML 4.0.0 (www.pml-lang.dev)" />
         <title>PMLC Commands Reference Manual</title>
         <link rel="stylesheet" href="css/pml-default.css">
         <link rel="stylesheet" href="css/pml-print-default.css" media="print">
@@ -29,7 +29,7 @@
                                             <li class="pml-toc-leaf-node"><a href="#command_version">Display PMLC's Version Number</a></li>
                                             <li class="pml-toc-leaf-node"><a href="#command_PDML_to_XML">Convert PDML to XML</a></li>
                                             <li class="pml-toc-leaf-node"><a href="#command_PDML_to_standalone">Create Standalone PDML</a></li>
-                                            <li class="pml-toc-leaf-node"><a href="#command_export_tags">Export PML Nodes And Attributes Data to a JSON File</a></li>
+                                            <li class="pml-toc-leaf-node"><a href="#command_export_meta_data">Export PML Meta Data to a JSON File</a></li>
                                             <li class="pml-toc-leaf-node"><a href="#command_create_nodes_reference_manual">Create Nodes Reference Manual</a></li>
                                             <li class="pml-toc-leaf-node"><a href="#command_create_commands_reference_manual">Create Commands Reference Manual</a></li>
                                         </ul>
@@ -39,7 +39,7 @@
                         </div>
                     </nav>
                 </aside>
-                <article id="doc__" class="pml-doc-text" id="doc__">
+                <article id="doc__" class="pml-doc-text">
                     <h1 class="pml-doc-title">PMLC Commands Reference Manual</h1>
                     <table class="pml-table">
                         <tr class="pml-table-body-row">
@@ -48,7 +48,7 @@
 
                             </td>
                             <td class="pml-table-body-cell">
-                                <p class="pml-paragraph">PMLC 3.1.0 2022-10-03</p>
+                                <p class="pml-paragraph">PMLC 4.0.0 2023-02-23</p>
 
                             </td>
 
@@ -92,7 +92,10 @@
                         <h2 class="pml-chapter-title">Introduction</h2>
                         <p class="pml-paragraph">This document describes the commands supported by PMLC's command line interface (CLI).</p>
                         <div class="pml-admonition">
-                            <div class="pml-admonition-label">Note</div>
+                            <div class="pml-admonition-label">
+                                <p class="pml-paragraph">Note</p>
+
+                            </div>
                             <div class="pml-admonition-content">
                                 <p class="pml-paragraph">All command names and options are case-insensitive. For example, instead of writing <code class="pml-inline-code">PML_to_HTML</code>, you can also write <code class="pml-inline-code">pml_to_html</code>.</p>
                             </div>
@@ -282,7 +285,7 @@ pmlc p2h --output ../website/docs/about/index.html about.pml</pre>
 
                                             </td>
                                             <td class="pml-table-body-cell">
-                                                <p class="pml-paragraph">[C:\Users\Lisa\AppData\Roaming\PML_Companion\3_0\config\PML_to_HTML\css\pml-default.css, C:\Users\Lisa\AppData\Roaming\PML_Companion\3_0\config\PML_to_HTML\css\pml-print-default.css]</p>
+                                                <p class="pml-paragraph">[C:\Users\Lisa\AppData\Roaming\PML_Companion\4_0\config\PML_to_HTML\css\pml-default.css, C:\Users\Lisa\AppData\Roaming\PML_Companion\4_0\config\PML_to_HTML\css\pml-print-default.css]</p>
 
                                             </td>
 
@@ -377,7 +380,7 @@ pmlc p2h --output ../website/docs/about/index.html about.pml</pre>
 
                                             </td>
                                             <td class="pml-table-body-cell">
-                                                <p class="pml-paragraph">C:\Users\Lisa\AppData\Roaming\PML_Companion\3_0\config\PML_to_HTML\html\default_html_footer_template.txt</p>
+                                                <p class="pml-paragraph">C:\Users\Lisa\AppData\Roaming\PML_Companion\4_0\config\PML_to_HTML\html\default_html_footer_template.txt</p>
 
                                             </td>
 
@@ -472,7 +475,7 @@ pmlc p2h --output ../website/docs/about/index.html about.pml</pre>
 
                                             </td>
                                             <td class="pml-table-body-cell">
-                                                <p class="pml-paragraph">C:\Users\Lisa\AppData\Roaming\PML_Companion\3_0\config\PML_to_HTML\html\default_html_header_template.txt</p>
+                                                <p class="pml-paragraph">C:\Users\Lisa\AppData\Roaming\PML_Companion\4_0\config\PML_to_HTML\html\default_html_header_template.txt</p>
 
                                             </td>
 
@@ -1825,18 +1828,18 @@ pmlc p2h --output ../website/docs/about/index.html about.pml</pre>
                             </ul>
 
                         </section>
-                        <section id="command_export_tags" class="pml-chapter">
-                            <h3 class="pml-chapter-title">Export PML Nodes And Attributes Data to a JSON File</h3>
-                            <p class="pml-paragraph"><b class="pml-bold">Name: </b><code class="pml-inline-code">export_tags</code></p>
-                            <p class="pml-paragraph"><b class="pml-bold">Alternative name: </b><code class="pml-inline-code">et</code></p>
+                        <section id="command_export_meta_data" class="pml-chapter">
+                            <h3 class="pml-chapter-title">Export PML Meta Data to a JSON File</h3>
+                            <p class="pml-paragraph"><b class="pml-bold">Name: </b><code class="pml-inline-code">export_meta_data</code></p>
+                            <p class="pml-paragraph"><b class="pml-bold">Alternative name: </b><code class="pml-inline-code">md</code></p>
                             <div class="pml-header">Description</div>
-                            <p class="pml-paragraph">This command creates a JSON file describing PML nodes and attributes.<br />The JSON file can be used by editor plugins and tools to get structured data about PML nodes and attributes.</p>
+                            <p class="pml-paragraph">This command creates a JSON file containing PML meta data (nodes, attributes, etc).<br />The JSON file can be used by editor plugins and tools to query structured data about PML.</p>
                             <div class="pml-header">Examples</div>
-                            <pre class="pml-input">pmlc export_tags</pre>
+                            <pre class="pml-input">pmlc export_meta_data</pre>
                             <div class="pml-header">Input Parameters</div>
                             <ul class="pml-list">
                                 <li class="pml-list-element">
-                                    <div class="pml-header">JSON Output File Path</div>
+                                    <div class="pml-header">Output File Path</div>
                                     <table class="pml-table">
                                         <tr class="pml-table-body-row">
                                             <td class="pml-table-body-cell">
@@ -1877,7 +1880,7 @@ pmlc p2h --output ../website/docs/about/index.html about.pml</pre>
 
                                             </td>
                                             <td class="pml-table-body-cell">
-                                                <p class="pml-paragraph">The absolute or relative path of the JSON file to be created.<br />If the path is relative, it is relative to the current working directory.<br />The default value is file 'pml_tags.json' created in the current working directory.<br />If the file exists already it will be overwritten.</p>
+                                                <p class="pml-paragraph">The absolute or relative path of the file to be created.<br />If the path is relative, it is relative to the current working directory.<br />The default value is file 'PML_meta_data.json' created in the current working directory.<br />If the file exists already it will be overwritten.</p>
 
                                             </td>
 
@@ -1910,7 +1913,7 @@ pmlc p2h --output ../website/docs/about/index.html about.pml</pre>
 
                                             </td>
                                             <td class="pml-table-body-cell">
-                                                <p class="pml-paragraph">pml_tags.json</p>
+                                                <p class="pml-paragraph">PML_meta_data.json</p>
 
                                             </td>
 
@@ -1921,7 +1924,7 @@ pmlc p2h --output ../website/docs/about/index.html about.pml</pre>
 
                                             </td>
                                             <td class="pml-table-body-cell">
-                                                <p class="pml-paragraph">--output_file pml/tags.json</p>
+                                                <p class="pml-paragraph">--output_file pml/nodes.json</p>
 
                                             </td>
 

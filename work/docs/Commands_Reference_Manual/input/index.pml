@@ -1,20 +1,20 @@
 [doc [title PMLC Commands Reference Manual]
 
     [table 
-        [tr [tc [b PML Version]][tc PMLC 3.1.0 2022-10-03]]
-        [tr [tc [b License]][tc [link url=https://creativecommons.org/licenses/by-nd/4.0/ text="CC BY-ND 4.0"]]]
+        [tr [tc [b PML Version]][tc PMLC 4.0.0 2023-02-23]]
+        [tr [tc [b License]][tc [link (url=https://creativecommons.org/licenses/by-nd/4.0/) CC BY-ND 4.0]]]
         [tr [tc [b Author and Copyright]][tc Christian Neumanns]]
-        [tr [tc [b Website]][tc [link url=https://www.pml-lang.dev/]]]
+        [tr [tc [b Website]][tc [link (url=https://www.pml-lang.dev/)]]]
     ]
-    [ch ( id="introduction" ) [title Introduction]
+    [ch [@ id="introduction" ] [title Introduction]
         [p This document describes the commands supported by PMLC's command line interface (CLI).]
         [note 
             [p All command names and options are case-insensitive. For example, instead of writing [c PML_to_HTML], you can also write [c pml_to_html].]
         ]
     ]
 
-    [ch ( id="commands" ) [title Commands]
-        [ch ( id="command_PML_to_HTML" ) [title Convert PML to HTML]
+    [ch [@ id="commands" ] [title Commands]
+        [ch [@ id="command_PML_to_HTML" ] [title Convert PML to HTML]
             [b Name: ][c PML_to_HTML]
 
             [b Alternative name: ][c p2h]
@@ -55,7 +55,7 @@
                         [tr [tc [b Description]][tc This parameter is used to explicitly specify one or more CSS files to be used in the final HTML document.[nl][nl]The value is a comma separated list of directories and/or files.[nl]If a directory is specified, then all files in the directory (including files in sub-directories) are used.[nl]All directory and file paths can be absolute or relative.[nl]Each file must be a valid CSS file.[nl][nl]By default, file(s) in sub-directory 'config/PML_to_HTML/css' of PMLC's shared data directory are used.[nl]If these default files are to be used together with other CSS files specified by this parameter, then the default files location must also explicitly be specified in the parameter]]
                         [tr [tc [b Type]][tc directory_or_file_paths or null]]
                         [tr [tc [b Required]][tc no]]
-                        [tr [tc [b Default Value]][tc \[C:\\Users\\Lisa\\AppData\\Roaming\\PML_Companion\\3_0\\config\\PML_to_HTML\\css\\pml-default.css, C:\\Users\\Lisa\\AppData\\Roaming\\PML_Companion\\3_0\\config\\PML_to_HTML\\css\\pml-print-default.css\]]]
+                        [tr [tc [b Default Value]][tc \[C:\\Users\\Lisa\\AppData\\Roaming\\PML_Companion\\4_0\\config\\PML_to_HTML\\css\\pml-default.css, C:\\Users\\Lisa\\AppData\\Roaming\\PML_Companion\\4_0\\config\\PML_to_HTML\\css\\pml-print-default.css\]]]
                         [tr [tc [b Example(s)]][tc ../../shared/css, css]]
                     ]
                 ]
@@ -69,7 +69,7 @@
                         [tr [tc [b Description]][tc The path of the HTML footer template file.[nl]The path can be absolute or relative]]
                         [tr [tc [b Type]][tc file_path or null]]
                         [tr [tc [b Required]][tc no]]
-                        [tr [tc [b Default Value]][tc C:\\Users\\Lisa\\AppData\\Roaming\\PML_Companion\\3_0\\config\\PML_to_HTML\\html\\default_html_footer_template.txt]]
+                        [tr [tc [b Default Value]][tc C:\\Users\\Lisa\\AppData\\Roaming\\PML_Companion\\4_0\\config\\PML_to_HTML\\html\\default_html_footer_template.txt]]
                         [tr [tc [b Example(s)]][tc ../../shared/HTML_footer.txt]]
                     ]
                 ]
@@ -83,7 +83,7 @@
                         [tr [tc [b Description]][tc The path of the HTML header template file.[nl]The path can be absolute or relative]]
                         [tr [tc [b Type]][tc file_path or null]]
                         [tr [tc [b Required]][tc no]]
-                        [tr [tc [b Default Value]][tc C:\\Users\\Lisa\\AppData\\Roaming\\PML_Companion\\3_0\\config\\PML_to_HTML\\html\\default_html_header_template.txt]]
+                        [tr [tc [b Default Value]][tc C:\\Users\\Lisa\\AppData\\Roaming\\PML_Companion\\4_0\\config\\PML_to_HTML\\html\\default_html_header_template.txt]]
                         [tr [tc [b Example(s)]][tc ../../shared/HTML_header.txt]]
                     ]
                 ]
@@ -221,7 +221,7 @@
             ]
         ]
 
-        [ch ( id="command_info" ) [title Display PMLC Info]
+        [ch [@ id="command_info" ] [title Display PMLC Info]
             [b Name: ][c info]
 
             [header Description]
@@ -238,7 +238,7 @@
             [p This command has no input parameters]
         ]
 
-        [ch ( id="command_version" ) [title Display PMLC's Version Number]
+        [ch [@ id="command_version" ] [title Display PMLC's Version Number]
             [b Name: ][c version]
 
             [header Description]
@@ -255,7 +255,7 @@
             [p This command has no input parameters]
         ]
 
-        [ch ( id="command_PDML_to_XML" ) [title Convert PDML to XML]
+        [ch [@ id="command_PDML_to_XML" ] [title Convert PDML to XML]
             [b Name: ][c PDML_to_XML]
 
             [b Alternative name: ][c pdml2xml]
@@ -303,7 +303,7 @@
             ]
         ]
 
-        [ch ( id="command_PDML_to_standalone" ) [title Create Standalone PDML]
+        [ch [@ id="command_PDML_to_standalone" ] [title Create Standalone PDML]
             [b Name: ][c PDML_to_standalone]
 
             [b Alternative name: ][c pdml2sa]
@@ -351,41 +351,41 @@
             ]
         ]
 
-        [ch ( id="command_export_tags" ) [title Export PML Nodes And Attributes Data to a JSON File]
-            [b Name: ][c export_tags]
+        [ch [@ id="command_export_meta_data" ] [title Export PML Meta Data to a JSON File]
+            [b Name: ][c export_meta_data]
 
-            [b Alternative name: ][c et]
+            [b Alternative name: ][c md]
 
             [header Description]
-            [p This command creates a JSON file describing PML nodes and attributes.[nl]The JSON file can be used by editor plugins and tools to get structured data about PML nodes and attributes.]
+            [p This command creates a JSON file containing PML meta data (nodes, attributes, etc).[nl]The JSON file can be used by editor plugins and tools to query structured data about PML.]
 
             [header Examples]
             [input 
                 ~~~
-                pmlc export_tags
+                pmlc export_meta_data
                 ~~~
             ]
 
             [header Input Parameters]
             [list 
                 [el 
-                    [header JSON Output File Path]
+                    [header Output File Path]
                     [table 
                         [tr [tc [b Name]][tc output_file]]
                         [tr [tc [b Alternative name]][tc of]]
                         [tr [tc [b Is positional parameter]][tc No]]
-                        [tr [tc [b Description]][tc The absolute or relative path of the JSON file to be created.[nl]If the path is relative, it is relative to the current working directory.[nl]The default value is file 'pml_tags.json' created in the current working directory.[nl]If the file exists already it will be overwritten.]]
+                        [tr [tc [b Description]][tc The absolute or relative path of the file to be created.[nl]If the path is relative, it is relative to the current working directory.[nl]The default value is file 'PML_meta_data.json' created in the current working directory.[nl]If the file exists already it will be overwritten.]]
                         [tr [tc [b Type]][tc file_path]]
                         [tr [tc [b Required]][tc no]]
-                        [tr [tc [b Default Value]][tc pml_tags.json]]
-                        [tr [tc [b Example(s)]][tc --output_file pml/tags.json]]
+                        [tr [tc [b Default Value]][tc PML_meta_data.json]]
+                        [tr [tc [b Example(s)]][tc --output_file pml/nodes.json]]
                     ]
                 ]
 
             ]
         ]
 
-        [ch ( id="command_create_nodes_reference_manual" ) [title Create Nodes Reference Manual]
+        [ch [@ id="command_create_nodes_reference_manual" ] [title Create Nodes Reference Manual]
             [b Name: ][c create_nodes_reference_manual]
 
             [b Alternative name: ][c cnrm]
@@ -404,7 +404,7 @@
             [p This command has no input parameters]
         ]
 
-        [ch ( id="command_create_commands_reference_manual" ) [title Create Commands Reference Manual]
+        [ch [@ id="command_create_commands_reference_manual" ] [title Create Commands Reference Manual]
             [b Name: ][c create_commands_reference_manual]
 
             [b Alternative name: ][c ccrm]

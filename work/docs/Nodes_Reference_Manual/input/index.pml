@@ -1,20 +1,20 @@
 [doc [title PML Nodes Reference Manual]
 
     [table 
-        [tr [tc [b PML Version]][tc PMLC 3.1.0 2022-10-03]]
-        [tr [tc [b License]][tc [link url=https://creativecommons.org/licenses/by-nd/4.0/ text="CC BY-ND 4.0"]]]
+        [tr [tc [b PML Version]][tc PMLC 4.0.0 2023-02-23]]
+        [tr [tc [b License]][tc [link (url=https://creativecommons.org/licenses/by-nd/4.0/) CC BY-ND 4.0]]]
         [tr [tc [b Author and Copyright]][tc Christian Neumanns]]
-        [tr [tc [b Website]][tc [link url=https://www.pml-lang.dev/]]]
+        [tr [tc [b Website]][tc [link (url=https://www.pml-lang.dev/)]]]
     ]
-    [ch ( id="introduction" ) [title Introduction]
-        [p This document describes all standard [link url=https://www.pml-lang.dev/ text=PML] nodes. For each type of node, its tag and attributes are listed, and an example shows how to use it.]
+    [ch [@ id="introduction" ] [title Introduction]
+        [p This document describes all standard [link (url=https://www.pml-lang.dev/) PML] nodes. For each type of node, its tag and attributes are listed, and an example shows how to use it.]
     ]
 
-    [ch ( id="block_nodes" ) [title Block Nodes]
+    [ch [@ id="block_nodes" ] [title Block Nodes]
         [p A [i block] node is a section that starts at a given line in the document and ends at a subsequent line.]
         [p For example, a [i chapter], a [i paragraph], and a [i list] are all [i block] nodes.]
-        [ch ( id="fundamental_block_nodes" ) [title Fundamental Nodes]
-            [ch ( id="node_doc" ) [title Document]
+        [ch [@ id="fundamental_block_nodes" ] [title Fundamental Nodes]
+            [ch [@ id="node_doc" ] [title Document]
 
                 [b Name: ][c doc]
 
@@ -30,8 +30,8 @@
                         [table 
                             [tr [tc [b Name]][tc id]]
                             [tr [tc [b Is positional parameter]][tc No]]
-                            [tr [tc [b Description]][tc A unique identifier for the node.[nl][nl]An id can be used to:[nl]- identify a node so that an internal link can be done with an 'xref' (cross reference) node.[nl]- identify a node so that it can be styled individually with CSS[nl]- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.[nl][nl]An identifier must start with a letter or an underscore, and can be followed by any number of letters, digits, underscores, dots, and hyphens. Note for programmers: The regex of an identifier is: \[a-zA-Z_\]\[a-zA-Z0-9_\\.-\]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.[nl]]]
-                            [tr [tc [b Type]][tc string or null]]
+                            [tr [tc [b Description]][tc A unique identifier for the node.[nl][nl]An id can be used to:[nl]- identify a node so that an internal link can be done with an 'xref' (cross reference) node.[nl]- identify a node so that it can be styled individually with CSS[nl]- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.[nl][nl]An identifier must start with a letter or an underscore (_), and can be followed by any number of letters, digits, underscores (_), dots (.), and hyphens (-).. Note for programmers: The regex of an identifier is: \[a-zA-Z_\]\[a-zA-Z0-9_\\.-\]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.[nl]]]
+                            [tr [tc [b Type]][tc id or null]]
                             [tr [tc [b Required]][tc no]]
                             [tr [tc [b Default Value]][tc null]]
                             [tr [tc [b Example(s)]][tc id = basic_concept]]
@@ -86,7 +86,7 @@
 
             ]
 
-            [ch ( id="node_p" ) [title Paragraph]
+            [ch [@ id="node_p" ] [title Paragraph]
 
                 [b Name: ][c p]
 
@@ -102,8 +102,8 @@
                         [table 
                             [tr [tc [b Name]][tc id]]
                             [tr [tc [b Is positional parameter]][tc No]]
-                            [tr [tc [b Description]][tc A unique identifier for the node.[nl][nl]An id can be used to:[nl]- identify a node so that an internal link can be done with an 'xref' (cross reference) node.[nl]- identify a node so that it can be styled individually with CSS[nl]- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.[nl][nl]An identifier must start with a letter or an underscore, and can be followed by any number of letters, digits, underscores, dots, and hyphens. Note for programmers: The regex of an identifier is: \[a-zA-Z_\]\[a-zA-Z0-9_\\.-\]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.[nl]]]
-                            [tr [tc [b Type]][tc string or null]]
+                            [tr [tc [b Description]][tc A unique identifier for the node.[nl][nl]An id can be used to:[nl]- identify a node so that an internal link can be done with an 'xref' (cross reference) node.[nl]- identify a node so that it can be styled individually with CSS[nl]- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.[nl][nl]An identifier must start with a letter or an underscore (_), and can be followed by any number of letters, digits, underscores (_), dots (.), and hyphens (-).. Note for programmers: The regex of an identifier is: \[a-zA-Z_\]\[a-zA-Z0-9_\\.-\]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.[nl]]]
+                            [tr [tc [b Type]][tc id or null]]
                             [tr [tc [b Required]][tc no]]
                             [tr [tc [b Default Value]][tc null]]
                             [tr [tc [b Example(s)]][tc id = basic_concept]]
@@ -159,7 +159,7 @@
 
             ]
 
-            [ch ( id="node_ch" ) [title Chapter]
+            [ch [@ id="node_ch" ] [title Chapter]
 
                 [b Name: ][c ch]
 
@@ -175,8 +175,8 @@
                         [table 
                             [tr [tc [b Name]][tc id]]
                             [tr [tc [b Is positional parameter]][tc No]]
-                            [tr [tc [b Description]][tc A unique identifier for the node.[nl][nl]An id can be used to:[nl]- identify a node so that an internal link can be done with an 'xref' (cross reference) node.[nl]- identify a node so that it can be styled individually with CSS[nl]- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.[nl][nl]An identifier must start with a letter or an underscore, and can be followed by any number of letters, digits, underscores, dots, and hyphens. Note for programmers: The regex of an identifier is: \[a-zA-Z_\]\[a-zA-Z0-9_\\.-\]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.[nl]]]
-                            [tr [tc [b Type]][tc string or null]]
+                            [tr [tc [b Description]][tc A unique identifier for the node.[nl][nl]An id can be used to:[nl]- identify a node so that an internal link can be done with an 'xref' (cross reference) node.[nl]- identify a node so that it can be styled individually with CSS[nl]- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.[nl][nl]An identifier must start with a letter or an underscore (_), and can be followed by any number of letters, digits, underscores (_), dots (.), and hyphens (-).. Note for programmers: The regex of an identifier is: \[a-zA-Z_\]\[a-zA-Z0-9_\\.-\]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.[nl]]]
+                            [tr [tc [b Type]][tc id or null]]
                             [tr [tc [b Required]][tc no]]
                             [tr [tc [b Default Value]][tc null]]
                             [tr [tc [b Example(s)]][tc id = basic_concept]]
@@ -255,7 +255,7 @@
 
             ]
 
-            [ch ( id="node_title" ) [title Chapter Title]
+            [ch [@ id="node_title" ] [title Chapter Title]
 
                 [b Name: ][c title]
 
@@ -271,8 +271,8 @@
                         [table 
                             [tr [tc [b Name]][tc id]]
                             [tr [tc [b Is positional parameter]][tc No]]
-                            [tr [tc [b Description]][tc A unique identifier for the node.[nl][nl]An id can be used to:[nl]- identify a node so that an internal link can be done with an 'xref' (cross reference) node.[nl]- identify a node so that it can be styled individually with CSS[nl]- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.[nl][nl]An identifier must start with a letter or an underscore, and can be followed by any number of letters, digits, underscores, dots, and hyphens. Note for programmers: The regex of an identifier is: \[a-zA-Z_\]\[a-zA-Z0-9_\\.-\]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.[nl]]]
-                            [tr [tc [b Type]][tc string or null]]
+                            [tr [tc [b Description]][tc A unique identifier for the node.[nl][nl]An id can be used to:[nl]- identify a node so that an internal link can be done with an 'xref' (cross reference) node.[nl]- identify a node so that it can be styled individually with CSS[nl]- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.[nl][nl]An identifier must start with a letter or an underscore (_), and can be followed by any number of letters, digits, underscores (_), dots (.), and hyphens (-).. Note for programmers: The regex of an identifier is: \[a-zA-Z_\]\[a-zA-Z0-9_\\.-\]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.[nl]]]
+                            [tr [tc [b Type]][tc id or null]]
                             [tr [tc [b Required]][tc no]]
                             [tr [tc [b Default Value]][tc null]]
                             [tr [tc [b Example(s)]][tc id = basic_concept]]
@@ -328,7 +328,7 @@
 
             ]
 
-            [ch ( id="node_subtitle" ) [title Chapter Subtitle]
+            [ch [@ id="node_subtitle" ] [title Chapter Subtitle]
 
                 [b Name: ][c subtitle]
 
@@ -344,8 +344,8 @@
                         [table 
                             [tr [tc [b Name]][tc id]]
                             [tr [tc [b Is positional parameter]][tc No]]
-                            [tr [tc [b Description]][tc A unique identifier for the node.[nl][nl]An id can be used to:[nl]- identify a node so that an internal link can be done with an 'xref' (cross reference) node.[nl]- identify a node so that it can be styled individually with CSS[nl]- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.[nl][nl]An identifier must start with a letter or an underscore, and can be followed by any number of letters, digits, underscores, dots, and hyphens. Note for programmers: The regex of an identifier is: \[a-zA-Z_\]\[a-zA-Z0-9_\\.-\]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.[nl]]]
-                            [tr [tc [b Type]][tc string or null]]
+                            [tr [tc [b Description]][tc A unique identifier for the node.[nl][nl]An id can be used to:[nl]- identify a node so that an internal link can be done with an 'xref' (cross reference) node.[nl]- identify a node so that it can be styled individually with CSS[nl]- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.[nl][nl]An identifier must start with a letter or an underscore (_), and can be followed by any number of letters, digits, underscores (_), dots (.), and hyphens (-).. Note for programmers: The regex of an identifier is: \[a-zA-Z_\]\[a-zA-Z0-9_\\.-\]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.[nl]]]
+                            [tr [tc [b Type]][tc id or null]]
                             [tr [tc [b Required]][tc no]]
                             [tr [tc [b Default Value]][tc null]]
                             [tr [tc [b Example(s)]][tc id = basic_concept]]
@@ -404,68 +404,11 @@
 
             ]
 
-            [ch ( id="node_options" ) [title Options]
-
-                [b Name: ][c options]
-
-                [b Kind:] Node without child nodes
-
-                [header Description]
-                [p Used to define a set of options applied to the document.[nl]If used, this node must be the first child node of the 'doc' node.[nl]Please consult the user manual and/or the CLI manual to see the list of options available.]
-
-                [header Attributes]
-                [p This node doesn't have attributes.]
-
-                [b HTML Attributes:] not allowed
-
-                [header Example]
-                [list 
-                    [el 
-                        [p PML code:]
-                        [code 
-                            ~~~
-                            [doc [title Options Demo]
-                                [options
-                                    [TOCPosition top]
-                                    [TOCTitle Inhaltsverzeichnis]
-                                ]
-                                text
-                            ]
-                            ~~~
-                        ]
-                    ]
-                    [el 
-                        [p Result:]
-                        [html 
-                            ~~~
-                            <div style="border: 1px dotted grey; padding-left: 1em; padding-right: 1em;border-radius: 7px;">
-                            <h1 class="pml-doc-title">Options Demo</h1>
-                            <p class="pml-paragraph">text </p>
-                            
-                            </div>
-                            
-                            ~~~
-                        ]
-                    ]
-                    [el 
-                        [p HTML code generated:]
-                        [code 
-                            ~~~
-                            <h1 class="pml-doc-title">Options Demo</h1>
-                            <p class="pml-paragraph">text </p>
-                            
-                            ~~~
-                        ]
-                    ]
-                ]
-
-            ]
-
         ]
 
-        [ch ( id="common_nodes" ) [title Common Nodes]
-            [ch ( id="list_nodes" ) [title List]
-                [ch ( id="node_list" ) [title List]
+        [ch [@ id="common_nodes" ] [title Common Nodes]
+            [ch [@ id="list_nodes" ] [title List]
+                [ch [@ id="node_list" ] [title List]
 
                     [b Name: ][c list]
 
@@ -481,8 +424,8 @@
                             [table 
                                 [tr [tc [b Name]][tc id]]
                                 [tr [tc [b Is positional parameter]][tc No]]
-                                [tr [tc [b Description]][tc A unique identifier for the node.[nl][nl]An id can be used to:[nl]- identify a node so that an internal link can be done with an 'xref' (cross reference) node.[nl]- identify a node so that it can be styled individually with CSS[nl]- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.[nl][nl]An identifier must start with a letter or an underscore, and can be followed by any number of letters, digits, underscores, dots, and hyphens. Note for programmers: The regex of an identifier is: \[a-zA-Z_\]\[a-zA-Z0-9_\\.-\]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.[nl]]]
-                                [tr [tc [b Type]][tc string or null]]
+                                [tr [tc [b Description]][tc A unique identifier for the node.[nl][nl]An id can be used to:[nl]- identify a node so that an internal link can be done with an 'xref' (cross reference) node.[nl]- identify a node so that it can be styled individually with CSS[nl]- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.[nl][nl]An identifier must start with a letter or an underscore (_), and can be followed by any number of letters, digits, underscores (_), dots (.), and hyphens (-).. Note for programmers: The regex of an identifier is: \[a-zA-Z_\]\[a-zA-Z0-9_\\.-\]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.[nl]]]
+                                [tr [tc [b Type]][tc id or null]]
                                 [tr [tc [b Required]][tc no]]
                                 [tr [tc [b Default Value]][tc null]]
                                 [tr [tc [b Example(s)]][tc id = basic_concept]]
@@ -674,7 +617,7 @@
 
                 ]
 
-                [ch ( id="node_el" ) [title List Element]
+                [ch [@ id="node_el" ] [title List Element]
 
                     [b Name: ][c el]
 
@@ -690,8 +633,8 @@
                             [table 
                                 [tr [tc [b Name]][tc id]]
                                 [tr [tc [b Is positional parameter]][tc No]]
-                                [tr [tc [b Description]][tc A unique identifier for the node.[nl][nl]An id can be used to:[nl]- identify a node so that an internal link can be done with an 'xref' (cross reference) node.[nl]- identify a node so that it can be styled individually with CSS[nl]- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.[nl][nl]An identifier must start with a letter or an underscore, and can be followed by any number of letters, digits, underscores, dots, and hyphens. Note for programmers: The regex of an identifier is: \[a-zA-Z_\]\[a-zA-Z0-9_\\.-\]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.[nl]]]
-                                [tr [tc [b Type]][tc string or null]]
+                                [tr [tc [b Description]][tc A unique identifier for the node.[nl][nl]An id can be used to:[nl]- identify a node so that an internal link can be done with an 'xref' (cross reference) node.[nl]- identify a node so that it can be styled individually with CSS[nl]- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.[nl][nl]An identifier must start with a letter or an underscore (_), and can be followed by any number of letters, digits, underscores (_), dots (.), and hyphens (-).. Note for programmers: The regex of an identifier is: \[a-zA-Z_\]\[a-zA-Z0-9_\\.-\]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.[nl]]]
+                                [tr [tc [b Type]][tc id or null]]
                                 [tr [tc [b Required]][tc no]]
                                 [tr [tc [b Default Value]][tc null]]
                                 [tr [tc [b Example(s)]][tc id = basic_concept]]
@@ -786,10 +729,10 @@
 
             ]
 
-            [ch ( id="table_nodes" ) [title Table]
-                [ch ( id="node_table_data" ) [title Table Data]
+            [ch [@ id="table_nodes" ] [title Table]
+                [ch [@ id="node_sim_table" ] [title Simple Table]
 
-                    [b Name: ][c table_data]
+                    [b Name: ][c sim_table]
 
                     [b Kind:] Node with raw text content
 
@@ -816,8 +759,8 @@
                             [table 
                                 [tr [tc [b Name]][tc id]]
                                 [tr [tc [b Is positional parameter]][tc No]]
-                                [tr [tc [b Description]][tc A unique identifier for the node.[nl][nl]An id can be used to:[nl]- identify a node so that an internal link can be done with an 'xref' (cross reference) node.[nl]- identify a node so that it can be styled individually with CSS[nl]- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.[nl][nl]An identifier must start with a letter or an underscore, and can be followed by any number of letters, digits, underscores, dots, and hyphens. Note for programmers: The regex of an identifier is: \[a-zA-Z_\]\[a-zA-Z0-9_\\.-\]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.[nl]]]
-                                [tr [tc [b Type]][tc string or null]]
+                                [tr [tc [b Description]][tc A unique identifier for the node.[nl][nl]An id can be used to:[nl]- identify a node so that an internal link can be done with an 'xref' (cross reference) node.[nl]- identify a node so that it can be styled individually with CSS[nl]- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.[nl][nl]An identifier must start with a letter or an underscore (_), and can be followed by any number of letters, digits, underscores (_), dots (.), and hyphens (-).. Note for programmers: The regex of an identifier is: \[a-zA-Z_\]\[a-zA-Z0-9_\\.-\]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.[nl]]]
+                                [tr [tc [b Type]][tc id or null]]
                                 [tr [tc [b Required]][tc no]]
                                 [tr [tc [b Default Value]][tc null]]
                                 [tr [tc [b Example(s)]][tc id = basic_concept]]
@@ -835,14 +778,16 @@
                             [code 
                                 ~~~
                                 Simple table:
-                                [table_data
+                                [sim_table
+                                    ~~~
                                     cell 1.1, cell 1.2
                                     cell 2.1, cell 2.2
-                                table_data]
+                                    ~~~
+                                ]
                                 
                                 Table with header, footer, and column alignments:
                                 
-                                [table_data (halign="C,L,R")
+                                [sim_table (halign="C,L,R")
                                     ~~~
                                     Position, Product, Price
                                     -
@@ -930,7 +875,7 @@
 
                 ]
 
-                [ch ( id="node_table" ) [title Table]
+                [ch [@ id="node_table" ] [title Table]
 
                     [b Name: ][c table]
 
@@ -959,8 +904,8 @@
                             [table 
                                 [tr [tc [b Name]][tc id]]
                                 [tr [tc [b Is positional parameter]][tc No]]
-                                [tr [tc [b Description]][tc A unique identifier for the node.[nl][nl]An id can be used to:[nl]- identify a node so that an internal link can be done with an 'xref' (cross reference) node.[nl]- identify a node so that it can be styled individually with CSS[nl]- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.[nl][nl]An identifier must start with a letter or an underscore, and can be followed by any number of letters, digits, underscores, dots, and hyphens. Note for programmers: The regex of an identifier is: \[a-zA-Z_\]\[a-zA-Z0-9_\\.-\]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.[nl]]]
-                                [tr [tc [b Type]][tc string or null]]
+                                [tr [tc [b Description]][tc A unique identifier for the node.[nl][nl]An id can be used to:[nl]- identify a node so that an internal link can be done with an 'xref' (cross reference) node.[nl]- identify a node so that it can be styled individually with CSS[nl]- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.[nl][nl]An identifier must start with a letter or an underscore (_), and can be followed by any number of letters, digits, underscores (_), dots (.), and hyphens (-).. Note for programmers: The regex of an identifier is: \[a-zA-Z_\]\[a-zA-Z0-9_\\.-\]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.[nl]]]
+                                [tr [tc [b Type]][tc id or null]]
                                 [tr [tc [b Required]][tc no]]
                                 [tr [tc [b Default Value]][tc null]]
                                 [tr [tc [b Example(s)]][tc id = basic_concept]]
@@ -1212,7 +1157,7 @@
 
                 ]
 
-                [ch ( id="node_theader" ) [title Table Header]
+                [ch [@ id="node_theader" ] [title Table Header]
 
                     [b Name: ][c theader]
 
@@ -1228,8 +1173,8 @@
                             [table 
                                 [tr [tc [b Name]][tc id]]
                                 [tr [tc [b Is positional parameter]][tc No]]
-                                [tr [tc [b Description]][tc A unique identifier for the node.[nl][nl]An id can be used to:[nl]- identify a node so that an internal link can be done with an 'xref' (cross reference) node.[nl]- identify a node so that it can be styled individually with CSS[nl]- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.[nl][nl]An identifier must start with a letter or an underscore, and can be followed by any number of letters, digits, underscores, dots, and hyphens. Note for programmers: The regex of an identifier is: \[a-zA-Z_\]\[a-zA-Z0-9_\\.-\]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.[nl]]]
-                                [tr [tc [b Type]][tc string or null]]
+                                [tr [tc [b Description]][tc A unique identifier for the node.[nl][nl]An id can be used to:[nl]- identify a node so that an internal link can be done with an 'xref' (cross reference) node.[nl]- identify a node so that it can be styled individually with CSS[nl]- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.[nl][nl]An identifier must start with a letter or an underscore (_), and can be followed by any number of letters, digits, underscores (_), dots (.), and hyphens (-).. Note for programmers: The regex of an identifier is: \[a-zA-Z_\]\[a-zA-Z0-9_\\.-\]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.[nl]]]
+                                [tr [tc [b Type]][tc id or null]]
                                 [tr [tc [b Required]][tc no]]
                                 [tr [tc [b Default Value]][tc null]]
                                 [tr [tc [b Example(s)]][tc id = basic_concept]]
@@ -1385,7 +1330,7 @@
 
                 ]
 
-                [ch ( id="node_tfooter" ) [title Table Footer]
+                [ch [@ id="node_tfooter" ] [title Table Footer]
 
                     [b Name: ][c tfooter]
 
@@ -1401,8 +1346,8 @@
                             [table 
                                 [tr [tc [b Name]][tc id]]
                                 [tr [tc [b Is positional parameter]][tc No]]
-                                [tr [tc [b Description]][tc A unique identifier for the node.[nl][nl]An id can be used to:[nl]- identify a node so that an internal link can be done with an 'xref' (cross reference) node.[nl]- identify a node so that it can be styled individually with CSS[nl]- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.[nl][nl]An identifier must start with a letter or an underscore, and can be followed by any number of letters, digits, underscores, dots, and hyphens. Note for programmers: The regex of an identifier is: \[a-zA-Z_\]\[a-zA-Z0-9_\\.-\]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.[nl]]]
-                                [tr [tc [b Type]][tc string or null]]
+                                [tr [tc [b Description]][tc A unique identifier for the node.[nl][nl]An id can be used to:[nl]- identify a node so that an internal link can be done with an 'xref' (cross reference) node.[nl]- identify a node so that it can be styled individually with CSS[nl]- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.[nl][nl]An identifier must start with a letter or an underscore (_), and can be followed by any number of letters, digits, underscores (_), dots (.), and hyphens (-).. Note for programmers: The regex of an identifier is: \[a-zA-Z_\]\[a-zA-Z0-9_\\.-\]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.[nl]]]
+                                [tr [tc [b Type]][tc id or null]]
                                 [tr [tc [b Required]][tc no]]
                                 [tr [tc [b Default Value]][tc null]]
                                 [tr [tc [b Example(s)]][tc id = basic_concept]]
@@ -1558,7 +1503,7 @@
 
                 ]
 
-                [ch ( id="node_tr" ) [title Table Row]
+                [ch [@ id="node_tr" ] [title Table Row]
 
                     [b Name: ][c tr]
 
@@ -1574,8 +1519,8 @@
                             [table 
                                 [tr [tc [b Name]][tc id]]
                                 [tr [tc [b Is positional parameter]][tc No]]
-                                [tr [tc [b Description]][tc A unique identifier for the node.[nl][nl]An id can be used to:[nl]- identify a node so that an internal link can be done with an 'xref' (cross reference) node.[nl]- identify a node so that it can be styled individually with CSS[nl]- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.[nl][nl]An identifier must start with a letter or an underscore, and can be followed by any number of letters, digits, underscores, dots, and hyphens. Note for programmers: The regex of an identifier is: \[a-zA-Z_\]\[a-zA-Z0-9_\\.-\]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.[nl]]]
-                                [tr [tc [b Type]][tc string or null]]
+                                [tr [tc [b Description]][tc A unique identifier for the node.[nl][nl]An id can be used to:[nl]- identify a node so that an internal link can be done with an 'xref' (cross reference) node.[nl]- identify a node so that it can be styled individually with CSS[nl]- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.[nl][nl]An identifier must start with a letter or an underscore (_), and can be followed by any number of letters, digits, underscores (_), dots (.), and hyphens (-).. Note for programmers: The regex of an identifier is: \[a-zA-Z_\]\[a-zA-Z0-9_\\.-\]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.[nl]]]
+                                [tr [tc [b Type]][tc id or null]]
                                 [tr [tc [b Required]][tc no]]
                                 [tr [tc [b Default Value]][tc null]]
                                 [tr [tc [b Example(s)]][tc id = basic_concept]]
@@ -1692,7 +1637,7 @@
 
                 ]
 
-                [ch ( id="node_tc" ) [title Table Cell]
+                [ch [@ id="node_tc" ] [title Table Cell]
 
                     [b Name: ][c tc]
 
@@ -1708,8 +1653,8 @@
                             [table 
                                 [tr [tc [b Name]][tc id]]
                                 [tr [tc [b Is positional parameter]][tc No]]
-                                [tr [tc [b Description]][tc A unique identifier for the node.[nl][nl]An id can be used to:[nl]- identify a node so that an internal link can be done with an 'xref' (cross reference) node.[nl]- identify a node so that it can be styled individually with CSS[nl]- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.[nl][nl]An identifier must start with a letter or an underscore, and can be followed by any number of letters, digits, underscores, dots, and hyphens. Note for programmers: The regex of an identifier is: \[a-zA-Z_\]\[a-zA-Z0-9_\\.-\]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.[nl]]]
-                                [tr [tc [b Type]][tc string or null]]
+                                [tr [tc [b Description]][tc A unique identifier for the node.[nl][nl]An id can be used to:[nl]- identify a node so that an internal link can be done with an 'xref' (cross reference) node.[nl]- identify a node so that it can be styled individually with CSS[nl]- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.[nl][nl]An identifier must start with a letter or an underscore (_), and can be followed by any number of letters, digits, underscores (_), dots (.), and hyphens (-).. Note for programmers: The regex of an identifier is: \[a-zA-Z_\]\[a-zA-Z0-9_\\.-\]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.[nl]]]
+                                [tr [tc [b Type]][tc id or null]]
                                 [tr [tc [b Required]][tc no]]
                                 [tr [tc [b Default Value]][tc null]]
                                 [tr [tc [b Example(s)]][tc id = basic_concept]]
@@ -1828,7 +1773,7 @@
 
             ]
 
-            [ch ( id="node_header" ) [title Header]
+            [ch [@ id="node_header" ] [title Header]
 
                 [b Name: ][c header]
 
@@ -1844,8 +1789,8 @@
                         [table 
                             [tr [tc [b Name]][tc id]]
                             [tr [tc [b Is positional parameter]][tc No]]
-                            [tr [tc [b Description]][tc A unique identifier for the node.[nl][nl]An id can be used to:[nl]- identify a node so that an internal link can be done with an 'xref' (cross reference) node.[nl]- identify a node so that it can be styled individually with CSS[nl]- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.[nl][nl]An identifier must start with a letter or an underscore, and can be followed by any number of letters, digits, underscores, dots, and hyphens. Note for programmers: The regex of an identifier is: \[a-zA-Z_\]\[a-zA-Z0-9_\\.-\]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.[nl]]]
-                            [tr [tc [b Type]][tc string or null]]
+                            [tr [tc [b Description]][tc A unique identifier for the node.[nl][nl]An id can be used to:[nl]- identify a node so that an internal link can be done with an 'xref' (cross reference) node.[nl]- identify a node so that it can be styled individually with CSS[nl]- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.[nl][nl]An identifier must start with a letter or an underscore (_), and can be followed by any number of letters, digits, underscores (_), dots (.), and hyphens (-).. Note for programmers: The regex of an identifier is: \[a-zA-Z_\]\[a-zA-Z0-9_\\.-\]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.[nl]]]
+                            [tr [tc [b Type]][tc id or null]]
                             [tr [tc [b Required]][tc no]]
                             [tr [tc [b Default Value]][tc null]]
                             [tr [tc [b Example(s)]][tc id = basic_concept]]
@@ -1916,7 +1861,7 @@
 
             ]
 
-            [ch ( id="node_caption" ) [title Caption]
+            [ch [@ id="node_caption" ] [title Caption]
 
                 [b Name: ][c caption]
 
@@ -1932,8 +1877,8 @@
                         [table 
                             [tr [tc [b Name]][tc id]]
                             [tr [tc [b Is positional parameter]][tc No]]
-                            [tr [tc [b Description]][tc A unique identifier for the node.[nl][nl]An id can be used to:[nl]- identify a node so that an internal link can be done with an 'xref' (cross reference) node.[nl]- identify a node so that it can be styled individually with CSS[nl]- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.[nl][nl]An identifier must start with a letter or an underscore, and can be followed by any number of letters, digits, underscores, dots, and hyphens. Note for programmers: The regex of an identifier is: \[a-zA-Z_\]\[a-zA-Z0-9_\\.-\]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.[nl]]]
-                            [tr [tc [b Type]][tc string or null]]
+                            [tr [tc [b Description]][tc A unique identifier for the node.[nl][nl]An id can be used to:[nl]- identify a node so that an internal link can be done with an 'xref' (cross reference) node.[nl]- identify a node so that it can be styled individually with CSS[nl]- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.[nl][nl]An identifier must start with a letter or an underscore (_), and can be followed by any number of letters, digits, underscores (_), dots (.), and hyphens (-).. Note for programmers: The regex of an identifier is: \[a-zA-Z_\]\[a-zA-Z0-9_\\.-\]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.[nl]]]
+                            [tr [tc [b Type]][tc id or null]]
                             [tr [tc [b Required]][tc no]]
                             [tr [tc [b Default Value]][tc null]]
                             [tr [tc [b Example(s)]][tc id = basic_concept]]
@@ -1979,7 +1924,7 @@
 
             ]
 
-            [ch ( id="node_admon" ) [title Admonition]
+            [ch [@ id="node_admon" ] [title Admonition]
 
                 [b Name: ][c admon]
 
@@ -1995,24 +1940,11 @@
                         [table 
                             [tr [tc [b Name]][tc id]]
                             [tr [tc [b Is positional parameter]][tc No]]
-                            [tr [tc [b Description]][tc A unique identifier for the node.[nl][nl]An id can be used to:[nl]- identify a node so that an internal link can be done with an 'xref' (cross reference) node.[nl]- identify a node so that it can be styled individually with CSS[nl]- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.[nl][nl]An identifier must start with a letter or an underscore, and can be followed by any number of letters, digits, underscores, dots, and hyphens. Note for programmers: The regex of an identifier is: \[a-zA-Z_\]\[a-zA-Z0-9_\\.-\]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.[nl]]]
-                            [tr [tc [b Type]][tc string or null]]
+                            [tr [tc [b Description]][tc A unique identifier for the node.[nl][nl]An id can be used to:[nl]- identify a node so that an internal link can be done with an 'xref' (cross reference) node.[nl]- identify a node so that it can be styled individually with CSS[nl]- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.[nl][nl]An identifier must start with a letter or an underscore (_), and can be followed by any number of letters, digits, underscores (_), dots (.), and hyphens (-).. Note for programmers: The regex of an identifier is: \[a-zA-Z_\]\[a-zA-Z0-9_\\.-\]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.[nl]]]
+                            [tr [tc [b Type]][tc id or null]]
                             [tr [tc [b Required]][tc no]]
                             [tr [tc [b Default Value]][tc null]]
                             [tr [tc [b Example(s)]][tc id = basic_concept]]
-                        ]
-                    ]
-
-                    [el 
-                        [header Label]
-                        [table 
-                            [tr [tc [b Name]][tc label]]
-                            [tr [tc [b Is positional parameter]][tc No]]
-                            [tr [tc [b Description]][tc The admonition's label, such as 'Note', 'Tip', 'Warning', etc.]]
-                            [tr [tc [b Type]][tc string]]
-                            [tr [tc [b Required]][tc yes]]
-                            [tr [tc [b Default Value]][tc none]]
-                            [tr [tc [b Example(s)]][tc label = Tip]]
                         ]
                     ]
 
@@ -2026,8 +1958,9 @@
                         [p PML code:]
                         [code 
                             ~~~
-                            [admon (label=Tip)
-                                We will have a look at some [i striking] examples later in the book.
+                            [admon
+                                [alabel Tip]
+                                Later you'll see some [i striking] examples.
                             ]
                             ~~~
                         ]
@@ -2038,9 +1971,12 @@
                             ~~~
                             <div style="border: 1px dotted grey; padding-left: 1em; padding-right: 1em;border-radius: 7px;">
                             <div class="pml-admonition">
-                                <div class="pml-admonition-label">Tip</div>
+                                <div class="pml-admonition-label">
+                                    <p class="pml-paragraph">Tip</p>
+                            
+                                </div>
                                 <div class="pml-admonition-content">
-                                    <p class="pml-paragraph">We will have a look at some <i class="pml-italic">striking</i> examples later in the book. </p>
+                                    <p class="pml-paragraph">Later you'll see some <i class="pml-italic">striking</i> examples. </p>
                                 </div>
                             </div>
                             
@@ -2054,9 +1990,12 @@
                         [code 
                             ~~~
                             <div class="pml-admonition">
-                                <div class="pml-admonition-label">Tip</div>
+                                <div class="pml-admonition-label">
+                                    <p class="pml-paragraph">Tip</p>
+                            
+                                </div>
                                 <div class="pml-admonition-content">
-                                    <p class="pml-paragraph">We will have a look at some <i class="pml-italic">striking</i> examples later in the book. </p>
+                                    <p class="pml-paragraph">Later you'll see some <i class="pml-italic">striking</i> examples. </p>
                                 </div>
                             </div>
                             
@@ -2067,7 +2006,7 @@
 
             ]
 
-            [ch ( id="node_note" ) [title Note]
+            [ch [@ id="node_note" ] [title Note]
 
                 [b Name: ][c note]
 
@@ -2083,8 +2022,8 @@
                         [table 
                             [tr [tc [b Name]][tc id]]
                             [tr [tc [b Is positional parameter]][tc No]]
-                            [tr [tc [b Description]][tc A unique identifier for the node.[nl][nl]An id can be used to:[nl]- identify a node so that an internal link can be done with an 'xref' (cross reference) node.[nl]- identify a node so that it can be styled individually with CSS[nl]- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.[nl][nl]An identifier must start with a letter or an underscore, and can be followed by any number of letters, digits, underscores, dots, and hyphens. Note for programmers: The regex of an identifier is: \[a-zA-Z_\]\[a-zA-Z0-9_\\.-\]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.[nl]]]
-                            [tr [tc [b Type]][tc string or null]]
+                            [tr [tc [b Description]][tc A unique identifier for the node.[nl][nl]An id can be used to:[nl]- identify a node so that an internal link can be done with an 'xref' (cross reference) node.[nl]- identify a node so that it can be styled individually with CSS[nl]- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.[nl][nl]An identifier must start with a letter or an underscore (_), and can be followed by any number of letters, digits, underscores (_), dots (.), and hyphens (-).. Note for programmers: The regex of an identifier is: \[a-zA-Z_\]\[a-zA-Z0-9_\\.-\]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.[nl]]]
+                            [tr [tc [b Type]][tc id or null]]
                             [tr [tc [b Required]][tc no]]
                             [tr [tc [b Default Value]][tc null]]
                             [tr [tc [b Example(s)]][tc id = basic_concept]]
@@ -2111,7 +2050,10 @@
                             ~~~
                             <div style="border: 1px dotted grey; padding-left: 1em; padding-right: 1em;border-radius: 7px;">
                             <div class="pml-admonition">
-                                <div class="pml-admonition-label">Note</div>
+                                <div class="pml-admonition-label">
+                                    <p class="pml-paragraph">Note</p>
+                            
+                                </div>
                                 <div class="pml-admonition-content">
                                     <p class="pml-paragraph">Please remember that ...</p>
                                 </div>
@@ -2127,7 +2069,10 @@
                         [code 
                             ~~~
                             <div class="pml-admonition">
-                                <div class="pml-admonition-label">Note</div>
+                                <div class="pml-admonition-label">
+                                    <p class="pml-paragraph">Note</p>
+                            
+                                </div>
                                 <div class="pml-admonition-content">
                                     <p class="pml-paragraph">Please remember that ...</p>
                                 </div>
@@ -2140,14 +2085,14 @@
 
             ]
 
-            [ch ( id="node_quote" ) [title Quote]
+            [ch [@ id="node_quote" ] [title Quote]
 
                 [b Name: ][c quote]
 
                 [b Kind:] Node with child nodes
 
                 [header Description]
-                [p A piece of text said or written by somebody else.]
+                [p The exact words said or written by somebody else.]
 
                 [header Attributes]
                 [list 
@@ -2156,24 +2101,11 @@
                         [table 
                             [tr [tc [b Name]][tc id]]
                             [tr [tc [b Is positional parameter]][tc No]]
-                            [tr [tc [b Description]][tc A unique identifier for the node.[nl][nl]An id can be used to:[nl]- identify a node so that an internal link can be done with an 'xref' (cross reference) node.[nl]- identify a node so that it can be styled individually with CSS[nl]- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.[nl][nl]An identifier must start with a letter or an underscore, and can be followed by any number of letters, digits, underscores, dots, and hyphens. Note for programmers: The regex of an identifier is: \[a-zA-Z_\]\[a-zA-Z0-9_\\.-\]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.[nl]]]
-                            [tr [tc [b Type]][tc string or null]]
+                            [tr [tc [b Description]][tc A unique identifier for the node.[nl][nl]An id can be used to:[nl]- identify a node so that an internal link can be done with an 'xref' (cross reference) node.[nl]- identify a node so that it can be styled individually with CSS[nl]- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.[nl][nl]An identifier must start with a letter or an underscore (_), and can be followed by any number of letters, digits, underscores (_), dots (.), and hyphens (-).. Note for programmers: The regex of an identifier is: \[a-zA-Z_\]\[a-zA-Z0-9_\\.-\]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.[nl]]]
+                            [tr [tc [b Type]][tc id or null]]
                             [tr [tc [b Required]][tc no]]
                             [tr [tc [b Default Value]][tc null]]
                             [tr [tc [b Example(s)]][tc id = basic_concept]]
-                        ]
-                    ]
-
-                    [el 
-                        [header Source of Quote]
-                        [table 
-                            [tr [tc [b Name]][tc source]]
-                            [tr [tc [b Is positional parameter]][tc No]]
-                            [tr [tc [b Description]][tc The source of the quote, such as the name of a person, the title of an article, etc.]]
-                            [tr [tc [b Type]][tc string or null]]
-                            [tr [tc [b Required]][tc no]]
-                            [tr [tc [b Default Value]][tc null]]
-                            [tr [tc [b Example(s)]][tc source = Dalai Lama]]
                         ]
                     ]
 
@@ -2187,8 +2119,9 @@
                         [p PML code:]
                         [code 
                             ~~~
-                            [quote (source="Albert Einstein, physicist")
+                            [quote
                                 Everything should be as simple as possible, but not simpler.
+                                [qsource [i Albert Einstein, physicist]]
                             ]
                             ~~~
                         ]
@@ -2202,11 +2135,14 @@
                                 <div class="pml-quote-text-block">
                                     <div class="pml-quote-text-prefix"></div>
                                     <div class="pml-quote-text">
-                                        <p class="pml-paragraph">Everything should be as simple as possible, but not simpler. </p>
+                                        <p class="pml-paragraph">Everything should be as simple as possible, but not simpler.</p>
                                     </div>
                                     <div class="pml-quote-text-suffix"></div>
                                 </div>
-                                <div class="pml-quote-source">Albert Einstein, physicist</div>
+                                <div class="pml-quote-source">
+                                    <p class="pml-paragraph"><i class="pml-italic">Albert Einstein, physicist</i></p>
+                            
+                                </div>
                             </blockquote>
                             
                             </div>
@@ -2222,11 +2158,14 @@
                                 <div class="pml-quote-text-block">
                                     <div class="pml-quote-text-prefix"></div>
                                     <div class="pml-quote-text">
-                                        <p class="pml-paragraph">Everything should be as simple as possible, but not simpler. </p>
+                                        <p class="pml-paragraph">Everything should be as simple as possible, but not simpler.</p>
                                     </div>
                                     <div class="pml-quote-text-suffix"></div>
                                 </div>
-                                <div class="pml-quote-source">Albert Einstein, physicist</div>
+                                <div class="pml-quote-source">
+                                    <p class="pml-paragraph"><i class="pml-italic">Albert Einstein, physicist</i></p>
+                            
+                                </div>
                             </blockquote>
                             
                             ~~~
@@ -2236,7 +2175,7 @@
 
             ]
 
-            [ch ( id="node_monospace" ) [title Monospace]
+            [ch [@ id="node_monospace" ] [title Monospace]
 
                 [b Name: ][c monospace]
 
@@ -2252,8 +2191,8 @@
                         [table 
                             [tr [tc [b Name]][tc id]]
                             [tr [tc [b Is positional parameter]][tc No]]
-                            [tr [tc [b Description]][tc A unique identifier for the node.[nl][nl]An id can be used to:[nl]- identify a node so that an internal link can be done with an 'xref' (cross reference) node.[nl]- identify a node so that it can be styled individually with CSS[nl]- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.[nl][nl]An identifier must start with a letter or an underscore, and can be followed by any number of letters, digits, underscores, dots, and hyphens. Note for programmers: The regex of an identifier is: \[a-zA-Z_\]\[a-zA-Z0-9_\\.-\]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.[nl]]]
-                            [tr [tc [b Type]][tc string or null]]
+                            [tr [tc [b Description]][tc A unique identifier for the node.[nl][nl]An id can be used to:[nl]- identify a node so that an internal link can be done with an 'xref' (cross reference) node.[nl]- identify a node so that it can be styled individually with CSS[nl]- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.[nl][nl]An identifier must start with a letter or an underscore (_), and can be followed by any number of letters, digits, underscores (_), dots (.), and hyphens (-).. Note for programmers: The regex of an identifier is: \[a-zA-Z_\]\[a-zA-Z0-9_\\.-\]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.[nl]]]
+                            [tr [tc [b Type]][tc id or null]]
                             [tr [tc [b Required]][tc no]]
                             [tr [tc [b Default Value]][tc null]]
                             [tr [tc [b Example(s)]][tc id = basic_concept]]
@@ -2318,7 +2257,7 @@
 
             ]
 
-            [ch ( id="node_div" ) [title Division]
+            [ch [@ id="node_div" ] [title Division]
 
                 [b Name: ][c div]
 
@@ -2334,8 +2273,8 @@
                         [table 
                             [tr [tc [b Name]][tc id]]
                             [tr [tc [b Is positional parameter]][tc No]]
-                            [tr [tc [b Description]][tc A unique identifier for the node.[nl][nl]An id can be used to:[nl]- identify a node so that an internal link can be done with an 'xref' (cross reference) node.[nl]- identify a node so that it can be styled individually with CSS[nl]- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.[nl][nl]An identifier must start with a letter or an underscore, and can be followed by any number of letters, digits, underscores, dots, and hyphens. Note for programmers: The regex of an identifier is: \[a-zA-Z_\]\[a-zA-Z0-9_\\.-\]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.[nl]]]
-                            [tr [tc [b Type]][tc string or null]]
+                            [tr [tc [b Description]][tc A unique identifier for the node.[nl][nl]An id can be used to:[nl]- identify a node so that an internal link can be done with an 'xref' (cross reference) node.[nl]- identify a node so that it can be styled individually with CSS[nl]- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.[nl][nl]An identifier must start with a letter or an underscore (_), and can be followed by any number of letters, digits, underscores (_), dots (.), and hyphens (-).. Note for programmers: The regex of an identifier is: \[a-zA-Z_\]\[a-zA-Z0-9_\\.-\]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.[nl]]]
+                            [tr [tc [b Type]][tc id or null]]
                             [tr [tc [b Required]][tc no]]
                             [tr [tc [b Default Value]][tc null]]
                             [tr [tc [b Example(s)]][tc id = basic_concept]]
@@ -2389,7 +2328,7 @@
 
             ]
 
-            [ch ( id="node_html" ) [title HTML Code]
+            [ch [@ id="node_html" ] [title HTML Code]
 
                 [b Name: ][c html]
 
@@ -2405,8 +2344,8 @@
                         [table 
                             [tr [tc [b Name]][tc id]]
                             [tr [tc [b Is positional parameter]][tc No]]
-                            [tr [tc [b Description]][tc A unique identifier for the node.[nl][nl]An id can be used to:[nl]- identify a node so that an internal link can be done with an 'xref' (cross reference) node.[nl]- identify a node so that it can be styled individually with CSS[nl]- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.[nl][nl]An identifier must start with a letter or an underscore, and can be followed by any number of letters, digits, underscores, dots, and hyphens. Note for programmers: The regex of an identifier is: \[a-zA-Z_\]\[a-zA-Z0-9_\\.-\]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.[nl]]]
-                            [tr [tc [b Type]][tc string or null]]
+                            [tr [tc [b Description]][tc A unique identifier for the node.[nl][nl]An id can be used to:[nl]- identify a node so that an internal link can be done with an 'xref' (cross reference) node.[nl]- identify a node so that it can be styled individually with CSS[nl]- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.[nl][nl]An identifier must start with a letter or an underscore (_), and can be followed by any number of letters, digits, underscores (_), dots (.), and hyphens (-).. Note for programmers: The regex of an identifier is: \[a-zA-Z_\]\[a-zA-Z0-9_\\.-\]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.[nl]]]
+                            [tr [tc [b Type]][tc id or null]]
                             [tr [tc [b Required]][tc no]]
                             [tr [tc [b Default Value]][tc null]]
                             [tr [tc [b Example(s)]][tc id = basic_concept]]
@@ -2458,8 +2397,8 @@
 
         ]
 
-        [ch ( id="media_nodes" ) [title Media Nodes]
-            [ch ( id="node_image" ) [title Image]
+        [ch [@ id="media_nodes" ] [title Media Nodes]
+            [ch [@ id="node_image" ] [title Image]
 
                 [b Name: ][c image]
 
@@ -2516,8 +2455,8 @@
                         [table 
                             [tr [tc [b Name]][tc id]]
                             [tr [tc [b Is positional parameter]][tc No]]
-                            [tr [tc [b Description]][tc A unique identifier for the node.[nl][nl]An id can be used to:[nl]- identify a node so that an internal link can be done with an 'xref' (cross reference) node.[nl]- identify a node so that it can be styled individually with CSS[nl]- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.[nl][nl]An identifier must start with a letter or an underscore, and can be followed by any number of letters, digits, underscores, dots, and hyphens. Note for programmers: The regex of an identifier is: \[a-zA-Z_\]\[a-zA-Z0-9_\\.-\]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.[nl]]]
-                            [tr [tc [b Type]][tc string or null]]
+                            [tr [tc [b Description]][tc A unique identifier for the node.[nl][nl]An id can be used to:[nl]- identify a node so that an internal link can be done with an 'xref' (cross reference) node.[nl]- identify a node so that it can be styled individually with CSS[nl]- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.[nl][nl]An identifier must start with a letter or an underscore (_), and can be followed by any number of letters, digits, underscores (_), dots (.), and hyphens (-).. Note for programmers: The regex of an identifier is: \[a-zA-Z_\]\[a-zA-Z0-9_\\.-\]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.[nl]]]
+                            [tr [tc [b Type]][tc id or null]]
                             [tr [tc [b Required]][tc no]]
                             [tr [tc [b Default Value]][tc null]]
                             [tr [tc [b Example(s)]][tc id = basic_concept]]
@@ -2616,7 +2555,7 @@
 
             ]
 
-            [ch ( id="node_audio" ) [title Audio (Sound)]
+            [ch [@ id="node_audio" ] [title Audio (Sound)]
 
                 [b Name: ][c audio]
 
@@ -2660,8 +2599,8 @@
                         [table 
                             [tr [tc [b Name]][tc id]]
                             [tr [tc [b Is positional parameter]][tc No]]
-                            [tr [tc [b Description]][tc A unique identifier for the node.[nl][nl]An id can be used to:[nl]- identify a node so that an internal link can be done with an 'xref' (cross reference) node.[nl]- identify a node so that it can be styled individually with CSS[nl]- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.[nl][nl]An identifier must start with a letter or an underscore, and can be followed by any number of letters, digits, underscores, dots, and hyphens. Note for programmers: The regex of an identifier is: \[a-zA-Z_\]\[a-zA-Z0-9_\\.-\]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.[nl]]]
-                            [tr [tc [b Type]][tc string or null]]
+                            [tr [tc [b Description]][tc A unique identifier for the node.[nl][nl]An id can be used to:[nl]- identify a node so that an internal link can be done with an 'xref' (cross reference) node.[nl]- identify a node so that it can be styled individually with CSS[nl]- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.[nl][nl]An identifier must start with a letter or an underscore (_), and can be followed by any number of letters, digits, underscores (_), dots (.), and hyphens (-).. Note for programmers: The regex of an identifier is: \[a-zA-Z_\]\[a-zA-Z0-9_\\.-\]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.[nl]]]
+                            [tr [tc [b Type]][tc id or null]]
                             [tr [tc [b Required]][tc no]]
                             [tr [tc [b Default Value]][tc null]]
                             [tr [tc [b Example(s)]][tc id = basic_concept]]
@@ -2734,7 +2673,7 @@
 
             ]
 
-            [ch ( id="node_video" ) [title Video]
+            [ch [@ id="node_video" ] [title Video]
 
                 [b Name: ][c video]
 
@@ -2791,8 +2730,8 @@
                         [table 
                             [tr [tc [b Name]][tc id]]
                             [tr [tc [b Is positional parameter]][tc No]]
-                            [tr [tc [b Description]][tc A unique identifier for the node.[nl][nl]An id can be used to:[nl]- identify a node so that an internal link can be done with an 'xref' (cross reference) node.[nl]- identify a node so that it can be styled individually with CSS[nl]- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.[nl][nl]An identifier must start with a letter or an underscore, and can be followed by any number of letters, digits, underscores, dots, and hyphens. Note for programmers: The regex of an identifier is: \[a-zA-Z_\]\[a-zA-Z0-9_\\.-\]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.[nl]]]
-                            [tr [tc [b Type]][tc string or null]]
+                            [tr [tc [b Description]][tc A unique identifier for the node.[nl][nl]An id can be used to:[nl]- identify a node so that an internal link can be done with an 'xref' (cross reference) node.[nl]- identify a node so that it can be styled individually with CSS[nl]- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.[nl][nl]An identifier must start with a letter or an underscore (_), and can be followed by any number of letters, digits, underscores (_), dots (.), and hyphens (-).. Note for programmers: The regex of an identifier is: \[a-zA-Z_\]\[a-zA-Z0-9_\\.-\]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.[nl]]]
+                            [tr [tc [b Type]][tc id or null]]
                             [tr [tc [b Required]][tc no]]
                             [tr [tc [b Default Value]][tc null]]
                             [tr [tc [b Example(s)]][tc id = basic_concept]]
@@ -2878,7 +2817,7 @@
 
             ]
 
-            [ch ( id="node_youtube_video" ) [title Embedded Youtube Video]
+            [ch [@ id="node_youtube_video" ] [title Embedded Youtube Video]
 
                 [b Name: ][c youtube_video]
 
@@ -2935,8 +2874,8 @@
                         [table 
                             [tr [tc [b Name]][tc id]]
                             [tr [tc [b Is positional parameter]][tc No]]
-                            [tr [tc [b Description]][tc A unique identifier for the node.[nl][nl]An id can be used to:[nl]- identify a node so that an internal link can be done with an 'xref' (cross reference) node.[nl]- identify a node so that it can be styled individually with CSS[nl]- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.[nl][nl]An identifier must start with a letter or an underscore, and can be followed by any number of letters, digits, underscores, dots, and hyphens. Note for programmers: The regex of an identifier is: \[a-zA-Z_\]\[a-zA-Z0-9_\\.-\]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.[nl]]]
-                            [tr [tc [b Type]][tc string or null]]
+                            [tr [tc [b Description]][tc A unique identifier for the node.[nl][nl]An id can be used to:[nl]- identify a node so that an internal link can be done with an 'xref' (cross reference) node.[nl]- identify a node so that it can be styled individually with CSS[nl]- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.[nl][nl]An identifier must start with a letter or an underscore (_), and can be followed by any number of letters, digits, underscores (_), dots (.), and hyphens (-).. Note for programmers: The regex of an identifier is: \[a-zA-Z_\]\[a-zA-Z0-9_\\.-\]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.[nl]]]
+                            [tr [tc [b Type]][tc id or null]]
                             [tr [tc [b Required]][tc no]]
                             [tr [tc [b Default Value]][tc null]]
                             [tr [tc [b Example(s)]][tc id = basic_concept]]
@@ -3021,8 +2960,8 @@
 
         ]
 
-        [ch ( id="footnotes_block" ) [title Footnotes]
-            [ch ( id="node_fnotes" ) [title Footnotes Placeholder]
+        [ch [@ id="footnotes_block" ] [title Footnotes]
+            [ch [@ id="node_fnotes" ] [title Footnotes Placeholder]
 
                 [b Name: ][c fnotes]
 
@@ -3038,8 +2977,8 @@
                         [table 
                             [tr [tc [b Name]][tc id]]
                             [tr [tc [b Is positional parameter]][tc No]]
-                            [tr [tc [b Description]][tc A unique identifier for the node.[nl][nl]An id can be used to:[nl]- identify a node so that an internal link can be done with an 'xref' (cross reference) node.[nl]- identify a node so that it can be styled individually with CSS[nl]- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.[nl][nl]An identifier must start with a letter or an underscore, and can be followed by any number of letters, digits, underscores, dots, and hyphens. Note for programmers: The regex of an identifier is: \[a-zA-Z_\]\[a-zA-Z0-9_\\.-\]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.[nl]]]
-                            [tr [tc [b Type]][tc string or null]]
+                            [tr [tc [b Description]][tc A unique identifier for the node.[nl][nl]An id can be used to:[nl]- identify a node so that an internal link can be done with an 'xref' (cross reference) node.[nl]- identify a node so that it can be styled individually with CSS[nl]- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.[nl][nl]An identifier must start with a letter or an underscore (_), and can be followed by any number of letters, digits, underscores (_), dots (.), and hyphens (-).. Note for programmers: The regex of an identifier is: \[a-zA-Z_\]\[a-zA-Z0-9_\\.-\]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.[nl]]]
+                            [tr [tc [b Type]][tc id or null]]
                             [tr [tc [b Required]][tc no]]
                             [tr [tc [b Default Value]][tc null]]
                             [tr [tc [b Example(s)]][tc id = basic_concept]]
@@ -3204,7 +3143,7 @@
 
             ]
 
-            [ch ( id="node_fnote_def" ) [title Footnote Definition]
+            [ch [@ id="node_fnote_def" ] [title Footnote Definition]
 
                 [b Name: ][c fnote_def]
 
@@ -3220,8 +3159,8 @@
                         [table 
                             [tr [tc [b Name]][tc id]]
                             [tr [tc [b Is positional parameter]][tc No]]
-                            [tr [tc [b Description]][tc A unique identifier for the node.[nl][nl]An id can be used to:[nl]- identify a node so that an internal link can be done with an 'xref' (cross reference) node.[nl]- identify a node so that it can be styled individually with CSS[nl]- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.[nl][nl]An identifier must start with a letter or an underscore, and can be followed by any number of letters, digits, underscores, dots, and hyphens. Note for programmers: The regex of an identifier is: \[a-zA-Z_\]\[a-zA-Z0-9_\\.-\]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.[nl]]]
-                            [tr [tc [b Type]][tc string or null]]
+                            [tr [tc [b Description]][tc A unique identifier for the node.[nl][nl]An id can be used to:[nl]- identify a node so that an internal link can be done with an 'xref' (cross reference) node.[nl]- identify a node so that it can be styled individually with CSS[nl]- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.[nl][nl]An identifier must start with a letter or an underscore (_), and can be followed by any number of letters, digits, underscores (_), dots (.), and hyphens (-).. Note for programmers: The regex of an identifier is: \[a-zA-Z_\]\[a-zA-Z0-9_\\.-\]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.[nl]]]
+                            [tr [tc [b Type]][tc id or null]]
                             [tr [tc [b Required]][tc no]]
                             [tr [tc [b Default Value]][tc null]]
                             [tr [tc [b Example(s)]][tc id = basic_concept]]
@@ -3245,7 +3184,7 @@
                             ]
                             
                             [fnote_def (id=fn_2)
-                                [table_data
+                                [sim_table
                                     ~~~
                                     c11 | c12 | c13
                                     c21 | c22 | c23
@@ -3345,8 +3284,8 @@
 
         ]
 
-        [ch ( id="software_development_nodes" ) [title Software Development]
-            [ch ( id="node_code" ) [title Source Code]
+        [ch [@ id="software_development_nodes" ] [title Software Development]
+            [ch [@ id="node_code" ] [title Source Code]
 
                 [b Name: ][c code]
 
@@ -3376,8 +3315,8 @@
                         [table 
                             [tr [tc [b Name]][tc id]]
                             [tr [tc [b Is positional parameter]][tc No]]
-                            [tr [tc [b Description]][tc A unique identifier for the node.[nl][nl]An id can be used to:[nl]- identify a node so that an internal link can be done with an 'xref' (cross reference) node.[nl]- identify a node so that it can be styled individually with CSS[nl]- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.[nl][nl]An identifier must start with a letter or an underscore, and can be followed by any number of letters, digits, underscores, dots, and hyphens. Note for programmers: The regex of an identifier is: \[a-zA-Z_\]\[a-zA-Z0-9_\\.-\]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.[nl]]]
-                            [tr [tc [b Type]][tc string or null]]
+                            [tr [tc [b Description]][tc A unique identifier for the node.[nl][nl]An id can be used to:[nl]- identify a node so that an internal link can be done with an 'xref' (cross reference) node.[nl]- identify a node so that it can be styled individually with CSS[nl]- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.[nl][nl]An identifier must start with a letter or an underscore (_), and can be followed by any number of letters, digits, underscores (_), dots (.), and hyphens (-).. Note for programmers: The regex of an identifier is: \[a-zA-Z_\]\[a-zA-Z0-9_\\.-\]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.[nl]]]
+                            [tr [tc [b Type]][tc id or null]]
                             [tr [tc [b Required]][tc no]]
                             [tr [tc [b Default Value]][tc null]]
                             [tr [tc [b Example(s)]][tc id = basic_concept]]
@@ -3447,7 +3386,7 @@
 
             ]
 
-            [ch ( id="node_insert_code" ) [title Insert Source Code]
+            [ch [@ id="node_insert_code" ] [title Insert Source Code]
 
                 [b Name: ][c insert_code]
 
@@ -3503,8 +3442,8 @@
                         [table 
                             [tr [tc [b Name]][tc id]]
                             [tr [tc [b Is positional parameter]][tc No]]
-                            [tr [tc [b Description]][tc A unique identifier for the node.[nl][nl]An id can be used to:[nl]- identify a node so that an internal link can be done with an 'xref' (cross reference) node.[nl]- identify a node so that it can be styled individually with CSS[nl]- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.[nl][nl]An identifier must start with a letter or an underscore, and can be followed by any number of letters, digits, underscores, dots, and hyphens. Note for programmers: The regex of an identifier is: \[a-zA-Z_\]\[a-zA-Z0-9_\\.-\]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.[nl]]]
-                            [tr [tc [b Type]][tc string or null]]
+                            [tr [tc [b Description]][tc A unique identifier for the node.[nl][nl]An id can be used to:[nl]- identify a node so that an internal link can be done with an 'xref' (cross reference) node.[nl]- identify a node so that it can be styled individually with CSS[nl]- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.[nl][nl]An identifier must start with a letter or an underscore (_), and can be followed by any number of letters, digits, underscores (_), dots (.), and hyphens (-).. Note for programmers: The regex of an identifier is: \[a-zA-Z_\]\[a-zA-Z0-9_\\.-\]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.[nl]]]
+                            [tr [tc [b Type]][tc id or null]]
                             [tr [tc [b Required]][tc no]]
                             [tr [tc [b Default Value]][tc null]]
                             [tr [tc [b Example(s)]][tc id = basic_concept]]
@@ -3616,7 +3555,7 @@
 
             ]
 
-            [ch ( id="node_input" ) [title Input]
+            [ch [@ id="node_input" ] [title Input]
 
                 [b Name: ][c input]
 
@@ -3632,8 +3571,8 @@
                         [table 
                             [tr [tc [b Name]][tc id]]
                             [tr [tc [b Is positional parameter]][tc No]]
-                            [tr [tc [b Description]][tc A unique identifier for the node.[nl][nl]An id can be used to:[nl]- identify a node so that an internal link can be done with an 'xref' (cross reference) node.[nl]- identify a node so that it can be styled individually with CSS[nl]- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.[nl][nl]An identifier must start with a letter or an underscore, and can be followed by any number of letters, digits, underscores, dots, and hyphens. Note for programmers: The regex of an identifier is: \[a-zA-Z_\]\[a-zA-Z0-9_\\.-\]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.[nl]]]
-                            [tr [tc [b Type]][tc string or null]]
+                            [tr [tc [b Description]][tc A unique identifier for the node.[nl][nl]An id can be used to:[nl]- identify a node so that an internal link can be done with an 'xref' (cross reference) node.[nl]- identify a node so that it can be styled individually with CSS[nl]- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.[nl][nl]An identifier must start with a letter or an underscore (_), and can be followed by any number of letters, digits, underscores (_), dots (.), and hyphens (-).. Note for programmers: The regex of an identifier is: \[a-zA-Z_\]\[a-zA-Z0-9_\\.-\]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.[nl]]]
+                            [tr [tc [b Type]][tc id or null]]
                             [tr [tc [b Required]][tc no]]
                             [tr [tc [b Default Value]][tc null]]
                             [tr [tc [b Example(s)]][tc id = basic_concept]]
@@ -3683,7 +3622,7 @@
 
             ]
 
-            [ch ( id="node_output" ) [title Output]
+            [ch [@ id="node_output" ] [title Output]
 
                 [b Name: ][c output]
 
@@ -3699,8 +3638,8 @@
                         [table 
                             [tr [tc [b Name]][tc id]]
                             [tr [tc [b Is positional parameter]][tc No]]
-                            [tr [tc [b Description]][tc A unique identifier for the node.[nl][nl]An id can be used to:[nl]- identify a node so that an internal link can be done with an 'xref' (cross reference) node.[nl]- identify a node so that it can be styled individually with CSS[nl]- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.[nl][nl]An identifier must start with a letter or an underscore, and can be followed by any number of letters, digits, underscores, dots, and hyphens. Note for programmers: The regex of an identifier is: \[a-zA-Z_\]\[a-zA-Z0-9_\\.-\]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.[nl]]]
-                            [tr [tc [b Type]][tc string or null]]
+                            [tr [tc [b Description]][tc A unique identifier for the node.[nl][nl]An id can be used to:[nl]- identify a node so that an internal link can be done with an 'xref' (cross reference) node.[nl]- identify a node so that it can be styled individually with CSS[nl]- create an HTML anchor so that it can be accessed with the # (hash) sign (e.g. writing id=foo will enable you to have an HTML link ending with #foo.[nl][nl]An identifier must start with a letter or an underscore (_), and can be followed by any number of letters, digits, underscores (_), dots (.), and hyphens (-).. Note for programmers: The regex of an identifier is: \[a-zA-Z_\]\[a-zA-Z0-9_\\.-\]*. Identifiers are case-sensitive. The following identifiers are all different: name, Name, and NAME.[nl]]]
+                            [tr [tc [b Type]][tc id or null]]
                             [tr [tc [b Required]][tc no]]
                             [tr [tc [b Default Value]][tc null]]
                             [tr [tc [b Example(s)]][tc id = basic_concept]]
@@ -3757,11 +3696,11 @@
 
     ]
 
-    [ch ( id="inline_nodes" ) [title Inline Nodes]
+    [ch [@ id="inline_nodes" ] [title Inline Nodes]
         [p An [i inline] node represents a part of a paragraph (a span of text). All nodes contained in a paragraph are inline nodes.]
         [p For example, the [c italic] node is an [i inline] node. All text contained in it is written in [i italics].]
-        [ch ( id="font_nodes" ) [title Font]
-            [ch ( id="node_b" ) [title Bold Text]
+        [ch [@ id="font_nodes" ] [title Font]
+            [ch [@ id="node_b" ] [title Bold Text]
 
                 [b Name: ][c b]
 
@@ -3809,7 +3748,7 @@
 
             ]
 
-            [ch ( id="node_i" ) [title Italic Text]
+            [ch [@ id="node_i" ] [title Italic Text]
 
                 [b Name: ][c i]
 
@@ -3861,7 +3800,7 @@
 
             ]
 
-            [ch ( id="node_sub" ) [title Subscript Text]
+            [ch [@ id="node_sub" ] [title Subscript Text]
 
                 [b Name: ][c sub]
 
@@ -3914,7 +3853,7 @@
 
             ]
 
-            [ch ( id="node_sup" ) [title Superscript Text]
+            [ch [@ id="node_sup" ] [title Superscript Text]
 
                 [b Name: ][c sup]
 
@@ -3967,7 +3906,7 @@
 
             ]
 
-            [ch ( id="node_strike" ) [title Strikethrough Text]
+            [ch [@ id="node_strike" ] [title Strikethrough Text]
 
                 [b Name: ][c strike]
 
@@ -4020,7 +3959,7 @@
 
             ]
 
-            [ch ( id="node_c" ) [title Inline Source Code]
+            [ch [@ id="node_c" ] [title Inline Source Code]
 
                 [b Name: ][c c]
 
@@ -4071,30 +4010,17 @@
 
         ]
 
-        [ch ( id="node_link" ) [title URL Link]
+        [ch [@ id="node_link" ] [title URL Link]
 
             [b Name: ][c link]
 
-            [b Kind:] Node without child nodes
+            [b Kind:] Node with child nodes
 
             [header Description]
             [p A URL link to a resource, such as a website or a file to download.]
 
             [header Attributes]
             [list 
-                [el 
-                    [header URL Text]
-                    [table 
-                        [tr [tc [b Name]][tc text]]
-                        [tr [tc [b Is positional parameter]][tc No]]
-                        [tr [tc [b Description]][tc The text to be displayed instead of the URL. If no text is specified then the URL itself is displayed.]]
-                        [tr [tc [b Type]][tc string or null]]
-                        [tr [tc [b Required]][tc no]]
-                        [tr [tc [b Default Value]][tc null]]
-                        [tr [tc [b Example(s)]][tc text = our website]]
-                    ]
-                ]
-
                 [el 
                     [header URL]
                     [table 
@@ -4118,7 +4044,7 @@
                     [p PML code:]
                     [code 
                         ~~~
-                        Please have a look at [link url=https://www.pml-lang.dev/docs/articles/practical-document-markup-language/index.html text="this article"] for more information.
+                        Please have a look at [link (url=https://www.pml-lang.dev/docs/articles/practical-document-markup-language/index.html) this article] for more information.
                         ~~~
                     ]
                 ]
@@ -4147,14 +4073,14 @@
 
         ]
 
-        [ch ( id="node_verbatim" ) [title Verbatim Text]
+        [ch [@ id="node_verbatim" ] [title Verbatim Text]
 
             [b Name: ][c verbatim]
 
             [b Kind:] Node with raw text content
 
             [header Description]
-            [p Raw, verbatim text that is rendered as is, without any transformations]
+            [p Raw, verbatim text that is rendered as is, without any transformations.[nl]Note: The text still has to be escaped, according to the standard PML escaping rules.]
 
             [header Attributes]
             [p This node doesn't have attributes.]
@@ -4196,11 +4122,11 @@
 
         ]
 
-        [ch ( id="node_xref" ) [title Cross-Reference]
+        [ch [@ id="node_xref" ] [title Cross-Reference]
 
             [b Name: ][c xref]
 
-            [b Kind:] Node without child nodes
+            [b Kind:] Node with child nodes
 
             [header Description]
             [p A cross-reference (link) to another node in the same document.]
@@ -4210,26 +4136,13 @@
                 [el 
                     [header Referenced Node Id]
                     [table 
-                        [tr [tc [b Name]][tc node_id]]
+                        [tr [tc [b Name]][tc ref_id]]
                         [tr [tc [b Is positional parameter]][tc No]]
                         [tr [tc [b Description]][tc The identifier of the node that is referenced.]]
                         [tr [tc [b Type]][tc string]]
                         [tr [tc [b Required]][tc yes]]
                         [tr [tc [b Default Value]][tc none]]
                         [tr [tc [b Example(s)]][tc node_id = chapter_1]]
-                    ]
-                ]
-
-                [el 
-                    [header Text]
-                    [table 
-                        [tr [tc [b Name]][tc text]]
-                        [tr [tc [b Is positional parameter]][tc No]]
-                        [tr [tc [b Description]][tc The text to be displayed for the cross-reference.[nl]If this attribute is omitted, then the title of the target node is displayed. If the target node doesn't have a title, then the target node's identifier is displayed instead.]]
-                        [tr [tc [b Type]][tc string or null]]
-                        [tr [tc [b Required]][tc no]]
-                        [tr [tc [b Default Value]][tc null]]
-                        [tr [tc [b Example(s)]][tc text = "Hello World example"]]
                     ]
                 ]
 
@@ -4248,7 +4161,9 @@
                         ]
                         
                         [ch [title Conclusion]
-                            As we saw in chapter [xref node_id=solution], it is ...
+                            As we saw in chapter [xref (ref_id=solution)], ...
+                            ...
+                            As we saw [xref (ref_id=solution) previously], ...
                         ]
                         
                         ~~~
@@ -4266,7 +4181,7 @@
                         </section>
                         <section id="ch__2" class="pml-chapter">
                             <h2 class="pml-chapter-title">Conclusion</h2>
-                            <p class="pml-paragraph">As we saw in chapter <a class="pml-xref" href="#solution">A Beautiful Solution</a>, it is ... </p>
+                            <p class="pml-paragraph">As we saw in chapter <a class="pml-xref" href="#solution">A Beautiful Solution</a>, ... ... As we saw <a class="pml-xref" href="#solution">previously</a>, ... </p>
                         
                         </section>
                         
@@ -4286,7 +4201,7 @@
                         </section>
                         <section id="ch__2" class="pml-chapter">
                             <h2 class="pml-chapter-title">Conclusion</h2>
-                            <p class="pml-paragraph">As we saw in chapter <a class="pml-xref" href="#solution">A Beautiful Solution</a>, it is ... </p>
+                            <p class="pml-paragraph">As we saw in chapter <a class="pml-xref" href="#solution">A Beautiful Solution</a>, ... ... As we saw <a class="pml-xref" href="#solution">previously</a>, ... </p>
                         
                         </section>
                         
@@ -4297,7 +4212,7 @@
 
         ]
 
-        [ch ( id="node_span" ) [title Span]
+        [ch [@ id="node_span" ] [title Span]
 
             [b Name: ][c span]
 
@@ -4346,7 +4261,7 @@
 
         ]
 
-        [ch ( id="node_nl" ) [title New Line]
+        [ch [@ id="node_nl" ] [title New Line]
 
             [b Name: ][c nl]
 
@@ -4395,7 +4310,7 @@
 
         ]
 
-        [ch ( id="node_sp" ) [title Space Character]
+        [ch [@ id="node_sp" ] [title Space Character]
 
             [b Name: ][c sp]
 
@@ -4448,7 +4363,7 @@
 
         ]
 
-        [ch ( id="node_text" ) [title Text]
+        [ch [@ id="node_text" ] [title Text]
 
             [b Name: ][c text]
 
@@ -4499,8 +4414,8 @@
 
         ]
 
-        [ch ( id="footnotes_inline" ) [title Footnotes]
-            [ch ( id="node_fnote" ) [title Inline Footnote]
+        [ch [@ id="footnotes_inline" ] [title Footnotes]
+            [ch [@ id="node_fnote" ] [title Inline Footnote]
 
                 [b Name: ][c fnote]
 
@@ -4612,7 +4527,7 @@
 
             ]
 
-            [ch ( id="node_fnote_ref" ) [title Footnote Reference]
+            [ch [@ id="node_fnote_ref" ] [title Footnote Reference]
 
                 [b Name: ][c fnote_ref]
 
@@ -4659,17 +4574,17 @@
                         [p PML code:]
                         [code 
                             ~~~
-                            text [fnote_ref did=1] text
+                            text [fnote_ref did=f1] text
                             
-                            Advice for life [fnote_ref did=2 text="Rodegast 1987"].
+                            Advice for life [fnote_ref did=f2 text="Rodegast 1987"].
                             
-                            text [fnote_ref did=1] [fnote_ref did=2] text
+                            text [fnote_ref did=f1] [fnote_ref did=f2] text
                             
-                            [fnote_def (id=1)
+                            [fnote_def (id=f1)
                                 Text of [i footnote 1]
                             ]
                             
-                            [fnote_def (id=2)
+                            [fnote_def (id=f2)
                                 Rodegast, P. (1987). [i Emmanuel's Book: A Manual for Living Comfortably in the Cosmos.] Bantam.
                             ]
                             
@@ -4683,20 +4598,20 @@
                         [html 
                             ~~~
                             <div style="border: 1px dotted grey; padding-left: 1em; padding-right: 1em;border-radius: 7px;">
-                            <p class="pml-paragraph">text <sup id="fnr__1" class="pml-footnote-ref"><a href="#1">1</a></sup> text</p>
-                            <p class="pml-paragraph">Advice for life <sup id="fnr__2" class="pml-footnote-ref"><a href="#2">Rodegast 1987</a></sup>.</p>
-                            <p class="pml-paragraph">text <sup id="fnr__3" class="pml-footnote-ref"><a href="#1">1</a></sup> <sup id="fnr__4" class="pml-footnote-ref"><a href="#2">2</a></sup> text</p>
+                            <p class="pml-paragraph">text <sup id="fnr__1" class="pml-footnote-ref"><a href="#f1">1</a></sup> text</p>
+                            <p class="pml-paragraph">Advice for life <sup id="fnr__2" class="pml-footnote-ref"><a href="#f2">Rodegast 1987</a></sup>.</p>
+                            <p class="pml-paragraph">text <sup id="fnr__3" class="pml-footnote-ref"><a href="#f1">1</a></sup> <sup id="fnr__4" class="pml-footnote-ref"><a href="#f2">2</a></sup> text</p>
                             <div class="pml-header">Footnotes</div>
                             <div class="pml-footnotes">
                                 <table>
-                                    <tr id="1" class="pml-footnote">
+                                    <tr id="f1" class="pml-footnote">
                                         <td style="vertical-align: top;">1.</td>
                                         <td class="pml-footnote-backlink" style="vertical-align: top;"><a href="#fnr__1">^</a><a href="#fnr__3">^</a></td>
                                         <td>
                                             <p class="pml-paragraph">Text of <i class="pml-italic">footnote 1</i></p>
                                         </td>
                                     </tr>
-                                    <tr id="2" class="pml-footnote">
+                                    <tr id="f2" class="pml-footnote">
                                         <td style="vertical-align: top;">2.</td>
                                         <td class="pml-footnote-backlink" style="vertical-align: top;"><a href="#fnr__2">^</a><a href="#fnr__4">^</a></td>
                                         <td>
@@ -4715,20 +4630,20 @@
                         [p HTML code generated:]
                         [code 
                             ~~~
-                            <p class="pml-paragraph">text <sup id="fnr__1" class="pml-footnote-ref"><a href="#1">1</a></sup> text</p>
-                            <p class="pml-paragraph">Advice for life <sup id="fnr__2" class="pml-footnote-ref"><a href="#2">Rodegast 1987</a></sup>.</p>
-                            <p class="pml-paragraph">text <sup id="fnr__3" class="pml-footnote-ref"><a href="#1">1</a></sup> <sup id="fnr__4" class="pml-footnote-ref"><a href="#2">2</a></sup> text</p>
+                            <p class="pml-paragraph">text <sup id="fnr__1" class="pml-footnote-ref"><a href="#f1">1</a></sup> text</p>
+                            <p class="pml-paragraph">Advice for life <sup id="fnr__2" class="pml-footnote-ref"><a href="#f2">Rodegast 1987</a></sup>.</p>
+                            <p class="pml-paragraph">text <sup id="fnr__3" class="pml-footnote-ref"><a href="#f1">1</a></sup> <sup id="fnr__4" class="pml-footnote-ref"><a href="#f2">2</a></sup> text</p>
                             <div class="pml-header">Footnotes</div>
                             <div class="pml-footnotes">
                                 <table>
-                                    <tr id="1" class="pml-footnote">
+                                    <tr id="f1" class="pml-footnote">
                                         <td style="vertical-align: top;">1.</td>
                                         <td class="pml-footnote-backlink" style="vertical-align: top;"><a href="#fnr__1">^</a><a href="#fnr__3">^</a></td>
                                         <td>
                                             <p class="pml-paragraph">Text of <i class="pml-italic">footnote 1</i></p>
                                         </td>
                                     </tr>
-                                    <tr id="2" class="pml-footnote">
+                                    <tr id="f2" class="pml-footnote">
                                         <td style="vertical-align: top;">2.</td>
                                         <td class="pml-footnote-backlink" style="vertical-align: top;"><a href="#fnr__2">^</a><a href="#fnr__4">^</a></td>
                                         <td>

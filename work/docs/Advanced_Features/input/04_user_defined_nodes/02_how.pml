@@ -12,9 +12,9 @@
 
     The content of [c config/nodes/ctext.pdml] is as follows:
 
-    [insert_code file=[!get UDN_examples_dir]/config/nodes/ctext.pdml]
+    [insert_code file=[u:get UDN_examples_dir]/config/nodes/ctext.pdml]
 
-    Note the mandatory file extension used in the above example: [c pdml]. This means that the file contains a [i PDML document]. PDML stands for [i Practical Data and Markup Language]. You can easily see that PDML code looks like PML code. This is no surprise, because the PDML syntax is actually used in PML. So you don't need to learn a new syntax. Another advantage is that all PDML features (such as comments or [c u:ins_file] nodes to insert shared code) can be used to define UDNs. For more information about PDML please visit its [link url=https://pdml-lang.dev/ text=website] or read [link url=https://pdml-lang.dev/docs/introduction/index.html text="Introduction to PDML"].
+    Note the mandatory file extension used in the above example: [c pdml]. This means that the file contains a [i PDML document]. PDML stands for [i Practical Data and Markup Language]. You can easily see that PDML code looks like PML code. This is no surprise, because the PDML syntax is actually used in PML. So you don't need to learn a new syntax. Another advantage is that all PDML features (such as comments or [c u:ins_file] nodes to insert shared code) can be used to define UDNs. For more information about PDML please visit its [link (url=https://pdml-lang.dev/) website] or read [link (url=https://pdml-lang.dev/docs/introduction/index.html) Introduction to PDML].
 
     As can be seen in the above code:
 
@@ -37,7 +37,7 @@
 
     The most interesting part is node [c script]. This node contains Javascript code that will be executed by the PML converter to write the target HTML code. If you look at the line [c context.write ...] you can see that the Javascript code dynamically generates the HTML code we had to write manually in standard PML.
 
-    Being able to use a very popular programming language to create UDNs is very powerful, because all Javascript language features, as well as the huge set of existing Javascript libraries can be used. For example, in case of more complex UDNs you could use the popular [link url=https://ejs.co/ text="EJS templating language"] that lets you generate HTML markup with plain JavaScript, possibly using external template files that can be adapted by users.
+    Being able to use a very popular programming language to create UDNs is very powerful, because all Javascript language features, as well as the huge set of existing Javascript libraries can be used. For example, in case of more complex UDNs you could use the popular [link (url=https://ejs.co/) EJS templating language] that lets you generate HTML markup with plain JavaScript, possibly using external template files that can be adapted by users.
 
     Instead of using the syntax [c() (fc=red bc=yellow)] to define the foreground/background colors, we could also decide to use a shorter syntax. For example, we could use only one attribute named [c c], and separate the two colors by a slash: [c() (c=red/yellow)]. Or we could decide to use the syntax [c() (c="red on yellow")] which is a bit more readable. All this is possible because Javascript string functions can be used in a [c script] node.
 
